@@ -124,9 +124,11 @@ http://www.haskell.org/ghc/docs/latest/html/users_guide/deriving.html
 http://stackoverflow.com/questions/7947981/how-do-i-import-the-foldable-class-into-my-module
 
 StackOverflow-Foldable:
+http://stackoverflow.com/questions/17562345/generalizing-sequence-for-all-functors
 http://stackoverflow.com/questions/8359115/haskell-an-example-of-a-foldable-which-is-not-a-functor
 http://stackoverflow.com/questions/8359115/haskell-an-example-of-a-foldable-which-is-not-a-functor-or-not-traversable
 http://stackoverflow.com/questions/10803221/haskell-can-i-perform-several-folds-over-the-same-lazy-list-without-keeping-lis
+http://stackoverflow.com/questions/3998133/does-this-simple-haskell-function-already-have-a-well-known-name/
 
 
 7. Traversable (Data.Traversable.Traversable) :

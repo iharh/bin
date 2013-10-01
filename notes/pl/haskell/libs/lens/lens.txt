@@ -58,3 +58,18 @@ Just 3
 > Right 3 ^? _left
 Nothing
 
+http://stackoverflow.com/questions/15489324/traversal-tree-with-lens-and-zippers
+http://stackoverflow.com/questions/14100387/create-new-list-from-list-of-string-in-haskell/
+http://stackoverflow.com/questions/6270214/haskell-list-of-tuples-to-list/
+
+> import Control.Lens
+> toListOf (traverse.both) [(1,2),(3,4)]
+            ^        ^
+            |        |> Traversal of the tuple (a, a)
+            |> Traversal of a list [b]
+[1,2,3,4]
+
+To convert from a list of lists:
+
+> toListOf (traverse.traverse) [[1,2],[3,4],[5,6,7]]
+[1,2,3,4,5,6,7]

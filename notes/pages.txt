@@ -5,8 +5,10 @@ CLB Presentation                          - 20:00 (Slide 23)
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Tutorial.html
   Composability
+
 http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
-  http://www.tinyproxys.com/facebook.stackoverflow.com/questions/11532050/what-is-the-const-applicative-functor-useful-for
+  http://habrahabr.ru/post/189712/
+  http://www.reddit.com/r/haskell/comments/1isryj/lenses_in_pictures/
 
 http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversable.html#fmapDefault
 http://hackage.haskell.org/package/labeled-tree-1.0.0.0/docs/src/Data-LabeledTree.html#Tree
