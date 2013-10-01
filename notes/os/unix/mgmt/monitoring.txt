@@ -1,0 +1,5 @@
+lsof     - list of open files
+free     - free OS memory
+file     - identify file type
+basename - extract base name
+

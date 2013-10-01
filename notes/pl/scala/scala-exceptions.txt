@@ -1,0 +1,8 @@
+Exception handling:
+http://www.scala-lang.org/archives/downloads/distrib/files/nightly/docs/library/index.html#scala.util.Try
+http://notepad.mmakowski.com/composable%20pipelines%20in%20Scala
+Haller - Composable Pipelines (Haller - Futures and Promises in Scala 2_10 slides)
+http://danielwestheide.com/blog/2012/12/26/the-neophytes-guide-to-scala-part-6-error-handling-with-try.html
+http://tersesystems.com/2012/12/27/error-handling-in-scala
+https://coderwall.com/p/qe0uca
+

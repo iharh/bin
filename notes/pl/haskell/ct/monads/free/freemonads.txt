@@ -1,0 +1,74 @@
+kmett-free (http://hackage.haskell.org/package/free, https://github.com/ekmett/free/)
+
+http://blog.omega-prime.co.uk/?p=34
+
+http://www.haskellforall.com/2012/07/purify-code-using-free-monads.html
+http://www.haskellforall.com/2012/06/you-could-have-invented-free-monads.html
+
+http://debasishg.blogspot.com/2013/01/a-language-and-its-interpretation.html
+
+http://newartisans.com/2012/08/meta-programming-with-the-free-monad/
+
+(?) Bjarnason - Stackless Scala With Free Monads (Scala)
+
+http://stackoverflow.com/questions/14641864/what-monads-can-be-expressed-as-free-over-some-functor
+http://stackoverflow.com/questions/13352205/what-are-free-monads
+
+
+http://stackoverflow.com/questions/10364549/monad-friendly-event-based-io
+
+> data Free f r = Pure r | Free (f (Free f r))
+
+http://blog.functorial.com/posts/2012-07-22-What-Makes-The-Free-Monad-Free.html
+
+The free monad for a functor f is given by the fixed point of the bifunctor X -> A -> F (X + A) where the fixed point is taken over X.
+
+> :k Free
+> (* -> *) -> *    -> *
+
+
+A free monad is like a "list of functors", where Pure is analogous to a list's Nil constructor and Free is analogous to a list's Cons constructor
+because it prepends an additional functor onto the "list".
+
+The nice thing about a free monad is that, given a functor f, Free f is automatically a monad:
+
+> instance (Functor f) => Monad (Free f) where
+>   return = Pure
+>   Pure r >>= f = f r
+>   Free x >>= f = Free (fmap (>>= f) x)
+
+
+http://joyoftypes.blogspot.com/2012/04/free-monad-primer.html
+
+> class Functor f => Monad f where
+>    return :: a -> f a
+>    join :: f (f a) -> f a
+
+data Free f a = Pure a | Impure (f (Free f a))
+
+lets define the monad instance
+
+>instance Functor f => Functor (Free f) where
+>   fmap f (Pure a) = Pure $ f a
+>   fmap f (Impure (ffa) = Impure $ fmap (fmap f) ffa
+
+that was easy, now
+	
+> instance Functor f => Monad (Free f) where
+>    return = Pure
+>    m (>>=) f = joinFree $ fmap f m
+
+okay, so the hard part is join. How do we define that?
+
+Recall that
+	
+> cancat  [] = []
+> concat (x:xs) = x:concat xs
+
+so
+	
+> joinFree (Pure a) = a
+> joinFree (Impure f) = Impure $ fmap joinFree f
+
+and now we have free monads!
+

@@ -1,0 +1,1 @@
+C-h - show hidden files in UI (http://www.unixmen.com/unix-linux-file-recognition-did-you-know/)

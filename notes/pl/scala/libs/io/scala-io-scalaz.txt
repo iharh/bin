@@ -1,0 +1,4 @@
+http://eed3si9n.com/learning-scalaz-day17
+http://eed3si9n.com/learning-scalaz-day18
+http://www.edofic.com/2013/01/monadic-io-with-scalaz/
+

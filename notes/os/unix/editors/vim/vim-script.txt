@@ -1,0 +1,4 @@
+http://learnvimscriptthehardway.stevelosh.com/
+
+if filereadable(expand("~/.vim/gvimrc.local"))
+  source ~/.vim/gvimrc.local

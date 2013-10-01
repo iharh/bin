@@ -1,0 +1,7 @@
+Articles:
+http://www.xml.com/lpt/a/2001/02/14/functional.html
+http://www.rsdn.ru/article/haskell/haskell_xml.xml
+
+Libraries:
+http://hackage.haskell.org/package/xml-lens (https://github.com/fumieval/xml-lens)
+

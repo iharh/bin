@@ -1,0 +1,2 @@
+Presentations:
+http://www.slideshare.net/sefftinge/gwt-and-xtend

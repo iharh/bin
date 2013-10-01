@@ -1,0 +1,8 @@
+http://vim.wikia.com/wiki/File_format
+
+:e ++ff=dos
+
+set ffs=dos
+set ff=dos
+
+# ffs - fileformats, ff=fileformat

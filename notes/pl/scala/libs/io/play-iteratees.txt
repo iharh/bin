@@ -1,0 +1,4 @@
+Play Iteratees, CLI:
+http://blog.greweb.fr/2013/01/playcli-play-iteratees-unix-pipe/
+https://github.com/gre/playCLI
+

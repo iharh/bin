@@ -1,0 +1,4 @@
+https://github.com/hamcrest/JavaHamcrest
+http://code.google.com/p/hamcrest/wiki/Tutorial
+http://www.slideshare.net/wakaleo/developer-testing-tools-roundup
+

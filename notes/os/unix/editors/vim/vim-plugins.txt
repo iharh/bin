@@ -1,0 +1,24 @@
+Plugins:
+
+NERDTree - File system tree
+Project - User-configured tree
+LustyExplorer - Quick folder navigation
+FuzzyFinder - Flexible search
+
+BufferExplorer (bufexplorer.zip)
+	\be
+		Activate Buffer Explorer
+	let g:bufExplorerShowRelativePath=1
+
+taglist.vim (http://vim-taglist.sourceforge.net)
+
+!!! vimrouter (http://github.com/airblade/vim-router)	
+
+
+Search for a code-base (need ack.vim - script id 2572 - http://github.com/mileszs/ack.vim):
+
+:Ack text-to-search
+
+
+Pathogen
+!!! http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/

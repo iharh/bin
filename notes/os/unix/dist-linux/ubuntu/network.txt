@@ -1,0 +1,19 @@
+/etc/hostname
+  hostname
+/etc/resolv.conf
+  don't edit
+
+/etc/network/interfaces
+
+auto lo
+iface lo inet loopback
+
+auto eth1
+#dhcp
+iface eth1 inet static
+  address 10.9.11.217
+  netmask 255.255.240.0
+  gateway 10.9.0.1
+
+
+ifconfig /a

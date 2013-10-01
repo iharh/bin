@@ -1,0 +1,7 @@
+[user]
+	name = Ihar Hancharenka
+[color]
+	ui = always
+	diff = always
+[core]
+	autocrlf = true

@@ -1,0 +1,12 @@
+event bus:
+vert.x
+
+Visual:
+
+highchart.js
+chart.js (http://www.chartjs.org/)
+
+d3.js (http://d3js.org/, frameworks/io/DOM)
+
+http://www.jstat.org/ (https://github.com/jstat/jstat)
+

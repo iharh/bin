@@ -1,0 +1,42 @@
+Patridge - http://www.slideshare.net/nkpart/scala-implicits
+http://www.slideshare.net/shinolajla/taxonomy-ofscala?from_search=13
+
+1. Implicit parameters
+
+val a: A = ...
+implicit def (a: A): B = ...
+val b: B = a
+
+2.
+
+T % String
+  for T is sub-type or implicit-converted to String
+
+
+3. Parameter groups
+
+fun1(...)(...)(...)
+  function can have multiple parameter groups
+
+the last-one can be made implicit
+
+they can depend on the abstract parameters of prev-groups:
+
+  def mungeData[D](d: D)(implicit m: Munger[D])
+
+and this works for higher-kinds:
+
+  def mungeData[M[_], D)(d: D)(implicit m: Munger[D], each: Each[M])
+
+4. Companion objects - with the same name as a trait.
+
+any "implicit val <name> = new <trait-name> ..." will be available anywhere a <trait-name> is needed withou imports.
+
+5. Implicit Classes
+
+implicit class Person(name: String)
+
+implicit class Person(name: String)
+implicit final def Person(name: String): Person = new Person(name)
+
+

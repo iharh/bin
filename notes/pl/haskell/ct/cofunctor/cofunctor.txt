@@ -1,0 +1,2 @@
+https://github.com/ekmett/contravariant/
+https://github.com/ekmett/contravariant/blob/master/Data/Functor/Contravariant.hs

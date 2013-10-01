@@ -1,0 +1,3 @@
+Checking
+HLint (http://ocharles.org.uk/blog/posts/2012-12-05-24-days-of-hackage-hlint.html)
+

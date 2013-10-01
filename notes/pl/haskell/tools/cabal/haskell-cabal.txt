@@ -1,0 +1,93 @@
+CABAL - Common Architecture for Building Applications and Libraries
+
+http://habrahabr.ru/post/165559/
+http://bob.ippoli.to/archives/2013/01/11/getting-started-with-haskell/
+http://www.reddit.com/r/haskell/comments/16qpi7/best_practice_of_using_haskellcabal_on_windows/
+
+
+http://www.haskell.org/haskellwiki/Cabal-Install
+http://hackage.haskell.org/trac/hackage/wiki/CabalInstall
+
+Get a pre-built cabal.exe from:
+
+http://www.haskell.org/cabal/download.html
+
+You must put the cabal.exe in a directory that is on your %PATH%, for example C:\Program Files\Haskell\bin. 
+
+To install cabal-packages globally:
+
+http://www.volkerschatz.com/haskell/glocabal.html
+
+
+Config Location:
+C:\Users\Ihar_Hancharenka\AppData\Roaming\cabal\config
+NOTE: use cabal --config-file=<...your config location...>
+
+To turn on --global by default:
+
+ user-install: False
+
+
+http://www.haskell.org/cabal/users-guide/installing-packages.html#path-variables-in-the-simple-build-system
+"Paths in the simple build system"
+https://github.com/haskell/cabal/blob/master/Cabal/Distribution/Simple/InstallDirs.hs
+
+* update *
+
+cabal update --verbose=3
+
+* list *
+
+cabal list <pack-name-pattern>
+
+* install *
+
+cabal install cabal-install
+cabal install <package>
+
+* unpack *
+
+cabal unpack <package>
+
+* haddock *
+
+cabal haddock <package>
+
+* init *
+
+generate package.cabal file
+
+****************************************************************************************************
+documentation
+****************************************************************************************************
+
+cabal-dev install <name> --enable-documentation
+
+****************************************************************************************************
+cabal files
+****************************************************************************************************
+
+  ghc-options: -Wall
+
+
+****************************************************************************************************
+usefull options
+****************************************************************************************************
+
+http://blog.ezyang.com/2011/06/pinpointing-space-leaks-in-big-programs/:
+
+After you have your test case, the next step is to compile with profiling enabled.
+With GHC, this is as simple as switching your build settings to build a profiled stage 2 compiler;
+for a more ordinary Haskell project, all you need to do is add
+  -prof -auto-all to your ghc invocation,
+or invoke Cabal with
+  --enable-executable-profiling --enable-library-profiling --ghc-option=-auto-all.
+
+!!!
+You may need to install profiling versions of your libraries, so a useful line to have in your .cabal/config file is
+
+  library-profiling: True,
+
+which causes all libraries you cabal install or cabal configure to have profiling enabled.
+
+ghc-prof-options: -auto-all

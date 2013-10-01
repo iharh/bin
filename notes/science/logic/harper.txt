@@ -1,0 +1,4 @@
+|- turnstyle (Frege)
+Meet - GLB (Lower semilattice)
+Join - LUB (Upper semilattice)
+

@@ -1,0 +1,3 @@
+http://www.timphilipwilliams.com/slides.html
+https://github.com/willtim/recursion-schemes
+Williams - Recursion Schemes by Example slides

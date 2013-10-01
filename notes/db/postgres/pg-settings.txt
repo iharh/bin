@@ -1,0 +1,5 @@
+D:\dev\Utils\PostgreSQL\9.1\data\pg_hba.conf
+
+#Add the following after 127.0.0.0 ...
+host    all             all             0.0.0.0/0               md5
+

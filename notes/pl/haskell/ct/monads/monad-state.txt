@@ -1,0 +1,19 @@
+State Monad:
+
+newtype State s a = State { runState :: (s -> (a,s)) }
+
+instance Monad (State s) where
+    return a        = State $ \s -> (a,s)
+    (State x) >>= f = State $ \s -> let (v,s1) = x s in runState (f v) s1
+
+instance MonadPlus (State s) where
+    mzero = ...
+    mplus = ...
+
+class MonadState m s | m -> s where
+    get :: m s
+    put :: s -> m ()
+
+instance MonadState (State s) s where
+    get   = State $ \s -> (s,s)
+    put s = State $ \_ -> ((),s)

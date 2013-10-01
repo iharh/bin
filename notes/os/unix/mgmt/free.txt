@@ -1,0 +1,2 @@
+alias meminfo='free -m -l -t'
+## pass options to free ## 

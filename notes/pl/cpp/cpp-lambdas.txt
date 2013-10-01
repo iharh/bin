@@ -1,0 +1,4 @@
+HPC Lambdas:
+http://www.codeproject.com/Articles/616090/Delegates-Cplusplus11-vs-Impossibly-Fast-A-Quick-a
+http://www.codeproject.com/Articles/11015/The-Impossibly-Fast-C-Delegates
+

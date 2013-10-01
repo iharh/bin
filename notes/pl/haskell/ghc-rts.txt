@@ -1,0 +1,18 @@
+RTS:
+http://notepad.mmakowski.com/Advanced%20Haskell
+http://www.aosabook.org/en/ghc.html
+
+RTS options:
+http://www.haskell.org/ghc/docs/latest/html/users_guide/runtime-control.html
+
+GC:
+http://hackage.haskell.org/trac/ghc/wiki/GarbageCollectorNotes
+System.Mem.performGC :: IO ()
+ghc-gc-tune
+
+Scheduler:
+http://hackage.haskell.org/trac/ghc/wiki/Commentary/Rts/Scheduler
+http://blog.ezyang.com/2013/01/the-ghc-scheduler/
+
+FFI:
+http://blog.ezyang.com/2010/07/safety-first-ffi-and-threading/

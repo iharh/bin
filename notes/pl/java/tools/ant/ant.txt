@@ -1,0 +1,4 @@
+path printing:
+
+<pathconvert targetos="windows" property="toprint.classpath" refid="classpath" pathsep="&#13;&#10;"/>
+<echo message="${toprint.classpath}"/>

@@ -1,0 +1,4 @@
+http://www.codeproject.com/Articles/650289/TMPP-Template-Metaprogramming-Programming
+
+mpllibs (Sinkovics)
+

@@ -1,0 +1,7 @@
+Articles:
+Odersky - Fighting Bit Rot with Types
+
+Scala WAT - collections:
+http://habrahabr.ru/company/tcsbank/blog/184310/
+http://rickyclarkson.blogspot.ru/2008/01/in-defence-of-0l-in-scala.html
+

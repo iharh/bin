@@ -1,0 +1,16 @@
+cd -
+	Go to the previous dir
+
+
+Env vars:
+
+cdpath
+	use it for quick cd
+OLDPWD
+	filled by "cd -"
+
+
+zsh options:
+
+chase_links
+	stop lie about [soft] links

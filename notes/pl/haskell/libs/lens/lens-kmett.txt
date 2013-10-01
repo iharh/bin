@@ -1,0 +1,11 @@
+https://github.com/ekmett/lens/wiki/Derivation
+http://adit.io/posts/2013-07-22-lenses-in-pictures.html
+
+https://www.fpcomplete.com/user/edwardk/cellular-automata
+https://www.fpcomplete.com/user/edwardk/cellular-automata/part-1
+https://www.fpcomplete.com/user/edwardk/cellular-automata/part-2
+https://www.fpcomplete.com/user/edwardk/cellular-automata/part-3
+
+http://www.youtube.com/watch?v=D6sva6hGJ-s
+  24:40 - problem with Store
+

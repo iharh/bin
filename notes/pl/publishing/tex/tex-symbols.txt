@@ -1,0 +1,8 @@
+http://detexify.kirelabs.org/classify.html
+
+\hookrightarrow
+  injection
+\rightsquigarrow
+  eta-reduction, pattern-calculus
+\leadsto
+  funcional dependencies

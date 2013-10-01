@@ -1,0 +1,3 @@
+netstat
+	-tulanp - show open ports
+

@@ -1,0 +1,16 @@
+a.xml:
+<root>
+	<el1>
+		<el2 errcnt="0"/>
+		<el2 errcnt="1"/>
+		<el2 errcnt="2"/>
+	</el1>
+</root>
+
+!!!
+-o "-----" -n -f -n -o "-----" -n
+
+> xml sel -t -m "root/el1/el2" -i "@errcnt > 0" -v "@errcnt" -n *.xml
+1
+2
+

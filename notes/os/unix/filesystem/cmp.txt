@@ -1,0 +1,8 @@
+cmp
+  finds the first difference
+
+comm
+  ???
+
+diff/patch
+

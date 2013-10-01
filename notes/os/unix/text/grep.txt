@@ -1,0 +1,1 @@
+grep "exception" --color=always a.txt | grep -v "no subscriptions refer to assertion" | grep -v "Overlimit original text"

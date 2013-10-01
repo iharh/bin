@@ -1,0 +1,2 @@
+Config (aliases) at
+  ~/.ssh/config

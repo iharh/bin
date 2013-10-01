@@ -1,0 +1,1 @@
+http://www.practicalweb.co.uk/blog/12/10/16/how-build-centos-6-base-box-vagrant

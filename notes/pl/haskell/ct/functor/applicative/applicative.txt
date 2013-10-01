@@ -1,0 +1,194 @@
+Applicative Functors:
+
+Ruegg - Applicative Functors in Haskell
+Powers - Applicative Functors (https://vimeo.com/31168331, https://vimeo.com/31518213)
+
+Applicative Functors Composition:
+
+http://ocharles.org.uk/blog/posts/2012-12-20-24-days-of-hackage-transformers.html
+http://cp.reddit.com/r/haskell/comments/156fjx/24_days_of_hackage_transformers/
+http://hackage.haskell.org/packages/archive/transformers/latest/doc/html/src/Data-Functor-Compose.html#Compose
+
+Traversable composition:
+http://ocharles.org.uk/blog/posts/2013-01-22-deriving-traversals.html
+
+Kmett:
+http://comonad.com/reader/2013/algebras-of-applicatives/
+http://comonad.com/reader/2012/abstracting-with-applicatives/
+
+Applicative-zip analogy
+http://stackoverflow.com/questions/15726733/simple-examples-to-illustrate-category-monoid-and-monad
+
+Applicative-lift
+http://stackoverflow.com/questions/14022791/what-is-control-applicative-lift-useful-for/14022871
+http://hackage.haskell.org/packages/archive/transformers/latest/doc/html/src/Control-Applicative-Lift.html
+
+
+
+I don't think I've ever written a project that didn't use this package. Once you learn how transformers work for the first time you find them in disguise everywhere in your previous code. That to me is the litmus test of a truly good abstraction: it naturally arises in people's code even when they are unaware of it.
+
+    permalink
+    save
+
+[+]ithika 13 points14 points15 points 20 days ago  (0 children)
+
+[–]ithika 13 points14 points15 points 20 days ago
+
+    transformers ... in disguise
+
+Carry on.
+
+    permalink
+    save
+    parent
+
+[+]tr0lltherapy 15 points16 points17 points 20 days ago* (0 children)
+
+[–]tr0lltherapy 15 points16 points17 points 20 days ago*
+
+this series is the best haskell educational material since LYAH
+
+    permalink
+    save
+
+[+]onmach 6 points7 points8 points 20 days ago  (0 children)
+
+[–]onmach 6 points7 points8 points 20 days ago
+
+Oh cool, a package I already know and understand, surely nothing new here. Learned something new anyways (Functor composition).
+
+    permalink
+    save
+
+[+]FidgetBoy 2 points3 points4 points 20 days ago  (4 children)
+
+[–]FidgetBoy 2 points3 points4 points 20 days ago
+
+  newtype Merge e a = Merge (Compose ((->) (MergeScope e)) Maybe a)
+    deriving (Functor, Applicative)
+
+Can someone explain this to me? Or link me to someone else's explanation/documentation :) Specifically, what does the (->) represent? Doing :t (->) in ghci (quite predictably) results in a parse error. Is this some Haskell extension I've never heard of? Also, looking at the documentation for Compose, it's type is f (g a) -> Compose f g a, yet it takes 3 arguments in the example. Is this a case of forgetting parentheses, or is something else happening here?
+
+    permalink
+    save
+
+[+]sclv 3 points4 points5 points 20 days ago  (0 children)
+
+[–]sclv 3 points4 points5 points 20 days ago
+
+(->) is a type constructor, not a value constructor. It doesn't exist at the term level, and so can't have a type -- it already is a component of a type.
+
+On the other hand, we can get its kind.
+
+> :k Maybe
+Maybe :: * -> *
+> :k (->)
+(->) :: * -> * -> *
+
+    permalink
+    save
+    parent
+
+[+]MatrixFrog 2 points3 points4 points 20 days ago  (0 children)
+
+[–]MatrixFrog 2 points3 points4 points 20 days ago
+
+(->) is the type constructor for functions. (->) a b is a function that takes an a and returns a b. Also written a -> b of course.
+
+    permalink
+    save
+    parent
+
+[+]gcross 1 point2 points3 points 20 days ago  (0 children)
+
+[–]gcross 1 point2 points3 points 20 days ago
+
+First the Compose type takes three arguments, the type of the value that it contains is a function of these three arguments, and that happens to be (leaving out the field name):
+
+    newtype Compose f g a = Compose (f(g a))
+
+So in other worse, when Compose is being used in the context of types it takes three arguments, and when it is being used as a constructor in the context of values it takes a single argument with the type given above.
+
+Also, (->) is the type of functions; you presumably can't to :t (->) because it is built-in and so has special behavior.
+
+    permalink
+    save
+    parent
+
+[+]onmach 1 point2 points3 points 20 days ago* (0 children)
+
+[–]onmach 1 point2 points3 points 20 days ago*
+
+If you go
+
+:i Functor 
+
+you'll see ((->) a) is a functor. That means that for a function (a->b) you can fmap something and change b to whatever you want. So for example
+
+fmap show (+1) 
+
+will change
+
+Num a => a -> a 
+
+to
+
+Num a => a -> String
+
+To make it clearer, if you look at the definition of fmap:
+
+class Functor f where
+  fmap :: (a -> b) -> f a -> f b 
+
+And substitute in ((->) r) aka (r -> ?) for f, you get
+
+class Functor ((->) r) where
+  fmap :: (a -> b) -> (r -> a) -> (r -> b)
+
+    permalink
+    save
+    parent
+
+[+]johnharker 0 points1 point2 points 19 days ago  (1 child)
+
+[–]johnharker 0 points1 point2 points 19 days ago
+
+I'm confused by the use of runReaderT c $ do. From what I can tell the first argument to runReaderT is the ReaderT and the second argument is the environment you want available to the ReaderT. What am I missing?
+
+I've been experimenting with the use of ReaderT and I can't seem to reproduce the style in the article where runReaderT is given a ReaderT as the last argument via do. How am I using this wrong?
+
+    permalink
+    save
+
+[+]hammar 0 points1 point2 points 19 days ago  (0 children)
+
+[–]hammar 0 points1 point2 points 19 days ago
+
+Looks like an error in the article. It should be flip runReaderT c $ do ...
+
+    permalink
+    save
+    parent
+
+[+]aleator 1 point2 points3 points 17 days ago  (1 child)
+
+[–]aleator 1 point2 points3 points 17 days ago
+
+Silly question, but what do people use Control.Applicative.Lift for?
+
+I guess the whole transformers package could do with a metric ton of examples..
+
+    permalink
+    save
+
+[+]ocharles[S] 0 points1 point2 points 17 days ago  (0 children)
+
+[–]ocharles[S] 0 points1 point2 points 17 days ago
+
+Not a silly question at all, I'm on the hunt for answers now!
+http://cp.reddit.com/r/haskell/comments/156fjx/24_days_of_hackage_transformers/
+
+Kodumal - Scala Typeclassopedia
+
+Applicative - applies function to effectfull-args.
+You have one computation... At monads - you have multiple computations.

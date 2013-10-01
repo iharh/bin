@@ -1,0 +1,3 @@
+http://www.slideshare.net/debasishg/dependency-injection-in-scala-beyond-the-cake-pattern
+Spiewak - Cake Pattern -The Bakery from the Black Lagoon (http://marakana.com/s/post/1399/cake_pattern_bakery_from_the_black_lagoon_daniel_spiewak_ne_scala_video)
+

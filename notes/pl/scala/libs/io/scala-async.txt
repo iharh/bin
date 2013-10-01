@@ -1,0 +1,2 @@
+Haller - Scala Async - A New Way to Simplify Asynchronous Code (https://vimeo.com/66864872)
+

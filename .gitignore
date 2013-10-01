@@ -1,0 +1,10 @@
+.*.swp
+cmd/util/misc/.wcd/*
+cmd/wrk/*
+notes/wrk/*
+vagrant-boxes/*/.vagrant/*
+prj/cabal/*/dist/*
+prj/cabal/*/.cabal-sandbox/*
+prj/cabal/*/cabal.sandbox.config
+prj/sbt/*/target/*
+prj/sbt/*/project/target/*

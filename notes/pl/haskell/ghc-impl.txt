@@ -1,0 +1,21 @@
+Implementation:
+http://hackage.haskell.org/trac/ghc/wiki/ReadingList
+Mitchell - Transformation and Analysis of Functional Programs
+Jones - Implementing Functional Languages - a tutorial.pdf (better and smaller than old-book, p 46 - WHNF).
+Santos - Compilation by Transformation in Non-Strict Functional Languages phd
+Vries - Graph Reduction - The Implementation of Functional Languages slides
+
+Coercions:
+http://hackage.haskell.org/trac/ghc/wiki/IntermediateTypes
+http://hackage.haskell.org/trac/ghc/wiki/Commentary/Compiler/FC
+
+PatternCalculus:
+\rightsquigarrow
+
+Patterns (Typesafe, Combinators)
+http://hackage.haskell.org/package/first-class-patterns
+
+Parallel:
+http://www.cse.chalmers.se/edu/course/pfp/ - pfp2012
+
+

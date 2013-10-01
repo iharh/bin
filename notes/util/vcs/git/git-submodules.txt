@@ -1,0 +1,9 @@
+http://blogs.atlassian.com/2013/03/git-submodules-workflows-tips/
+
+git submodule
+  sync   - update .git/config based on .gitmodules
+  init
+  update
+
+
+git clone --recursive...

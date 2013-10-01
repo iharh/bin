@@ -1,0 +1,1 @@
+copy /Z \\tsclient\D\Welcome\Far3.zip .

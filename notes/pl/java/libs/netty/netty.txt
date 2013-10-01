@@ -1,0 +1,21 @@
+1. Raw ZeroCopy technique:
+
+http://www.ibm.com/developerworks/library/j-zerocopy/
+http://squirrel.pl/blog/2012/06/05/io-vs-nio-interruptions-timeouts-and-buffers/
+
+2. Netty
+
+http://www.slideshare.net/danbim/zerocopy-eventdriven-servers-with-netty
+http://www.slideshare.net/VictorCherkassky/netty-presentation
+http://www.slideshare.net/normanmaurer/netty4
+
+http://docs.jboss.org/netty/3.2/guide/pdf/netty.pdf
+- http://docs.jboss.org/netty/3.2/guide/html/architecture.html
+
+http://netty.io/wiki/related-articles.html
+
+http://seeallhearall.blogspot.com/2012/05/netty-tutorial-part-1-introduction-to.html
+http://seeallhearall.blogspot.com/2012/06/netty-tutorial-part-15-on-channel.html
+
+http://www.znetdevelopment.com/blogs/2009/04/21/netty-using-handlers/
+

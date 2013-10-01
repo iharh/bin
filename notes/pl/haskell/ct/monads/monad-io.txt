@@ -1,0 +1,7 @@
+http://stefan-klinger.de/files/monadGuide.pdf
+
+fun :: IO String
+fun = do n <- (readLn::IO Int) -- explicit type specifier
+
+Strict version:
+System.IO.Strict (readFile)

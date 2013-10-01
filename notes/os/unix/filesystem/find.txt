@@ -1,0 +1,19 @@
+find - util
+
+find . -name '*.c' -print
+	it is important to quote pattern (in order to avoid shell expansion).
+find . \( -name '*.exe' -or -name '*.obj' \) -print
+	-//- using -or
+
+-//- -exec rm {} ';'
+	-//- remove the found file ({} - parameter)
+	sometimes you can use -ok insead of -exec for per-item confirmation
+
+-//- -print | xargs rm
+	-//- another way to delete files
+Note: in order to protect from spaces in file names problem, use:
+find . -name '*.o' -print0 | xargs -0 rm
+	here 0 is an ASCII 0 separator
+
+
+

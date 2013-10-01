@@ -1,0 +1,3 @@
+JVM Internals:
+http://www.slideshare.net/dougqh
+

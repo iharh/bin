@@ -1,0 +1,21 @@
+sudo service network restart
+sudo chkconfig --list network
+
+tracepath
+traceroute
+
+route
+  to get a route table (!!! man route gives info about interesting files)
+
+ip
+  a lot of interesting stuff (route for example)
+
+DHCP:
+
+sudo dhclient eth0
+  ??? hangs
+
+/etc/sysconfig/network-scripts/ifcfg-eth0
+
+DHCP_HOSTNAME=epbygomw0024t1.gomel.epam.com
+

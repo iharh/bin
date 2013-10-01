@@ -1,0 +1,27 @@
+<project name="KnovaInstall" default="do-ftp">
+	<target name="do-ftp">
+		<ftp
+			action="put"
+
+			server="ftp.knova.com"
+			userid="cust_aol"
+			password="b8u5RuST"
+
+			passive="yes"
+			verbose="yes"
+
+			remotedir="7.2.11"
+		>
+			<fileset dir=".">
+				<include name="**/*.7z"/>
+			</fileset>
+		</ftp>
+	</target>
+
+	<target name="ftp-shutdown" depends="do-ftp">
+		<exec executable="shutdown"> <!-- .exe  dir="${install.server.dir}" -->
+			<arg line="-s -t 60 -f"/>
+			<!-- env key="KANISA_ADMIN" value="${install.server.dir}/ns${server.type}.xml"/ -->
+		</exec>
+	</target>
+</project>

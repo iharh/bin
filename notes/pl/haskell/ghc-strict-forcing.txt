@@ -1,0 +1,36 @@
+1. seq
+http://hackage.haskell.org/trac/ghc/wiki/Commentary/Compiler/SeqMagic
+
+
+2. kmett - Once
+https://www.fpcomplete.com/user/edwardk/snippets/once
+http://www.reddit.com/r/haskell/comments/1lo15w/deepseq_once/
+
+data Once a = Once () a
+
+runOnce :: Once a -> a
+runOnce (Once _ a) = a
+
+once :: NFData a => a -> Once a
+once a = Once (rnf a) a
+
+instance NFData (Once a) where
+  rnf (Once () _) = ()
+
+
+3. $!
+f $! x - behaves as normal application of f, but the top-level evaluation of
+         the argument expression x is forced before the function f is applied
+f x y  - could be one of:
+         (f $! x) y
+         (f x) $! y
+         (f $! x) $! y
+Ex:
+foldl'              :: (a -> b -> a) -> a -> [b] -> a
+foldl' f v []       = v
+foldl' f v (x : xs) = ((foldl' f) $! (f v x)) xs
+
+4. MagicHash, UnboxedTuples
+
+type STRep s a = State# s -> (# State# s, a #)
+

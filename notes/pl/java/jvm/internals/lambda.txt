@@ -1,0 +1,3 @@
+Project Lambda:
+http://zeroturnaround.com/labs/java-8-the-first-taste-of-lambdas (including bytecode with javap)
+

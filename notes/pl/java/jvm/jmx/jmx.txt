@@ -1,0 +1,31 @@
+if "%2"=="0"              set MGMT_PORT=5555
+if "%2"=="CC"             set MGMT_PORT=5554
+if "%2"=="QUERY"          set MGMT_PORT=5553
+if "%2"=="RECOMMENDATION" set MGMT_PORT=5552
+
+
+set MGMT_PORT=
+set MGMT_OPTIONS=
+
+if "%SERVER_ID%"=="KIndex_0" set MGMT_PORT=5555
+
+if ""%MGMT_PORT%""=="""" goto skipMgmt
+set MGMT_OPTIONS=-Dcom.sun.management.jmxremote.port=%MGMT_PORT% -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+
+:skipMgmt
+
+
+For Tomcat:
+
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=5555
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+
+
+For bat:
+set JMX_PORT=-Dcom.sun.management.jmxremote.port=5555
+set JMX_OPTIONS=-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+
+add %JMX_OPTIONS% to java.exe at appropriate bat file
+

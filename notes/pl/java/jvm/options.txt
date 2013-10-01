@@ -1,0 +1,10 @@
+To bypass the file system type check, set the -XX:+PerfBypassFileSystemCheck option on the java command line for both the
+applications you want to monitor and for the jvmstat tools. Setting this option for target applications is application
+specific. For the jvmstat tools, the following environment variable can be set before running any of the commands:
+set VMARGS=-XX:+PerfBypassFileSystemCheck
+
+_JAVA_LAUNCHER_DEBUG
+
+
+javac options:
+javac -Xpring classname

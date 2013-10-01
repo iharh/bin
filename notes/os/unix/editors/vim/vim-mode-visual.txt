@@ -1,0 +1,28 @@
+:h visual-mode
+	!!! a lot of usefull stuff
+:h v_
+	Help on all the keys in visual-mode
+:h v_b_
+	Help on all the keys in visual-block-mode
+
+vit-patter-without-first-v
+	use a/i and motion (w, ...) to select inside visual mode
+o
+	Toggle position of cursor in selection
+O
+	Switch to the other corner (for Visual-Block mode).
+u
+	Lowercase selection
+U
+	Uppercase selection
+r<sym>
+	Replace the selected text by single symbol <sym>
+!<cmd>
+	Replace the selection by the <cmd>-results
+=
+	Indent the selection
+~
+	Change the case in selection
+gq
+	Format/Wrap the selected text
+

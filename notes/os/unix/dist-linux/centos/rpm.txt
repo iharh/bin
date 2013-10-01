@@ -1,0 +1,1 @@
+rpm -qa | grep <your_str>

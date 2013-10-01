@@ -1,0 +1,58 @@
+CLB Reference Guide                       - 467..576..613..648..667..674..694
+                                            724..727..738..746..875..886..902..911..982..988..991
+CLB Presentation                          - 20:00 (Slide 23)
+
+URLs:
+http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Tutorial.html
+  Composability
+http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
+  http://www.tinyproxys.com/facebook.stackoverflow.com/questions/11532050/what-is-the-const-applicative-functor-useful-for
+
+http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversable.html#fmapDefault
+http://hackage.haskell.org/package/labeled-tree-1.0.0.0/docs/src/Data-LabeledTree.html#Tree
+
+http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
+
+Books:
+Chiusano - FP in Scala                    - 281..303
+Ibsen     - Camel in Action               - 215..237...461...501 (Ch 7 of 14)
+Cohn      - Agile Estimating and Planning - 152..167...255..307 (Ch 14 of 22)
+
+Articles:
+Maithilish - Apache Ivy Beginners Guide   -  11
+Kmett and Lenses                          -  slide 79 van Laarhoven Lenses
+
+Clildren:
+
+Video:
+Linux in a Real World 3                   -  21:30
+Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
+
+Audio:
+Grant                                     -  Ch 61
+Uzhankov                                  -1:04:00
+Gritz 1, 7-8                              -  04:00
+
+Magazines:
+ACCU - 115
+TMR  - 13 p57 - Comonad, l60 (http://themonadreader.wordpress.com/previous-issues/, cached)
+
+Old Haskell
+BirdGibbons - Understanding Idiomatic Traversals Backwards and Forwards
+Hutton  - A Tutorial on the Universality and Expressiveness of Fold - 11 (5.)
+Wadler - The Concatenate Wanishes
+Kothari - Cpp Templates Traits vs Haskell Type Classes
+Hughes - A Novel Representation of Lists and Its Application to the Function Reverse
+Hutton - Compact Fusion
+
+Old Video:
+lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
+
+Review:
+FP-People (Appel), Windows Access Control Demystified
+Erwig - A Generic Recursion Toolbox for Haskell (Or: Scrap Your Boilerplate Systematically)
+FP-Features-Folds
+FP-Features-CategoryTheoryBased-Applicative
+
+ToNote:
+Negus - Linux Bible - p74

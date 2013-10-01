@@ -1,0 +1,2 @@
+Sinyakov - Cpp11 (http://www.slideshare.net/adankevich/c11-15621074)
+

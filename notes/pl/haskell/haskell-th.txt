@@ -1,0 +1,4 @@
+monadloc:
+https://github.com/pepeiborra/monadloc
+http://hackage.haskell.org/cgi-bin/hackage-scripts/package/monadloc
+
