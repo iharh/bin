@@ -1,3 +1,7 @@
+yum search network | grep manager
+su -
+yum remove NetworkManager
+
 sudo service network restart
 sudo chkconfig --list network
 
@@ -18,4 +22,27 @@ sudo dhclient eth0
 /etc/sysconfig/network-scripts/ifcfg-eth0
 
 DHCP_HOSTNAME=epbygomw0024t1.gomel.epam.com
+
+other stuff here:
+DEVICE="eth0"
+BOOTPROTO=??? none
+  to disable boot protocol
+NM_CONTROLLED="no"
+  network-manager controlled
+ONBOOT="yes"
+TYPE="Ethernet"
+NETWORK=<ip-net>
+  the address of the network
+NETMASK=<ip-mask>
+IPADDR=<ip-addr>
+
+/etc/sysconfig/network
+
+NETWORKER=yes
+HOSTNAME=...
+GATEWAY=<ip-gateway>
+
+/etc/resolv.conf
+
+nameserver <ip-nameserver>
 

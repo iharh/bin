@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/11245183/importance-of-isomorphic-functions/

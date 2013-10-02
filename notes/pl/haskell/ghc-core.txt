@@ -43,7 +43,10 @@ http://www.haskellforall.com/2012/10/hello-core.html
 http://blog.ezyang.com/2011/04/tracing-the-compilation-of-hello-factorial/
 http://ics.p.lodz.pl/~stolarek/blog/2013/01/taking-magic-out-of-ghc-or-tracing-compilation-by-transformation/
 http://lambda.jstolarek.com/2013/01/taking-magic-out-of-ghc-or-tracing-compilation-by-transformation/
+
 http://alpmestan.com/2013/06/27/ghc-core-by-example-episode-1/
+http://alpmestan.com/2013/10/01/ghc-core-by-example-episode-2-evaluation/
+https://github.com/alpmestan/oh-my-laziness/blob/master/oh-my-laziness.md
 
 StackOverflow:
 http://stackoverflow.com/questions/6121146/reading-ghc-core

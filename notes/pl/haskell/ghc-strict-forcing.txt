@@ -1,3 +1,7 @@
+Options:
+-funbox-strict-fields
+  http://www.haskell.org/ghc/docs/latest/html/users_guide/pragmas.html#unpack-pragma
+
 1. seq
 http://hackage.haskell.org/trac/ghc/wiki/Commentary/Compiler/SeqMagic
 
