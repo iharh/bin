@@ -44,13 +44,15 @@ if [ -f ~/clb.bashrc ]; then
         source ~/clb.bashrc
 fi
 
-
 Install prerequisites:
 
-sudo yum install man vim svn dos2unix
+sudo yum install man vim dos2unix
+sudo yum remove svn
+
+Install WanDisco svn client...
+
 
 ??? sudo yum --enablerepo=centosplus install
-yum repolist
 
 Kernell:
 yum install kernel-devel
@@ -60,12 +62,7 @@ yum update kernel
 install java:
 http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html
 
-put jdk rpm to /vagrant share and run:
-
-sudo rpm -ivh /vagrant/jdk-<ver>-linux-x64.rpm
-sudo rpm -Uvh /vagrant/jdk-<ver>-linux-x64.rpm
-
-sudo rpm -ivh /media/sf_/vagrant/jdk-<ver>-linux-x64.rpm
+sudo rpm -ivh jdk-<ver>-linux-x64.rpm
 
 uninstall java:
 http://www.java.com/en/download/help/linux_uninstall.xml
@@ -73,7 +70,6 @@ http://www.java.com/en/download/help/linux_uninstall.xml
 rpm -qa | grep jdk
   should be something ending with *-fcs.*"
 rpm -e jre-<version>-fcs
-
 
 install ant:
 wget http://ftp.byfly.by/pub/apache.org/ant/binaries/apache-ant-1.9.2-bin.tar.gz

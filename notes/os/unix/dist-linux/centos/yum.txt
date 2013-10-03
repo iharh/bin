@@ -1,0 +1,13 @@
+yum install <package>
+yum remove|erase <package>
+  search
+  list|info
+
+Repositories:
+
+yum repolist
+
+Files:
+
+ll /etc/yum.repos.d/
+

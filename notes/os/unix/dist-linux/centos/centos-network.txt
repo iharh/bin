@@ -36,6 +36,9 @@ NETWORK=<ip-net>
 NETMASK=<ip-mask>
 IPADDR=<ip-addr>
 
+MASTER=bond0
+SLAVE=yes
+
 /etc/sysconfig/network
 
 NETWORKER=yes
@@ -45,4 +48,14 @@ GATEWAY=<ip-gateway>
 /etc/resolv.conf
 
 nameserver <ip-nameserver>
+
+
+!!! BOOT LOADING !!!
+/etc/modprobe.d/
+
+files for loading kernel modules
+bonding.conf:
+
+alias bond0 bonding
+options bond0 mode=6 miimon=100
 

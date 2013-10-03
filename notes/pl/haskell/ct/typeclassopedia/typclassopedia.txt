@@ -169,6 +169,7 @@ class (Functor t, Foldable t) => Traversable t where
 
 Impl:
 http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversable.html
+http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversable.html#fmapDefault
 
 Wiki:
 http://www.haskell.org/haskellwiki/Foldable_and_Traversable
@@ -177,6 +178,9 @@ StackOverflow-Traversable:
 http://stackoverflow.com/questions/14110671/do-traversables-really-require-to-be-traversed-left-to-right
 http://stackoverflow.com/questions/7460809/can-someone-explain-the-traverse-function-in-haskell
 http://stackoverflow.com/questions/6031805/how-to-map-over-applicative-form
+
+Samples:
+http://hackage.haskell.org/package/labeled-tree-1.0.0.0/docs/src/Data-LabeledTree.html#Tree
 
 
 8. Category
