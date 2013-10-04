@@ -7,6 +7,22 @@ Repositories:
 
 yum repolist
 
+Groups:
+
+yum grouplist
+
+yum groupinstall <group>
+yum grouplinfo   <group>
+
+interesting:
+   Development tools
+   Additional Development
+   Server Platform Development
+
+ui stuff
+   Desktop Platform Development
+
+
 Files:
 
 ll /etc/yum.repos.d/

@@ -167,6 +167,20 @@ class (Functor t, Foldable t) => Traversable t where
     sequence :: Monad m => t (m a) -> m (t a)
     sequence = mapM id
 
+StackOverflow-Traversable:
+http://stackoverflow.com/questions/7460809/can-someone-explain-the-traverse-function-in-haskell
+
+traverse turns things inside a Traversable into a
+  Traversable of things "inside" an Applicative,
+    given a function that makes Applicatives out of things.
+
+traverse is the loop. Its implementation depends on the data structure to be traversed.
+That might be a List, Tree, Maybe, Seq(ence), or anything that has a generic way of beeing traversed via sth. like a for-loop or recursive function.
+An Array would have a for-loop, a List a while-loop, a Tree either sth. recursive or the combination of a stack with a while-loop;
+but in functional languages you do not need these cumbersome loop commands:
+  you combine the inner part of the loop (in the shape of a function) with the data structure in a more directly manner and less verbose.
+  (Those imperative loops always remind me of design patterns in assembler.)
+
 Impl:
 http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversable.html
 http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversable.html#fmapDefault
@@ -174,14 +188,12 @@ http://hackage.haskell.org/packages/archive/base/latest/doc/html/Data-Traversabl
 Wiki:
 http://www.haskell.org/haskellwiki/Foldable_and_Traversable
 
-StackOverflow-Traversable:
-http://stackoverflow.com/questions/14110671/do-traversables-really-require-to-be-traversed-left-to-right
-http://stackoverflow.com/questions/7460809/can-someone-explain-the-traverse-function-in-haskell
-http://stackoverflow.com/questions/6031805/how-to-map-over-applicative-form
-
 Samples:
 http://hackage.haskell.org/package/labeled-tree-1.0.0.0/docs/src/Data-LabeledTree.html#Tree
 
+Laws:
+http://comments.gmane.org/gmane.comp.lang.haskell.libraries/17778
+http://stackoverflow.com/questions/14110671/do-traversables-really-require-to-be-traversed-left-to-right
 
 8. Category
 

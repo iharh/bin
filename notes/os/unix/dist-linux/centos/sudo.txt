@@ -1,0 +1,2 @@
+sudo -
+	become a superuser

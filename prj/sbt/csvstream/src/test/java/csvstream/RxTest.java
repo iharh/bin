@@ -14,7 +14,10 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
+import java.io.Writer;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+
 
 import java.util.List;
 import java.util.ArrayList;
@@ -39,10 +42,10 @@ public class RxTest {
 		}
 	}
 
-	private class StatObserver implements Observer<StatItem> {
+	private class StatWriteObserver implements Observer<StatItem> {
 		private CsvWriter w;
 
-		public StatObserver(CsvWriter w) throws IOException {
+		public StatWriteObserver(CsvWriter w) throws IOException {
 			this.w = w;
 			w.writeRecord(new String [] {"RECORD_ID", "FREQ"});
 		}
@@ -66,25 +69,30 @@ public class RxTest {
 		}
 	}
 
-	private CsvWriter createCsvWriter(String name) throws FileNotFoundException {
-		return new CsvWriter(new BufferedWriter(new OutputStreamWriter(new FileOutputStream("D:\\" + name + ".csv"), UTF_8)), ',');
+	private Writer createOutWriter(String fileName) throws FileNotFoundException {
+		return new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName), UTF_8));
+	}
+
+	private Observer<StatItem> createStatWriteObserver(String name) throws IOException, FileNotFoundException {
+		return new StatWriteObserver(new CsvWriter(createOutWriter("D:\\" + name + ".csv"), ','));
 	}
 
 	@Test
 	public void test1() throws Exception {
-		final CsvWriter w1 = createCsvWriter("w1");
-		final CsvWriter w2 = createCsvWriter("w2");
-
-		final int IDS_SIZE = 6;
+		final int IDS_SIZE = 7;
 		List<StatItem> items = new ArrayList<StatItem>(IDS_SIZE);
 		for (int i = 0; i < IDS_SIZE; ++i)
 			items.add(new StatItem(i, i + 1));
 
-		// call .publish() to get ConnectableObservable
-		ConnectableObservable o = Observable.from(items).publish();
-		o.subscribe(new StatObserver(w1));
-		o.subscribe(new StatObserver(w2));
+		ConnectableObservable<StatItem> o = Observable.from(items).publish();
+		o.subscribe(createStatWriteObserver("w1"));
+		o.subscribe(createStatWriteObserver("w2"));
 		o.connect();
+
+		PrintWriter wt = new PrintWriter(createOutWriter("D:\\wt.txt"));
+		wt.print("a"); wt.print("b"); wt.println();
+		wt.println("def");
+		wt.close();
 
 		assertTrue(true);
     	}
