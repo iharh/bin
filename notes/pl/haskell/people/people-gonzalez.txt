@@ -55,7 +55,8 @@ Comonads:
 http://www.haskellforall.com/2013/02/you-could-have-invented-comonads.html
 
 Pipes:
-http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Control-Frame-Tutorial.html
+http://www.haskellforall.com/2013/10/manual-proofs-for-pipes-laws.html
+  https://github.com/Gabriel439/Haskell-Pipes-Library/blob/master/laws.md
 http://www.haskellforall.com/2013/09/pipes-40-simpler-types-and-api.html
 http://www.haskellforall.com/2013/05/pipes-330-folds-and-uniting-listt-with.html
 http://www.haskellforall.com/2013/03/pipes-32-listt-codensity-arrowchoice.html

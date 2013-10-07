@@ -1,0 +1,11 @@
+http://linux.die.net/man/8/update-alternatives
+
+Ubuntu:
+http://askubuntu.com/questions/233190/what-exactly-does-update-alternatives-do
+
+CentOS:
+http://www.lamolabs.org/blog/5562/5-minute-guide-to-using-the-alternatives-command-on-fedoracentosrhel/
+http://wiki.centos.org/HowTos/JavaDevelopmentKit
+
+Files:
+ls -l /etc/alternatives
