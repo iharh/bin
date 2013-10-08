@@ -4,24 +4,23 @@ CLB Presentation                          - 20:00 (Slide 23)
 
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Tutorial.html
-  Tricks
+  Appendix: Types
 
 http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
 
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Chiusano - FP in Scala                    - 290..303
-Ibsen     - Camel in Action               - 221..237...461...501 (Ch 7 of 14)
-Cohn      - Agile Estimating and Planning - 154..167...255..307 (Ch 14 of 22)
+Chiusano - FP in Scala                    - 295..303
+Ibsen     - Camel in Action               - 224..237...461...501 (Ch 7 of 14)
+Cohn      - Agile Estimating and Planning - 158..167...255..307 (Ch 14 of 22)
 
 Articles:
 Maithilish - Apache Ivy Beginners Guide   -  11
 Kmett and Lenses                          -  slide 79 van Laarhoven Lenses
 
 Video:
-Linux in a Real World 5                   -  02:00
-Raychaudhuri - Functional IO in Scala     -  32:00
+Linux in a Real World 6                   -  03:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
@@ -31,7 +30,6 @@ Gritz 1, 7-8                              -  04:00
 
 Magazines:
 ACCU - 115
-TMR  - 13 p57 - Comonad, l60 (http://themonadreader.wordpress.com/previous-issues/, cached)
 
 Old Haskell
 BirdGibbons - Understanding Idiomatic Traversals Backwards and Forwards
@@ -40,6 +38,7 @@ Wadler - The Concatenate Wanishes
 Kothari - Cpp Templates Traits vs Haskell Type Classes
 Hughes - A Novel Representation of Lists and Its Application to the Function Reverse
 Hutton - Compact Fusion
+Stewart - From Lists to Streams to nothing...
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
