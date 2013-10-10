@@ -78,6 +78,7 @@ http://www.haskellforall.com/2013/06/pipes-concurrency-120-behaviors-and.html
 http://www.haskellforall.com/2013/04/pipes-concurrency-100-reactive.html
 
 pipes-parse:
+http://www.haskellforall.com/2013/10/how-to-reimplement-conduit-parsing-api.html
 http://www.haskellforall.com/2013/06/pipes-parse-100-pushback-delimited.html
 
 pipes-bytestring:
