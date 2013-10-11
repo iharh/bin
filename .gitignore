@@ -1,4 +1,5 @@
 .*.swp
+derby.log
 cmd/util/misc/.wcd/*
 cmd/wrk/*
 notes/wrk/*

@@ -4,7 +4,7 @@ CLB Presentation                          - 20:00 (Slide 23)
 
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
-  Appendix: Types - pipes also provides polymorphic type synonyms with apostrophes at the end ...
+  Categories
 
 http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
 http://www.reddit.com/r/haskell/comments/1o0985/lenses_store_and_yoneda/
@@ -12,25 +12,25 @@ http://www.reddit.com/r/haskell/comments/1o0985/lenses_store_and_yoneda/
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Chiusano - FP in Scala                    - 301..303
-Ibsen     - Camel in Action               - 227..237...461...501 (Ch 7 of 14)
-Cohn      - Agile Estimating and Planning - 158..167...255..307 (Ch 14 of 22)
+Ibsen - Camel in Action                   - 229..237...461...501 (Ch 7 of 14)
+Cohn  - Agile Estimating and Planning     - 160..167...255..307 (Ch 14 of 22)
 
 Articles:
 Maithilish - Apache Ivy Beginners Guide   -  11
 Kmett and Lenses                          -  slide 79 van Laarhoven Lenses
 
 Video:
-Jones - Lenses - Compositional Data Acces -  20:00
+Jones - Lenses - Compositional Data Acces -  30:00
 Mitchell - Everyone Should Use a Generics -  10:00
 Bergmark - Compiling Haskell to JS        -  10:00
 Loh - Monads for Free                     -  10:00
+Stroustrup - The Essence of Cpp with Ex   -  06:00
 Linux in a Real World 6                   -  03:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
 Grant                                     -  Ch 61
-Uzhankov                                  -  40:00
+Uzhankov                                  -1:10:00
 Gritz 1, 7-8                              -  04:00
 
 Magazines:

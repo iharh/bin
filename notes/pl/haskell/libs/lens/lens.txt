@@ -10,10 +10,13 @@ http://google-opensource.blogspot.com/2012/10/lenses-folds-and-traversals-haskel
 OConnor - Functor is to Lens as Applicative is to Biplate - Introducing Multiplate
 
 
-
 http://www.haskellforall.com/2012/01/haskell-for-mainstream-programmers_28.html
 http://www.haskellforall.com/2013/05/program-imperatively-using-haskell.html
   http://habrahabr.ru/post/190442/
+
+http://fvisser.nl/post/2013/okt/11/why-i-dont-like-the-lens-library.html
+http://www.reddit.com/r/haskell/comments/1o6iqs/why_i_dont_like_the_lens_library/
+
 
 AdditIO
 http://adit.io/posts/2013-07-22-lenses-in-pictures.html
@@ -26,6 +29,7 @@ Visser - fclabels (https://vimeo.com/41098956)
 
 XML:
 http://hackage.haskell.org/package/xml-lens (https://github.com/fumieval/xml-lens)
+
 
 
 Samples:

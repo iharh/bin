@@ -8,6 +8,9 @@ instance Functor Identity where
 
 type Lens' s a = forall f. Functor f => (a -> f a) -> s -> f s
 
+-- set
+
+We need to go from (f s) to (s). Let's use Identity/runIdentity for that
 
 set :: forall s a. Lens' s a -> (a -> s -> s)
 
@@ -23,3 +26,77 @@ const x _ = x
 
 set :: forall s a. Lens' s a -> (a -> s -> s)
 set ln x = runIdentity . ln (Identity . const x)
+
+-- over
+
+Let's generalize what we've done with const - approach to arbitrary function f
+
+set  :: forall s a. Lens' s a ->  a       -> s -> s
+over :: forall s a. Lens' s a -> (a -> a) -> s -> s
+
+set  ln x = runIdentity . ln (Identity . const x)
+over ln f = runIdentity . ln (Identity . f      )
+
+over :: forall s a. Lens' s a -> (a -> a) -> s -> s
+over ln f = runIdentity . ln (Identity . f)
+
+-- view
+
+We need to go from (f s) to (a) ???
+
+set  :: forall s a. Lens' s a ->  a       -> s -> s
+view :: forall s a. Lens' s a             -> s -> s
+
+view :: forall s a. Lens' s a -> s -> s
+view = ???
+
+We need to go from (f s) to (a)... Let's pack (a) inside the (f).
+
+newtype Const v a = Const v
+
+getConst :: Const v a -> v
+getConst (Const x) = a
+
+instance Functor (Const v) where
+  fmap f (Const x) = Const x  -- (Const v) functor ignores its argument a
+
+
+view :: forall s a. Lens' s a -> s -> s
+view ln s = getConst (ln Const s)  -- here we using  Const :: a -> Const a a
+
+-- Edward would write it
+
+view :: forall s a. Lens' s a -> s -> s
+view ln = getConst . ln Const
+
+-- Example: Lens construction
+
+type Lens' s a = forall f. Functor f => (a -> f a) -> s -> f s
+
+data Person = P { _name :: String, _salary :: String }
+
+name :: Lens' Person String
+-- name :: Functor f => (String -> f String) -> Person -> f Person
+
+name elt_fn (P n s) = fmap (\n' -> P n' s) (elt_fn n)
+
+1. elt_fn :: String -> f String  -- :: a -> fa
+
+2. fmap :: Functor f => (a -> b) -> f a -> f b
+
+3. (\n' -> P n' s) :: String -> Person  -- This function is like a data structure with a hole in it
+
+4. (elt_fn n) :: f String
+
+name elt_fn (P n s) = (\n' -> P n' s) <$> (elt_fn n)  -- (<$>) = fmap in Data.Functor
+
+-- ... Lens usage
+
+> let fred = P { _name = "Fred", _salary = 100 }
+
+> view name
+"Fred"
+
+> set name "Bill" fred
+P { _name = "Bill", _salary = 100 }
+

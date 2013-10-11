@@ -1,5 +1,11 @@
-Patridge - http://www.slideshare.net/nkpart/scala-implicits
-http://www.slideshare.net/shinolajla/taxonomy-ofscala?from_search=13
+Patridge:
+http://www.slideshare.net/nkpart/scala-implicits
+Wyatt:
+http://www.slideshare.net/DerekWyatt1/scala-implicits-not-to-be-feared
+Allen:
+http://www.slideshare.net/shinolajla/taxonomy-ofscala
+
+http://www.slideshare.net/futurespective/23-implicits-12236589
 
 1. Implicit parameters
 
