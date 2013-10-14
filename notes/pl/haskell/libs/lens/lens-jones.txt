@@ -73,7 +73,7 @@ view ln = getConst . ln Const
 
 type Lens' s a = forall f. Functor f => (a -> f a) -> s -> f s
 
-data Person = P { _name :: String, _salary :: String }
+data Person = P { _name :: String, _salary :: Int }
 
 name :: Lens' Person String
 -- name :: Functor f => (String -> f String) -> Person -> f Person
@@ -99,4 +99,52 @@ name elt_fn (P n s) = (\n' -> P n' s) <$> (elt_fn n)  -- (<$>) = fmap in Data.Fu
 
 > set name "Bill" fred
 P { _name = "Bill", _salary = 100 }
+
+
+-- How does things work ???
+
+view name (P { _name = "Fred", _salary = 100 } )
+  -- inline view
+= getConst (name Const (P { _name = "Fred", _salary = 100 } ))
+  -- inline name
+= getConst (fmap (\n' -> P n' 100) (Const "Fred"))
+  -- fmap f (Const x) = Const x
+= getConst (Const "Fred")
+  -- getConst (Const x) = x
+= "Fred"
+
+Note: The newtype has no runtime cost
+      It just tells the "Functor f => " which functor dictionary to pass to 'ln'.
+
+-- Making lenses easily
+
+import Control.Lens.TH
+
+$(makeLenses ''Person)  -- expands to a lens for 'name' and one for 'salary'.
+
+
+-- Lenses composition
+
+Note: is just an ordinary functional composition
+
+data Person = P { _name :: String, _addr :: Address, _salary :: Int }
+
+data Address = A { _road :: String, _city :: String, _postcode :: String }
+
+
+$(makeLenses ''Person)
+$(makeLenses ''Address)
+
+setPostcode :: String -> Person -> Person
+setPostcode pc p = set (addr . postcode) pc s
+
+-- Line noise (infix operators)
+
+(.~) = set
+f $ x = f x
+
+setPostcode = addr.postcode .~ pc $ p
+
+-- What are the other usages of (Functor f) other than Const and Identity ???
+
 

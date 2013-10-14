@@ -1,5 +1,8 @@
 Abrahamson:
-https://www.fpcomplete.com/user/tel/basic-lensing (http://www.reddit.com/r/haskell/comments/1anf0n/school_of_haskellbasic_lensing/)
+http://www.reddit.com/r/haskell/comments/1obpxb/a_little_lens_starter_tutorial_school_of_haskell/
+  https://www.fpcomplete.com/user/tel/a-little-lens-starter-tutorial
+http://www.reddit.com/r/haskell/comments/1anf0n/school_of_haskellbasic_lensing/
+  https://www.fpcomplete.com/user/tel/basic-lensing 
 http://r6research.livejournal.com/23705.html
 
 https://www.fpcomplete.com/user/tel/lenses-from-scratch

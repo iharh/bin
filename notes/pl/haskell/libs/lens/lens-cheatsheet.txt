@@ -1,0 +1,3 @@
+http://www.reddit.com/r/haskell/comments/1oa9qx/beginners_cheatsheet_to_the_lens_library/
+http://www.haskell.org/haskellwiki/LensBeginnersCheatsheet
+
