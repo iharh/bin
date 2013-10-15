@@ -147,4 +147,116 @@ setPostcode = addr.postcode .~ pc $ p
 
 -- What are the other usages of (Functor f) other than Const and Identity ???
 
+-- Application (Virtual fields) --
 
+data Temp = T { _farenheit :: Float }
+
+$(makeLenses ''Temp)
+-- farenheit :: Lens Temp Float
+
+centigrade :: Lens Temp Float
+centigrade centi_fn (T faren)
+  = (\centi' -> T (cToF centi'))
+    <$> (centi_fn (fToC faren))
+
+cToF :: Float -> Float  -- Centigrade to Farenheit
+fToC :: Float -> Float  -- Farenheit to Centigrade
+
+-- the 'centigrade' field isn't "really there", 
+   but the centigrade lens is fully first class
+
+
+-- Application (invariants)
+
+data Time = T { _hours :: Int, _mins :: Int }
+
+- We want adding to mins to affect hours
+
+> let now = T { _hours = 3, _mins = 58 }
+> over mins (+ 4) now
+T { _hours = 4, _mins = 2 }
+
+mins :: Lens Time Int
+mins min_fn (T h m)
+  = wrap <$> (min_fn m)  -- (min_fn m) :: f Int
+  where
+    wrap :: Int -> Time
+    wrap m' | m' >= 60  = T (h + 1) (m' - 60)
+            | m'  < 0   = T (h - 1) (m' + 60)
+	    | otherwise = T h m'
+
+
+-- Application (Non-record data structures from Control.Lens.At)
+
+at :: Ord k => k -> Lens' (Map k v) (Maybe v)
+
+- Focus is the value for a key
+- Can be Nothing (key not mapped) or (Just v)
+
+at k mb_fn m
+  = wrap <$> (mb_fn mv)
+  where
+    mv = Map.lookup k m
+
+    wrap :: Maybe v -> Map k v
+    wrap (Just v') = Map.insert k v' m
+    wrap Nothing   = case mv of
+                       Nothing -> m
+		       Just _  -> Map.delete k m
+
+- at is a parameterized (by key k) lens
+
+
+-- Application (Bit fields from Data.Bits.Lens)
+
+bitAt :: Int -> Lens' Int Bool
+
+> view (bitAt 1) 3
+True
+> view (bitAt 1) 2
+True
+> view (bitAt 1) 5
+False
+
+bitAt :: Bits b => Int -> Lens' b Bool
+
+
+-- Application (Fumbling in deep data structures -- Web-scraper from hexpat-lens package)
+
+p ^.. _HTML' . to allNodes
+             . traverse . named "a"
+	     . traverse . ix "href"
+	     . filtered isLocal
+	     . to trimSpaces
+
+
+- The second great Edward's idea about generalization
+
+type Lens' s a = forall f. Functor f => (a -> f a) -> (s -> f s)
+
+- We have seen that we can instantiate 'f' in various ways
+- But what if we changed "Functor" ?
+
+type Traversal' s a = forall f. Applicative f => (a -> f a) -> (s -> f s)
+
+-- A Traversal is a lens with multiple foci (focuses)
+-- Traversal' s a   --- can point to multiple places withing a data structure.
+
+- What on earth is Applicative ?
+
+class Functor f => Applicative f where
+  pure  :: a -> f a
+  (<*>) :: f (a -> b) -> f a -> f b
+
+-- A bit like Monad but weaker
+
+class Monad m where
+  return :: a -> m a
+  (>>=)  :: m a -> (a -> m b) -> m b
+
+-- Every Monad is an Applicative
+
+  pure = return
+  mf <*> mx = do { f <- mf; x <- mx; return (f x) }
+
+- But not vice versa

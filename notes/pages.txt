@@ -7,31 +7,32 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 
 http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
-http://www.reddit.com/r/haskell/comments/1o0985/lenses_store_and_yoneda/
 http://www.reddit.com/r/haskell/comments/1obpxb/a_little_lens_starter_tutorial_school_of_haskell/
+  Prisms
 
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 230..237...461...501 (Ch 7 of 14)
+Ibsen - Camel in Action                   - 232..237...461...501 (Ch 7 of 14)
 Cohn  - Agile Estimating and Planning     - 160..167...255..307 (Ch 14 of 22)
 
 Articles:
-Maithilish - Apache Ivy Beginners Guide   -  11
+Maithilish - Apache Ivy Beginners Guide   -  13
 
 Video:
-Jones - Lenses - Compositional Data Acces -  40:30
-Loh - Monads for Free                     -  20:00
+Jones - Lenses - Compositional Data Acces -  52:36
+Loh - Monads for Free                     -  26:00
 Mitchell - Everyone Should Use a Generics -  10:00
-Bergmark - Compiling Haskell to JS        -  10:00
-Stroustrup - The Essence of Cpp with Ex   -  06:00
+Bergmark - Compiling Haskell to JS        -  15:00
+Polak - EDSL at Scrive                    -  11:00
+Stroustrup - The Essence of Cpp with Ex   -  13:00
 Linux in a Real World 6                   -  03:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
 Grant                                     -  Ch 61
 Uzhankov                                  -1:10:00
-Gritz 1, 7-8                              -  04:00
+Gritz 1, 7-8                              -  53:30
 
 Magazines:
 ACCU - 117

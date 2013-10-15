@@ -1,0 +1,27 @@
+http://olmex.blogspot.in/2012/04/ivy-beginners-guide.html
+http://olmexsoftdocs.appspot.com/
+
+<dependency .../>
+  transitive="false" - to avoid transitive resolution
+
+Ivycache
+by default is at $HOME/.ivy2
+
+<ivy:resolve> is automatically called by <ivy:cachepath ...>, <ivy:retrieve ...> if not directly specified.
+
+<ivy:retrieve .../>
+  sync="true" - to delete any extra files at lib dir
+  type="jar"  - to copy jar-artifacts only
+       "jar,bundle"
+  pattern="myfolder/[artifact]-[revision].[ext]" - change location where to put retrieved files
+    [organization]
+    [module]
+    [revision]
+    [artifact]
+    [type]
+    [ext]
+    [conf]
+
+
+ivysettings.xml
+  to override default settings
