@@ -13,14 +13,14 @@ http://www.reddit.com/r/haskell/comments/1obpxb/a_little_lens_starter_tutorial_s
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 232..237...461...501 (Ch 7 of 14)
+Ibsen - Camel in Action                   - 233..237...461...501 (Ch 7 of 14)
 Cohn  - Agile Estimating and Planning     - 160..167...255..307 (Ch 14 of 22)
 
 Articles:
-Maithilish - Apache Ivy Beginners Guide   -  13
+Maithilish - Apache Ivy Beginners Guide   -  17
 
 Video:
-Jones - Lenses - Compositional Data Acces -  52:36
+Jones - Lenses - Compositional Data Acces -  57:00
 Loh - Monads for Free                     -  26:00
 Mitchell - Everyone Should Use a Generics -  10:00
 Bergmark - Compiling Haskell to JS        -  15:00

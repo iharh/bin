@@ -260,3 +260,68 @@ class Monad m where
   mf <*> mx = do { f <- mf; x <- mx; return (f x) }
 
 - But not vice versa
+
+-- How does Applicative support multi-focus lenses ?
+
+data Address = A { _road :: String, _city :: String, _postcode :: String }
+
+Note: Reminder:
+
+road :: Lens' Address String
+road elt_fn (A r c p) = (\r' -> A r' c p) <$> (elt_fn r)
+
+-- (\r' -> A r' c p)  -- box with hole in it
+-- (elt_fn r)         -- thing to put in the hole
+
+
+type Traversal' s a = forall f. Applicative f => (a -> f a) -> (s -> f s)
+
+- Imagine a Traversal focusing on 'road' and 'city' (but not 'postcode').
+
+addr_strs :: Traversal' Address String
+addr_strs elt_fn (A r c p)
+  = ... (\r' c' -> A r' c' p) ... (elt_fn r) ... (elt_fn c) ...
+
+-- (\r' c' -> A r' c' p)  -- Box with two holes :: String -> String -> Address
+-- (elt_fn r) :: f String
+-- (elt_fn c) :: f String
+
+Note: fmap (<$>) isn't powerfull enough to feed the mentioned three pieces togeather.
+
+-- So, the final code is:
+
+type Traversal' s a = forall f. Applicative f => (a -> f a) -> (s -> f s)
+
+addr_strs :: Traversal' Address String
+addr_strs elt_fn (A r c p)
+  = pure (\r' c' -> A r' c' p) <*> (elt_fn r) <*> (elt_fn c)
+
+- In fact, you'll see code like this:
+addr_strs elt_fn (A r c p)
+  = (\r' c' -> A r' c' p) <$> (elt_fn r) <*> (elt_fn c)
+  
+Note:
+class Functor f => Applicative f where
+  pure  :: a -> f a
+  (<*>) :: f (a -> b) -> f a -> f b
+
+
+-- What can we do with Traversal ???
+
+- Reminder:
+
+over :: Lens' s a -> (a -> a) -> s -> s
+over ln f = runIdentity . ln (Identity . f)
+
+- Imagine instead ln :: Traversal' s a
+- Does that work ???
+
+over :: Traversal' s a -> (a -> a) -> s -> s
+over ln f = runIdentity . ln (Identity . f)
+
+- Yes, if Identity is an instance of Applicative, which it is.
+
+- So, our new over will apply the (a -> a) function to all the focuses (foci)
+
+!!! Just going from Functor to Applicative gives you a lenses with multiple focuses (foci)
+
