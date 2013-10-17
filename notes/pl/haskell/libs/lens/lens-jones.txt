@@ -1,3 +1,6 @@
+http://skillsmatter.com/podcast/scala/lenses-compositional-data-access-and-manipulation/
+http://gist.io/6923187
+
 17:17
 
 newtype Identity a = Identity { runIdentity :: a } 
@@ -325,3 +328,73 @@ over ln f = runIdentity . ln (Identity . f)
 
 !!! Just going from Functor to Applicative gives you a lenses with multiple focuses (foci)
 
+
+-- Very similar things with 'view'
+
+view :: Lens' s a -> (s -> a)
+view ln s = getConst (ln Const s)
+
+- Try replacing Lens with Traversable
+
+view :: Traversable' s a -> (s -> a)
+view ln s = getConst (ln Const s)
+
+- This obviously can't work (Why not?)
+- We need Const to be an instance of Applicative
+
+- The Applicative instance of Const requires element values to be a Monoid !
+
+~~~~
+class Monoid a where
+  mempty :: a
+  mappend :: a -> a -> a
+
+class Functor f => Applicative f where
+  pure  :: a -> f a
+  (<*>) :: f (a -> b) -> f a -> f b
+
+newtype Const v a = Const v
+
+getConst :: Const v a -> v
+getConst (Const x) = a
+
+instance Functor (Const v) where
+  fmap f (Const x) = Const x  -- (Const v) functor ignores its argument a
+~~~
+
+instance Monoid a => Applicative (Const a) where
+  pure x = Const mempty
+  (Const vf) <*> (Const va) = Const (vf 'mappend' va)
+
+> let fredA = A "71 Humberstone Rd" "Cambridge" "CB4 1JD"
+> view addr_strs fredA
+"71 HumberstoneRdCambridge"
+
+
+-- Lenses aren't abstract
+
+type Lens' s a = forall f. Functor f => (a -> f a) -> (s -> f s)
+
+- .. and not
+
+newtype Lens' s a = L (forall f. Functor f => (a -> f a) -> (s -> f s))
+
+- Lenses and traversal would not compose (or would require lots of different functions to compose)
+
+
+-- A real type of lenses (type-changing lenses)
+
+type Lens' s a = Lens s s a a
+
+type Lens s t a b = forall f. Functor f => (a -> f b) -> (s -> f t)
+
+-- over :: Lens' s a -> (a -> a) -> s -> s
+
+over :: Profunctor p => Setting p s t a b -> p a b -> s -> t
+
+
+-- We extensively used the following to make amazing amount of abstractions:
+
+- The ability to abstract over type constructors (a lot of them a of a kind * -> *)
+- HigherRanked types (the lens themselves are polymorphic functions)
+- TypeClasses  

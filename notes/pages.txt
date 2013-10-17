@@ -8,20 +8,19 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
 
 http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
 http://www.reddit.com/r/haskell/comments/1obpxb/a_little_lens_starter_tutorial_school_of_haskell/
-  Prisms
+  Are there any other interesting Prisms? [Printer/Parsers]
 
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 233..237...461...501 (Ch 7 of 14)
+Ibsen - Camel in Action                   - 235..237...461...501 (Ch 7 of 14)
 Cohn  - Agile Estimating and Planning     - 160..167...255..307 (Ch 14 of 22)
 
 Articles:
 Maithilish - Apache Ivy Beginners Guide   -  17
 
 Video:
-Jones - Lenses - Compositional Data Acces -  57:00
-Loh - Monads for Free                     -  26:00
+Loh - Monads for Free                     -  35:00
 Mitchell - Everyone Should Use a Generics -  10:00
 Bergmark - Compiling Haskell to JS        -  15:00
 Polak - EDSL at Scrive                    -  11:00
