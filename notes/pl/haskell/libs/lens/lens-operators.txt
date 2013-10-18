@@ -1,0 +1,4 @@
+http://hackage.haskell.org/package/lens/docs/Control-Lens-Operators.html
+
+(^..) :: s -> Getting (Endo [a]) s a -> [a]
+s ^.. l = toListOf l s
