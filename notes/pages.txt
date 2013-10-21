@@ -6,28 +6,32 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 
-http://twanvl.nl/blog/haskell/cps-functional-references (+Kmett slides from 26, 43, 52-55)
-http://www.reddit.com/r/haskell/comments/1obpxb/a_little_lens_starter_tutorial_school_of_haskell/
-  https://www.fpcomplete.com/user/tel/a-little-lens-starter-tutorial#what-are-isos-
+http://twanvl.nl/blog/haskell/cps-functional-references
 
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 238..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 163..167...255..307 (Ch 14 of 22)
+Ibsen - Camel in Action                   - 239..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 165..167...255..307 (Ch 14 of 22)
 
 Articles:
-Maithilish - Apache Ivy Beginners Guide   -  21
+Maithilish - Apache Ivy Beginners Guide   -  23
 http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 
 Video:
-Loh - Monads for Free                     -  40:00
-Bergmark - Compiling Haskell to JS        -  20:00
-Polak - EDSL at Scrive                    -  17:00
+Bergmark - Compiling Haskell to JS        -  26:00
+Polak - EDSL at Scrive                    -  25:00
 Mitchell - Everyone Should Use a Generics -  15:00
-Stroustrup - The Essence of Cpp with Ex   -  21:00
+
+Kluchnikov - Dependent Types              -  17:00
+
+Stroustrup - The Essence of Cpp with Ex   -  32:00
+Carruth - The Care and Feeding of Cpp Dra -  10:00
+Parent - Cpp Seasoning                    -  02:00
+Parent - Inheritance is the Base Class .. -  03:00
 Linux in a Real World 6                   -  15:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
+
 
 Audio:
 Grant                                     -  Ch 61

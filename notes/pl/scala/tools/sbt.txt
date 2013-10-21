@@ -4,6 +4,7 @@ Hinojosa - Testing in Scala
 console
 	launch a repl
 
+http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html
 http://twitter.github.com/scala_school/sbt.html
 
 Common Commands
@@ -67,3 +68,20 @@ Test tags (for test-only after --)
   -n include by the name-of-tag/tags
   -l exclude -//-
 
+Keys:
+http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#keys
+http://www.scala-sbt.org/release/sxr/sbt/Keys.scala.html
+http://www.scala-sbt.org/release/docs/Getting-Started/More-About-Settings.html#computing-a-value-based-on-other-keys-values
+http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#keys-in-sbt-interactive-mode
+  show <taskName>
+
+Tasks:
+
+sbt tasks
+
+http://www.scala-sbt.org/release/docs/Detailed-Topics/Tasks
+
+Log Messages:
+http://www.scala-sbt.org/release/docs/Howto/logging.html
+
+	last <task>
