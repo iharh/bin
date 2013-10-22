@@ -1,6 +1,6 @@
 .*.swp
 derby.log
-cmd/util/misc/.wcd/*
+cmd/util/misc/.*/*
 cmd/wrk/*
 notes/wrk/*
 vagrant-boxes/*/.vagrant/*

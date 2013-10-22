@@ -1,2 +1,13 @@
 Sinyakov - Cpp11 (http://www.slideshare.net/adankevich/c11-15621074)
+  slide 71
+
+From Meyers:
+std::move    is an unconditional cast to r-val
+std::forward ...     conditional ...
+
+The better name for std::move will be rvalue_cast
+
+
+decltype(auto) - for return type
+
 

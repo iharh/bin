@@ -2,3 +2,5 @@ http://www.codeproject.com/Articles/650289/TMPP-Template-Metaprogramming-Program
 
 mpllibs (Sinkovics)
 
+http://www.slideshare.net/ReggieM/practical-meta-programming
+
