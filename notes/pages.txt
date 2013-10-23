@@ -6,35 +6,34 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 
-http://twanvl.nl/blog/haskell/cps-functional-references
-
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 240..280...461...501 (Ch 8 of 14)
+Ibsen - Camel in Action                   - 242..280...461...501 (Ch 8 of 14)
 Cohn  - Agile Estimating and Planning     - 165..167...255..307 (Ch 14 of 22)
 
 Articles:
+Kothari - Cpp Templates Traits vs Haskell - 0
+Hutton  - A Tutorial on the Universality  - 0
 http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 
 Video:
-Mitchell - Everyone Should Use a Generics -  25:00
-Marlow - The Haxl Project at Facebook     -  14:00
+Marlow - The Haxl Project at Facebook     -  22:00
 
-Stroustrup - The Essence of Cpp with Ex   -  44:00
-Carruth - The Care and Feeding of Cpp Dra -  28:00
-Wong - Cpp14 through the Looking Glass    -  20:00
+Stroustrup - The Essence of Cpp with Ex   -  58:00
+Carruth - The Care and Feeding of Cpp Dra -  41:30
+Wong - Cpp14 through the Looking Glass    -  40:00
+Sutter - One Cpp                          -  30:00
 Meyers - An Effective Cpp                 -  08:00
-Sutter - One Cpp                          -  05:00
-Parent - Cpp Seasoning                    -  02:00
+Parent - Cpp Seasoning                    -  08:00
 Parent - Inheritance is the Base Class .. -  03:00
 
-Linux in a Real World 7                   -  01:00
+Linux in a Real World 7                   -  19:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
 Grant                                     -  Ch 61
-Uzhankov                                  -  00:00
+Uzhankov                                  -  33:00
 Gritz 1, 7-8                              -1:11:00
 
 Magazines:
@@ -42,11 +41,9 @@ ACCU - 117
 
 Old Haskell
 BirdGibbons - Understanding Idiomatic Traversals Backwards and Forwards
-Hutton  - A Tutorial on the Universality and Expressiveness of Fold - 11 (5.)
-Wadler - The Concatenate Wanishes
-Kothari - Cpp Templates Traits vs Haskell Type Classes
 Hughes - A Novel Representation of Lists and Its Application to the Function Reverse
 Hutton - Compact Fusion
+Wadler - The Concatenate Wanishes
 Stewart - From Lists to Streams to nothing...
 
 Old Video:

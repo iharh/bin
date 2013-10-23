@@ -18,7 +18,3 @@ libraryDependencies ++= Seq(
   "com.novocode"            % "junit-interface"  % "0.10"    % "test",
   "junit"                   % "junit"            % "4.11"    % "test"
 )
-
-lazy val hello1 = taskKey[Unit]("An example task")
-
-hello1 := { println("Hello 111!") }
