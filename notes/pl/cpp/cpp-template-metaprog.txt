@@ -1,6 +1,15 @@
+Joren Heit - TMPP: Template Metaprogramming Programming
 http://www.codeproject.com/Articles/650289/TMPP-Template-Metaprogramming-Programming
 
-mpllibs (Sinkovics)
+Josh Walker - make your compiler work for you
+http://accu.org/index.php/journals/424
 
+Aleksey Gurtovoy and David Abrahams. The boost c++ metaprogramming library.
+http://www.boost.org/libs/mpl/doc/paper/html/index.html
+
+mpllibs (Sinkovics)
+http://abel.web.elte.hu/mpllibs/metamonad/manual.html
+
+Reggie Meisler - Practical Meta-programming
 http://www.slideshare.net/ReggieM/practical-meta-programming
 
