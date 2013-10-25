@@ -59,10 +59,11 @@ yum install kernel-devel
 yum update kernel
 
 
-install java:
+install/upgrade java:
 http://docs.oracle.com/javase/7/docs/webnotes/install/linux/linux-jdk.html
 
 sudo rpm -ivh jdk-<ver>-linux-x64.rpm
+sudo rpm -Uvh jdk-<ver>-linux-x64.rpm
 
 uninstall java:
 http://www.java.com/en/download/help/linux_uninstall.xml

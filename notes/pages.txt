@@ -9,37 +9,34 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 243..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 169..177...255..307 (Ch 15 of 22)
+Ibsen - Camel in Action                   - 245..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 171..177...255..307 (Ch 15 of 22)
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 2
-Kothari - Cpp Templates Traits vs Haskell - 2 (2.1)
+BirdGibbons - Understand Idiom Traversals - 2 (3.)
+Kothari - Cpp Templates Traits vs Haskell - 4 (Ex 2)
 
 Video:
-Charles - On Pipes                        -  10:00
+Charles - On Pipes                        -  15:00
 
-Stroustrup - The Essence of Cpp with Ex   -1:11:00
-Sutter - One Cpp                          -1:15:30
-Carruth - The Care and Feeding of Cpp Dra -  59:30
+Carruth - The Care and Feeding of Cpp Dra -1:17:30
 Wong - Cpp14 through the Looking Glass    -  47:00
 Meyers - An Effective Cpp                 -  08:00
 Parent - Cpp Seasoning                    -  16:25
 Parent - Inheritance is the Base Class .. -  03:00
 
-Linux in a Real World 8                   -  09:00
+Linux in a Real World 9                   -  09:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
 Grant                                     -  Ch 62
-Uzhankov                                  -1:06:00
 Gritz 1, 7-8                              -1:11:00
 
 Magazines:
 ACCU - 117
 
 Articles to Read:
-BirdGibbons - Understanding Idiomatic Traversals Backwards and Forwards
+Hutton  - A Tutorial on the Universality
 Hughes - A Novel Representation of Lists and Its Application to the Function Reverse
 Hutton - Compact Fusion
 Wadler - The Concatenate Wanishes

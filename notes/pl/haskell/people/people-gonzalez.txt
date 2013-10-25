@@ -1,6 +1,5 @@
 http://www.haskellforall.com/2013/06/the-resource-applicative.html
 
-
 Tutorials:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Control-Proxy-Tutorial.html
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Control-Proxy-Synonym.html
@@ -116,4 +115,6 @@ http://stackoverflow.com/questions/14192018/pipes-3-0-non-linear-topologies/
 http://stackoverflow.com/questions/14327327/dependency-injection-in-haskell-solving-the-task-idiomatically
 http://stackoverflow.com/questions/13920695/what-is-the-connection-between-iteratees-and-frp/
 
+Chemistry:
+http://www.haskellforall.com/2013/10/an-all-atom-protein-search-engine.html
 
