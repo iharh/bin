@@ -9,28 +9,27 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 245..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 171..177...255..307 (Ch 15 of 22)
+Ibsen - Camel in Action                   - 246..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 173..177...255..307 (Ch 15 of 22)
 
 Articles:
-BirdGibbons - Understand Idiom Traversals - 2 (3.)
-Kothari - Cpp Templates Traits vs Haskell - 4 (Ex 2)
+BirdGibbons - Understand Idiom Traversals - 3 ()
+Kothari - Cpp Templates Traits vs Haskell - 10 (3)
 
 Video:
-Charles - On Pipes                        -  15:00
+Charles - On Pipes                        -  20:30
 
-Carruth - The Care and Feeding of Cpp Dra -1:17:30
-Wong - Cpp14 through the Looking Glass    -  47:00
-Meyers - An Effective Cpp                 -  08:00
-Parent - Cpp Seasoning                    -  16:25
+Parent - Cpp Seasoning                    -1:05:37
 Parent - Inheritance is the Base Class .. -  03:00
+Sutter - My Favorite Cpp 10 Liner         -  07:00
+Meyers - An Effective Cpp                 -  08:00
 
 Linux in a Real World 9                   -  09:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
 Grant                                     -  Ch 62
-Gritz 1, 7-8                              -1:11:00
+Gritz 1, 7-8                              -1:29:00
 
 Magazines:
 ACCU - 117
