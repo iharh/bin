@@ -201,9 +201,30 @@ instance Traversable Tree where
   traverse f (Bin u v) = pure Bin <*> traverse f u <*> traverse f v
 
 
+newtype Identity a = Identity { runIdentity :: a }
+
+instance Applicative Identity where
+  pure x                    = Identity x
+  Identity f <*> Identity x = Identity (f x)
+
+
+data Compose m n a = Compose (m (n a))
+
+instance (Applicative m, Applicative n) => Applicative (Compose m n) where
+  pure x                    = Compose (pure (pure x))
+  Compose mf <*> Compose mx = Compose (pure (<*>) <*> mf <*> mx)
+
+We can introduce an idiomatic composition operator:
+
+(<.>) :: (Applicative m, Applicative n) => (b -> n c) -> (a -> m b) -> a -> Compose m n c
+g <.> f = Compose . imap g . f
+
+-- imap is an fmpa for Idiom (Applicative)
+
 Laws:
 http://comments.gmane.org/gmane.comp.lang.haskell.libraries/17778
 http://stackoverflow.com/questions/14110671/do-traversables-really-require-to-be-traversed-left-to-right
+BirdGibbons - Understanding Idiomatic Traversals Backwards and Forwards
 
 8. Category
 

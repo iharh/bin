@@ -3,34 +3,33 @@ CLB Reference Guide                       - 467..576..613..648..667..674..694
 CLB Presentation                          - 20:00 (Slide 23)
 
 URLs:
+http://eax.me/haskell-exceptions/
+  Function bracket
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 247..280...461...501 (Ch 8 of 14)
+Ibsen - Camel in Action                   - 248..280...461...501 (Ch 8 of 14)
 Cohn  - Agile Estimating and Planning     - 173..177...255..307 (Ch 15 of 22)
 
 Articles:
-BirdGibbons - Understand Idiom Traversals - 3 (4.)
-Kothari - Cpp Templates Traits vs Haskell - 16 (3.5)
+BirdGibbons - Understand Idiom Traversals - 4 (5.)
+Kothari - Cpp Templates Traits vs Haskell - 18 (3.5)
+Overload111 - Meyers - URefs in C++11     - 9..13
 
 Video:
-Charles - On Pipes                        -  33:00
-
-Meyers - An Effective Cpp                 -  26:30
-Alexandrescu - Writing Quick Code Cpp     -  40:00
-Lavavej - Dont Help the Compiler          -  09:00
-Brumer - Compiler Confidential            -  05:00
+Lavavej - Dont Help the Compiler          -  34:00
+Brumer - Compiler Confidential            -  16:00
 Radigan - CompilerPP                      -  03:00
 
-Linux in a Real World 10                  -  01:00
+Linux in a Real World 10                  -  14:00
 Lavavej - Type Traits                     -  09:00 (need to note an integral_constant)
 
 Audio:
-Grant                                     -  Ch 62
 Gritz 1, 7-8                              -1:29:00
+Grant                                     -  Ch 62
 
 Magazines:
 ACCU - 117

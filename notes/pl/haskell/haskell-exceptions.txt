@@ -5,6 +5,10 @@ Articles:
 Wadler - How to replace failure by a list of success
 Stewart - Scripting with Types (http://donsbot.files.wordpress.com/2009/01/semicolon.pdf)
 
+Blogs:
+http://eax.me/haskell-exceptions/
+!!! Control.Exception is the current module, all the other are obsolete
+
 StackOverflow:
 Marlow-ParallelAndConcurrentProgrammingInHaskell
 http://stackoverflow.com/questions/18052619/how-do-i-correctly-use-control-exception-catch-in-haskell

@@ -1,6 +1,12 @@
 Sinyakov - Cpp11 (http://www.slideshare.net/adankevich/c11-15621074)
   slide 71
 
+******
+* URefs, RVals and move semantics
+******
+
+http://thbecker.net/articles/auto_and_decltype/section_01.html
+
 From Meyers:
 std::move    is an unconditional cast to r-val
   the better name for std::move will be rvalue_cast
@@ -56,3 +62,69 @@ Widget w;
 logAndProcess(w);            // call with lval
 logAndProcess(std::move(w)); // call with rval
 
+******
+* Exceptions
+******
+
+void someFunc() noexcept; // more optimization opportunities
+
+... maybe unwind a stack in case of exception (offers compiler writers more optimization opprotunities)...
+
+
+Ex 1.
+
+If during mem-allocation one of the elt-move-ctor throws the exception, we just have a basic (not strong ex.guarantee).
+
+For strong-guarantee, only non-throwing move acceptable
+std::vector::push_back uses std::move_if_noexcept
+-> cast to RVal only if T's move know to not throw.
+   ... or we don't have a copy c-tor (move c-tor can throw)
+
+noexcept declaration is an INTERFACE promise (not just a current impl)
+
+noexcept stands for
+  notexcept(true)
+
+noexcept(false)
+  not guarantee not to throw
+
+This is usefull for conditional ex-safety guarantee (at templates)
+
+noexcept is also an operator:
+
+tepmpate <typename T>
+void f(T && param) noexcept(noexcept(*param));
+
+***********
+* Threads *
+***********
+
+RAAI class for std::thread
+
+class ThreadRAAI
+{
+public:
+  typedef void (std::thread::*RAAIAction)(); // d-tor action
+
+  ThreadRAAI(std::thread &&thread, RAAIAction a)
+  : t(std::move(thread)), action(a) {}
+
+  ~ThreadRAAI()
+  { if (t.joinable()) (t.*action)(); } // need to do more protection for race cond
+
+private:
+  RAAIAction action;
+  std::thread t;
+};
+
+ThreadRAAI t1(std::thread(doThisWork), &std::thread::join); // join on destruction
+
+Note: Boost has an RAAI answer !!!
+
+*************
+* decltypes *
+*************
+
+https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/introduction_to_the_c_11_feature_trailing_return_types
+https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/c_11_the_decltype_specifier_part_i
+https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/c_11_the_decltype_specifier_part_ii
