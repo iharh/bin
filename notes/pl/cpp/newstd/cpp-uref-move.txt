@@ -1,0 +1,88 @@
+******
+* URefs, RVals and move semantics
+******
+
+http://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers
+http://thbecker.net/articles/rvalue_references/section_01.html
+http://blog.smartbear.com/development/c11-tutorial-explaining-the-ever-elusive-lvalues-and-rvalues
+http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/
+
+From Meyers:
+std::move    is an unconditional cast to r-val
+  the better name for std::move will be rvalue_cast
+  std::move turns its arg to rval even if it isn't, and achieves that by "hiding the name"
+
+std::forward ...     conditional ...
+  casts param to rval iff rval was passed in
+
+// conceptual impl at namespace std
+
+template<typename T>
+T &&forward(T &&param)
+{
+    if (is_lvalue_reference<T>::value)
+      return param
+    else
+      return move(param); // cast to rval
+}
+
+Universal ref - can become either lval or rval
+
+decltype(auto) - for return type
+
+Ex 1:
+
+class string {
+public:
+  ...
+  string &operator=(const string &rhs); // copy assignment
+  string &operator=(string &&rhs);      // move assignment
+  ...
+};
+
+void processAndAdd(const string s)
+{
+  ...
+  sds.name = std::move(s); // copies s! since s is declared as const
+  ...
+}
+
+Ex 2:
+
+void process(Widget &lvalParam);
+void process(Widget &&rvalParam);
+
+template<typename T>
+void logAndProcess(T &&param)
+{
+  ...
+  process(std::forward<T>(param));
+}
+
+Widget w;
+logAndProcess(w);            // call with lval
+logAndProcess(std::move(w)); // call with rval
+
+
+From Lavavej:
+don't return by &&
+don't return by const &
+(NOTE: RVO, NRVO optimizations do the job)
+
+
+From ... Becker:
+
+Derived(Derived &&rhs)
+: Base (std::move(rhs))  // !!! very important to cast to rval here, maybe using std::forward
+{
+  // other stuff
+}
+
+RVO (return value optimization)
+
+X foo()
+{
+  X x;
+  // ...
+  return x;  // !!! don't need to call std::move since compiler does RVO and would construct X object directly at the location of foo's return value
+}

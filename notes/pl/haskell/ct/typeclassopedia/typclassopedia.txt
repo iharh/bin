@@ -221,6 +221,21 @@ g <.> f = Compose . imap g . f
 
 -- imap is an fmpa for Idiom (Applicative)
 
+
+newtype Const a b = Const { getConst :: a }
+
+instance Monoid a => Applicative (Const a) where
+  pure x              = Const mempty
+  Const x <*> Const y = Const (mappend x y)
+
+Now we can define
+
+contents :: Traversable t => t a -> [a]
+contents = getConst . traverse (\x -> Const [x])
+
+Of cause, in the list monoid used here we have mempty = [] and mappend = ++
+
+
 Laws:
 http://comments.gmane.org/gmane.comp.lang.haskell.libraries/17778
 http://stackoverflow.com/questions/14110671/do-traversables-really-require-to-be-traversed-left-to-right

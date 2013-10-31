@@ -1,0 +1,4 @@
+http://cpp-next.com/archive/2010/07/algebraic-data-types/
+http://ericniebler.com/2013/07/16/f-algebras-and-c/
+  https://github.com/ericniebler/fpxx
+  https://code.google.com/p/catatonic/

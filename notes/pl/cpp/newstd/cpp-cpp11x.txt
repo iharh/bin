@@ -2,67 +2,6 @@ Sinyakov - Cpp11 (http://www.slideshare.net/adankevich/c11-15621074)
   slide 71
 
 ******
-* URefs, RVals and move semantics
-******
-
-http://thbecker.net/articles/auto_and_decltype/section_01.html
-
-From Meyers:
-std::move    is an unconditional cast to r-val
-  the better name for std::move will be rvalue_cast
-
-std::forward ...     conditional ...
-  casts param to rval iff rval was passed in
-
-// conceptual impl at namespace std
-
-template<typename T>
-T &&forward(T &&param)
-{
-    if (is_lvalue_reference<T>::value)
-      return param
-    else
-      return move(param); // cast to rval
-}
-
-Universal ref - can become either lval or rval
-
-decltype(auto) - for return type
-
-Ex 1:
-
-class string {
-public:
-  ...
-  string &operator=(const string &rhs); // copy assignment
-  string &operator=(string &&rhs);      // move assignment
-  ...
-};
-
-void processAndAdd(const string s)
-{
-  ...
-  sds.name = std::move(s); // copies s! since s is declared as const
-  ...
-}
-
-Ex 2:
-
-void process(Widget &lvalParam);
-void process(Widget &&rvalParam);
-
-template<typename T>
-void logAndProcess(T &&param)
-{
-  ...
-  process(std::forward<T>(param));
-}
-
-Widget w;
-logAndProcess(w);            // call with lval
-logAndProcess(std::move(w)); // call with rval
-
-******
 * Exceptions
 ******
 
@@ -128,3 +67,6 @@ Note: Boost has an RAAI answer !!!
 https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/introduction_to_the_c_11_feature_trailing_return_types
 https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/c_11_the_decltype_specifier_part_i
 https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e82276f3/entry/c_11_the_decltype_specifier_part_ii
+
+http://thbecker.net/articles/auto_and_decltype/section_01.html
+
