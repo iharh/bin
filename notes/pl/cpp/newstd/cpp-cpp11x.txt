@@ -1,3 +1,10 @@
+Books:
+Lippman - CPP Primer 5th ed
+  Ch 13, 16.2.6, 16.2.7
+Josuttis - Cpp Standard Library 2nd ed
+  Ch 3
+
+Presentations:
 Sinyakov - Cpp11 (http://www.slideshare.net/adankevich/c11-15621074)
   slide 71
 
@@ -70,3 +77,8 @@ https://www.ibm.com/developerworks/community/blogs/5894415f-be62-4bc0-81c5-3956e
 
 http://thbecker.net/articles/auto_and_decltype/section_01.html
 
+*************
+* static if *
+*************
+
+???
