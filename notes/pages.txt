@@ -9,19 +9,19 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 250..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 175..177...255..307 (Ch 15 of 22)
+Ibsen - Camel in Action                   - 251..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 179..188...255..307 (Ch 16 of 22)
 
 Articles:
-BirdGibbons - Understand Idiom Traversals - 6 (7.)
-Overload111 - Meyers - URefs in C++11     - 11..13
+BirdGibbons - Understand Idiom Traversals - 7 (8.)
+Overload111 - Meyers - URefs in C++11     - 12..13
 
 Video:
-Alexandrescu - Static If I Had a Hummer   -  30:52
+Lavavej - STL11 Magic and Secrets         -  03:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 7-8                              -1:39:00
+Gritz 1, 8                                -  01:00
 Grant                                     -  Ch 62
 
 Magazines:

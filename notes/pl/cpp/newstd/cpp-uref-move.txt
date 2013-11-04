@@ -86,3 +86,13 @@ X foo()
   // ...
   return x;  // !!! don't need to call std::move since compiler does RVO and would construct X object directly at the location of foo's return value
 }
+
+Ex 3. We use URef when there is a type-deduction, if there is no - we just about RRef
+
+void std::vector<Widget>::push_back(Widget &&x);  // no type-deduction needed, so - RRef
+
+template<class ...Args>
+void std::vector<Widget>::emplace_back(Args &&... args);  // type-deduction, so - URef
+
+
+

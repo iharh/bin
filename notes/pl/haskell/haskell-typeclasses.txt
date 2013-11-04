@@ -11,5 +11,7 @@ without having to thread the dictionary around manually.
 
 FakingIt (+Hinze)
 Kothari - Cpp Templates Traits vs Haskell Type Classes
-Overview - http://jeltsch.wordpress.com/2013/02/09/some-interesting-features-of-haskells-type-system/
+DosReis - What is Generic Programming (mostly for cpp)
+Overview
+  http://jeltsch.wordpress.com/2013/02/09/some-interesting-features-of-haskells-type-system/
 

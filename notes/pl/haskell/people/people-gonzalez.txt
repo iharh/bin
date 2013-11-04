@@ -105,6 +105,9 @@ http://www.haskellforall.com/2012/01/haskell-for-engineers-unicode.html
 Defaults:
 http://www.haskellforall.com/2013/04/defaults.html
 
+Test QuickCheck:
+http://www.haskellforall.com/2013/11/test-stream-programming-using-haskells.html
+
 
 Examples:
 http://www.haskellforall.com/2012/10/parsing-chemical-substructures.html
