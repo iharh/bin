@@ -57,6 +57,9 @@ instance Applicative [] where
 	pure x    = [x]
 	gs <*> xs = [ g x | g <- gs, x <- xs ]
 
+Note1: McBride and Paterson 2008, Ex 2
+  In the framework of sets and total functions every idiomatic expr can be written as
+    fure f <*> x1 <*> ... <*> xN,   where x1..xN are atomic effectful computations
 
 4. Monoid (Data.Monoid.Monoid):
 

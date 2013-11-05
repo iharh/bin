@@ -94,5 +94,17 @@ void std::vector<Widget>::push_back(Widget &&x);  // no type-deduction needed, s
 template<class ...Args>
 void std::vector<Widget>::emplace_back(Args &&... args);  // type-deduction, so - URef
 
+Ex 4.
 
+Reference collapsing is used for:
+- template arg deduction
+- auto-vars
+- decltypes
+
+Ex 5.
+
+template<class... Args>
+void emplace_back(Args &&... args);
+
+Appends a new element to the end of the container. The element is constructed in-place, i.e. no copy or move operations are performed.
 

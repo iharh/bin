@@ -9,23 +9,19 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 251..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 179..188...255..307 (Ch 16 of 22)
+Ibsen - Camel in Action                   - 252..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 181..188...255..307 (Ch 16 of 22)
 
 Articles:
-BirdGibbons - Understand Idiom Traversals - 7 (8.)
-Overload111 - Meyers - URefs in C++11     - 12..13
+BirdGibbons - Understand Idiom Traversals - 8 (9.)
 
 Video:
-Lavavej - STL11 Magic and Secrets         -  03:00
+Boehm - Threads and Shared Vars           -  01:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
 Gritz 1, 8                                -  01:00
 Grant                                     -  Ch 62
-
-Magazines:
-ACCU - 117
 
 Articles to Read:
 Hutton  - A Tutorial on the Universality
@@ -33,6 +29,9 @@ Hughes - A Novel Representation of Lists and Its Application to the Function Rev
 Hutton - Compact Fusion
 Wadler - The Concatenate Wanishes
 Stewart - From Lists to Streams to nothing...
+
+Magazines:
+ACCU - 117
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
