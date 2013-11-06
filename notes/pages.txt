@@ -9,14 +9,14 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 252..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 181..188...255..307 (Ch 16 of 22)
+Ibsen - Camel in Action                   - 253..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 183..188...255..307 (Ch 16 of 22)
 
 Articles:
 BirdGibbons - Understand Idiom Traversals - 8 (9.)
 
 Video:
-Boehm - Threads and Shared Vars           -  01:00
+Alexandrescu - Systematic Error Handling  -  10:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
