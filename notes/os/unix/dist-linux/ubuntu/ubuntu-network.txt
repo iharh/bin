@@ -2,8 +2,13 @@ sudo apt-cache search network | grep manager
 sudo su -
 sudo apt-get remove network-manager
 
+http://www.unixmen.com/change-hostname-ubuntu-13-10/
+
 /etc/hostname
   hostname
+/etc/hosts
+  127.0.0.1 localhost
+  127.0.1.1 your_new_hostname
 /etc/resolv.conf
   don't edit
 
