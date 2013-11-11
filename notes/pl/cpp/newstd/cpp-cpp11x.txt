@@ -5,41 +5,12 @@ Josuttis - Cpp Standard Library 2nd ed
   Ch 3
 
 Presentations:
-Sinyakov - Cpp11 (http://www.slideshare.net/adankevich/c11-15621074)
+Sinyakov - Cpp11
+  http://www.slideshare.net/adankevich/c11-15621074
   slide 71
 
-******
-* Exceptions
-******
-
-void someFunc() noexcept; // more optimization opportunities
-
-... maybe unwind a stack in case of exception (offers compiler writers more optimization opprotunities)...
-
-
-Ex 1.
-
-If during mem-allocation one of the elt-move-ctor throws the exception, we just have a basic (not strong ex.guarantee).
-
-For strong-guarantee, only non-throwing move acceptable
-std::vector::push_back uses std::move_if_noexcept
--> cast to RVal only if T's move know to not throw.
-   ... or we don't have a copy c-tor (move c-tor can throw)
-
-noexcept declaration is an INTERFACE promise (not just a current impl)
-
-noexcept stands for
-  notexcept(true)
-
-noexcept(false)
-  not guarantee not to throw
-
-This is usefull for conditional ex-safety guarantee (at templates)
-
-noexcept is also an operator:
-
-tepmpate <typename T>
-void f(T && param) noexcept(noexcept(*param));
+Johansen - STL:
+  http://sven-johannsen.de/slides/stl11_201311/stl11.html
 
 ***********
 * Threads *
@@ -82,3 +53,4 @@ http://thbecker.net/articles/auto_and_decltype/section_01.html
 *************
 
 ???
+

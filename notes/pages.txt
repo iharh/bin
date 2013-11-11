@@ -9,14 +9,14 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 255..280...461...501 (Ch 8 of 14)
+Ibsen - Camel in Action                   - 257..280...461...501 (Ch 8 of 14)
 Cohn  - Agile Estimating and Planning     - 185..188...255..307 (Ch 16 of 22)
 
 Articles:
-Huet - The Zipper                         - 2
+Huet - The Zipper                         - 3
 
 Video:
-Alexandrescu - Systematic Error Handling  -  10:00
+Alexandrescu - Systematic Error Handling  -1:07:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
