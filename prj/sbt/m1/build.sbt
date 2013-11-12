@@ -1,5 +1,5 @@
 // TODO: seems to be optional
-name := "comparator"
+name := "m1"
 
 version := "1.0-SNAPSHOT"
 

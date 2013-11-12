@@ -6,22 +6,22 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
-http://blog.ezyang.com/2010/04/you-could-have-invented-zippers/
 
 Books:
-Ibsen - Camel in Action                   - 257..280...461...501 (Ch 8 of 14)
+Ibsen - Camel in Action                   - 258..280...461...501 (Ch 8 of 14)
 Cohn  - Agile Estimating and Planning     - 185..188...255..307 (Ch 16 of 22)
 
 Articles:
-Huet - The Zipper                         - 3
+Huet - The Zipper                         - 4
 
 Video:
-Alexandrescu - Systematic Error Handling  -1:07:00
+http://www.ustream.tv/recorded/40685818   -  12:00
+Meyers - Universal References             -  01:30
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 8                                -  01:00
-Grant                                     -  Ch 62
+Gritz 1, 8                                -  46:30
+Grant                                     -  Ch 65
 Sedakova                                  -  20:00
 
 Articles to Read:
