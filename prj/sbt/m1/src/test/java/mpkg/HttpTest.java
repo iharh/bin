@@ -1,8 +1,5 @@
 package cmppkg;
 
-import com.thoughtworks.xstream.XStream;
-
-
 import org.apache.http.HttpEntity;
 import org.apache.http.util.EntityUtils;
 
@@ -16,43 +13,30 @@ import org.apache.http.client.utils.URIBuilder;
 // http://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html
 import java.net.URI;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 import java.io.Writer;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Reader;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
 
 import org.junit.Test;
 import org.junit.Ignore;
 
-
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-public class M1Test {
-    @Test
-    public void testXStream() throws Exception {
-        XStream xstream = new XStream();
 
-        Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(new File("D:\\oXStream.xml")), "utf8"));
-        ObjectOutputStream out = null;
-        try {
-            out = xstream.createObjectOutputStream(writer);
-            out.writeObject("abc");
-            out.writeObject("def");
-            out.writeObject(56);
-        } finally {
-            if (out != null) {
-                out.close();
-            }
-        }
+import static java.nio.charset.StandardCharsets.*;
 
-        assertTrue(true);
-    }
-
-    @Ignore
+public class HttpTest {
+    @Ignore 
     public void testHttp() throws Exception {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         String s1 = "ABC";
@@ -73,7 +57,7 @@ public class M1Test {
             HttpPost httppost = new HttpPost(uri);
             // httppost.setConfig(requestConfig);
 
-            InputStreamEntity reqEntity = new InputStreamEntity(new FileInputStream(new File("D:\\1\\data\\i1.xml")), -1);
+            InputStreamEntity reqEntity = new InputStreamEntity(new FileInputStream("D:\\1\\data\\i1.xml"), -1);
             reqEntity.setContentType("application/xml");
             reqEntity.setChunked(true);
 
@@ -82,7 +66,7 @@ public class M1Test {
             CloseableHttpResponse response = httpclient.execute(httppost);
             try {
                 HttpEntity resEntity = response.getEntity();
-                resEntity.writeTo(new FileOutputStream(new File("D:\\aOut.xml")));
+                resEntity.writeTo(new FileOutputStream("D:\\aOut.xml"));
                 // s1 = EntityUtils.toString(resEntity);
                 EntityUtils.consume(resEntity); // TODO: use toString(resEntity) in the PROD
             } finally {

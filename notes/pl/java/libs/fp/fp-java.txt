@@ -26,6 +26,7 @@ jodd, jtx (http://jodd.org/doc/index.html)
 totallylazy (http://code.google.com/p/totallylazy/)
 https://github.com/hraberg/enumerable
 Guava-totallylazy(http://tonylawrence.com/blog/2012/05/31/fluent-guava/)
+http://jdeferred.org/
 
 7. Functors in Java
 http://blog.tmorris.net/just-what-the-funk-is-a-functor-anyway/
