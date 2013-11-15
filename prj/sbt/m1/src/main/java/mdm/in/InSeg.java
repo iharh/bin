@@ -1,4 +1,4 @@
-package cmppkg.in;
+package mdm.in;
 
 public class InSeg {
     private String id;

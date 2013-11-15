@@ -8,15 +8,15 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
 http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
 
 Books:
-Ibsen - Camel in Action                   - 262..280...461...501 (Ch 8 of 14)
+Ibsen - Camel in Action                   - 264..280...461...501 (Ch 8 of 14)
 Cohn  - Agile Estimating and Planning     - 185..188...255..307 (Ch 16 of 22)
 
 Articles:
-Jones - Practical Type Inference for      - 3
+Jones - Practical Type Inference for      - 5
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  12:00
-Sutter - Atomic Weapons 1                 -  35:00 (p 13)
+Sutter - Atomic Weapons 1                 -1:03:00 (p 20)
 Linux in a Real World 11                  -  01:00
 
 Audio:

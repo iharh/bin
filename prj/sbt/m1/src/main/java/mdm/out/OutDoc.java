@@ -1,4 +1,4 @@
-package cmppkg.out;
+package mdm.out;
 
 public class OutDoc {
     private String id;

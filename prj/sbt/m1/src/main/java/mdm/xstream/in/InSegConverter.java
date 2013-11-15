@@ -1,4 +1,6 @@
-package cmppkg.out;
+package mdm.xstream.in;
+
+import mdm.in.InSeg;
 
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
@@ -6,20 +8,19 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
-public class OutSegConverter implements Converter {
+public class InSegConverter implements Converter {
     public boolean canConvert(Class clazz) {
-            return OutSeg.class == clazz;
+            return InSeg.class == clazz;
     }
 
     public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
-	throw new UnsupportedOperationException("deserialization is not supported by design here");
+        InSeg seg = (InSeg) value;
+        writer.addAttribute("id", seg.getId());
+        writer.setValue(seg.getValue());
     }
 
     public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {
-        OutSeg result = new OutSeg();
-        result.setId(reader.getAttribute("id"));
-        result.setValue(reader.getValue());
-        return result;
+	throw new UnsupportedOperationException("deserialization is not supported by design here");
     }
 };
 
