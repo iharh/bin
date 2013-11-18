@@ -14,6 +14,8 @@ import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
 import java.io.IOException;
 
+import static mdm.xstream.MDMXStreamConstants.*;
+
 public class MDMConverter {
 
     public static void marshal(InDoc inDoc, Writer writer) throws IOException {
@@ -21,7 +23,7 @@ public class MDMConverter {
 
         ObjectOutputStream out = null;
         try {
-            out = x.createObjectOutputStream(writer, MDMInStreamFactory.ROOT_EL);
+            out = x.createObjectOutputStream(writer, ROOT_EL_IN);
             out.writeObject(inDoc);
         } finally {
             if (out != null) {

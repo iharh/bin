@@ -7,16 +7,9 @@ import mdm.xstream.in.InSegConverter;
 
 import com.thoughtworks.xstream.XStream;
 
+import static mdm.xstream.MDMXStreamConstants.*;
+
 public class MDMInStreamFactory {
-    public static final String ROOT_EL = "madamira_input";
-
-    private static final String FIELD_ID       = "id";
-    private static final String FIELD_SEGS     = "segs";
-
-    private static final String ALIAS_IN_DOC   = "in_doc";
-    private static final String ALIAS_IN_SEG   = "in_seg";
-
-
     private static XStream x;
 
     public static synchronized XStream getXStream() {

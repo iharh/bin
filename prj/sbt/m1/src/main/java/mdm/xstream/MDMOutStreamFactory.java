@@ -7,25 +7,13 @@ import mdm.out.Word;
 import mdm.out.Analysis;
 import mdm.out.MorphFS;
 
+import mdm.xstream.out.OutWordConverter;
+
 import com.thoughtworks.xstream.XStream;
 
+import static mdm.xstream.MDMXStreamConstants.*;
+
 public class MDMOutStreamFactory {
-    private static final String FIELD_ID       = "id";
-    private static final String FIELD_SEGS     = "segs";
-    private static final String FIELD_WORDS    = "words";
-    private static final String FIELD_WORD     = "word";
-    private static final String FIELD_SEGINFO  = "segInfo";
-    private static final String FIELD_MORPH_FS = "morphFS";
-    private static final String FIELD_STEM     = "stem";
-
-    private static final String ALIAS_OUT_DOC   = "out_doc";
-    private static final String ALIAS_OUT_SEG   = "out_seg";
-    private static final String ALIAS_SEG_INFO  = "segment_info";
-    private static final String ALIAS_WORD_INFO = "word_info";
-    private static final String ALIAS_WORD      = "word";
-    private static final String ALIAS_ANALYSIS  = "analysis";
-    private static final String ALIAS_MORPH_FS  = "morph_feature_set";
-
     private static XStream x;
 
     public static synchronized XStream getXStream() {
@@ -42,8 +30,9 @@ public class MDMOutStreamFactory {
             x.aliasField(ALIAS_WORD_INFO, OutSeg.class, FIELD_WORDS);
 
             x.alias(ALIAS_WORD, Word.class);
-            x.useAttributeFor(Word.class, FIELD_ID);
-            x.useAttributeFor(Word.class, FIELD_WORD);
+            //x.useAttributeFor(Word.class, FIELD_ID);
+            //x.useAttributeFor(Word.class, FIELD_WORD);
+            x.registerConverter(new OutWordConverter(x));
 
             x.alias(ALIAS_ANALYSIS, Analysis.class);
             x.aliasField(ALIAS_MORPH_FS, Analysis.class, FIELD_MORPH_FS);
