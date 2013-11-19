@@ -19,7 +19,7 @@ import static java.nio.charset.StandardCharsets.*;
 public class InTest {
     private static final String OUT_FILE = "mdm_in.xml";
 
-    @Test
+    @Ignore
     public void testPrepareInput() throws Exception {
         MDMConverter.marshal(MDMTestUtils.getInDoc1(),
             new BufferedWriter(

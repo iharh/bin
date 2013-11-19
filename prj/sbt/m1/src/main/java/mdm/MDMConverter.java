@@ -19,29 +19,14 @@ import static mdm.xstream.MDMXStreamConstants.*;
 public class MDMConverter {
 
     public static void marshal(InDoc inDoc, Writer writer) throws IOException {
-        XStream x = MDMInStreamFactory.getXStream();
-
-        ObjectOutputStream out = null;
-        try {
-            out = x.createObjectOutputStream(writer, ROOT_EL_IN);
+        try (ObjectOutputStream out = MDMInStreamFactory.getXStream().createObjectOutputStream(writer, ROOT_EL_IN)) {
             out.writeObject(inDoc);
-        } finally {
-            if (out != null) {
-                out.close();
-            }
         }
     }
 
     public static OutDoc unmarshal(Reader reader) throws IOException, ClassNotFoundException {
-        XStream x = MDMOutStreamFactory.getXStream();
-        ObjectInputStream in = null;
-        try {
-            in = x.createObjectInputStream(reader);
+        try (ObjectInputStream in = MDMOutStreamFactory.getXStream().createObjectInputStream(reader)) {
             return (OutDoc) in.readObject();
-        } finally {
-            if (in != null) {
-                in.close();
-            }
         }
     }
 };

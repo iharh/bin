@@ -4,7 +4,6 @@ public class Word {
     private String id;
     private String word;
     private Analysis analysis;
-    private WordAttr [] attrs;
 
     public String getId() {
         return id;
@@ -25,12 +24,5 @@ public class Word {
     }
     public void setAnalysis(Analysis analysis) {
         this.analysis = analysis;
-    }
-
-    public WordAttr [] getAttrs() {
-        return attrs;
-    }
-    public void setAttrs(WordAttr [] attrs) {
-        this.attrs = attrs;
     }
 };

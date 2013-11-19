@@ -5,10 +5,11 @@ import mdm.in.InSeg;
 
 import mdm.out.OutDoc;
 import mdm.out.OutSeg;
-import mdm.out.SegInfo;
+// import mdm.out.SegInfo;
 import mdm.out.Word;
 import mdm.out.Analysis;
 import mdm.out.MorphFS;
+import mdm.out.MorphFSAttr;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -44,9 +45,9 @@ public class MDMTestUtils {
         assertNotNull(outSeg);
         assertEquals(DOC1_SEG1_ID, outSeg.getId());
 
-        SegInfo segInfo = outSeg.getSegInfo();
-        assertNotNull(segInfo);
-        assertEquals(PREPROC_VAL, segInfo.getPreprocessed());
+        //SegInfo segInfo = outSeg.getSegInfo();
+        //assertNotNull(segInfo);
+        //assertEquals(PREPROC_VAL, segInfo.getPreprocessed());
 
         Word [] words = outSeg.getWords();
         assertNotNull(words);
@@ -63,5 +64,18 @@ public class MDMTestUtils {
 
         MorphFS morphFS = analysis.getMorphFS();
         assertNotNull(morphFS);
+
+        MorphFSAttr [] attrs = morphFS.getAttrs();
+        assertNotNull(attrs);
+        assertThat(attrs.length, greaterThan(0));
+
+        MorphFSAttr attr = attrs[0];
+        assertNotNull(attr);
+
+        assertThat(attrs, allOf(
+            hasItemInArray(new MorphFSAttr("pos", "noun")),
+            hasItemInArray(new MorphFSAttr("gen", "f")),
+            hasItemInArray(new MorphFSAttr("num", "s"))
+        ));
     }
 }

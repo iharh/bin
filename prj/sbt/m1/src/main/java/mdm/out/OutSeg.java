@@ -2,7 +2,7 @@ package mdm.out;
 
 public class OutSeg {
     private String id;
-    private SegInfo segInfo;
+    private SegInfo segInfo; // we don't need this, keep for XStream only
     private Word [] words;
 
     public String getId() {
@@ -12,12 +12,12 @@ public class OutSeg {
         this.id = id;
     }
 
-    public SegInfo getSegInfo() {
-        return segInfo;
-    }
-    public void setSegInfo(SegInfo segInfo) {
-        this.segInfo = segInfo;
-    }
+    //public SegInfo getSegInfo() {
+    //    return segInfo;
+    //}
+    //public void setSegInfo(SegInfo segInfo) {
+    //    this.segInfo = segInfo;
+    //}
 
     public Word [] getWords() {
         return words;

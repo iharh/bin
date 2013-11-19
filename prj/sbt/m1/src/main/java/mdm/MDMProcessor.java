@@ -83,42 +83,42 @@ public class MDMProcessor {
         // httppost.setConfig(mdmRequestConfig);
         httppost.setEntity(reqEntity);
 
-        CloseableHttpResponse response = httpclient.execute(httppost);
-        try {
+        try (CloseableHttpResponse response = httpclient.execute(httppost)) {
             HttpEntity resEntity = response.getEntity();
             resEntity.writeTo(out);
             EntityUtils.consume(resEntity); // we can use toString(resEntity) also
-        } finally {
-            response.close();
         }
     }
 
     public static OutDoc process(InDoc inDoc) throws IOException, URISyntaxException, ClassNotFoundException {
-        ByteArrayOutputStream bos = new ByteArrayOutputStream(); // TODO: specifying direct size impacts performance a lot !!!
-        MDMConverter.marshal(inDoc,
-            new BufferedWriter(
-                new OutputStreamWriter(bos, UTF_8)
-            )
-        );
-        ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
-        bos.close();
-        bos = new ByteArrayOutputStream(); // TODO: specifying direct size impacts performance a lot !!!
+        ByteArrayInputStream bis = null;
+        try {
+            try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) { // TODO: specifying direct size impacts performance a lot !!!
+                MDMConverter.marshal(inDoc,
+                    new BufferedWriter(
+                        new OutputStreamWriter(bos, UTF_8)
+                    )
+                );
+                bis = new ByteArrayInputStream(bos.toByteArray());
+            }
 
-        process(bis, bos);
+            try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) { // TODO: specifying direct size impacts performance a lot !!!
+                process(bis, bos);
 
-        bis.close();
-        bis = new ByteArrayInputStream(bos.toByteArray());
-        bos.close();
+                bis.close();
+                bis = new ByteArrayInputStream(bos.toByteArray());
+            }
 
-        OutDoc outDoc = MDMConverter.unmarshal(
-            new BufferedReader(
-                new InputStreamReader(bis, UTF_8)
-            )
-        );
-
-        bis.close(); 
-        
-        return outDoc;
+            OutDoc outDoc = MDMConverter.unmarshal(
+                new BufferedReader(
+                    new InputStreamReader(bis, UTF_8)
+                )
+            );
+            return outDoc;
+        } finally {
+            if (bis != null)
+                bis.close();
+        }
     }
 };
 

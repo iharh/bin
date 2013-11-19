@@ -1,13 +1,21 @@
 package mdm.out;
 
 public class MorphFS {
-    private String stem;
+    private String lemma;
+    private MorphFSAttr [] attrs;
 
-    public String getStem() {
-        return stem;
+    public String getLemma() {
+        return lemma;
     }
-    public void setStem(String stem) {
-        this.stem = stem;
+    public void setLemma(String lemma) {
+        this.lemma = lemma;
+    }
+
+    public MorphFSAttr [] getAttrs() {
+        return attrs;
+    }
+    public void setAttrs(MorphFSAttr [] attrs) {
+        this.attrs = attrs;
     }
 };
 

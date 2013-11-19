@@ -12,8 +12,13 @@ Sinyakov - Cpp11
 Johansen - STL:
   http://sven-johannsen.de/slides/stl11_201311/stl11.html
 
-Video - Sutter about VS 2013
+Video
+Sutter about VS 2013
   http://events.visualstudio.com/eng/sessions/details/?SessionProfile=1876
+Lavavej - Core Cpp
+  http://channel9.msdn.com/Series/C9-Lectures-Stephan-T-Lavavej-Core-C-/Core-Cpp-10
+Conferences
+  GoingNative 2013, Going Native 2012, Cpp and Beyond 2012
 
 ***********
 * Threads *

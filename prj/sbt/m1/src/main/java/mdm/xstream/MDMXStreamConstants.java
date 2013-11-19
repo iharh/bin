@@ -9,7 +9,7 @@ public class MDMXStreamConstants {
     public static final String FIELD_WORD     = "word";
     public static final String FIELD_SEGINFO  = "segInfo";
     public static final String FIELD_MORPH_FS = "morphFS";
-    public static final String FIELD_STEM     = "stem";
+    public static final String FIELD_LEMMA    = "lemma";
 
     public static final String ALIAS_IN_DOC   = "in_doc";
     public static final String ALIAS_IN_SEG   = "in_seg";
