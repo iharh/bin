@@ -1,5 +1,16 @@
+Terminology:
+http://ant.apache.org/ivy/history/latest-milestone/terminology.html
+
+Articles:
 http://olmex.blogspot.in/2012/04/ivy-beginners-guide.html
 http://olmexsoftdocs.appspot.com/
+
+Configurations:
+http://ant.apache.org/ivy/history/latest-milestone/ivyfile/configurations.html
+
+ModuleConfig:
+http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
+
 
 <dependency .../>
   transitive="false" - to avoid transitive resolution

@@ -130,6 +130,22 @@ Note:
 -- | 'curry' converts an uncurried function to a curried function.
 curry                   :: ((a, b) -> c) -> a -> b -> c
 curry f x y             =  f (x, y)
+
+
+Note (Hutton - Compact fusion):
+
+unfold :: (a -> Bool) -> (a -> b) -> (a -> a) -> a -> [b]
+unfold p hd tl = f
+  where f x = if p x then [] else hd x : f (tl x )
+
+The resulting list is therefore of the form:
+
+unfold p hd tl x = [hd x ; hd (tl x ); hd (tl (tl x )); ...]
+
+Ex.
+
+downFrom = unfold (==0) id pred  -- builds a list from a given number down to 0
+
   
 7. words/unwords
 
