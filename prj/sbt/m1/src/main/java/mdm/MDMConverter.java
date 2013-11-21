@@ -6,8 +6,6 @@ import mdm.xstream.MDMOutStreamFactory;
 import mdm.in.InDoc;
 import mdm.out.OutDoc;
 
-import com.thoughtworks.xstream.XStream;
-
 import java.io.Reader;
 import java.io.Writer;
 import java.io.ObjectOutputStream;

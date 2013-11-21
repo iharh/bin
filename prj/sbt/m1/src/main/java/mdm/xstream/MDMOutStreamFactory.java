@@ -36,7 +36,7 @@ public class MDMOutStreamFactory {
             x.alias(ALIAS_ANALYSIS, Analysis.class);
             x.aliasField(ALIAS_MORPH_FS, Analysis.class, FIELD_MORPH_FS);
             // x.useAttributeFor(MorphFS.class, FIELD_LEMMA);
-            x.registerConverter(new MorphFSConverter(x));
+            x.registerConverter(new MorphFSConverter());
         }
         return x;
     }

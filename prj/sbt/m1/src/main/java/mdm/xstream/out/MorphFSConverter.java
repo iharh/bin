@@ -3,7 +3,6 @@ package mdm.xstream.out;
 import mdm.out.MorphFS;
 import mdm.out.MorphFSAttr;
 
-import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.converters.Converter;
 import com.thoughtworks.xstream.converters.MarshallingContext;
 import com.thoughtworks.xstream.converters.UnmarshallingContext;
@@ -16,18 +15,13 @@ import java.util.ArrayList;
 import static mdm.xstream.MDMXStreamConstants.*;
 
 public class MorphFSConverter implements Converter {
-    private XStream xstream;
-
-    public MorphFSConverter(XStream xstream) {
-        this.xstream = xstream;
-    }
 
     public boolean canConvert(Class clazz) {
             return MorphFS.class == clazz;
     }
 
     public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
-	throw new UnsupportedOperationException("serialization is not supported by design here");
+        throw new UnsupportedOperationException("serialization is not supported by design here");
     }
 
     public Object unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context) {

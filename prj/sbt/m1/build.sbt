@@ -21,6 +21,7 @@ libraryDependencies ++= Seq(
   //"commons-io"                % "commons-io"         % "2.4"     % "test"
   "com.novocode"              % "junit-interface"    % "0.10"    % "test",
   "junit"                     % "junit"              % "4.11"    % "test",
-  "org.hamcrest"              % "hamcrest-library"   % "1.3"     % "test"
+  "org.hamcrest"              % "hamcrest-library"   % "1.3"     % "test",
+  "com.google.guava"          % "guava"              % "15.0"    % "test"
 )
 

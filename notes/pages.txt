@@ -9,12 +9,12 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
   The application project
 
 Books:
-Ibsen - Camel in Action                   - 270..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 194..202...255..307 (Ch 17 of 22)
-Mironova - Unusual Adventure to Ancient   - 17
+Ibsen - Camel in Action                   - 272..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 197..202...255..307 (Ch 17 of 22)
+Mironova - Unusual Adventure to Ancient   - 21
 
 Articles:
-Hutton - Compact Fusion                   - 2
+Hutton - Compact Fusion                   - 4
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  12:00
