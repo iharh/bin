@@ -56,7 +56,7 @@ public class MDMTestUtils {
         Word word = words[idx];
         assertNotNull(word);
 
-        assertEquals(Integer.toString(idx), word.getId());
+        assertEquals(idx, word.getId());
         assertEquals(WORD0_WORD_VAL, word.getWord());
         
         Analysis analysis = word.getAnalysis();

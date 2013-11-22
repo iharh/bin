@@ -15,8 +15,14 @@ testOptions += Tests.Argument(TestFrameworks.JUnit, "-q", "-a")
 //Warn Info
 
 libraryDependencies ++= Seq(
-  "org.apache.httpcomponents" % "httpclient" % "4.3.1",
-  "com.thoughtworks.xstream"  % "xstream"    % "1.4.5",
+  "org.apache.httpcomponents" % "httpclient"     % "4.3.1",
+  // transitive dep on
+  // httpcore-4.3
+  // commons-logging-1.1.3
+  "com.thoughtworks.xstream"  % "xstream"        % "1.4.5",
+  "org.slf4j"                 % "slf4j-api"      % "1.7.5",
+  "org.slf4j"                 % "slf4j-log4j12"  % "1.7.5",
+  "log4j"                     % "log4j"          % "1.2.17",
   //"org.scalatest"      % "scalatest_2.10"   % "1.9.1"   % "test",
   //"commons-io"                % "commons-io"         % "2.4"     % "test"
   "com.novocode"              % "junit-interface"    % "0.10"    % "test",

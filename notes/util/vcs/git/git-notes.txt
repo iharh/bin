@@ -182,6 +182,8 @@ ARCHIVING:
 
 git archive -o latest.zip HEAD
 
+RECOVERING
+http://blog.ctp.com/2013/11/21/git-recovering-from-mistakes/
 
 UNSTAGING:
 
