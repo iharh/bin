@@ -9,24 +9,20 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
   The application project
 
 Books:
-Ibsen - Camel in Action                   - 274..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 197..202...255..307 (Ch 17 of 22)
-Mironova - Unusual Adventure to Ancient   - 23
+Ibsen - Camel in Action                   - 277..280...461...501 (Ch 8 of 14)
+Cohn  - Agile Estimating and Planning     - 199..202...255..307 (Ch 17 of 22)
+Mironova - Unusual Adventure to Ancient   - 27
 
 Articles:
-Hutton - Compact Fusion                   - 7
+Hutton - Compact Fusion                   - 9
 
 Video:
-Lebovitz - Building a commercial development platform in Haskell - 06:00
-Husain - End to end Reactive Programming at Netflix - 12:00
-Epstein - Building scalable high-availability distributed systems in Haskell - 15:00
-Kmett - Functional Reporting              -  16:00
 http://www.ustream.tv/recorded/40685818   -  12:00
-Sutter - Standard Cpp Concurrency         -  30:00 (Slide 7)
+Sutter - You Dont Know                    -  02:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 11                               -  10:00
+Gritz 1, 11                               -  29:00
 Grant                                     -  Ch 65
 Sedakova                                  -  20:00
 
