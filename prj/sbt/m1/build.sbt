@@ -19,6 +19,7 @@ libraryDependencies ++= Seq(
   // transitive dep on
   // httpcore-4.3
   // commons-logging-1.1.3
+  "net.sourceforge.reb4j"     % "net.sourceforge.reb4j" % "2.1.0",
   "com.thoughtworks.xstream"  % "xstream"        % "1.4.5",
   "org.slf4j"                 % "slf4j-api"      % "1.7.5",
   "org.slf4j"                 % "slf4j-log4j12"  % "1.7.5",

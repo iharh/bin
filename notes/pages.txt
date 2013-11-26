@@ -9,21 +9,21 @@ http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
   The application project
 
 Books:
-Ibsen - Camel in Action                   - 277..280...461...501 (Ch 8 of 14)
+Ibsen - Camel in Action                   - 278..280...461...501 (Ch 8 of 14)
 Cohn  - Agile Estimating and Planning     - 199..202...255..307 (Ch 17 of 22)
 Mironova - Unusual Adventure to Ancient   - 27
 
 Articles:
-Hutton - Compact Fusion                   - 9
+Hutton - Compact Fusion                   - 10
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  12:00
-Sutter - You Dont Know                    -  02:00
+AndreiHerbScottCB2012C9Interview_mid      -  02:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
 Gritz 1, 11                               -  29:00
-Grant                                     -  Ch 65
+Grant                                     -  Ch 67
 Sedakova                                  -  20:00
 
 Articles to Read:

@@ -39,8 +39,6 @@ public class MappingTest {
             InputStream is = getClass().getResourceAsStream("/" + RES_MAPPING_PROPERTIES);
         ) {
             mappingProps.load(is);
-            //mappingProps.setProperty(PROP_ASP_C, "v1");
-            //mappingProps.list(ps);
             for (String propKey : mappingProps.stringPropertyNames()) {
                 log.debug("mapping key: {}", propKey);
                 String propVal = mappingProps.getProperty(propKey);
