@@ -5,26 +5,24 @@ CLB Presentation                          - 20:00 (Slide 23)
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
-http://ant.apache.org/ivy/history/latest-milestone/tutorial/conf.html
-  The application project
 
 Books:
-Ibsen - Camel in Action                   - 278..280...461...501 (Ch 8 of 14)
-Cohn  - Agile Estimating and Planning     - 199..202...255..307 (Ch 17 of 22)
-Mironova - Unusual Adventure to Ancient   - 27
+Ibsen - Camel in Action                   - 284..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 201..202...255..307 (Ch 17 of 22)
+Mironova - Unusual Adventure to Ancient   - 31
 
 Articles:
-Hutton - Compact Fusion                   - 10
+Hutton - Compact Fusion                   - 11
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  12:00
-AndreiHerbScottCB2012C9Interview_mid      -  02:00
+CppBeyond2012PanelAskUsAnything_mid       -  23:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
 Gritz 1, 11                               -  29:00
 Grant                                     -  Ch 67
-Sedakova                                  -  20:00
+Sedakova                                  -  34:00
 
 Articles to Read:
 Hutton  - A Tutorial on the Universality

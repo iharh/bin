@@ -1,4 +1,4 @@
-package cmppkg;
+package mpkg;
 
 import mdm.in.InDoc;
 import mdm.in.InSeg;
