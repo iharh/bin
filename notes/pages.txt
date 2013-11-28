@@ -7,21 +7,20 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 
 Books:
-Ibsen - Camel in Action                   - 284..314...461...501 (Ch 9 of 14)
+Ibsen - Camel in Action                   - 287..314...461...501 (Ch 9 of 14)
 Cohn  - Agile Estimating and Planning     - 201..202...255..307 (Ch 17 of 22)
-Mironova - Unusual Adventure to Ancient   - 31
+Mironova - Unusual Adventure to Ancient   - 35
 
 Articles:
-Hutton - Compact Fusion                   - 11
+Hutton - Compact Fusion                   - 13
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  12:00
-CppBeyond2012PanelAskUsAnything_mid       -  23:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
 Gritz 1, 11                               -  29:00
-Grant                                     -  Ch 67
+Grant                                     -  Ch 68
 Sedakova                                  -  34:00
 
 Articles to Read:
