@@ -3,6 +3,9 @@ http://book.mixu.net/distsys/single-page.html
 
 http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
 
+MIT:
+http://courses.csail.mit.edu/6.851/spring12/
+
 Ideal Hash Trees:
 http://lampwww.epfl.ch/papers/idealhashtrees.pdf
 http://hypirion.com/musings/understanding-persistent-vector-pt-1
@@ -15,3 +18,5 @@ http://ekmett.github.io/presentations/Cache-Oblivious%20Data%20Structures.pdf
 Open Data Structures:
 http://opendatastructures.org/
 https://github.com/patmorin/ods
+
+

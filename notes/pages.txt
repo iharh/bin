@@ -7,15 +7,15 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 
 Books:
-Ibsen - Camel in Action                   - 287..314...461...501 (Ch 9 of 14)
+Ibsen - Camel in Action                   - 290..314...461...501 (Ch 9 of 14)
 Cohn  - Agile Estimating and Planning     - 201..202...255..307 (Ch 17 of 22)
 Mironova - Unusual Adventure to Ancient   - 35
 
 Articles:
-Hutton - Compact Fusion                   - 13
+Hutton  - A Tutorial on the Universality  - 0
 
 Video:
-http://www.ustream.tv/recorded/40685818   -  12:00
+http://www.ustream.tv/recorded/40685818   -  to classify
 Linux in a Real World 11                  -  01:00
 
 Audio:
@@ -24,7 +24,6 @@ Grant                                     -  Ch 68
 Sedakova                                  -  34:00
 
 Articles to Read:
-Hutton  - A Tutorial on the Universality
 Wadler - The Concatenate Wanishes
 Stewart - From Lists to Streams to nothing...
 Hughes - A Novel Representation of Lists and Its Application to the Function Reverse

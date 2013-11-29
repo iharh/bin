@@ -38,6 +38,7 @@ http://software.intel.com/ru-ru/articles/reduce-intel-cilk-plus/
 http://habrahabr.ru/blogs/programming/126275/
 http://habrahabr.ru/blogs/algorithm/112394/
 
+
 Monads:
 
 http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
@@ -74,24 +75,15 @@ http://stefan-klinger.de/files/monadGuide.pdf (We just need this 34 pages of Cat
 Yorgey - Typeclassopedia (TMR-13).
 
 
-F#
-http://www.slideshare.net/lgayowski/taking-functional-programming-into-the-mainstream-eclipse-summit-europe-2009
-
 IH-FPByExamples:
 http://dl.dropbox.com/u/41939712/FPByExamples.zip
 
 Videos:
 http://channel9.msdn.com/Tags/brian+beckman (Dot't fear the Monads, State Monad, Monads, Monoids and Mort).
 
-
 +++++++++++++++
 + Advanced FP +
 +++++++++++++++
-
-OCaml
-Jason Hickey - Introduction to the OCaml (a lot of OCaml-specific stuff, maybe just Standard-ML fundamentals are enough).
-
-- Tail-recursive version of map using rev (p 55)
 
 Data Structures:
 Okasaki - Pure Functional Data Structures (Need OCaml)
@@ -112,6 +104,8 @@ Hutton - Introduction to Category Theory (lections)
 
 Mark P Jones - FP with Overloading and HO Polymorphism
 Swierstra - Data Types a la Carte
+
+Hutton - Compact Fusion
 
 Need to read once again later (not all is clear from the first time):
 Gibbons - Calculating Functional Programs
@@ -149,3 +143,18 @@ Dan Burton - Pipes to Conduits:
 ++++++++++++++++++++
 
 - Fogus - Functional JavaScript (underscore)
+
++++++++++++++++
++ FP in OCaml +
++++++++++++++++
+
+Jason Hickey - Introduction to the OCaml (a lot of OCaml-specific stuff, maybe just Standard-ML fundamentals are enough).
+
+- Tail-recursive version of map using rev (p 55)
+
+++++++++++++
++ FP in F# +
+++++++++++++
+
+http://www.slideshare.net/lgayowski/taking-functional-programming-into-the-mainstream-eclipse-summit-europe-2009
+

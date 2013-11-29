@@ -91,6 +91,36 @@ public class MDMProcessor {
     }
 
     public static OutDoc process(InDoc inDoc) throws IOException, URISyntaxException, ClassNotFoundException {
+        // TODO: probably this is the best place to optimize
+        // 1. XStream performance
+        //   One approach you could try is to create your own implementations of the HierarchicalStreamWriter and HierarchicalStreamReader interfaces that make use of NIO.
+        //   These are the bridges between the tree structurethat XStream works with and the underlying representation.
+        //   OR.... If this is a bit daunting, you could just create OutputStream/InputStream wrappers around ByteBuffers. This will at least save the intermediate conversions.
+        //
+        // Try to use Netty in order to support puuled circular input-output buffers in order to avoid GC stress and extra memory copying
+        //   http://netty.io/
+        //   https://blog.twitter.com/2013/netty-4-at-twitter-reduced-gc-overhead
+        //     http://netty.io/4.0/api/io/netty/buffer/ByteBufAllocator.html
+        //
+        // Memory allocation:
+        // Use cache of ByteBuffer-s with flip to swith from write to read (clear/compact to switch back from write to read)
+        // ... byteBuffer.asCharBuffer()...
+        // ... ByteBuf/CompositeByteBuf/ByteBufAllocator and other stuff from ???
+        //       this is ref-countable, resizeable, separate idx for read/write, fluent i-face
+        //
+        //     ChannelHandler[Inbound/Outbound/State/Operation] and ChannelPipeline/ChannelPipelineFactory
+        //       always called by assigned EventExecutor (or default one), typesafe
+        //         ScheduledEventExecutor <= EventExecutor <= EventLoop
+        //     in handler - don't block, byt call ctx.executor().schedule(... task ...);
+        //
+        // ??  ChannelAdopter[Inboud/Outbound]
+        // ??  Encoders, Decoders, Hybrids (ByteToByteCodec, ByteToMessage, MessageToMessage)
+        // ??  Boostrap, EventLoopGroup
+        //
+        // Try to look at NIO Zero-Copy and Direct-Channel-Transfer technics
+        // ... XXInputStream -> getChannel -> transferTo
+        // Readable/Writeable-ByteChannel
+        // ?? Selectors - Multiplexed IO, onRead/onWrite
         ByteArrayInputStream bis = null;
         try {
             try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) { // TODO: specifying direct size impacts performance a lot !!!
