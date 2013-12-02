@@ -7,9 +7,9 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 
 Books:
-Ibsen - Camel in Action                   - 290..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 201..202...255..307 (Ch 17 of 22)
-Mironova - Unusual Adventure to Ancient   - 35
+Ibsen - Camel in Action                   - 293..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 203..210...255..307 (Ch 18 of 22)
+Mironova - Unusual Adventure to Ancient   - 37
 
 Articles:
 Hutton  - A Tutorial on the Universality  - 0
@@ -19,7 +19,7 @@ http://www.ustream.tv/recorded/40685818   -  to classify
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 11                               -  29:00
+Gritz 1, 11                               -  55:00
 Grant                                     -  Ch 68
 Sedakova                                  -  34:00
 

@@ -5,11 +5,17 @@ http://youtu.be/actIwwQWwjU
 http://courses.csail.mit.edu/6.851/spring12/lectures/L17.html
 http://courses.csail.mit.edu/6.851/spring12/lectures/L17.pdf
 
+Jakobson - Space Efficient Trees and Graphs:
 www.cs.cmu.edu/afs/cs.cmu.edu/project/aladdin/wwwlocal/compression/00063533.pdf 
+
+Watanabe - A Succinct N-gram Language Model:
 http://www.aclweb.org/anthology/P/P09/P09-2086.pdf
 
 https://lra.le.ac.uk/handle/2381/4805
 https://lra.le.ac.uk/bitstream/2381/4805/1/2008DelprattodPhD.pdf
+
+Anderson
+http://da-data.blogspot.com/2013/04/rank-select-for-systems-folks-our-minor.html
 
 http://www.slideshare.net/pfi/succinct-data-structure-for-analyzing-document-collection
 
@@ -61,4 +67,7 @@ http://code.google.com/p/sumire-tries/
 
 Taiju:
 http://code.google.com/p/taiju/
+
+Succinct Bit Vector:
+http://code.google.com/p/sbvj/
 
