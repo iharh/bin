@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class HttpTest {
-    @Ignore 
+    @Test 
     public void testHttp() throws Exception {
         try {
             MDMTestUtils.checkOutDoc1(MDMProcessor.process(MDMTestUtils.getInDoc1()));

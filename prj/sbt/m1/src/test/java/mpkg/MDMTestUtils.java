@@ -48,6 +48,7 @@ public class MDMTestUtils {
         assertNotNull(words);
         assertThat(words.length, greaterThan(0));
 
+        // Word 0
         Word word = words[idx];
         assertNotNull(word);
 
@@ -72,5 +73,29 @@ public class MDMTestUtils {
             hasItemInArray(new MorphFSAttr("gen", "f")),
             hasItemInArray(new MorphFSAttr("num", "s"))
         ));
+
+        assertEquals(0, word.getWordStartPos());
+        assertEquals(6, word.getWordLength());
+
+        // Word 1
+        ++idx;
+        word = words[idx];
+        assertNotNull(word);
+        assertEquals(7, word.getWordStartPos());
+        assertEquals(10, word.getWordLength());
+
+        // Word 2
+        ++idx;
+        word = words[idx];
+        assertNotNull(word);
+        assertEquals(18, word.getWordStartPos());
+        assertEquals(6, word.getWordLength());
+
+        // Word 3
+        ++idx;
+        word = words[idx];
+        assertNotNull(word);
+        assertEquals(25, word.getWordStartPos());
+        assertEquals(7, word.getWordLength());
     }
 }

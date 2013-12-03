@@ -73,7 +73,12 @@ http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#keys
 http://www.scala-sbt.org/release/sxr/sbt/Keys.scala.html
 http://www.scala-sbt.org/release/docs/Getting-Started/More-About-Settings.html#computing-a-value-based-on-other-keys-values
 http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#keys-in-sbt-interactive-mode
-  show <taskName>
+
+Show/Inspection:
+
+show
+    <taskName>
+    full-classpath
 
 Tasks:
 
@@ -85,3 +90,12 @@ Log Messages:
 http://www.scala-sbt.org/release/docs/Howto/logging.html
 
 	last <task>
+
+
+.sbt file
+
+initialCommands in console := """
+    |import scalaz._
+    |import Scalaz._
+    |""".stripMargin
+

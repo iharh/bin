@@ -1,7 +1,10 @@
 package mdm;
 
 import mdm.in.InDoc;
+import mdm.in.InSeg;
 import mdm.out.OutDoc;
+import mdm.out.OutSeg;
+import mdm.out.Word;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.util.EntityUtils;
@@ -38,6 +41,10 @@ public class MDMProcessor {
 
     private static final int REQ_SOCKET_TIMEOUT = 1000;
     private static final int REQ_CONNECT_TIMEOUT = 1000;
+
+    private static final String DOC_ID_PREFIX = "docid";
+    private static final String SEG_ID_PREFIX = "segid";
+
 
     private static CloseableHttpClient mdmHttpClient;
     private static URI mdmURI;
@@ -131,24 +138,90 @@ public class MDMProcessor {
                 );
                 bis = new ByteArrayInputStream(bos.toByteArray());
             }
-
             try (ByteArrayOutputStream bos = new ByteArrayOutputStream()) { // TODO: specifying direct size impacts performance a lot !!!
                 process(bis, bos);
 
                 bis.close();
                 bis = new ByteArrayInputStream(bos.toByteArray());
             }
-
             OutDoc outDoc = MDMConverter.unmarshal(
                 new BufferedReader(
                     new InputStreamReader(bis, UTF_8)
                 )
             );
+            computeOffsets(inDoc, outDoc);
+
             return outDoc;
         } finally {
             if (bis != null)
                 bis.close();
         }
+    }
+
+    private static void computeOffsets(InDoc inDoc, OutDoc outDoc) {
+        if (inDoc == null || outDoc == null) {
+            return;
+        }
+        InSeg [] inSegs = inDoc.getSegs();
+        OutSeg [] outSegs = outDoc.getSegs();
+
+        if (inSegs == null || outSegs == null) {
+            return;
+        }
+        int segNum = Math.min(inSegs.length, outSegs.length);
+
+        for (int i = 0; i < segNum; ++i) {
+            InSeg inSeg = inSegs[i];
+            OutSeg outSeg = outSegs[i];
+            if (inSeg == null || outSeg == null) {
+                continue;
+            }
+            String value = inSeg.getValue();
+            Word [] outWords = outSeg.getWords();
+            if (value == null || outWords == null) {
+                continue;
+            }
+            int curIdx = 0;
+
+            for (Word outWord : outWords) {
+                if (outWord == null) {
+                    continue;
+                }
+                String word = outWord.getWord();
+                if (word == null) {
+                    continue;
+                }
+                int idx = value.indexOf(word, curIdx);
+                if (idx >= 0) {
+                    outWord.setWordStartPos(idx);
+                }
+                curIdx = idx;
+            }
+        }
+    }
+
+    public static Word [] processText(String text) throws IOException, URISyntaxException, ClassNotFoundException {
+        final String DEFAULT_ID = "1";
+
+        InSeg [] inSegs = new InSeg[1];
+        inSegs[0] = new InSeg(SEG_ID_PREFIX + DEFAULT_ID, text);
+        InDoc inDoc = new InDoc(DOC_ID_PREFIX + DEFAULT_ID, inSegs);
+
+        OutDoc outDoc = process(inDoc);
+
+        if (outDoc == null) {
+            return null;
+        }
+        
+        OutSeg [] outSegs = outDoc.getSegs();
+
+        if (outSegs == null) {
+            return null;
+        }
+
+        OutSeg outSeg = outSegs[0];
+
+        return outSeg == null ? null : outSeg.getWords();
     }
 };
 

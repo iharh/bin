@@ -4,6 +4,8 @@ public class Word {
     private int id;
     private String word;
     private Analysis analysis;
+    private int wordStartPos;
+//    private int wordLength;
 
     public int getId() {
         return id;
@@ -24,5 +26,16 @@ public class Word {
     }
     public void setAnalysis(Analysis analysis) {
         this.analysis = analysis;
+    }
+
+    public int getWordStartPos() {
+        return wordStartPos;
+    }
+    public void setWordStartPos(int wordStartPos) {
+        this.wordStartPos = wordStartPos;
+    }
+
+    public int getWordLength() {
+        return word == null ? 0 : word.length();
     }
 };

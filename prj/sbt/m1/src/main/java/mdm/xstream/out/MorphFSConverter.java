@@ -9,12 +9,21 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import java.util.List;
 import java.util.ArrayList;
 
 import static mdm.xstream.MDMXStreamConstants.*;
 
 public class MorphFSConverter implements Converter {
+
+    private Pattern lemmaPat;
+
+    public MorphFSConverter() {
+        lemmaPat = Pattern.compile("_\\d+|\\d+_");
+    }
 
     public boolean canConvert(Class clazz) {
             return MorphFS.class == clazz;
@@ -35,7 +44,7 @@ public class MorphFSConverter implements Converter {
             String attrValue = reader.getAttribute(i);
 
             if (FIELD_LEMMA.equals(attrName)) {
-                morphFS.setLemma(attrValue); // TODO: trim _<num>
+                morphFS.setLemma(lemmaPat.matcher(attrValue).replaceAll(""));
             } else {
                 attrs.add(new MorphFSAttr(attrName, attrValue));
             }

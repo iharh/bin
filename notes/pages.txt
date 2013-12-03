@@ -7,12 +7,12 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 
 Books:
-Ibsen - Camel in Action                   - 293..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 203..210...255..307 (Ch 18 of 22)
+Ibsen - Camel in Action                   - 295..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 205..210...255..307 (Ch 18 of 22)
 Mironova - Unusual Adventure to Ancient   - 37
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 0
+Hutton  - A Tutorial on the Universality  - 3
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  to classify

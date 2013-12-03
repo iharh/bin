@@ -21,7 +21,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static net.sourceforge.reb4j.charclass.CharClass.Perl.*;
 
 public class RegexTest {
-    @Test
+    @Ignore
     public void testRegex() throws Exception {
         // Literal, CharClass  are both Sequencable, Alternative, Quantifiable
         final Literal u = Literal.literal('_');
