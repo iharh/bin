@@ -5,19 +5,22 @@ CLB Presentation                          - 20:00 (Slide 23)
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
+http://www.informit.com/articles/printerfriendly.aspx?p=1407357
+  Lack of Safety
 
 Books:
-Ibsen - Camel in Action                   - 295..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 205..210...255..307 (Ch 18 of 22)
-Mironova - Unusual Adventure to Ancient   - 37
+Ibsen - Camel in Action                   - 297..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 207..210...255..307 (Ch 18 of 22)
+Mironova - Unusual Adventure to Ancient   - 40
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 3
+Hutton  - A Tutorial on the Universality  - 4
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  to classify
 Linux in a Real World 11                  -  01:00
 MS - Sexy Types - Are We Done Yet?        -  15:00
+Shaban - The Future of Java               -  10:00
 
 Audio:
 Gritz 1, 11                               -  55:00
