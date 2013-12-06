@@ -6,25 +6,28 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://www.informit.com/articles/printerfriendly.aspx?p=1407357
-  Lack of Safety
+  One-Pass Ranges
+http://eli.thegreenplace.net/2011/05/17/the-curiously-recurring-template-pattern-in-c/
+  Synthetic examples are prone...
 
 Books:
-Ibsen - Camel in Action                   - 297..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 207..210...255..307 (Ch 18 of 22)
+Ibsen - Camel in Action                   - 298..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 209..210...255..307 (Ch 18 of 22)
 Mironova - Unusual Adventure to Ancient   - 40
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 4
+Hutton  - A Tutorial on the Universality  - 5
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  to classify
 Linux in a Real World 11                  -  01:00
-MS - Sexy Types - Are We Done Yet?        -  15:00
-Shaban - The Future of Java               -  10:00
+MS - Sexy Types - Are We Done Yet?        -1:02:00
+Shaban - The Future of Java               -  25:00
+Polyulya - Goals And Patterns Of Usage    -  09:00
 
 Audio:
 Gritz 1, 11                               -  55:00
-Grant                                     -  Ch 78
+Grant                                     -  Ch 80
 Sedakova                                  -  34:00
 
 Articles to Read:
@@ -33,7 +36,7 @@ Stewart - From Lists to Streams to nothing...
 Hughes - A Novel Representation of Lists and Its Application to the Function Reverse
 
 Magazines:
-ACCU - 117
+ACCU - 118
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00

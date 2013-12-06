@@ -6,6 +6,7 @@ import mdm.out.OutDoc;
 import mdm.out.OutSeg;
 import mdm.out.Word;
 
+import org.apache.http.HttpHost;
 import org.apache.http.HttpEntity;
 import org.apache.http.util.EntityUtils;
 
@@ -36,11 +37,14 @@ import static java.nio.charset.StandardCharsets.*;
 
 public class MDMProcessor {
     private static final String HTTP_SCHEME = "http";
-    private static final String HTTP_HOST = "localhost";
+    private static final String HTTP_HOST = "localhost"; // "epbygomw0024";
     private static final int HTTP_PORT = 8223;
 
-    private static final int REQ_SOCKET_TIMEOUT = 1000;
-    private static final int REQ_CONNECT_TIMEOUT = 1000;
+    private static final String HTTP_PROXY_HOST = "127.0.0.1";
+    private static final int HTTP_PROXY_PORT = 8888;
+
+    private static final int REQ_SOCKET_TIMEOUT = 10000;
+    private static final int REQ_CONNECT_TIMEOUT = 10000;
 
     private static final String DOC_ID_PREFIX = "docid";
     private static final String SEG_ID_PREFIX = "segid";
@@ -48,7 +52,7 @@ public class MDMProcessor {
 
     private static CloseableHttpClient mdmHttpClient;
     private static URI mdmURI;
-    //private static RequestConfig mdmRequestConfig;
+    private static RequestConfig mdmRequestConfig;
 
     private static synchronized CloseableHttpClient getHttpClient() throws URISyntaxException {
         if (mdmHttpClient == null) {
@@ -62,10 +66,13 @@ public class MDMProcessor {
                 //.setParameter("q", "value")
                 .build();
 
-            //mdmRequestConfig = RequestConfig.custom()
-            //    .setSocketTimeout(REQ_SOCKET_TIMEOUT)
-            //    .setConnectTimeout(REQ_CONNECT_TIMEOUT)
-            //    .build();
+            HttpHost proxy = new HttpHost(HTTP_PROXY_HOST, HTTP_PROXY_PORT, HTTP_SCHEME); // "127.0.0.1"
+
+            mdmRequestConfig = RequestConfig.custom()
+                .setSocketTimeout(REQ_SOCKET_TIMEOUT)
+                .setConnectTimeout(REQ_CONNECT_TIMEOUT)
+                //.setProxy(proxy)
+                .build();
         }
         return mdmHttpClient;
     }
@@ -87,7 +94,7 @@ public class MDMProcessor {
         reqEntity.setChunked(true);
 
         HttpPost httppost = new HttpPost(mdmURI);
-        // httppost.setConfig(mdmRequestConfig);
+        httppost.setConfig(mdmRequestConfig);
         httppost.setEntity(reqEntity);
 
         try (CloseableHttpResponse response = httpclient.execute(httppost)) {
