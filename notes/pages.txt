@@ -6,24 +6,23 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://www.informit.com/articles/printerfriendly.aspx?p=1407357
-  One-Pass Ranges
+  Double-Ended Ranges
 http://eli.thegreenplace.net/2011/05/17/the-curiously-recurring-template-pattern-in-c/
-  Synthetic examples are prone...
+  Another interesting example is the following...
 
 Books:
-Ibsen - Camel in Action                   - 298..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 209..210...255..307 (Ch 18 of 22)
-Mironova - Unusual Adventure to Ancient   - 40
+Ibsen - Camel in Action                   - 301..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 213..223...255..307 (Ch 19 of 22)
+Mironova - Unusual Adventure to Ancient   - 44
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 5
+Hutton  - A Tutorial on the Universality  - 6
 
 Video:
 http://www.ustream.tv/recorded/40685818   -  to classify
 Linux in a Real World 11                  -  01:00
-MS - Sexy Types - Are We Done Yet?        -1:02:00
-Shaban - The Future of Java               -  25:00
-Polyulya - Goals And Patterns Of Usage    -  09:00
+Polyulya - Goals And Patterns Of Usage    -  17:00
+SEC2013-Agile                             -  12:00
 
 Audio:
 Gritz 1, 11                               -  55:00

@@ -1,3 +1,7 @@
+VS 2013 Performance optimizations:
+http://blogs.msdn.com/b/vcblog/archive/2013/12/06/performance-with-visual-c-2013.aspx
+
+
 \Microsoft Visual Studio 9.0\Common7\Packages\Debugger\autoexp.dat
 
 http://www.codeguru.com/Cpp/V-S/debug/article.php/c1281 - for 6.0
