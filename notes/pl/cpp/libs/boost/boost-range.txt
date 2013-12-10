@@ -1,0 +1,5 @@
+Redl - Boost Range slides
+https://github.com/boostcon/cppnow_presentations_2012/blob/master/tue/boost_range.pdf
+
+Alexandrescu - On Iteration
+http://www.informit.com/articles/printerfriendly.aspx?p=1407357
