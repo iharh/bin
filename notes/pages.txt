@@ -2,27 +2,26 @@ CLB Reference Guide                       - 467..576..613..648..667..674..694
                                             724..727..738..746..875..886..902..911..982..988..991
 CLB Presentation                          - 20:00 (Slide 23)
 
-http://en.wikipedia.org/wiki/Curiously_recurring_template_pattern
-
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://www.informit.com/articles/printerfriendly.aspx?p=1407357
-  Random Access Ranges
+  Higher Order Ranges
 
 Books:
-Ibsen - Camel in Action                   - 303..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 213..223...255..307 (Ch 19 of 22)
-Mironova - Unusual Adventure to Ancient   - 44
+Ibsen - Camel in Action                   - 306..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 218..223...255..307 (Ch 19 of 22)
+Mironova - Unusual Adventure to Ancient   - 49
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 7
+Hutton  - A Tutorial on the Universality  - 9
 
 Video:
-http://www.ustream.tv/recorded/40685818   -  to classify
+Kmett - Succinct Data Structures          -  00:00
 Linux in a Real World 11                  -  01:00
-SEC2013-Agile                             -  24:00
-Sparks - Reactive Clojure                 -  07:00
+SEC2013-Agile                             -  50:00
+Manko - Distributing Team How To Get      -  02:00
+Kuper - LVars lattice-based data struct   -  26:00
 
 Audio:
 Gritz 1, 11                               -  55:00

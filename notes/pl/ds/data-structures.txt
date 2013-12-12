@@ -1,5 +1,3 @@
-Shapiro - CRDTs.
-http://book.mixu.net/distsys/single-page.html
 
 http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
 

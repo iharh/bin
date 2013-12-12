@@ -4,3 +4,8 @@ Spiewak - Cake Pattern -The Bakery from the Black Lagoon (http://marakana.com/s/
 http://blog.originate.com/blog/2013/10/21/reader-monad-for-dependency-injection/
 http://scala.org.ua/presentations/scala-functional-refactoring/#/
 
+http://it-talk.org/post83873.html#p83873
+
+Warski - The no Framework Scala DI Framework
+http://www.slideshare.net/adamw1pl/the-noframework-scala-dependency-injection-framework
+
