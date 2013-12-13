@@ -1,7 +1,8 @@
 BoldAsFont=no
 Font=Terminal
 FontHeight=14
-Term=xterm-256color
+Term=xterm
+#xterm-256color
 Columns=130
 Rows=40
 BackspaceSendsBS=yes

@@ -6,26 +6,24 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://www.informit.com/articles/printerfriendly.aspx?p=1407357
-  Higher Order Ranges
+  Three-Legged Algorithms
 
 Books:
-Ibsen - Camel in Action                   - 306..314...461...501 (Ch 9 of 14)
+Ibsen - Camel in Action                   - 309..314...461...501 (Ch 9 of 14)
 Cohn  - Agile Estimating and Planning     - 218..223...255..307 (Ch 19 of 22)
 Mironova - Unusual Adventure to Ancient   - 49
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 9
+Hutton  - A Tutorial on the Universality  - 10
 
 Video:
 Kmett - Succinct Data Structures          -  00:00
 Linux in a Real World 11                  -  01:00
 SEC2013-Agile                             -  50:00
 Manko - Distributing Team How To Get      -  02:00
-Kuper - LVars lattice-based data struct   -  26:00
 
 Audio:
 Gritz 1, 11                               -  55:00
-Grant                                     -  Ch 80
 Sedakova                                  -  34:00
 
 Articles to Read:
