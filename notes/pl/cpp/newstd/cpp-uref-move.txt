@@ -7,6 +7,10 @@ http://thbecker.net/articles/rvalue_references/section_01.html
 http://blog.smartbear.com/development/c11-tutorial-explaining-the-ever-elusive-lvalues-and-rvalues
 http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/
 
+Parent - Value Semantics and Concept Based Polymorphism:
+http://2012.cppnow.org/session/value-semantics-and-concepts-based-polymorphism/
+
+
 From Meyers:
 std::move    is an unconditional cast to r-val
   the better name for std::move will be rvalue_cast
