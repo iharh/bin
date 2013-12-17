@@ -6,17 +6,15 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://www.informit.com/articles/printerfriendly.aspx?p=1407357
-  Three-Legged Algorithms
-http://www.cakesolutions.net/teamblogs/2013/12/16/typeclases-in-scala-haskell/
+  Weaknesses
 
 Books:
-Ibsen - Camel in Action                   - 310..314...461...501 (Ch 9 of 14)
-Cohn  - Agile Estimating and Planning     - 221..223...255..307 (Ch 19 of 22)
+Ibsen - Camel in Action                   - 312..314...461...501 (Ch 9 of 14)
+Cohn  - Agile Estimating and Planning     - 225..230...255..307 (Ch 20 of 22)
 Mironova - Unusual Adventure to Ancient   - 54
 
 Articles:
-Hutton  - A Tutorial on the Universality  - 11
-Parent  - Value Semantics Slides          - 28
+Hutton  - A Tutorial on the Universality  - 13
 
 Video:
 Kmett - Succinct Data Structures          -  00:00
@@ -27,6 +25,8 @@ Manko - Distributing Team How To Get      -  02:00
 Audio:
 Gritz 1, 11                               -  55:00
 Sedakova                                  -  34:00
+Kot                                       -  26:00
+
 
 Articles to Read:
 Wadler - The Concatenate Wanishes
