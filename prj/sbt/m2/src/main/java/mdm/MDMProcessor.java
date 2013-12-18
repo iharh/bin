@@ -30,11 +30,16 @@ import java.io.InputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import static org.apache.http.entity.ContentType.*;
 
 import static java.nio.charset.StandardCharsets.*;
 
 public class MDMProcessor {
+    private static final Logger log = LoggerFactory.getLogger(MDMProcessor.class);
+    
     private static final String HTTP_SCHEME = "http";
     private static final String HTTP_HOST = "localhost";
     private static final int HTTP_PORT = 8223;
@@ -95,7 +100,7 @@ public class MDMProcessor {
         }
     }
 
-    public static /*synchronized*/ void process(InputStream in, OutputStream out) throws IOException {
+    public static synchronized void process(InputStream in, OutputStream out) throws IOException {
         CloseableHttpClient httpclient = mdmHttpClient; 
 
         InputStreamEntity reqEntity = new InputStreamEntity(in, APPLICATION_XML);
@@ -174,6 +179,7 @@ public class MDMProcessor {
     }
 
     private static void computeOffsets(InDoc inDoc, OutDoc outDoc) {
+        //log.debug("computeOffsets called");
         if (inDoc == null || outDoc == null) {
             return;
         }
@@ -209,8 +215,12 @@ public class MDMProcessor {
                 int idx = value.indexOf(word, curIdx);
                 if (idx >= 0) {
                     outWord.setWordStartPos(idx);
+                    curIdx = idx;
+                } else {
+                    outWord.setWordStartPos(curIdx);
+                    //log.debug("computeOffsets - unknown idx for: {}", word);
                 }
-                curIdx = idx;
+                curIdx += word.length();
             }
         }
     }
