@@ -23,3 +23,7 @@ C-W/C-H
 C-k
 	start digraph inserting mode
 
+Ctrl-X mode
+
+:h i_CTRL-X
+

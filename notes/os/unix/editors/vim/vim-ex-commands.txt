@@ -204,7 +204,7 @@ Execute External Command:
 
 :!<ext-cmd>
 	Execute external command <ext-cmd>.
-:sh
+:sh[ell]
 	Open a new shell window
 :r !<cmd>
 	Execute external command and edit its output
@@ -289,3 +289,9 @@ Writing system settings:
 These commands will write ":map" and ":set" commands to a file, in such a way
 that when these commands are executed, the current key mappings and options
 will be set to the same values.
+
+
+Re-Formatting:
+
+:retab
+  change tabulation

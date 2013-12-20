@@ -46,6 +46,7 @@ Continuation monad:
 http://www.haskellforall.com/2012/12/the-continuation-monad.html
 
 EitherT-ErrorT:
+http://www.haskellforall.com/2013/12/lift-error-handling-with-lens-like.html
 http://www.haskellforall.com/2012/07/breaking-from-loop.html
 http://www.haskellforall.com/2012/07/errors-10-simplified-error-handling.html
 http://stackoverflow.com/questions/14538294/correct-design-for-haskell-exception-handling

@@ -3,11 +3,19 @@ package mpkg;
 import net.sourceforge.reb4j.Alternation;
 import net.sourceforge.reb4j.Sequence;
 import net.sourceforge.reb4j.Literal;
+import net.sourceforge.reb4j.CharLiteral;
+import net.sourceforge.reb4j.StringLiteral;
 import net.sourceforge.reb4j.Quantified;
+import net.sourceforge.reb4j.Group;
+import net.sourceforge.reb4j.Entity;
 import net.sourceforge.reb4j.charclass.CharClass;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 
 import org.junit.Test;
 import org.junit.Ignore;
@@ -20,26 +28,52 @@ import static org.hamcrest.CoreMatchers.is;
 
 import static net.sourceforge.reb4j.charclass.CharClass.Perl.*;
 
+import static java.nio.charset.StandardCharsets.*;
+
 public class RegexTest {
-    @Ignore
+    private static final String RES_IN_TXT = "sample_rex_in.txt";
+    private static final String RES_OUT_TXT = "sample_rex_out.txt";
+
+    private BufferedReader getR(final String resName) {
+            return new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/" + resName), UTF_8));
+    }
+
+    @Test
     public void testRegex() throws Exception {
-        // Literal, CharClass  are both Sequencable, Alternative, Quantifiable
-        final Literal u = Literal.literal('_');
-        final CharClass d = DIGIT;
-        final Quantified dp = Quantified.atLeastOnce(d);
+        // Literal, StringLiteral, CharClass  are both Sequencable, Alternative, Quantifiable
+        final CharLiteral und = Literal.literal('_');
+        //final CharLiteral hyphen = Literal.literal('-');
+        final StringLiteral fatha = Literal.literal("-َ");
+        final StringLiteral damma = Literal.literal("-ُ");
+        final StringLiteral karsa = Literal.literal("-ِ");
+        final StringLiteral dammakarsa = Literal.literal("-ُِ");
 
-        final Sequence udp = Sequence.sequence(u, dp);
-        assertThat(udp.toPattern().pattern(), is("_\\d+"));
+        final CharClass dig = DIGIT;
+        final Quantified digp = Quantified.atLeastOnce(dig);
 
-        final Sequence dpu = Sequence.sequence(dp, u);
-        assertThat(dpu.toPattern().pattern(), is("\\d+_"));
+        final Sequence und_digp = Sequence.sequence(und, digp);
+        assertThat(und_digp.toString(), is("_\\d+"));
 
-        final Alternation alt = Alternation.alternatives(udp, dpu);
+        final Alternation hyphens = Alternation.alternatives(fatha, damma, karsa, dammakarsa);
+        final Quantified hyphens_opt = Quantified.optional(Group.capture(hyphens));
+        assertThat(hyphens_opt.toString(), is("(\\-َ|\\-ُ|\\-ِ|\\-ُِ)?"));
 
-        final Pattern pat = alt.toPattern();
-        assertThat(pat.pattern(), is("_\\d+|\\d+_"));
+        final Sequence grp_end = Sequence.sequence(hyphens_opt, und_digp, Entity.LINE_END);
+        assertThat(grp_end.toString(), is("(\\-َ|\\-ُ|\\-ِ|\\-ُِ)?_\\d+$"));
 
-        Matcher matcher = pat.matcher("Th234_is is _345my test st_1ring_ and ab343 or0_");
-        assertEquals("This is my test string_ and ab343 or", matcher.replaceAll(""));
+        final Pattern pat = grp_end.toPattern();
+
+        try(
+            final BufferedReader inR = getR(RES_IN_TXT);
+            final BufferedReader outR = getR(RES_OUT_TXT);
+        ) {
+            while (inR.ready()) {
+                final String inS = inR.readLine();
+                final String outS = outR.readLine();
+
+                final Matcher matcher = pat.matcher(inS);
+                assertEquals(outS, matcher.replaceAll(""));
+            }
+        }
     }
 };

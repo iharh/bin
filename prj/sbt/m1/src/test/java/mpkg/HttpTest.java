@@ -83,7 +83,7 @@ public class HttpTest {
         assertTrue(true);
     }
 
-    @Test 
+    @Ignore 
     public void testHttpSequential() throws Exception {
         for (int k = 0; k < RUNS; ++k) {
             MDMTestUtils.checkOutDoc1(MDMProcessor.process(MDMTestUtils.getInDoc1()));
