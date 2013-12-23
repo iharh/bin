@@ -11,7 +11,10 @@ Presentations:
 https://github.com/tibbe/talks
 http://www.slideshare.net/tibbe/highperformance-haskell (Tiebel - High Performance Haskell)
 http://www.slideshare.net/tibbe/reasoning-about-laziness (Tiebel - Reasoning About Haskell)
-Marks - Being Lazy (http://www.youtube.com/watch?v=eSrVC4-p7aI)
+Marks - Being Lazy
+  http://www.youtube.com/watch?v=eSrVC4-p7aI
+Meng - Strictness Unboxed Explained
+  https://docs.google.com/presentation/d/18ZdJoDGQr47wBfO-zEwW1hkc6tfiAdP7TYTKhki_IKk/edit#slide=id.p
 
 Wiki:
 http://en.wikibooks.org/wiki/Haskell/Laziness

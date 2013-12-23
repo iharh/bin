@@ -106,6 +106,7 @@ Mark P Jones - FP with Overloading and HO Polymorphism
 Swierstra - Data Types a la Carte
 
 Hutton - Compact Fusion
+Hutton - A Tutorial on the Universality and Expressiveness of Fold
 
 Need to read once again later (not all is clear from the first time):
 Gibbons - Calculating Functional Programs

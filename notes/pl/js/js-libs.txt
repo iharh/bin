@@ -10,3 +10,9 @@ d3.js (http://d3js.org/, frameworks/io/DOM)
 
 http://www.jstat.org/ (https://github.com/jstat/jstat)
 
+IO/Async
+
+Q:
+http://documentup.com/kriskowal/q/
+https://github.com/kriskowal/q
+
