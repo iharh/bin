@@ -7,20 +7,19 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 
 Books:
-Ibsen - Camel in Action                   - 320..358...461...501 (Ch 10 of 14)
-Cohn  - Agile Estimating and Planning     - 233..242...255..307 (Ch 21 of 22)
-Mironova - Unusual Adventure to Ancient   - 63
+Ibsen - Camel in Action                   - 322..358...461...501 (Ch 10 of 14)
+Cohn  - Agile Estimating and Planning     - 236..242...255..307 (Ch 21 of 22)
+Mironova - Unusual Adventure to Ancient   - 67
 
 Articles:
-Wadler - The Concatenate Wanishes         - 3
+Wadler - The Concatenate Wanishes         - 4
 
 Video:
 Kmett - Succinct Data Structures          -  00:00
 Linux in a Real World 11                  -  01:00
-Manko - Distributing Team How To Get      -  27:00
 
 Audio:
-Gritz 1, 12-13                            -  00:00
+Gritz 1, 12-13                            -  58:00
 Sedakova                                  -  34:00
 
 Articles to Read:
