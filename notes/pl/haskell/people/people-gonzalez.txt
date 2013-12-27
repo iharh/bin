@@ -122,3 +122,6 @@ http://stackoverflow.com/questions/13920695/what-is-the-connection-between-itera
 Chemistry:
 http://www.haskellforall.com/2013/10/an-all-atom-protein-search-engine.html
 
+Equational Reasoning:
+http://www.haskellforall.com/2013/12/equational-reasoning.html
+
