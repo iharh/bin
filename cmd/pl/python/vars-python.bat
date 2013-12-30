@@ -1,2 +1,3 @@
 @echo off
-call vars-python27.bat
+call vars-python33.bat
+:: 27

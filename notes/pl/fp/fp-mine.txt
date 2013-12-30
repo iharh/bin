@@ -105,15 +105,17 @@ Hutton - Introduction to Category Theory (lections)
 Mark P Jones - FP with Overloading and HO Polymorphism
 Swierstra - Data Types a la Carte
 
-Hutton - Compact Fusion
-Hutton - A Tutorial on the Universality and Expressiveness of Fold
-
 Need to read once again later (not all is clear from the first time):
 Gibbons - Calculating Functional Programs
 Gibbons - Datatype-Generic Programming
 
 Semantics:
 Mulcahey - What is the meaning of a Haskell program (https://vimeo.com/67174266)
+
+Real Samples:
+Hutton - Compact Fusion
+Hutton - A Tutorial on the Universality and Expressiveness of Fold
+Wadler - The Concatenate Wanishes
 
 +++++++++++++++++
 + FP In Haskell +
