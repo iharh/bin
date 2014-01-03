@@ -9,3 +9,5 @@ http://it-talk.org/post83873.html#p83873
 Warski - The no Framework Scala DI Framework
 http://www.slideshare.net/adamw1pl/the-noframework-scala-dependency-injection-framework
 
+Wyatt - Baking Delicious Modularity in Scala
+http://www.slideshare.net/DerekWyatt1/baking-delicious-modularity-in-scala
