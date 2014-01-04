@@ -5,22 +5,20 @@ CLB Presentation                          - 20:00 (Slide 23)
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
-http://www.haskellforall.com/2013/12/equational-reasoning.html
-  Proof techniques
 http://nbspace.ru/math/
-  Math and culture
+  ***
 
 Books:
-Ibsen - Camel in Action                   - 330..358...461...501 (Ch 10 of 14)
-Cohn  - Agile Estimating and Planning     - 247...255..307 (Ch 21 of 22)
-Mironova - Unusual Adventure to Ancient   - 77
+Ibsen - Camel in Action                   - 332..358...461...501 (Ch 10 of 14)
+Cohn  - Agile Estimating and Planning     - 249...255..307 (Ch 21 of 22)
+Mironova - Unusual Adventure to Ancient   - 80
 
 Articles:
-Hughes - A Novel Representation of Lists  - 2
+Hughes - A Novel Representation of Lists  - 3
 Coutts - From Lists to Streams to nothing...
 
 Video:
-Kmett - Succinct Data Structures          -  00:00
+Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
 Linux in a Real World 11                  -  01:00
 
 Audio:

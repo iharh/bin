@@ -118,8 +118,10 @@ set nowritebackup                 " And again.
 "au[tocmd] setl[ocal] 
 au FileType cpp setl sw=4 sts=4 et
 au FileType java setl sw=4 sts=4 et
+au FileType python setl sw=4 sts=4 et
 au FileType sql setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et
+au FileType txt setl noeol
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 
