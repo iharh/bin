@@ -9,13 +9,12 @@ http://nbspace.ru/math/
   ***
 
 Books:
-Ibsen - Camel in Action                   - 332..358...461...501 (Ch 10 of 14)
+Ibsen - Camel in Action                   - 334..358...461...501 (Ch 10 of 14)
 Cohn  - Agile Estimating and Planning     - 249...255..307 (Ch 21 of 22)
-Mironova - Unusual Adventure to Ancient   - 80
+Mironova - Unusual Adventure to Ancient   - 82
 
 Articles:
-Hughes - A Novel Representation of Lists  - 3
-Coutts - From Lists to Streams to nothing...
+Coutts - From Lists to Streams to nothing - 1
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)

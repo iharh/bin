@@ -116,6 +116,7 @@ Real Samples:
 Hutton - Compact Fusion
 Hutton - A Tutorial on the Universality and Expressiveness of Fold
 Wadler - The Concatenate Wanishes
+Hughes - A Novel Representation of Lists
 
 +++++++++++++++++
 + FP In Haskell +
