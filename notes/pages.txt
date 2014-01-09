@@ -6,22 +6,24 @@ URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
 http://nbspace.ru/math/
-  ***
+  Math in school
+http://www.infoq.com/interviews/andreasson-hadoop
+  Werner: So JDBC, ODBC the back and forth those is Hive or Pig, ...
 
 Books:
 Ibsen - Camel in Action                   - 334..358...461...501 (Ch 10 of 14)
-Cohn  - Agile Estimating and Planning     - 249...255..307 (Ch 21 of 22)
-Mironova - Unusual Adventure to Ancient   - 82
+Cohn  - Agile Estimating and Planning     - 251...255..307 (Ch 21 of 22)
+Mironova - Unusual Adventure to Ancient   - 86
 
 Articles:
-Coutts - From Lists to Streams to nothing - 1
+Coutts - From Lists to Streams to nothing - 2
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 14-15                            -1:01:00
+Gritz 1, 14-15                            -1:08:00
 Sedakova                                  -  34:00
 
 Magazines:
