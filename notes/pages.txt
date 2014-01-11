@@ -17,10 +17,10 @@ http://www.infoq.com/interviews/wampler-scala-nosql
 Books:
 Ibsen - Camel in Action                   - 339..358...461...501 (Ch 10 of 14)
 Cohn  - Agile Estimating and Planning     - 253...255..307 (Ch 21 of 22)
-Mironova - Unusual Adventure to Ancient   - 90
+Mironova - Unusual Adventure to Ancient   - 95
 
 Articles:
-Coutts - From Lists to Streams to nothing - 2 (2.1)
+Coutts - From Lists to Streams to nothing - 2 (2.2)
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)

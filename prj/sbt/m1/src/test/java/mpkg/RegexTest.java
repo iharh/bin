@@ -8,7 +8,10 @@ import net.sourceforge.reb4j.StringLiteral;
 import net.sourceforge.reb4j.Quantified;
 import net.sourceforge.reb4j.Group;
 import net.sourceforge.reb4j.Entity;
+import net.sourceforge.reb4j.Expression;
 import net.sourceforge.reb4j.charclass.CharClass;
+import net.sourceforge.reb4j.charclass.SingleChar;
+import net.sourceforge.reb4j.charclass.Negated;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,6 +42,15 @@ public class RegexTest {
     }
 
     @Test
+    public void testRegexClass() throws Exception {
+        Expression e = CharClass.character('d').negated();
+        assertThat(e.toString(), is("[^d]"));
+
+        final Matcher m = e.toPattern().matcher("aadabdaaadede");
+        assertEquals("dddd", m.replaceAll(""));
+    }
+
+    @Ignore
     public void testRegex() throws Exception {
         // Literal, StringLiteral, CharClass  are both Sequencable, Alternative, Quantifiable
         final CharLiteral und = Literal.literal('_');
