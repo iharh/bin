@@ -57,8 +57,9 @@ public class RegexTest {
         //final CharLiteral hyphen = Literal.literal('-');
         final StringLiteral fatha = Literal.literal("-َ");
         final StringLiteral damma = Literal.literal("-ُ");
-        final StringLiteral karsa = Literal.literal("-ِ");
-        final StringLiteral dammakarsa = Literal.literal("-ُِ");
+        final StringLiteral damma2 = Literal.literal("-ُ");
+        final StringLiteral kasra = Literal.literal("-ِ");
+        final StringLiteral dammakasra = Literal.literal("-ُِ");
 
         final CharClass dig = DIGIT;
         final Quantified digp = Quantified.atLeastOnce(dig);
@@ -66,7 +67,7 @@ public class RegexTest {
         final Sequence und_digp = Sequence.sequence(und, digp);
         assertThat(und_digp.toString(), is("_\\d+"));
 
-        final Alternation hyphens = Alternation.alternatives(fatha, damma, karsa, dammakarsa);
+        final Alternation hyphens = Alternation.alternatives(fatha, damma, kasra, dammakasra); // , damma2
         final Quantified hyphens_opt = Quantified.optional(Group.capture(hyphens));
         assertThat(hyphens_opt.toString(), is("(\\-َ|\\-ُ|\\-ِ|\\-ُِ)?"));
 

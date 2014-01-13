@@ -117,6 +117,8 @@ Hutton - Compact Fusion
 Hutton - A Tutorial on the Universality and Expressiveness of Fold
 Wadler - The Concatenate Wanishes
 Hughes - A Novel Representation of Lists
+Coutts - Stream Fusion: From Lists to Streams to Nothing at All
+  http://hackage.haskell.org/package/stream-fusion
 
 +++++++++++++++++
 + FP In Haskell +

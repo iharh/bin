@@ -1,4 +1,5 @@
 HPC Lambdas:
 http://www.codeproject.com/Articles/616090/Delegates-Cplusplus11-vs-Impossibly-Fast-A-Quick-a
 http://www.codeproject.com/Articles/11015/The-Impossibly-Fast-C-Delegates
+http://blog.coldflake.com/posts/2014-01-12-C%2B%2B-delegates-on-steroids.html
 
