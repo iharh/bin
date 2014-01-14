@@ -1,4 +1,3 @@
-
 http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
 
 MIT:
@@ -17,4 +16,8 @@ Open Data Structures:
 http://opendatastructures.org/
 https://github.com/patmorin/ods
 
-
+Kostyukov, RBTree:
+http://habrahabr.ru/post/208918/
+http://www.slideshare.net/vkostyukov/purely-functional-data-structures-in-scala-26175521
+http://www.youtube.com/watch?v=fWnaW3CP7OI
+http://matt.might.net/articles/red-black-delete/

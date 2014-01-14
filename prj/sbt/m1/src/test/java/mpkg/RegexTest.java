@@ -41,7 +41,7 @@ public class RegexTest {
             return new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/" + resName), UTF_8));
     }
 
-    @Test
+    @Ignore
     public void testRegexClass() throws Exception {
         Expression e = CharClass.character('d').negated();
         assertThat(e.toString(), is("[^d]"));

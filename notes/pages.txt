@@ -10,22 +10,22 @@ http://nbspace.ru/math/
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 http://www.infoq.com/interviews/click-0xdata
-  What's the interaction model
+  What's the relationship
 
 Books:
-Ibsen - Camel in Action                   - 342..358...461...501 (Ch 10 of 14)
-Mironova - Unusual Adventure to Ancient   - 99
+Ibsen - Camel in Action                   - 344..358...461...501 (Ch 10 of 14)
+Mironova - Unusual Adventure to Ancient   - 104
 
 Articles:
-Coutts - From Lists to Streams to nothing - 4 (3)
-ScrumTrek - Agile Cheklist                - 1
+Coutts - From Lists to Streams to nothing - 4 (4)
+ScrumTrek - Agile Cheklist                - 5
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 14-15                            -1:56:00
+Gritz 1, 16-17                            -  00:00
 Sedakova                                  -  34:00
 Budargin                                  -  13:00
 
