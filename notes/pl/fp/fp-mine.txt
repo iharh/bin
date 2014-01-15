@@ -117,8 +117,13 @@ Hutton - Compact Fusion
 Hutton - A Tutorial on the Universality and Expressiveness of Fold
 Wadler - The Concatenate Wanishes
 Hughes - A Novel Representation of Lists
+
 Coutts - Stream Fusion: From Lists to Streams to Nothing at All
+  (incl List Comprehensions semantics - 4)
   http://hackage.haskell.org/package/stream-fusion
+
+(also Church and co-Church encodings):
+Coutts - Stream Fusion - Practical Shortcut Fusion for Coinductive Sequence Types phd
 
 +++++++++++++++++
 + FP In Haskell +

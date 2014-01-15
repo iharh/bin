@@ -10,24 +10,24 @@ http://nbspace.ru/math/
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 http://www.infoq.com/interviews/click-0xdata
-  What's the relationship
+  You mentioned your computations
 
 Books:
-Ibsen - Camel in Action                   - 344..358...461...501 (Ch 10 of 14)
-Mironova - Unusual Adventure to Ancient   - 104
+Ibsen - Camel in Action                   - 347..358...461...501 (Ch 10 of 14)
+Mironova - Unusual Adventure to Ancient   - 109
 
 Articles:
-Coutts - From Lists to Streams to nothing - 4 (4)
-ScrumTrek - Agile Cheklist                - 5
+Coutts - From Lists to Streams to nothing - 4 (5)
+ScrumTrek - Agile Cheklist                - 6
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
 Linux in a Real World 11                  -  01:00
+Malinetsky                                -  07:00
 
 Audio:
 Gritz 1, 16-17                            -  00:00
 Sedakova                                  -  34:00
-Budargin                                  -  13:00
 
 Magazines:
 ACCU                                      - 118
