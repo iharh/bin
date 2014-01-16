@@ -13,11 +13,11 @@ http://www.infoq.com/interviews/click-0xdata
   You mentioned your computations
 
 Books:
-Ibsen - Camel in Action                   - 347..358...461...501 (Ch 10 of 14)
+Ibsen - Camel in Action                   - 350..358...461...501 (Ch 10 of 14)
 Mironova - Unusual Adventure to Ancient   - 109
 
 Articles:
-Coutts - From Lists to Streams to nothing - 4 (5)
+Coutts - From Lists to Streams to nothing - 5 (6)
 ScrumTrek - Agile Cheklist                - 6
 
 Video:

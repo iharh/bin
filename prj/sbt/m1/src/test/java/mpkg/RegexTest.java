@@ -19,7 +19,6 @@ import java.util.regex.Pattern;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
 import org.junit.Test;
 import org.junit.Ignore;
 

@@ -29,7 +29,7 @@ public class ICUTest {
     private static final String PAT_2 = "\\w+";
     private static final String PAT_3 = "[\\w\\?]+[\\w/\\*\\?\\s\\']*";
 
-    @Test
+    @Ignore
     public void testRegexICU() throws Exception {
         // final Pattern pat = UnicodeRegex.compile(PAT_ICU_1); // fix-method is also interesting (LC, L, Nl)
         final Pattern pat = Pattern.compile(PAT_3, Pattern.UNICODE_CHARACTER_CLASS | Pattern.CASE_INSENSITIVE);
