@@ -10,14 +10,16 @@ http://nbspace.ru/math/
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 http://www.infoq.com/interviews/click-0xdata
-  You mentioned your computations
+  You say you have a clustering solution
+http://www.haskellforall.com/2014/01/stream-fusion-for-pipes.html
+  Shortcut fusion
 
 Books:
-Ibsen - Camel in Action                   - 350..358...461...501 (Ch 10 of 14)
-Mironova - Unusual Adventure to Ancient   - 109
+Ibsen - Camel in Action                   - 352..358...461...501 (Ch 10 of 14)
+Mironova - Unusual Adventure to Ancient   - 111
 
 Articles:
-Coutts - From Lists to Streams to nothing - 5 (6)
+Coutts - From Lists to Streams to nothing - 6 (6.2)
 ScrumTrek - Agile Cheklist                - 6
 
 Video:
@@ -26,7 +28,7 @@ Linux in a Real World 11                  -  01:00
 Malinetsky                                -  07:00
 
 Audio:
-Gritz 1, 16-17                            -  00:00
+Gritz 1, 16-17                            -  12:00
 Sedakova                                  -  34:00
 
 Magazines:
