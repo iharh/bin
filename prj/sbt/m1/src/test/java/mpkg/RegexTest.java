@@ -49,14 +49,16 @@ public class RegexTest {
         assertEquals("dddd", m.replaceAll(""));
     }
 
-    @Ignore
+    @Test
     public void testRegex() throws Exception {
         // Literal, StringLiteral, CharClass  are both Sequencable, Alternative, Quantifiable
         final CharLiteral und = Literal.literal('_');
         //final CharLiteral hyphen = Literal.literal('-');
         final StringLiteral fatha = Literal.literal("-َ");
         final StringLiteral damma = Literal.literal("-ُ");
-        final StringLiteral damma2 = Literal.literal("-ُ");
+        final StringLiteral damma2_1 = Literal.literal("-َِ");
+        final StringLiteral damma2_2 = Literal.literal("-َِ");
+
         final StringLiteral kasra = Literal.literal("-ِ");
         final StringLiteral dammakasra = Literal.literal("-ُِ");
 
@@ -66,12 +68,12 @@ public class RegexTest {
         final Sequence und_digp = Sequence.sequence(und, digp);
         assertThat(und_digp.toString(), is("_\\d+"));
 
-        final Alternation hyphens = Alternation.alternatives(fatha, damma, kasra, dammakasra); // , damma2
+        final Alternation hyphens = Alternation.alternatives(fatha, damma, damma2_1, damma2_2, kasra, dammakasra);
         final Quantified hyphens_opt = Quantified.optional(Group.capture(hyphens));
-        assertThat(hyphens_opt.toString(), is("(\\-َ|\\-ُ|\\-ِ|\\-ُِ)?"));
+        assertThat(hyphens_opt.toString(), is("(\\-َ|\\-ُ|\\-َِ|\\-َِ|\\-ِ|\\-ُِ)?"));
 
         final Sequence grp_end = Sequence.sequence(hyphens_opt, und_digp, Entity.LINE_END);
-        assertThat(grp_end.toString(), is("(\\-َ|\\-ُ|\\-ِ|\\-ُِ)?_\\d+$"));
+        assertThat(grp_end.toString(), is("(\\-َ|\\-ُ|\\-َِ|\\-َِ|\\-ِ|\\-ُِ)?_\\d+$"));
 
         final Pattern pat = grp_end.toPattern();
 
