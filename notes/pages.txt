@@ -18,7 +18,7 @@ Ibsen - Camel in Action                   - 356..358...461...501 (Ch 10 of 14)
 Mironova - Unusual Adventure to Ancient   - 115
 
 Articles:
-Coutts - From Lists to Streams to nothing - 7 (7.2)
+Coutts - From Lists to Streams to nothing - 8 (Static arguments transformations)
 ScrumTrek - Agile Cheklist                - 6
 
 Video:
@@ -27,7 +27,7 @@ Linux in a Real World 11                  -  01:00
 Malinetsky                                -  07:00
 
 Audio:
-Gritz 1, 16-17                            -  12:00
+Gritz 1, 16-17                            -  37:00
 Sedakova                                  -  34:00
 
 Magazines:
