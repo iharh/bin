@@ -9,6 +9,8 @@ import com.thoughtworks.xstream.converters.UnmarshallingContext;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
+import com.ibm.icu.text.Normalizer;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -44,7 +46,7 @@ public class MorphFSConverter implements Converter {
             String attrValue = reader.getAttribute(i);
 
             if (FIELD_LEMMA.equals(attrName)) {
-                morphFS.setLemma(lemmaPat.matcher(attrValue).replaceAll(""));
+                morphFS.setLemma(Normalizer.compose(lemmaPat.matcher(attrValue).replaceAll(""), false));
             } else {
                 attrs.add(new MorphFSAttr(attrName, attrValue));
             }

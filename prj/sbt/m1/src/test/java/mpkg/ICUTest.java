@@ -7,7 +7,9 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-// import com.ibm.icu.impl.UnicodeRegex;
+import com.ibm.icu.text.Normalizer;
+import com.ibm.icu.impl.UnicodeRegex;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,7 +31,14 @@ public class ICUTest {
     private static final String PAT_2 = "\\w+";
     private static final String PAT_3 = "[\\w\\?]+[\\w/\\*\\?\\s\\']*";
 
-    @Ignore
+    private static final String AR_STR_DECOMP = "إِنَّ";
+    private static final String AR_STR_COMP = "إِنَّ";
+    @Test
+    public void testNormalizerICU() throws Exception {
+        assertEquals(AR_STR_COMP, Normalizer.compose(AR_STR_DECOMP, false));
+    }
+
+    @Test
     public void testRegexICU() throws Exception {
         // final Pattern pat = UnicodeRegex.compile(PAT_ICU_1); // fix-method is also interesting (LC, L, Nl)
         final Pattern pat = Pattern.compile(PAT_3, Pattern.UNICODE_CHARACTER_CLASS | Pattern.CASE_INSENSITIVE);

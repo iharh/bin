@@ -11,14 +11,14 @@ http://nbspace.ru/math/
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 http://www.infoq.com/interviews/click-0xdata
-  I guess that explains how you do the live
+  You used to be at Azul
 
 Books:
-Ibsen - Camel in Action                   - 356..358...461...501 (Ch 10 of 14)
+Ibsen - Camel in Action                   - 359..385...461...501 (Ch 11 of 14)
 Mironova - Unusual Adventure to Ancient   - 115
 
 Articles:
-Coutts - From Lists to Streams to nothing - 8 (Static arguments transformations)
+Coutts - From Lists to Streams to nothing - 8 (Specialization)
 ScrumTrek - Agile Cheklist                - 6
 
 Video:

@@ -1,11 +1,11 @@
 "Ihar Hancharenka custom settings
 set nocompatible                  " Must come first because it changes other options.
+" source $VIMRUNTIME/vimrc_example.vim
+
 "source $VIMRUNTIME/mswin.vim
 
 " for selection in visual/insert mode - http://vim.wikia.com/wiki/Make_C-Left_C-Right_behave_as_in_Windows
-if has('win32') || has('win64')
-  "behave mswin
-endif
+behave mswin
  
 " SHIFT-Del is Cut
 vnoremap <S-Del> "+x
@@ -17,6 +17,11 @@ cmap <S-Insert> <C-R>+
 " imap <S-Insert> <C-V>
 " vmap <S-Insert> <C-V>
 
+if has('win32') || has('win64')
+" for hiding ^M while viewing DOS-files
+  set fileformats=dos
+  set fileformat=dos
+endif
 
 set diffexpr=MyDiff()
 function MyDiff()
@@ -55,35 +60,27 @@ set wildmode=list:longest         " Complete files like a shell.
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
+" pathogen stuff !!!
 filetype off
+call pathogen#infect() " add string-param if you need to change bundle dir
+" !!! currently - clone the following VIM plugins !!!
+" git://github.com/altercation/vim-colors-solarized.git
+" git://github.com/vim-pandoc/vim-pandoc.git
+" git://github.com/derekwyatt/vim-scala.git
+" git://github.com/vim-scripts/VimClojure.git
 
-"NeoBundle stuff
-"git clone git://github.com/Shougo/neobundle.vim to vimfiles/bundle
+"silent! call pathogen#helptags()
+" To rebuild the help tags
+"" On Unix:
+":helptags ~/.vim/doc
+"" On Windows:
+":helpt[ags] ~/vimfiles/doc
 
-if has('vim_starting')
-   set nocompatible               " Be iMproved
-   " Required:
-   set runtimepath+=$HOME/vimfiles/bundle/neobundle.vim
-endif
-
-call neobundle#rc(expand("$HOME/vimfiles/bundle"))
-
-NeoBundleFetch "Shougo/neobundle.vim"
-
-" My Bundles here:
-NeoBundleLazy "Shougo/unite.vim"
-" nmake-vc100_32.bat -f make_msvc32.mak nodebug=1
-NeoBundleLazy "Shougo/vimproc", { "build" : { "windows" : "nmake-vc100_32.bat -f make_msvc32.mak nodebug=1" } }
-NeoBundle     "altercation/vim-colors-solarized"
-NeoBundleLazy "derekwyatt/vim-scala"
-NeoBundleLazy "derekwyatt/vim-sbt"
 
 syntax on                         " Turn on syntax highlighting
 filetype plugin indent on         " Turn on file type detection.
 
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
-NeoBundleCheck
+"runtime macros/matchit.vim        " Load the matchit plugin.
 
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -124,13 +121,25 @@ au FileType java setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
 au FileType sql setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et
-au FileType txt setl sw=4 sts=4 noeol
+au FileType txt setl noeol
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l-%L,%c-%v\ %)%P
+
+" !!! clojure stuff
+"let vimclojure#WantNailgun = 1
+"let vimclojure#NailgunClient = "D:/dev/PL/clojure/tools/ng/ng.exe"
+"let vimclojure#NailgunServer = "127.0.0.1"
+"let vimclojure#NailgunPort = "2113"
+
+let vimclojure#ParenRainbow = 1
+let vimclojure#SplitPos = "bottom" " left/right/top/bottom
+let vimclojure#SplitSize = 20
+
+" let vimclojure#HighlightBuiltins = 1 " is by default
 
 " !!! vim-pandoc stuff
 let g:pandoc_no_folding = 1
@@ -150,17 +159,13 @@ set autoindent                    " auto-indent
 set path=.,,**
 
 
-" http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
-" This tip is an improved version of the example given for :help last-position-jump.
-" It fixes a problem where the cursor position will not be restored if the file only has a single line. 
-"
 " Tell vim to remember certain things when we exit
 "  '50  :  marks will be remembered for up to 10 previously edited files
 "  "100 :  will save up to 100 lines for each register
 "  :20  :  up to 20 lines of command-line history will be remembered
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
-set viminfo='50,\"100,:20,%,n~/_viminfo
+set viminfo='50,\"100,:20,%,nD:\\dev\\Utils\\Shell\\Vim\\_viminfo
 
 function! ResCur()
   if line("'\"") <= line("$")
@@ -174,7 +179,6 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-set tags=./tags;/
 
 " Tab mappings.
 "map <leader>tt :tabnew<cr>
@@ -194,28 +198,3 @@ set tags=./tags;/
 "  runtime! custom_config/*.gvim*
 
 " :map <silent> <F2> :echo 'Hello!'<CR>
-
-"Unite settings
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
-
-" Use ag for search
-"if executable('ag')
-"  let g:unite_source_grep_command = 'ag'
-"  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-"  let g:unite_source_grep_recursive_opt = ''
-"endif
-
-
-" To rebuild the help tags
-"" On Unix:
-":helpt[ags] ~/.vim/doc
-"" On Windows:
-":helpt[ags] ~/vimfiles/doc
-
-" need not to be very early!
-if has('win32') || has('win64')
-" for hiding ^M while viewing DOS-files
-  set fileformats=dos
-  set fileformat=dos
-endif
