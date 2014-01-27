@@ -58,3 +58,5 @@ g]
 :tf
 :tl
     Go to the first/last tag in a list
+C-t
+    Go to N position before at tags stack...

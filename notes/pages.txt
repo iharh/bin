@@ -1,7 +1,6 @@
 CLB Reference Guide                       - 467..576..613..648..667..674..694
                                             724..727..738..746..875..886..902..911..982..988..991
 CLB Presentation                          - 20:00 (Slide 23)
-GLR*                                      - 13..33..40
 
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
@@ -10,15 +9,14 @@ http://nbspace.ru/math/
   Math in school - another problem
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
-http://www.infoq.com/interviews/click-0xdata
-  You used to be at Azul
 
 Books:
-Ibsen - Camel in Action                   - 359..385...461...501 (Ch 11 of 14)
+Lavie - GLR*                              - 15..33..40
+Ibsen - Camel in Action                   - 362..385...461...501 (Ch 11 of 14)
 Mironova - Unusual Adventure to Ancient   - 115
 
 Articles:
-Coutts - From Lists to Streams to nothing - 8 (Specialization)
+Coutts - From Lists to Streams to nothing - 9 (8)
 ScrumTrek - Agile Cheklist                - 6
 
 Video:
@@ -37,7 +35,7 @@ Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
 
 Review:
-FP-People (Appel), Windows Access Control Demystified
-Erwig - A Generic Recursion Toolbox for Haskell (Or: Scrap Your Boilerplate Systematically)
 FP-Features-Folds
 FP-Features-CategoryTheoryBased-Applicative
+FP-People (Appel), Windows Access Control Demystified
+Erwig - A Generic Recursion Toolbox for Haskell (Or: Scrap Your Boilerplate Systematically)
