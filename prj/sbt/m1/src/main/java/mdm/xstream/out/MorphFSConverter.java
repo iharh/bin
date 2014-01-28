@@ -24,7 +24,7 @@ public class MorphFSConverter implements Converter {
     private Pattern lemmaPat;
 
     public MorphFSConverter() {
-        lemmaPat = Pattern.compile("_\\d+|\\d+_");
+        lemmaPat = Pattern.compile("(\\-َ|\\-ُ|\\-َِ|\\-َِ|\\-ِ|\\-ُِ)?_\\d+$");
     }
 
     public boolean canConvert(Class clazz) {

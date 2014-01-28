@@ -5,19 +5,18 @@ CLB Presentation                          - 20:00 (Slide 23)
 URLs:
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
   Categories
-http://nbspace.ru/math/
-  Math in school - another problem
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 
 Books:
-Lavie - GLR*                              - 15..33..40
-Ibsen - Camel in Action                   - 362..385...461...501 (Ch 11 of 14)
-Mironova - Unusual Adventure to Ancient   - 115
+Lavie - GLR*                              - 17..33..40
+Ibsen - Camel in Action                   - 366..385...461...501 (Ch 11 of 14)
+Mironova - Unusual Adventure to Ancient   - 118
 
 Articles:
-Coutts - From Lists to Streams to nothing - 9 (8)
-ScrumTrek - Agile Cheklist                - 6
+Lockhart - Cry of Mathematician           - 14..28
+Coutts - From Lists to Streams to nothing - 11 (9.2)
+ScrumTrek - Agile Cheklist                - 7..21
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
@@ -25,7 +24,7 @@ Linux in a Real World 11                  -  01:00
 Malinetsky                                -  07:00
 
 Audio:
-Gritz 1, 16-17                            -  37:00
+Gritz 1, 16-17                            -1:00:00
 Sedakova                                  -  34:00
 
 Magazines:

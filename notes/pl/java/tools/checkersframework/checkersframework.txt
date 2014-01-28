@@ -1,0 +1,2 @@
+http://types.cs.washington.edu/checker-framework/
+http://www.slideshare.net/iwanowww/formal-verification-in-java-by-shura-iline-vladimir-ivanov-jeeconf-2013-kiev-ukraine

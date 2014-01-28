@@ -36,3 +36,13 @@ Java Serialization Facts and Fallacies
 
 Performance Techniques:
 https://wiki.openjdk.java.net/display/HotSpot/PerformanceTechniques
+
+Nutter
+  http://www.slideshare.net/CharlesNutter/javaone-2012-jvm-jit-for-dummies
+  http://www.youtube.com/watch?v=FnDHp3Qya6s
+
+Ivanov
+  http://www.slideshare.net/iwanowww/jitcompiler-in-jvm-by
+  http://www.slideshare.net/ZeroTurnaround/vladimir-ivanovjvmjitcompilationoverview-24613146  
+  http://vimeo.com/69631795
+
