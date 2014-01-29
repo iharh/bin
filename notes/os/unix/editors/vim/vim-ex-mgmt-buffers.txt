@@ -1,4 +1,9 @@
 Buffer Management:
+
+:h buffers
+  help on windows and buffers
+
+
 :ls/files/buffers[!]
 	List buffers (all open documents) - assigns a unique integer id-number to each buffer
 	! - for showing hidden buffers (help, quickfix, l...)

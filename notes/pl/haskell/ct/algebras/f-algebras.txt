@@ -3,6 +3,8 @@ http://en.wikipedia.org/wiki/F-coalgebra
 
 Milewski:
 https://www.fpcomplete.com/user/bartosz/understanding-algebras
+http://bartoszmilewski.com/2013/06/10/understanding-f-algebras/
+http://bartoszmilewski.com/2014/01/28/you-cant-make-an-algebra-without-breaking-a-few-eggs/
 
 http://lukepalmer.wordpress.com/2013/03/12/constructions-on-typeclasses-part-1-f-algebras/
 

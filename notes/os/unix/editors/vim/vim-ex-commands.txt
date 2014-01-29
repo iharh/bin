@@ -103,27 +103,6 @@ $
 
 
 
-Directory Managemennt:
-
-:cd path
-	Change working dir
-	!!! Use Tab and arrows to autocomplete !!!
-:pwd
-	Check the current working dir
-
-
-File Explorer:
-
-:Ex
-:e .
-	File explorer (E is capital).
-:Sex
-:Hex
-	Split window and open integrated File explorer
-:browse e
-	Open graphical file explorer (gvim only).:w
-
-
 Find files:
 
 :gr[ep][!] expr *.txt
