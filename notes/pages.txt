@@ -8,24 +8,25 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 https://github.com/vim-scripts/project.tar.gz/blob/master/doc/project.txt
-  MAPPINGS
+  SETTINGS
 
 Books:
-Lavie - GLR*                              - 19..33..40
-Ibsen - Camel in Action                   - 371..385...461...501 (Ch 11 of 14)
-Mironova - Unusual Adventure to Ancient   - 120
+Lavie - GLR*                              - 21..33..40
+Ibsen - Camel in Action                   - 375..385...461...501 (Ch 11 of 14)
+Mironova - Unusual Adventure to Ancient   - 125
 
 Articles:
-Lockhart - Cry of Mathematician           - 16..28
-ScrumTrek - Agile Cheklist                - 8..21
+Coutts - Rewriting Haskell Strings        - 2
+Lockhart - Cry of Mathematician           - 18..28
+ScrumTrek - Agile Cheklist                - 9..21
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
 Linux in a Real World 11                  -  01:00
-Malinetsky                                -1:20:00
+Malinetsky                                -1:41:00
 
 Audio:
-Gritz 1, 16-17                            -1:00:00
+Gritz 1, 18                               -  00:00
 Sedakova                                  -  34:00
 
 Magazines:

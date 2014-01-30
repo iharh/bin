@@ -7,6 +7,7 @@ Buffer Management:
 :ls/files/buffers[!]
 	List buffers (all open documents) - assigns a unique integer id-number to each buffer
 	! - for showing hidden buffers (help, quickfix, l...)
+:<N>b
 :b-
 	<N>
 		Go to buffer by the mentioned id-number
@@ -14,7 +15,7 @@ Buffer Management:
 		Switch to buffer by name
 	n,p
 		Switch to the next/previous buffer
-	f,l
+	(r,f),l
 		Switch to the first/last buffer
 	d[elete][!]
 		Buffer delete - unload and delete from buffer list(close file)

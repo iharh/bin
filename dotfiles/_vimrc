@@ -1,10 +1,13 @@
 "Ihar Hancharenka custom settings
-set nocompatible                  " Must come first because it changes other options.
+set nocp                 " Must come first because it changes other options.
 "source $VIMRUNTIME/mswin.vim
 
 " for selection in visual/insert mode - http://vim.wikia.com/wiki/Make_C-Left_C-Right_behave_as_in_Windows
 if has('win32') || has('win64')
-  "behave mswin
+    "behave mswin
+    let s:vimfilesbase='~/vimfiles/'
+else
+    let s:vimfilesbase='~/.vim/'
 endif
  
 " SHIFT-Del is Cut
@@ -61,22 +64,29 @@ filetype off
 "git clone git://github.com/Shougo/neobundle.vim to vimfiles/bundle
 
 if has('vim_starting')
-   set nocompatible               " Be iMproved
+   set nocp " Be iMproved
    " Required:
-   set runtimepath+=$HOME/vimfiles/bundle/neobundle.vim
+   " let s:neobundlepath = s:vimfilesbase . 'bundle/neobundle.vim'
+   set rtp+=~/vimfiles/bundle/neobundle.vim "learn how to use vars here $HOME
 endif
 
-call neobundle#rc(expand("$HOME/vimfiles/bundle"))
+call neobundle#rc(expand(s:vimfilesbase . '/bundle'))
 
 NeoBundleFetch "Shougo/neobundle.vim"
 
 " My Bundles here:
-NeoBundleLazy "Shougo/unite.vim"
-" nmake-vc100_32.bat -f make_msvc32.mak nodebug=1
-NeoBundleLazy "Shougo/vimproc", { "build" : { "windows" : "nmake-vc100_32.bat -f make_msvc32.mak nodebug=1" } }
-NeoBundle     "altercation/vim-colors-solarized"
-NeoBundleLazy "derekwyatt/vim-scala"
-NeoBundleLazy "derekwyatt/vim-sbt"
+" if filereadable("${HOME}/.vimrc")
+"   source ${HOME}/.vim/plugin-list.vim
+" endif
+" for CONFIG in split(glob('~/vimfiles/vimrc.d/*.vim'), '\n')
+"   exe 'source' CONFIG
+"endfor
+
+NeoBundleLazy 'Shougo/unite.vim'
+NeoBundleLazy 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
+NeoBundle     'altercation/vim-colors-solarized'
+"NeoBundleLazy 'derekwyatt/vim-scala'
+"NeoBundleLazy 'derekwyatt/vim-sbt'
 
 syntax on                         " Turn on syntax highlighting
 filetype plugin indent on         " Turn on file type detection.
@@ -114,9 +124,9 @@ set nowritebackup                 " And again.
 "set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 " UNCOMMENT TO USE
-"set tabstop=2                    " Global tab width.
-"set shiftwidth=2                 " And again, related.
-"set expandtab                    " Use spaces instead of tabs
+"ts tabstop                      " Global tab width.
+"sw shiftwidth=2                 " And again, related.
+"et expandtab                    " Use spaces instead of tabs
 
 "au[tocmd] setl[ocal] 
 au FileType cpp setl sw=4 sts=4 et
@@ -139,6 +149,7 @@ let g:pandoc_no_folding = 1
 
 " Or use vividchalk
 if has("dialog_gui")
+  "let g:solarized_termcolors=256
   set background=dark " or light which is by default
   colorscheme solarized
 else
@@ -176,23 +187,6 @@ augroup END
 
 set tags=./tags;/
 
-" Tab mappings.
-"map <leader>tt :tabnew<cr>
-"map <leader>te :tabedit
-"map <leader>tc :tabclose<cr>
-"map <leader>to :tabonly<cr>
-"map <leader>tn :tabnext<cr>
-"map <leader>tp :tabprevious<cr>
-"map <leader>tf :tabfirst<cr>
-"map <leader>tl :tablast<cr>
-"map <leader>tm :tabmove
-
-" Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
-
-" load custom configurations
-"  runtime! custom_config/*.gvim*
-
 " :map <silent> <F2> :echo 'Hello!'<CR>
 
 "Unite settings
@@ -208,10 +202,7 @@ nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
 
 
 " To rebuild the help tags
-"" On Unix:
-":helpt[ags] ~/.vim/doc
-"" On Windows:
-":helpt[ags] ~/vimfiles/doc
+":helpt[ags] s:vimfilesbase . doc
 
 " need not to be very early!
 if has('win32') || has('win64')
