@@ -7,18 +7,16 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
-https://github.com/vim-scripts/project.tar.gz/blob/master/doc/project.txt
-  SETTINGS
 
 Books:
-Lavie - GLR*                              - 21..33..40
-Ibsen - Camel in Action                   - 375..385...461...501 (Ch 11 of 14)
-Mironova - Unusual Adventure to Ancient   - 125
+Lavie - GLR*                              - 23..33..40
+Ibsen - Camel in Action                   - 377..384...461...501 (Ch 11 of 14)
+Mironova - Unusual Adventure to Ancient   - 126
 
 Articles:
-Coutts - Rewriting Haskell Strings        - 2
-Lockhart - Cry of Mathematician           - 18..28
-ScrumTrek - Agile Cheklist                - 9..21
+Coutts - Rewriting Haskell Strings        - 4 (3.1)
+Lockhart - Cry of Mathematician           - 20..28
+ScrumTrek - Agile Cheklist                - 10..21
 
 Video:
 Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)

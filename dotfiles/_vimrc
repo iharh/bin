@@ -1,9 +1,11 @@
-"Ihar Hancharenka custom settings
+"Ihar Hanchrenka custom settings 
 set nocp                 " Must come first because it changes other options.
-"source $VIMRUNTIME/mswin.vim
+":e $MYVIMRC
+":source %
 
 " for selection in visual/insert mode - http://vim.wikia.com/wiki/Make_C-Left_C-Right_behave_as_in_Windows
 if has('win32') || has('win64')
+    "source $VIMRUNTIME/mswin.vim
     "behave mswin
     let s:vimfilesbase='~/vimfiles/'
 else
@@ -58,7 +60,7 @@ set wildmode=list:longest         " Complete files like a shell.
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
-filetype off
+filet off "filetype
 
 "NeoBundle stuff
 "git clone git://github.com/Shougo/neobundle.vim to vimfiles/bundle
@@ -66,13 +68,12 @@ filetype off
 if has('vim_starting')
    set nocp " Be iMproved
    " Required:
-   " let s:neobundlepath = s:vimfilesbase . 'bundle/neobundle.vim'
-   set rtp+=~/vimfiles/bundle/neobundle.vim "learn how to use vars here $HOME
+   let &rtp.=','.s:vimfilesbase.'bundle/neobundle.vim'
 endif
 
 call neobundle#rc(expand(s:vimfilesbase . '/bundle'))
 
-NeoBundleFetch "Shougo/neobundle.vim"
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 " if filereadable("${HOME}/.vimrc")
@@ -88,8 +89,8 @@ NeoBundle     'altercation/vim-colors-solarized'
 "NeoBundleLazy 'derekwyatt/vim-scala'
 "NeoBundleLazy 'derekwyatt/vim-sbt'
 
-syntax on                         " Turn on syntax highlighting
-filetype plugin indent on         " Turn on file type detection.
+syn on                         " (syntax)   - turn on syntax highlighting
+filet plugin indent on         " (filetype) - turn on file type detection.
 
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
