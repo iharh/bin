@@ -9,22 +9,21 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 
 Books:
-Lavie - GLR*                              - 23..33..40
-Ibsen - Camel in Action                   - 377..384...461...501 (Ch 11 of 14)
-Mironova - Unusual Adventure to Ancient   - 126
+Lavie - GLR*                              - 27..33..40
+Ibsen - Camel in Action                   - 386..409...461...501 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 130
 
 Articles:
-Coutts - Rewriting Haskell Strings        - 4 (3.1)
-Lockhart - Cry of Mathematician           - 20..28
+Coutts - Rewriting Haskell Strings        - 11 (4)
+Lockhart - Cry of Mathematician           - 25..28
 ScrumTrek - Agile Cheklist                - 10..21
 
 Video:
-Kmett - Cache-Oblivious Maps              -  08:30 (slide 9)
+Kmett - Cache-Oblivious Maps              -  23:00 (slide 18)
 Linux in a Real World 11                  -  01:00
-Malinetsky                                -1:41:00
 
 Audio:
-Gritz 1, 18                               -  00:00
+Gritz 1, 19-27                            -  00:00
 Sedakova                                  -  34:00
 
 Magazines:

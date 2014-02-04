@@ -1,0 +1,10 @@
+http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
+
+Ideal Hash Trees:
+http://lampwww.epfl.ch/papers/idealhashtrees.pdf
+http://hypirion.com/musings/understanding-persistent-vector-pt-1
+http://hypirion.com/musings/understanding-persistent-vector-pt-2
+
+Julia:
+http://www.infoq.com/presentations/julia-vectors-maps-sets
+https://github.com/zachallaun/FunctionalCollections.jl

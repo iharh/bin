@@ -1,12 +1,5 @@
-http://cstheory.stackexchange.com/questions/1539/whats-new-in-purely-functional-data-structures-since-okasaki
-
 MIT:
 http://courses.csail.mit.edu/6.851/spring12/
-
-Ideal Hash Trees:
-http://lampwww.epfl.ch/papers/idealhashtrees.pdf
-http://hypirion.com/musings/understanding-persistent-vector-pt-1
-http://hypirion.com/musings/understanding-persistent-vector-pt-2
 
 Kmett - Cache Oblivious Maps
 http://www.reddit.com/r/haskell/comments/1p8sns/cacheoblivious_maps_by_edward_kmett_video/

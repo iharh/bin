@@ -4,6 +4,8 @@ pushd %~dp0
 
 call vars-ecm-p.bat
 
+call wrk-copydf.bat
+
 call git-autopush.bat
 
 call wrk-backup.bat

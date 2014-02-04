@@ -1,10 +1,12 @@
-//import java.io.File._
+//import sbt._
+
 import java.io.File
 import java.util.regex.Pattern
 
-lazy val hello1 = taskKey[Unit]("An example task")
+lazy val hellore = taskKey[Unit]("An example regex task")
+lazy val hellodef = taskKey[Unit]("An example with def task")
 
-hello1 := {
+hellore := {
   //val pattern = "**/.build/**/*.*"
   val pattern = "*.build*"
   var regex = new StringBuilder()
@@ -29,4 +31,10 @@ hello1 := {
     println("str: " + str + " pos: " + pos)
   })
   println("Hello 1!" + File.separator + regex.toString())
-} 
+}
+
+hellodef := {
+    def abc(s: String) =
+        s + "sss"
+    println(abc("def"))
+}

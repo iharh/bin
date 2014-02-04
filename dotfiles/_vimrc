@@ -155,7 +155,8 @@ if has("dialog_gui")
   colorscheme solarized
 else
   set background=light
-  colorscheme far                   " topfunky-light
+  colorscheme far
+  "topfunky-light
 endif
 
 set autoindent                    " auto-indent
@@ -211,3 +212,10 @@ if has('win32') || has('win64')
   set fileformats=dos
   set fileformat=dos
 endif
+
+"easier buffer/tabs navigation
+map <C-J> :bn<CR>
+map <C-K> :bp<CR>
+map <C-L> :tabn<CR>
+map <C-H> :tabp<CR>
+
