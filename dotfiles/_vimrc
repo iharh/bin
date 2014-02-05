@@ -86,7 +86,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundleLazy 'Shougo/unite.vim'
 NeoBundleLazy 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
 NeoBundle     'altercation/vim-colors-solarized'
-"NeoBundleLazy 'derekwyatt/vim-scala'
+NeoBundle     'derekwyatt/vim-scala'
+"NeoBundle     'repos-scala/scala-vundle'
 "NeoBundleLazy 'derekwyatt/vim-sbt'
 
 syn on                         " (syntax)   - turn on syntax highlighting
@@ -132,6 +133,7 @@ set nowritebackup                 " And again.
 "au[tocmd] setl[ocal] 
 au FileType cpp setl sw=4 sts=4 et
 au FileType java setl sw=4 sts=4 et
+au FileType scala setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
 au FileType sql setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et

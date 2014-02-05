@@ -1,4 +1,5 @@
 lazy val copydf = taskKey[Unit]("Dotfiles copy task")
+lazy val e1 = taskKey[Unit]("Echo some staff task")
 
 copydf := {
     val dst = file("D:\\dev\\bin\\dotfiles")
@@ -20,3 +21,9 @@ copydf := {
     // filesToCopy foreach {tup => println(tup._2) }
     IO.copy(filesToCopy)
 } 
+
+e1 := {
+     //"file://"+Path.userHome.absolutePath+"/.m2/repository"
+     println("aaa");
+     println(Path.userHome);
+}
