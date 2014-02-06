@@ -24,6 +24,8 @@ http://ru.wikibooks.org/wiki/%D0%AF%D0%B7%D1%8B%D0%BA_Haskell:_%D0%9E_%D0%BF%D0%
 Fokker - Tree Oriented Programming slides
 http://www.cs.uu.nl/wiki/bin/viewfile/Swierstra/ResearchTalks?rev=1.1;filename=tree-oriented-programming-slides.pdf
 
+http://eax.me/eaxcast-s01e02/
+
 Haskell Books:
 
 Hutton - Programming in Haskell (link is available at http://pv.bstu.ru/?topic=flp)

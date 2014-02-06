@@ -9,4 +9,5 @@ prj/cabal/*/.cabal-sandbox/*
 prj/cabal/*/cabal.sandbox.config
 prj/sbt/*/target/*
 prj/sbt/*/project/target/*
+prj/sbt/*/project/project/target/*
 prj/sbt/*/lib/*

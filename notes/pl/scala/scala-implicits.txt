@@ -7,6 +7,8 @@ http://www.slideshare.net/shinolajla/taxonomy-ofscala
 
 http://www.slideshare.net/futurespective/23-implicits-12236589
 
+http://habrahabr.ru/post/209850/
+
 1. Implicit parameters
 
 val a: A = ...

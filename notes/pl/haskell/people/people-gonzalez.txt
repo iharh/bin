@@ -26,6 +26,7 @@ http://www.haskellforall.com/2011/12/haskell-for-mainstream-programmers-code.htm
 http://www.haskellforall.com/2012/01/haskell-for-mainstream-programmers_04.html
 
 Folds (composable auto-strict stuff):
+  http://hackage.haskell.org/package/foldl
 http://www.haskellforall.com/2013/08/composable-streaming-folds.html
 http://www.haskellforall.com/2013/08/foldl-100-composable-streaming-and.html
 
@@ -80,6 +81,7 @@ http://www.haskellforall.com/2013/06/pipes-concurrency-120-behaviors-and.html
 http://www.haskellforall.com/2013/04/pipes-concurrency-100-reactive.html
 
 pipes-parse:
+http://www.haskellforall.com/2014/02/pipes-parse-30-lens-based-parsing.html
 http://www.haskellforall.com/2013/10/how-to-reimplement-conduit-parsing-api.html
 http://www.haskellforall.com/2013/06/pipes-parse-100-pushback-delimited.html
 

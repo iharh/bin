@@ -9,6 +9,9 @@ Blogs:
 http://eax.me/haskell-exceptions/
 !!! Control.Exception is the current module, all the other are obsolete
 
+Edsko de Vries - The darker corners of throwTo
+http://www.edsko.net/2013/06/11/throwto/
+
 StackOverflow:
 Marlow-ParallelAndConcurrentProgrammingInHaskell
 http://stackoverflow.com/questions/18052619/how-do-i-correctly-use-control-exception-catch-in-haskell
