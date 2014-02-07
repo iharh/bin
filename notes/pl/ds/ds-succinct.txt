@@ -49,6 +49,8 @@ https://github.com/alexbowe/wavelet-paper/blob/master/thesis.pdf
 
 http://code.google.com/p/wat-array/
 
+Grossi - Wavelet Trees from Theory to Practice
+
 RRR:
 http://alexbowe.com/rrr/
 http://portal.acm.org/citation.cfm?id=545411

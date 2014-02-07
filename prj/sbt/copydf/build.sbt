@@ -6,7 +6,7 @@ copydf := {
     IO.delete(dst)
     IO.createDirectory(dst)
     // IO.copy(...).get map {f => (f, dst / f.getName)})
-    val home = file("C:\\Users\\Ihar_Hancharenka")
+    val home = Path.userHome
     val vimfiles = home / "vimfiles"
     val filesToCopy = (
         (
@@ -14,16 +14,13 @@ copydf := {
 	    --- (vimfiles / "bundle" ***)
 	    --- (vimfiles ** ".*")
 	)
-        +++ (home / "_vimrc")
-        +++ (home / "_gvimrc")
-        +++ (home / "_pentadactylrc")
-        ) pair Path.rebase(home, dst)
-    // filesToCopy foreach {tup => println(tup._2) }
-    IO.copy(filesToCopy)
+        +++ (home * "_*rc")
+    )
+    val rebasedFilesToCopy = filesToCopy pair Path.rebase(home, dst)
+    // rebasedFilesToCopy foreach {tup => println(tup._2) }
+    IO.copy(rebasedFilesToCopy)
 } 
 
 e1 := {
-     //"file://"+Path.userHome.absolutePath+"/.m2/repository"
-     println("aaa");
-     println(Path.userHome);
+    println("aaa")
 }
