@@ -23,3 +23,7 @@ Traversal s t a b 	focus on one, none or many values; can be used as a Setter;ca
 Lens s t a b 	can be used as a Getter/Setter/Traversal/etc
 
 Many other lens types are available. You can use a value of a more general type where a value of a more specific type is required. Some values are presented in this document with a more specific and less esoteric type than the more general and less common type they really have. 
+
+--- http://www.haskellforall.com/2014/02/pipes-parse-30-lens-based-parsing.html
+
+...Define a Getter instead of a Lens' for transformations that are not reversible:

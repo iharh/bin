@@ -1,10 +1,5 @@
 Plugins:
 
-NERDTree - File system tree
-Project - User-configured tree
-LustyExplorer - Quick folder navigation
-FuzzyFinder - Flexible search
-
 BufferExplorer (bufexplorer.zip)
 	\be
 		Activate Buffer Explorer
@@ -12,7 +7,11 @@ BufferExplorer (bufexplorer.zip)
 
 taglist.vim (http://vim-taglist.sourceforge.net)
 
-!!! vimrouter (http://github.com/airblade/vim-router)	
+Project stuff:
+vimrouter
+  http://github.com/airblade/vim-router
+localcfg
+  https://gitlab.com/magus/localcfg/snippets/661
 
 
 Search for a code-base (need ack.vim - script id 2572 - http://github.com/mileszs/ack.vim):

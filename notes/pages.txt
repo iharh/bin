@@ -7,18 +7,16 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
-http://www.haskellforall.com/2014/02/pipes-parse-30-lens-based-parsing.html
-  Getters
 https://github.com/meiersi/HaskellerZ/blob/master/meetups/20120119-The_bytestring_library/bytestring-talk.md
-  Lazy bytestrings (slide 12 of 25)  
+  Lazy Bytestring Builder (slide 18 of 25)  
 
 Books:
-Lavie - GLR*                              - 34..40
-Ibsen - Camel in Action                   - 390..409...461...501 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 134..147..172..204..215
+Lavie - GLR*                              - 36..40
+Ibsen - Camel in Action                   - 393..409...461...501 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 140..147..172..204..215
 
 Articles:
-ScrumTrek - Agile Cheklist                - 13..21
+ScrumTrek - Agile Cheklist                - 14..21
 Harper - Stream Fusion on Haskell Unicode - 1
 
 Video:
@@ -26,7 +24,7 @@ Kmett - Cache-Oblivious Maps              -1:00:00 (slide 45 of 52)
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 19-27                            -1:35:00
+Gritz 1, 27-34                            -  33:00
 Sedakova                                  -  34:00
 
 Magazines:

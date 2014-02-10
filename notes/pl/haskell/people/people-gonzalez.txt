@@ -88,6 +88,10 @@ http://www.haskellforall.com/2013/06/pipes-parse-100-pushback-delimited.html
 pipes-bytestring:
 http://www.haskellforall.com/2013/09/perfect-streaming-using-pipes-bytestring.html
 
+pipes-http:
+http://www.haskellforall.com/2014/02/pipes-http-10-streaming-httphttps.html
+  http://www.reddit.com/r/haskell/comments/1xfaj9/haskell_for_all_pipeshttp10_streaming_httphttps/
+
 io-streams:
 http://www.haskellforall.com/2013/04/pipes-and-io-streams.html
 

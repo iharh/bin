@@ -1,0 +1,2 @@
+https://blog.codecentric.de/en/2014/02/elasticsearch-101/
+
