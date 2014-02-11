@@ -82,6 +82,7 @@ http://www.haskellforall.com/2013/04/pipes-concurrency-100-reactive.html
 
 pipes-parse:
 http://www.haskellforall.com/2014/02/pipes-parse-30-lens-based-parsing.html
+  http://www.yesodweb.com/blog/2014/02/ideas-pipes-parse
 http://www.haskellforall.com/2013/10/how-to-reimplement-conduit-parsing-api.html
 http://www.haskellforall.com/2013/06/pipes-parse-100-pushback-delimited.html
 

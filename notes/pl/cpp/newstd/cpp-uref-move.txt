@@ -2,13 +2,47 @@
 * URefs, RVals and move semantics
 ******
 
+Scott Meyers
 http://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers
+  http://habrahabr.ru/post/157961/
+
+Kondratskiy - Moves Demystified:
+http://kholdstare.github.io/technical/2013/11/23/moves-demystified.html
+http://www.reddit.com/r/cpp/comments/1r9t1z/moves_demystified_c11_article/
+
+Becker:
 http://thbecker.net/articles/rvalue_references/section_01.html
-http://blog.smartbear.com/development/c11-tutorial-explaining-the-ever-elusive-lvalues-and-rvalues
+
+Stroustroup - A Brief Introduction to Rvalue References:
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n2027.html
+http://www.artima.com/cppsource/rvalue.html
+
+Semenov - Move Semantics and Perfect Forwarding in C++11
+http://www.codeproject.com/Articles/397492/Move-Semantics-and-Perfect-Forwarding-in-Cplusplus
+
+Koenig - Short Articles about move:
+http://www.drdobbs.com/cpp/how-the-c-compiler-decides-to-move-objec/240158035
+http://www.drdobbs.com/cpp/some-optimizations-are-more-important-th/240159684
+http://www.drdobbs.com/cpp/an-important-move-optimization-is-nearly/240160031
+
+Abrahams - Want Speed - Pass by Value:
 http://cpp-next.com/archive/2009/08/want-speed-pass-by-value/
+http://cpp-next.com/archive/2009/09/making-your-next-move/
+http://cpp-next.com/archive/2009/09/your-next-assignment/
+http://cpp-next.com/archive/2009/10/exceptionally-moving/
+http://cpp-next.com/archive/2009/12/onward-forward/
 
 Parent - Value Semantics and Concept Based Polymorphism:
 http://2012.cppnow.org/session/value-semantics-and-concepts-based-polymorphism/
+http://isocpp.org/blog/2012/12/value-semantics-and-concepts-based-polymorphism-sean-parent
+
+Marco - Capture by Move (including lambdas):
+http://marcoarena.wordpress.com/2012/11/01/learn-how-to-capture-by-move/
+http://jrb-programming.blogspot.com/2012/11/another-alternative-to-lambda-move.html
+http://www.codeproject.com/Articles/515655/Anotherplusalternativeplustopluslambdaplusmoveplus
+
+Only in russian:
+http://www.rsdn.ru/article/cpp/Cpp11NewStd.xml
 
 
 From Meyers:
