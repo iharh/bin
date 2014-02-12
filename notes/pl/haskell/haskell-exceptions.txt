@@ -60,6 +60,11 @@ gonzalez-resource
 http://www.haskellforall.com/2013/06/the-resource-applicative.html
 http://www.reddit.com/r/haskell/comments/1haums/the_resource_applicative/
 
+snoyman-enclosed-exceptions
+https://www.fpcomplete.com/user/snoyberg/general-haskell/exceptions/catching-all-exceptions
+http://hackage.haskell.org/package/enclosed-exceptions
+https://github.com/jcristovao/enclosed-exceptions
+
 control-monad-exception:
 http://hackage.haskell.org/package/control-monad-exception
 http://pepeiborra.github.com/control-monad-exception/

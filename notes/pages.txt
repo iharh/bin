@@ -9,16 +9,20 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 http://blog.ezyang.com/2012/01/problem-set-the-codensity-transformation/
 http://www.yesodweb.com/blog/2014/02/ideas-pipes-parse
-  Overview of Approaches
+  An Archive file format
+https://github.com/psygnisfive/LensTutorial/blob/master/LensTutorial-Draft2.hs
+https://github.com/tonymorris/course
 
 Books:
-Lavie - GLR*                              - 38..40
-Ibsen - Camel in Action                   - 395..409...461...501 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 148..172..204..215
+Lavie - GLR*                              - 40..63..91..107..133..145..149..172..190..198
+Ibsen - Camel in Action                   - 398..409...461...501 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 151..172..204..215
 
 Articles:
-Harper - Stream Fusion on Haskell Unicode - 1
-ScrumTrek - Agile Cheklist                - 15..21
+Harper - Stream Fusion on Haskell Unicode - 2
+ScrumTrek - Agile Cheklist                - 16..21
+Jones - Call-pattern Specialization       - 0 
+Harper - A Library Writers Guide to Short - 0
 
 Video:
 Kmett - Cache-Oblivious Maps              -1:00:00 (slide 45 of 52)
