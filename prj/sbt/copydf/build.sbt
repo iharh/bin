@@ -1,6 +1,7 @@
 import complete.DefaultParsers._
 //import complete.Parser._
 
+lazy val dstPath = settingKey[String]("Dst path")
 lazy val copydf = taskKey[Unit]("Dotfiles copy task")
 lazy val e1 = taskKey[Unit]("Echo some staff task")
 lazy val i1 = inputKey[Unit]("Some input task")
@@ -8,8 +9,10 @@ lazy val i1 = inputKey[Unit]("Some input task")
 val argParser = OptSpace ~> token(StringBasic, "<arg>") // = spaceDelimited("<arg>")
 // StringBasic.examples("<arg>") // : Parser[String]
 
+dstPath := "D:\\dev\\bin\\dotfiles"
+
 copydf := {
-    val dst = file("D:\\dev\\bin\\dotfiles")
+    val dst = file(dstPath.value)
     IO.delete(dst)
     IO.createDirectory(dst)
     // IO.copy(...).get map {f => (f, dst / f.getName)})

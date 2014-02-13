@@ -7,29 +7,27 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
-http://blog.ezyang.com/2012/01/problem-set-the-codensity-transformation/
-http://www.yesodweb.com/blog/2014/02/ideas-pipes-parse
-  An Archive file format
 https://github.com/psygnisfive/LensTutorial/blob/master/LensTutorial-Draft2.hs
-https://github.com/tonymorris/course
+  type Lens s t a b = forall f. Functor f => (a -> f b) -> s -> f t
+http://blog.ezyang.com/2012/01/problem-set-the-codensity-transformation/
 
 Books:
-Lavie - GLR*                              - 40..63..91..107..133..145..149..172..190..198
-Ibsen - Camel in Action                   - 398..409...461...501 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 151..172..204..215
+Lavie - GLR*                              - 42..63..91..107..133..145..149..172..190..198 (Ch 3)
+Ibsen - Camel in Action                   - 402..409...461...501 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 156..172..204..215
 
 Articles:
-Harper - Stream Fusion on Haskell Unicode - 2
-ScrumTrek - Agile Cheklist                - 16..21
+Harper - Stream Fusion on Haskell Unicode - 3 (2.2 Unicode)
+ScrumTrek - Agile Cheklist                - 17..21
 Jones - Call-pattern Specialization       - 0 
 Harper - A Library Writers Guide to Short - 0
 
 Video:
-Kmett - Cache-Oblivious Maps              -1:00:00 (slide 45 of 52)
+Kmett - Cache-Oblivious Maps              -1:10:00 (slide 48 of 52)
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 27-34                            -1:22:00
+Gritz 1, 32-39                            -  00:00
 Sedakova                                  -  34:00
 
 Magazines:

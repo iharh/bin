@@ -1,0 +1,4 @@
+Explaining Rank N Types:
+http://www.reddit.com/r/haskell/comments/1xpz4i/explaining_rankntypes/
+http://sleepomeno.github.io/blog/2014/02/12/Explaining-Haskell-RankNTypes-for-all/
+http://stackoverflow.com/questions/3071136/what-does-the-forall-keyword-in-haskell-ghc-do
