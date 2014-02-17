@@ -1,9 +1,13 @@
 CABAL - Common Architecture for Building Applications and Libraries
 
+
 http://habrahabr.ru/post/165559/
 http://bob.ippoli.to/archives/2013/01/11/getting-started-with-haskell/
 http://www.reddit.com/r/haskell/comments/16qpi7/best_practice_of_using_haskellcabal_on_windows/
 
+Sandboxes:
+https://www.fpcomplete.com/school/to-infinity-and-beyond/older-but-still-interesting/an-introduction-to-cabal-sandboxes-copy
+http://coldwa.st/e/blog/2013-08-20-Cabal-sandbox.html
 
 http://www.haskell.org/haskellwiki/Cabal-Install
 http://hackage.haskell.org/trac/hackage/wiki/CabalInstall

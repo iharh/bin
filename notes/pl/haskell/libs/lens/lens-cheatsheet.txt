@@ -1,5 +1,6 @@
 http://www.reddit.com/r/haskell/comments/1oa9qx/beginners_cheatsheet_to_the_lens_library/
 http://www.haskell.org/haskellwiki/LensBeginnersCheatsheet
+https://www.fpcomplete.com/user/yiding/lens-cheat-sheet
 
 3 Types (stab stab stabbity stab stab stab)
 

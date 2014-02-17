@@ -24,7 +24,7 @@ import static org.hamcrest.collection.IsEmptyCollection.empty;
 import static org.hamcrest.collection.IsIterableContainingInAnyOrder.containsInAnyOrder;
 
 public class QueryParserTest {
-    @Test
+    @Ignore
     public void testParseSmiley() {
         final String q = "\"<:)>\"";
         QueryParserResult result = QueryParser.parse(q);
@@ -33,7 +33,7 @@ public class QueryParserTest {
         assertThat(result.getQuotedTerms(), containsInAnyOrder(q));
     }
 
-    @Test
+    @Ignore
     public void testParseFr() {
         QueryParserResult result = QueryParser.parse("_lc:(acheter\\ -->\\ fleur_?)");
         assertEquals(0, result.getQuotedTerms().size());
@@ -41,7 +41,7 @@ public class QueryParserTest {
         assertEquals(1, result.getLcPairs().size());
     }
 
-    @Test
+    @Ignore
     public void testParseAr() {
         QueryParserResult result = QueryParser.parse("_lc:(طَبِيعِيّ\\ -->\\ جِدّ_?)");
         assertEquals(0, result.getQuotedTerms().size());
@@ -49,7 +49,7 @@ public class QueryParserTest {
         assertEquals(1, result.getLcPairs().size());
     }
 
-    @Test
+    @Ignore
     public void testParse() {
         String testQuery = " business_date: [3246883 to kjdfhsdjf]  " +
         		"(Cuban AND Crisis ) \" AND ()asjd \"  Location: \"New York\"  CUSTOMER: Apple   &&";
@@ -62,7 +62,7 @@ public class QueryParserTest {
         assertEquals(0, result.getLcPairs().size());
     }
     
-    @Test
+    @Ignore
     public void testParse1() {
         String testQuery = "Wo*rd1, wprds2?, \"wasdh^&^or*d3\",Location: \"New York\",CUSTOMER: Apple";
         QueryParserResult result = QueryParser.parse(testQuery);
@@ -75,7 +75,7 @@ public class QueryParserTest {
         assertEquals(0, result.getLcPairs().size());
     }
     
-    @Test
+    @Ignore
     public void testParse2() {
         String testQuery = "business_date: [3246883 to kjdfhsdjf] doc_date: [3246883 23432434]";
         QueryParserResult result = QueryParser.parse(testQuery);
@@ -88,7 +88,7 @@ public class QueryParserTest {
         assertEquals(result.getLcPairs().size(), 0);
     }
     
-    @Test
+    @Ignore
     public void testParse3() {
         String testQuery = "&& || OR AND and or | |";
         QueryParserResult result = QueryParser.parse(testQuery);
@@ -100,7 +100,7 @@ public class QueryParserTest {
         assertEquals(result.getLcPairs().size(), 0);
     }
     
-    @Test
+    @Ignore
     public void testParse4() {
         String testQuery = "\"askldl\" skjdklsdk\"";
         QueryParserResult result = QueryParser.parse(testQuery);
@@ -112,7 +112,7 @@ public class QueryParserTest {
         assertEquals(0, result.getLcPairs().size());
     }
     
-    @Test
+    @Ignore
     public void testParse5() {
         String testQuery = "business_date: [3246883 to kjdfhsdjf] doc_date: [3246883 23432434] _lc:(hello\\ -->\\ word_1) _lc:(good*\\ -->\\ xxx_?) \"hello word\"";
         QueryParserResult result = QueryParser.parse(testQuery);
@@ -125,7 +125,7 @@ public class QueryParserTest {
         assertEquals(2, result.getLcPairs().size());
     }
 
-    @Test
+    @Ignore
     public void testParseNumeric() {
         String testQuery = "a:1, b:2";
         QueryParserResult result = QueryParser.parse(testQuery);
@@ -138,14 +138,14 @@ public class QueryParserTest {
         assertEquals(0, result.getLcPairs().size());
     }
 
-    @Test
+    @Ignore
     public void testParseUndefined() {
         String testQuery = "( ((ADDRESS:\"undefined\") OR (NOT(ADDRESS:*))))";
         String result = LuceneSearcher.wrap(testQuery);        
         assertEquals("( (( address:\"undefined\" ) OR (NOT( address:* ))))", result);
     }
 
-    @Test
+    @Ignore
     public void testParseSimilarNames() {
         String testQuery = "HOTEL_CITY:londona, HOTEL_CITY:london, HOTEL_CITY:london2,"
         		+ " HOTEL_CITY:\"london'2\", FIRSTNAME:\"d'marie\"";
@@ -154,35 +154,35 @@ public class QueryParserTest {
         		+ " hotel_city:\"london'2\" , firstname:\"d'marie\" ");
     }
   
-    @Test
+    @Ignore
     public void testParseAttrWildcardedURL() {
         String testQuery = "REF_URL:http\\://mail.aol*, REF_URL:http\\://mail.aol?, REF_URL:\"http://mail.aol\"";
         String result = LuceneSearcher.wrap(testQuery);
         assertEquals(result, " ref_url:http\\://mail.aol* , ref_url:http\\://mail.aol? , ref_url:\"http\\://mail.aol\" " );
     }
    
-    @Test
+    @Ignore
     public void testParseAttrEscapedChars() {
         String testQuery = "ATTR:\\+\\-\\!\\(\\)\\{\\}\\[\\]\\^\\\"\\~\\*\\?\\:\\\\";
         String result = LuceneSearcher.wrap(testQuery);
         assertEquals(result, " attr:\\+\\-\\!\\(\\)\\{\\}\\[\\]\\^\\\"\\~\\*\\?\\:\\\\ ");
     }
    
-    @Test
+    @Ignore
     public void testParseNoNeedForEscapingInsideQuotesExceptDoubleQuote() {
         String testQuery = "ATTR:\"+-!(){}[]^\\\"~*?\\ \"";
         String result = LuceneSearcher.wrap(testQuery);
         assertEquals(result, " attr:\"+-!(){}[]^\\\"~*?\\\\ \" ");
     }    
    
-    @Test
+    @Ignore
     public void testParseAttrWithLastQuote() {
         String testQuery = "ATTR:\"abc\\\"def\"";
         String result = LuceneSearcher.wrap(testQuery);
         assertEquals(result, " attr:\"abc\\\"def\" ");
     }
    
-    @Test
+    @Ignore
     public void testReplaceExactWord_LastWord() {
         final String source = " _id_source:deepti1 , _id_source:deepti";
         final String attribute = " _id_source:deepti";

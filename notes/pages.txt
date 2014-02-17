@@ -7,23 +7,20 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
-https://github.com/psygnisfive/LensTutorial/blob/master/LensTutorial-Draft2.hs
-  type Lens s t a b = forall f. Functor f => (a -> f b) -> s -> f t
-http://blog.ezyang.com/2012/01/problem-set-the-codensity-transformation/
+http://blog.ezyang.com/2012/02/visualizing-range-trees/
 
 Books:
-Lavie - GLR*                              - 42..63..91..107..133..145..149..172..190..198 (Ch 3)
-Ibsen - Camel in Action                   - 402..409...461...501 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 156..172..204..215
+Lavie - GLR*                              - 46..63..91..107..133..145..149..172..190..198 (Ch 3)
+Ibsen - Camel in Action                   - 411..442..461...501 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 160..172..204..215
 
 Articles:
-Harper - Stream Fusion on Haskell Unicode - 3 (2.2 Unicode)
-ScrumTrek - Agile Cheklist                - 17..21
-Jones - Call-pattern Specialization       - 0 
+Harper - Stream Fusion on Haskell Unicode - 9..12..14..16 (3 The Text Data Type)
+ScrumTrek - Agile Cheklist                - 19..21
 Harper - A Library Writers Guide to Short - 0
+Jones - Call-pattern Specialization       - 0 
 
 Video:
-Kmett - Cache-Oblivious Maps              -1:10:00 (slide 48 of 52)
 Linux in a Real World 11                  -  01:00
 
 Audio:
@@ -39,5 +36,5 @@ lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
 Review:
 FP-Features-Folds
 FP-Features-CategoryTheoryBased-Applicative
-FP-People (Appel), Windows Access Control Demystified
-Erwig - A Generic Recursion Toolbox for Haskell (Or: Scrap Your Boilerplate Systematically)
+FP-People (Appel) - Windows Access Control Demystified
+FP-People (Erwig) - A Generic Recursion Toolbox for Haskell (Or: Scrap Your Boilerplate Systematically)

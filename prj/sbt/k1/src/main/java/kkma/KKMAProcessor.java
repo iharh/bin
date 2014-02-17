@@ -29,7 +29,7 @@ public class KKMAProcessor {
         Scanner sc = new Scanner(System.in, UTF_8.name());
         // PrintStream out = new PrintStream(System.out, true, UTF_8.name())
         try (PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out, UTF_8))) {
-            while(sc.hasNextLine()) {
+            while (sc.hasNextLine()) {
                 String s = sc.nextLine();
 
                 // analyze morpheme without any post processing 

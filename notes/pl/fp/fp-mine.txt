@@ -123,6 +123,9 @@ Optimizations:
 Wadler - The Concatenate Wanishes
 Hughes - A Novel Representation of Lists
 
+Codensity transformation:
+  https://gist.github.com/thoughtpolice/3704890
+
 Coutts - Stream Fusion: From Lists to Streams to Nothing at All
   (incl ByteString, List Comprehensions semantics - 4)
   http://hackage.haskell.org/package/stream-fusion

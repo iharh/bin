@@ -1,4 +1,5 @@
 https://www.fpcomplete.com/school/to-infinity-and-beyond/pick-of-the-week/guide-to-ghc-extensions
+https://www.fpcomplete.com/user/PthariensFlame/guide-to-ghc-extensions
 
 Deriving:
 http://www.haskell.org/ghc/docs/latest/html/users_guide/deriving.html
