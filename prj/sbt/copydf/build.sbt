@@ -11,6 +11,8 @@ val argParser = OptSpace ~> token(StringBasic, "<arg>") // = spaceDelimited("<ar
 
 dstPath := "D:\\dev\\bin\\dotfiles"
 
+// pollInterval := 1000 // in ms for ~tasks
+
 copydf := {
     val dst = file(dstPath.value)
     IO.delete(dst)

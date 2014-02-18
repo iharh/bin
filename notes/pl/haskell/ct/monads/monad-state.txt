@@ -1,3 +1,5 @@
+https://www.fpcomplete.com/school/starting-with-haskell/basics-of-haskell/12-State-Monad
+
 State Monad:
 
 newtype State s a = State { runState :: (s -> (a,s)) }
@@ -19,3 +21,4 @@ instance MonadPlus (State s) where
     mplus = ...
 
 http://stackoverflow.com/questions/5541828/haskell-state-monad-and-monadic-guard
+

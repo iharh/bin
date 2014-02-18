@@ -23,8 +23,22 @@ cmap <S-Insert> <C-R>+
 " vmap <S-Insert> <C-V>
 
 
+fun! MyF()
+  "let v1 = 'abc'
+  "echo v1
+  echo expand("%")
+endf
+
+fun! SetCompilerAnt()
+  compiler ant
+  set makeprg=antcq\ -find\ build.xml
+  "errorformat
+  set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+endf
+call SetCompilerAnt()
+
 set diffexpr=MyDiff()
-function MyDiff()
+fun MyDiff()
   let opt = '-a --binary '
   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
   if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
@@ -43,7 +57,7 @@ function MyDiff()
       let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
     endif
   else
-    let cmd = $VIMRUNTIME . '\diff'
+    let cmd = $VIMRUNTIME . '\diff' "we go here since have no spaces at $VIMRUNTIME!
   endif
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction

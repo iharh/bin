@@ -1,0 +1,16 @@
+https://github.com/scalaz/scalaz-stream
+
+http://mandubian.com/2013/08/21/playztream/
+http://pchiusano.blogspot.com/2013/07/runtime-specialization-unboxing-and.html
+
+http://etorreborre.blogspot.com.au/2013/12/runstate-for-scalaz-stream-process.html
+http://etorreborre.blogspot.com.br/2013/12/runstate-0-combinators-1.html
+
+http://www.slideshare.net/FrankThomas5/main-26333362
+http://www.infoq.com/presentations/io-code-data
+
+http://stackoverflow.com/questions/18112224/scalaz-streams-and-iteratees/
+http://stackoverflow.com/questions/20127912/processing-multiple-files-in-parallel-with-scalaz-streams/
+http://stackoverflow.com/questions/18853079/performance-of-line-counting-with-scalaz-stream/
+
+http://youtu.be/8fC2V9HX_m8
