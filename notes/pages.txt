@@ -9,13 +9,13 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 
 Books:
-Lavie - GLR*                              - 51..63..91..107..133..145..149..172..190..198 (Ch 3)
-Ibsen - Camel in Action                   - 414..442..461..470..477..483..487..500 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 166..172..204..215
+Lavie - GLR*                              - 53..63..91..107..133..145..149..172..190..198 (Ch 3)
+Ibsen - Camel in Action                   - 416..442..461..470..477..483..487..500 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 175..204..215
 
 Articles:
-Harper - Stream Fusion on Haskell Unicode - 12..14..16 (5 Performance)
-ScrumTrek - Agile Cheklist                - 20..21
+Kniberg - Scrum and XP from the Trenches  - 7..94
+Harper - Stream Fusion on Haskell Unicode - 14..16 (5 Performance)
 Harper - A Library Writers Guide to Short - 0
 Jones - Call-pattern Specialization       - 0 
 

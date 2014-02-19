@@ -8,11 +8,6 @@ BufferExplorer (bufexplorer.zip)
 taglist.vim (http://vim-taglist.sourceforge.net)
 
 Project stuff:
-vimrouter
-  http://github.com/airblade/vim-router
-localcfg
-  https://gitlab.com/magus/localcfg/snippets/661
-
 
 Search for a code-base (need ack.vim - script id 2572 - http://github.com/mileszs/ack.vim):
 

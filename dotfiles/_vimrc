@@ -97,10 +97,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "   exe 'source' CONFIG
 "endfor
 
-NeoBundleLazy 'Shougo/unite.vim'
-NeoBundleLazy 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
-NeoBundle     'altercation/vim-colors-solarized'
-NeoBundle     'derekwyatt/vim-scala'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
+NeoBundle 'joonty/vim-sauce' "TODO: need to fix/customize this
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'derekwyatt/vim-scala'
 "NeoBundle     'repos-scala/scala-vundle'
 "NeoBundleLazy 'derekwyatt/vim-sbt'
 

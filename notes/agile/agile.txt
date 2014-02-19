@@ -1,0 +1,8 @@
+Books:
+Cohn - Agile Estimating and Planning
+Kniberg - Scrum and XP from the Trenches
+  http://www.infoq.com/minibooks/scrum-xp-from-the-trenches
+
+Small:
+ScrumTrek - Agile Cheklist
+
