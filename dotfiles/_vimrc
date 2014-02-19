@@ -99,7 +99,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
-NeoBundle 'joonty/vim-sauce' "TODO: need to fix/customize this
+NeoBundle 'iharh/neosauce'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
 "NeoBundle     'repos-scala/scala-vundle'
@@ -235,4 +235,12 @@ map <C-J> :bn<CR>
 map <C-K> :bp<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
+
+" QuickFix navigation
+" http://blog.sofistes.net/2013/10/effective-quickfix-window-use-in-vim.html
+map <A-p> :cp<CR> 
+map <A-n> :cn<CR> 
+map <A-P> :colder<CR>
+map <A-N> :newer<CR>
+
 

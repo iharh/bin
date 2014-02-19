@@ -7,6 +7,7 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
+https://www.fpcomplete.com/user/adinapoli/the-pragmatic-haskeller/episode-5-a-simple-dsl
 
 Books:
 Lavie - GLR*                              - 53..63..91..107..133..145..149..172..190..198 (Ch 3)
@@ -20,6 +21,7 @@ Harper - A Library Writers Guide to Short - 0
 Jones - Call-pattern Specialization       - 0 
 
 Video:
+Parsing Stuff in Haskell                  -  15:00
 Linux in a Real World 11                  -  01:00
 
 Audio:

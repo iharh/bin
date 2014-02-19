@@ -1,6 +1,6 @@
 " Add vim commands, mappings, functions, etc for this source
 "
-let g:current_dir = "D:\\clb\\src\\main"
+let g:current_dir = "D:\\clb\\src\\main\\fx\\fx"
 "exec 'cd ' . g:current_dir
 
 " TODO: share this stuff
