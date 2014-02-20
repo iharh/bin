@@ -10,14 +10,13 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
 https://www.fpcomplete.com/user/adinapoli/the-pragmatic-haskeller/episode-5-a-simple-dsl
 
 Books:
-Lavie - GLR*                              - 53..63..91..107..133..145..149..172..190..198 (Ch 3)
-Ibsen - Camel in Action                   - 416..442..461..470..477..483..487..500 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 175..204..215
+Lavie - GLR*                              - 54..63..91..107..133..145..149..172..190..198 (Ch 3)
+Ibsen - Camel in Action                   - 419..442..461..470..477..483..487..500 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 177..204..215
 
 Articles:
-Kniberg - Scrum and XP from the Trenches  - 7..94
-Harper - Stream Fusion on Haskell Unicode - 14..16 (5 Performance)
-Harper - A Library Writers Guide to Short - 0
+Harper - A Library Writers Guide to Short - 2..3..4..7..11..12
+Kniberg - Scrum and XP from the Trenches  - 8..94
 Jones - Call-pattern Specialization       - 0 
 
 Video:
@@ -25,7 +24,7 @@ Parsing Stuff in Haskell                  -  15:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 32-39                            -1:00:00
+Gritz 1, 40-2,12                          -  00:00
 Sedakova                                  -  34:00
 
 Magazines:

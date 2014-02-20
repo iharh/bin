@@ -153,6 +153,7 @@ au FileType python setl sw=4 sts=4 et
 au FileType sql setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et
 au FileType txt setl sw=4 sts=4 noeol
+au FileType haskell setl sw=4 sts=4 noeol
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 

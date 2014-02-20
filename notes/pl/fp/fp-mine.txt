@@ -126,11 +126,14 @@ Hughes - A Novel Representation of Lists
 Codensity transformation:
   https://gist.github.com/thoughtpolice/3704890
 
+Stream Fusion:
+
 Coutts - Stream Fusion: From Lists to Streams to Nothing at All
   (incl ByteString, List Comprehensions semantics - 4)
   http://hackage.haskell.org/package/stream-fusion
 
-(also Church and co-Church encodings):
+Fusion in general (with Church and co-Church encodings):
+Harper - A Library Writers Guide to Shortcut Fusion
 Coutts - Stream Fusion - Practical Shortcut Fusion for Coinductive Sequence Types phd
 
 Harper - Stream Fusion on Haskell Unicode Strings
