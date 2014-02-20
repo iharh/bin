@@ -2,5 +2,6 @@
 
 main :: IO ()
 main = do
-    putStrLn "hello!"
-    -- printf "%03d" 125
+    putStrLn "hello1"
+    -- _ <- printf "%03d\n" (127::Int)
+    putStrLn "hello2"

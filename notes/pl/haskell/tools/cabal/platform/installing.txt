@@ -1,0 +1,8 @@
+- Install platform silently
+@HaskellPlatform-2013.2.0.0-setup.exe /S /D=D:\dev\PL\Haskell\Platform\2013.2.0.0
+
+- cabal update
+- ghc-pkg recache
+- cabal install cabal-install
+- cabal --version
+- cabal install hscolour
