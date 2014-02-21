@@ -32,6 +32,8 @@ set DVD_ISO=F:\vbox-isos\CentOS-6.3-x86_64-minimal.iso
 :: CDROM
 ::VBoxManage storageattach %VM_NAME% --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium %DVD_ISO%
 :: or GuestAdditions
-::VBoxManage storageattach %VM_NAME% --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium D:\dev\Utils\VirtualBox\VBoxGuestAdditions.iso
+::VBoxManage storageattach %VM_NAME% --storagectl "IDE Controller" --port 1 --device 0 --type dvddrive --medium %VBOX_HOME%\VBoxGuestAdditions.iso
 :: --medium additions
+:: PORT forwarding
+::VBoxManage modifyvm %VM_NAME% --natpf1 "guestssh,tcp,,2222,,22"
 endlocal
