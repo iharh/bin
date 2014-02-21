@@ -1,0 +1,4 @@
+http://hackage.haskell.org/package/curl
+https://github.com/galoisinc/curl
+http://haskell.forkio.com/Home/curl-win32
+

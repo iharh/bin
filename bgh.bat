@@ -6,7 +6,7 @@ call vars-ecm-p.bat
 
 call wrk-copydf.bat
 
-call git-autopush.bat
+call git-ap.bat
 
 call wrk-backup.bat
 call yadisk-up.bat

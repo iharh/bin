@@ -1,0 +1,20 @@
+http://haskell.forkio.com/Home/curl-win32:
+
+to build:
+foo$ CPPFLAGS=-Ic:/packages/curl-7.19.4/include cabal install curl --ld-options=-Lc:/packages/curl-7.19.4/pre/lib
+
+to test:
+foo$ ghci -package curl ..... Network.Curl.curlGetString "http://www.haskell.org/" >>= putStrLn.fst
+
+building by mingw:
+
+foo$ cd <top of distribution tree>
+foo$ PKG_CONFIG_PATH=/c/src/openssl_mingw32-0.9.8e/:/c/src/openldap/ ./configure --with-ssl=c:/src/openssl_mingw32-0.9.8e/
+....
+foo$ make
+foo$ mkdir curl-7.19.4
+foo$ make install prefix=`pwd`/curl-7.19.4
+....
+foo$ cp curl-7.19.4/bin/libcurl-4.dll curl-7.19.4/bin/libcurl.dll
+foo$ cp README CHANGES COPYING curl-7.19.4/
+foo$ zip -r curl-7.19.4-mingw32.zip curl-7.19.4

@@ -1,0 +1,56 @@
+Ben Clifford - Parsing stuff in Haskell:
+http://www.youtube.com/watch?v=r_Enynu_TV0
+
+Booleans:
+
+...
+data JSONValue = B Bool | ... 
+-- B :: Bool -> JSONValue
+...
+bool :: Parser Bool
+...
+jsonBool :: Parser JSONValue
+jsonBool = fmap B bool
+         =  B <$> bool
+...
+(<$>) :: Functor f => (a -> b) -> f a -> f b
+(<$>) :: Functor f => (a -> b) -> Parser a -> Parser b
+
+Strings:
+...
+
+Arrays:
+
+["Hello","Goodbye",true,false,true]
+...
+data JSONValue = ... | A [JSONValue] | ...
+...
+array :: Parser [JSONValue]
+array = (char '[')
+        *>
+	( jsonValue 'sepBy' (char ',') )
+	<*
+	(char ']')
+
+...
+($>) ::
+(<$) ::
+(<|>) ::
+...
+jsonArray :: Parser JSONValue
+jsonArray = A <$> array
+
+jsonValue = jsonBool <|> jsonString <|> ... <|> jsonArray
+
+
+Objects
+
+{"name":"Ben","beer":true}
+
+data JSONValue = ... | O [(String, JSONValue)] | ...
+
+jsonObject :: Parser JSONValue
+jsonObject =
+  O <$> ((char '{') *>
+         (objectEntry 'sepBy' comma)
+	 <* (char '}'))

@@ -1,0 +1,6 @@
+https://www.fpcomplete.com/user/snoyberg/library-documentation
+https://www.fpcomplete.com/user/snoyberg/library-documentation/conduit-overview
+https://www.fpcomplete.com/user/snoyberg/library-documentation/resourcet
+
+https://www.fpcomplete.com/user/jwiegley/conduit-tour
+
