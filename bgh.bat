@@ -4,7 +4,7 @@ pushd %~dp0
 
 call vars-ecm-p.bat
 
-call wrk-copydf.bat
+call ss-copydf.bat
 
 call git-ap.bat
 

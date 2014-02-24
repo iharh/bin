@@ -1,5 +1,13 @@
 Ben Clifford - Parsing stuff in Haskell:
 http://www.youtube.com/watch?v=r_Enynu_TV0
+https://www.fpcomplete.com/user/adinapoli/the-pragmatic-haskeller/episode-5-a-simple-dsl
+
+
+import Control.Applicative hiding ((<|>), optional, many)
+
+(<||>) :: Parser a -> Parser a -> Parser a
+p <||> q = try p <|> q
+
 
 Booleans:
 

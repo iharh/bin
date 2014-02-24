@@ -12,6 +12,9 @@ http://coldwa.st/e/blog/2013-08-20-Cabal-sandbox.html
 http://www.haskell.org/haskellwiki/Cabal-Install
 http://hackage.haskell.org/trac/hackage/wiki/CabalInstall
 
+Documentation:
+http://eax.me/mini-notes-issue-17/
+
 Get a pre-built cabal.exe from:
 
 http://www.haskell.org/cabal/download.html
@@ -65,7 +68,15 @@ generate package.cabal file
 documentation
 ****************************************************************************************************
 
-cabal-dev install <name> --enable-documentation
+cabal install <name> --enable-documentation
+
+http://eax.me/mini-notes-issue-17/
+
+~/.cabal/config:
+
+documentation: True
+
+cabal install haskell-docs
 
 ****************************************************************************************************
 cabal files

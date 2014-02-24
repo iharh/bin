@@ -132,5 +132,6 @@ Chemistry:
 http://www.haskellforall.com/2013/10/an-all-atom-protein-search-engine.html
 
 Equational Reasoning:
+http://www.haskellforall.com/2014/02/reasoning-about-stream-programming.html
 http://www.haskellforall.com/2013/12/equational-reasoning.html
 

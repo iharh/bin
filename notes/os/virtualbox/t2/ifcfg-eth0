@@ -1,0 +1,8 @@
+DEVICE="eth0"
+BOOTPROTO="dhcp"
+HWADDR="08:00:27:1A:8C:4B"
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+TYPE="Ethernet"
+UUID="6b0cc6f6-24a9-4efa-b4f3-f8bb672873a9"
+DHCP_HOSTNAME=epbygomw0024t2.gomel.epam.com

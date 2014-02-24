@@ -48,6 +48,7 @@ label driveletter label
 ver          - http://www.windows-commandline.com/2011/12/ver-command.html
 dir          - http://www.windows-commandline.com/2009/01/search-for-file-from-command-line.html
 forfiles     - http://www.windows-commandline.com/2013/05/search-classes-in-jar-file.html
+               http://www.windows-commandline.com/forfiles/
 cd           - http://www.windows-commandline.com/2011/07/command-prompt-change-directory.html
 del          - remove file (http://www.windows-commandline.com/2011/11/del-command.html)
                http://www.windows-commandline.com/2010/02/delete-system-file-command-line.html

@@ -1,7 +1,6 @@
 @echo off
 setlocal
-call vars-vbox.bat
-call vars-path-append.bat %VBOX_HOME%
+call vars-vbox-p.bat
 
 set VM_NAME=centos63x64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
@@ -15,6 +14,7 @@ set DVD_ISO=F:\vbox-isos\CentOS-6.3-x86_64-minimal.iso
 ::VBoxManage storagectl %VM_NAME% --name "SATA Controller" --add sata --controller IntelAHCI --portcount 1 --hostiocache on --bootable on
 :: VDI DISK
 ::VBoxManage createhd --filename %VDI_NAME% --size 100000
+::VBoxManage modifyhd %VDI_NAME% --resize 500000
 :: Attach VDI DISK to VM
 ::VBoxManage storageattach %VM_NAME% --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium %VDI_NAME%
 :: MOTHERBOARD

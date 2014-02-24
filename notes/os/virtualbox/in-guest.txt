@@ -46,3 +46,25 @@ In order to keep things speedy, we can disable DNS lookups:
 /etc/ssh/sshd_config file:
 
 UseDNS No
+
+
+JDK:
+
+sudo rpm -ivh jdk-<ver>-linux-x64.rpm
+
+
+Disable firewall:
+
+http://www.cyberciti.biz/faq/fedora-redhat-centos-5-6-disable-firewall/
+
+# sudo service iptables save
+# sudo service iptables stop
+# sudo chkconfig iptables off
+
+# sudo service iptables status
+
+# sudo service ip6tables save
+# sudo service ip6tables stop
+# sudo chkconfig ip6tables off
+
+# sudo service ip6tables status
