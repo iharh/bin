@@ -9,27 +9,27 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 
 Books:
-Lavie - GLR*                              - 59..63..91..107..133..145..149..172..190..198 (Ch 3)
-Ibsen - Camel in Action                   - 425..442..461..470..477..483..487..500 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 179..204..215
-Saxena - Getting Started with Sbt for Sca - 31..38..68
+Lavie - GLR*                              - 63..91..107..133..145..149..172..190..198 (Ch 4)
+Ibsen - Camel in Action                   - 428..442..461..470..477..483..487..500 (Ch 12 of 14)
+Mironova - Unusual Adventure to Ancient   - 180..204..215
+Saxena - Getting Started with Sbt for Sca - 40..47..68
 
 Articles:
-Harper - A Library Writers Guide to Short - 4..7..11..12 (4)
-Kniberg - Scrum and XP from the Trenches  - 10..94
+Harper - A Library Writers Guide to Short - 6..7..11..12 (4 - CoChurch)
+Kniberg - Scrum and XP from the Trenches  - 11..94
 Jones - Call-pattern Specialization       - 0 
 
 Video:
-Parsing Stuff in Haskell                  -  20:00
+Parsing Stuff in Haskell                  -  30:00 of 55:00
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 1, 40-2,12                          -1:00:00
+Gritz 2,1-12                              -  00:00
 Sedakova                                  -  34:00
 
 Tracking:
 ACCU                                      - 119
-https://www.fpcomplete.com/recent-content - 24 Feb
+https://www.fpcomplete.com/recent-content - 25 Feb
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00

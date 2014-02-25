@@ -22,7 +22,7 @@ copydf := {
     IO.delete(dst)
     IO.createDirectory(dst)
     // IO.copy(...).get map {f => (f, dst / f.getName)})
-    val home = Path.userHome
+    val home = Path.userHome // .absolutePath
     val vimfiles = home / "vimfiles"
     val filesToCopy = (
         (

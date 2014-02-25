@@ -68,6 +68,10 @@ Test tags (for test-only after --)
   -n include by the name-of-tag/tags
   -l exclude -//-
 
+unmanagedBase
+unmanagedJars (:= file(...))
+  sbt show unmanaged-jars
+
 Keys:
 http://www.scala-sbt.org/release/docs/Getting-Started/Basic-Def.html#keys
 http://www.scala-sbt.org/release/sxr/sbt/Keys.scala.html

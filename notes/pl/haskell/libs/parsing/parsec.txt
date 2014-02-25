@@ -62,3 +62,22 @@ jsonObject =
   O <$> ((char '{') *>
          (objectEntry 'sepBy' comma)
 	 <* (char '}'))
+
+objectEntry :: Parser (String, JSONValue)
+objectEntry = do
+  key <- stringLiteral
+  char ':'
+  value <- jsonValue
+  return (key, value)
+
+
+Whitespaces:
+
+ws :: Parser String
+ws = many (oneOf " \t\n")
+
+lexeme p = p <* ws
+
+jsonBool' = B <$> bool
+
+jsonBool = lexeme jsonBool'

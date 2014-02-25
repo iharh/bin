@@ -8,8 +8,15 @@ $echo DHCP_HOSTNAME=epbygomw0024t2.gomel.epam.com>>/etc/sysconfig/network-script
 Start the network
 $ ifup eth0
 
+!!! For up-to date OS only !!!
 $yum update
-$yum install gcc make kernel-devel kernel-headers man sudo perl vim
+
+yum update -y kernel
+yum install man sudo perl vim
+yum install make gcc kernel-devel-`uname -r`
+#kernel-headers are auto-installed
+#yum list kernel-devel --showduplicates
+
 $poweroff
 
 In Devices -> Install Guest Additions (to insert CD-ROM)
@@ -18,53 +25,48 @@ mkdir /media/cdrom
 mount /dev/cdrom /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
 
+$poweroff
 
-Adding a vagrant user:
+!!! Adding a vagrant user:
 
-$groupadd admin
-$useradd -G admin vagrant
-$passwd -d vagrant
+groupadd admin
+useradd -G admin vagrant
+echo vagrant | passwd -f vagrant --stdin
+#passwd -d vagrant
 
 $visudo
 Defaults    env_keep += "SSH_AUTH_SOCK"
 %admin  ALL=NOPASSWD: ALL
 #Defaults    requiretty
 
-Vagrant key (to skip password requesting):
-
-$mkdir .ssh
-$chmod 0755 .ssh
-$curl -k https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub > .ssh/authorized_keys
-$chmod 0644 .ssh/authorized_keys
-
-
-vagrant$ sudo passwd -f vagrant
-
-
-# not needed
-In order to keep things speedy, we can disable DNS lookups:
-/etc/ssh/sshd_config file:
-
-UseDNS No
-
-
-JDK:
-
-sudo rpm -ivh jdk-<ver>-linux-x64.rpm
-
-
 Disable firewall:
 
-http://www.cyberciti.biz/faq/fedora-redhat-centos-5-6-disable-firewall/
-
-# sudo service iptables save
-# sudo service iptables stop
-# sudo chkconfig iptables off
-
-# sudo service iptables status
-
-# sudo service ip6tables save
-# sudo service ip6tables stop
-# sudo chkconfig ip6tables off
-
+service iptables save
+service iptables stop
+chkconfig iptables off
+#service iptables status
+service ip6tables save
+service ip6tables stop
+chkconfig ip6tables off
 # sudo service ip6tables status
+
+
+!!! With vagrant user !!!
+
+Vagrant key (to skip password requesting):
+
+mkdir .ssh
+chmod 0755 .ssh
+curl -k https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub > .ssh/authorized_keys
+chmod 0644 .ssh/authorized_keys
+
+sudo cp /media/sf_/vagrant/home/.bashrc ~
+sudo cp /media/sf_/vagrant/home/.vimrc ~
+sudo cp /media/sf_/vagrant/home/clb.bashrc ~
+sudo cp /media/sf_/vagrant/home/developerLicense.lic ~
+#--no-preserve=ownership 
+sudo chown vagrant:vagrant .bashrc .vimrc clb.bashrc developerLicense.lic
+
+!!! Install JDK and build:
+sudo rpm -ivh /media/sf_/vagrant/jdk-<ver>-linux-x64.rpm
+sudo /media/sf_/vagrant/clarabridge_cmp_x64_6.1.1.63.SR1.82744.bin
