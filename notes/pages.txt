@@ -16,7 +16,7 @@ Saxena - Getting Started with Sbt for Sca - 53..67
 
 Articles:
 Harper - A Library Writers Guide to Short - 7..8..11..12 (5 - Application) Add a note to mutypes-church.txt
-Kniberg - Scrum and XP from the Trenches  - 11..94
+Kniberg - Scrum and XP from the Trenches  - 12..94
 Jones - Call-pattern Specialization       - 0 
 
 Video:

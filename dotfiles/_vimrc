@@ -106,6 +106,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
+"NeoBundle 'Shougo/neocomplete.vim'
+"NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'iharh/neosauce'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
