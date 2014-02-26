@@ -24,6 +24,7 @@ In Devices -> Install Guest Additions (to insert CD-ROM)
 mkdir /media/cdrom
 mount /dev/cdrom /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
+?? sh /media/VBox*/VBoxLinuxAdditions.run
 
 $poweroff
 

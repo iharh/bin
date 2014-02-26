@@ -5,9 +5,6 @@ https://www.fpcomplete.com/user/adinapoli/the-pragmatic-haskeller/episode-5-a-si
 
 import Control.Applicative hiding ((<|>), optional, many)
 
-(<||>) :: Parser a -> Parser a -> Parser a
-p <||> q = try p <|> q
-
 
 Booleans:
 
@@ -81,3 +78,25 @@ lexeme p = p <* ws
 jsonBool' = B <$> bool
 
 jsonBool = lexeme jsonBool'
+
+jsonStringLiteral = lexeme (S <$> stringLiteral)
+
+jsonArray = A <$> array
+array = (lexeme $ char '[') $> 
+          ( jsonValue 'sepBy' (lexeme $ char ',') )
+	<* (lexeme $ char ']')
+
+Alternatives with a common prefix:
+
+day = (string "Monday" *> pure 1)
+  <|> try (string "Tuesday" *> pure 2)
+  <|> (string "Wednesday" *> pure 3)
+  <|> (string "Thursday" *> pure 4)
+
+(<||>) :: Parser a -> Parser a -> Parser a
+p <||> q = try p <|> q
+
+day = (string "Monday" *> pure 1)
+  <||> (string "Tuesday" *> pure 2)
+  <||> (string "Wednesday" *> pure 3)
+  <||> (string "Thursday" *> pure 4)

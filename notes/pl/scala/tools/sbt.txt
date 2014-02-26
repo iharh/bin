@@ -10,6 +10,8 @@ http://twitter.github.com/scala_school/sbt.html
 Common Commands
 
     tasks         - show all the available tasks
+     -v
+     help tasks -v
     actions       – show actions available for this project
 
     reload        - reload modified project description (build.sbt)
@@ -36,6 +38,14 @@ Common Commands
     console-procect ... for plugin dev
     test:console
     test:console-quick ... with test-dependencies
+
+Evaluation:
+    eval
+      eval Array(1,2,3).map(n=>println("Number "+n))
+    < file_name
+      eval commands from the filename
+    ;comd1;cmd2
+      eval cmd1, and then - cmd2 only if cmd1 is successfull
 
 Moar Commands
 
@@ -84,6 +94,22 @@ show
     <taskName>
     full-classpath
 
+inspect
+  <settingKey>
+
+set
+  <setting-expr>
+
+session
+  clear|list|remove|save|clear-all|list-all|save-all
+
+clear, list, save - has appropriate [-all] commands at build level also
+save-all
+  temp settings are appended to the first .sbt file in the project
+
+reload[plugins|return(optional)]
+
+
 Tasks:
 
 sbt tasks
@@ -96,10 +122,36 @@ http://www.scala-sbt.org/release/docs/Howto/logging.html
 	last <task>
 
 
+Multi-Project Build
+
+>projects
+  to inspect projects
+
+lazy val ... = [Root]Project()...dependsOn(...)
+
+...dependsOn(projectName % "config1->config2")
+
+.dependOn(square) is the same as .dependsOn(square % "compile->compile")
+.dependOn(square % test) is the same as .dependsOn(square % "test->compile")
+.dependOn(square % "compile->test;test->test") is the same as .dependsOn(square % "compile;test->test")
+.dependOn(square,cube) - multiple dep-sies
+
+...aggregate(square,cube) - groups projects togeather
+
+
+ProjectRef(file(...), "...")
+
 .sbt file
 
 initialCommands in console := """
     |import scalaz._
     |import Scalaz._
     |""".stripMargin
+
+~/.sbtconfig
+SBT_OPTS="-XX:PermSize=256M -XX:MaxPermSize=512M"
+
+~/.sbt/plugins/build.sbt
+logLevel := Level.Warn
+...
 

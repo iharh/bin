@@ -1,5 +1,7 @@
 ghc options
 -O2 -funbox-strict-fields
+{-# OPTIONS_GHC -funbox-strict-fields #}
+
 -fhpc // coverage
 +RTS -stderr // GC, mem, threads
 

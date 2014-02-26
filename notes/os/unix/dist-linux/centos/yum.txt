@@ -7,6 +7,10 @@ Repositories:
 
 yum repolist
 
+ll /etc/yum.repos.d/
+
+wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+
 Groups:
 
 yum grouplist
@@ -21,9 +25,3 @@ interesting:
 
 ui stuff
    Desktop Platform Development
-
-
-Files:
-
-ll /etc/yum.repos.d/
-
