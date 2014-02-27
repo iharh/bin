@@ -119,7 +119,8 @@ http://www.scala-sbt.org/release/docs/Detailed-Topics/Tasks
 Log Messages:
 http://www.scala-sbt.org/release/docs/Howto/logging.html
 
-	last <task>
+last <task>
+print-warnings
 
 
 Multi-Project Build
@@ -151,7 +152,30 @@ initialCommands in console := """
 ~/.sbtconfig
 SBT_OPTS="-XX:PermSize=256M -XX:MaxPermSize=512M"
 
+
+Logging:
+
 ~/.sbt/plugins/build.sbt
 logLevel := Level.Warn
+
+persistLogLevel
 ...
 
+traceLevel
+  negative - No stack trace
+  0 - up to the first stack frame
+  N - up to the N stack frames
+persistTraceLevel
+
+logBuffered := false
+
+
+Forking:
+
+fork in run := true
+fork in (Compile,run) := true
+fork in (Test,run) := true
+
+connectInput in run := true
+
+outputStrategy := Some(BufferedOutput(log: Logger))

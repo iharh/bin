@@ -100,3 +100,25 @@ day = (string "Monday" *> pure 1)
   <||> (string "Tuesday" *> pure 2)
   <||> (string "Wednesday" *> pure 3)
   <||> (string "Thursday" *> pure 4)
+
+
+<?> :: Parser p -> String -> Parser p
+
+jsonValue = jsonBool
+  <|> (jsonStringLiteral "string literal")
+  <|> jsonArray
+  <|> jsonObject
+  <|> jsonNumber
+
+> parse jsonBool "test" "falsehood"
+Right (B False)
+
+To fix this - 
+
+> parse (jsonBool <* eof) "test" "falsehood"
+Left (line 1, column 6)
+unexpected 'h'
+unexpected end of input
+
+
+
