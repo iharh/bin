@@ -4,11 +4,11 @@ import Development.NSIS
 
 main :: IO ()
 main = writeFile "mdm.nsi" $ nsis $ do
-    _ <- constant "MANUFACT" ("Clarabridge"::Exp String)
-    _ <- constant "PRODUCTNAME" ("$MANUFACT CMP"::Exp String)
+    _ <- constantStr "MANUFACT" "Clarabridge"
+    _ <- constantStr "PRODUCTNAME" "$MANUFACT CMP"
 
-    _ <- constant "MDM" ("mdm"::Exp String)
-    mdmName <- constant "MDMNAME" ("MADAMIRA"::Exp String)
+    _ <- constantStr "MDM" "mdm"
+    mdmName <- constantStr "MDMNAME" "MADAMIRA"
 
     name mdmName                      -- The name of the installer
     outFile "$MDM.exe"                -- Where to produce the installer
@@ -42,6 +42,9 @@ main = writeFile "mdm.nsi" $ nsis $ do
     section "thirdparty" [Required] $ do
         -- Set output path to the installation directory.
 	setOutPath "$INSTDIR\\thirdparty\\$MDMNAME"        -- Where to install files in this section
+
+	-- Macro
+	wordReplaceS "abc_$MDMNAME"
 
         -- Put file there
 	-- SetCompress off
