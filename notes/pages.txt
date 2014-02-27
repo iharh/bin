@@ -7,6 +7,7 @@ http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.htm
   Categories
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
+https://www.fpcomplete.com/user/gbaz/building-up-to-a-point-via-adjunctions
 
 Books:
 Lavie - GLR*                              - 65..91..107..133..145..149..172..190..198 (Ch 4)
@@ -29,7 +30,7 @@ Sedakova                                  -  34:00
 
 Tracking:
 ACCU                                      - 119
-https://www.fpcomplete.com/recent-content - 25 Feb
+https://www.fpcomplete.com/recent-content - 27 Feb
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
