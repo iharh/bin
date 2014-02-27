@@ -15,8 +15,8 @@ Ibsen - Camel in Action                   - 434..442..461..470..477..483..487..5
 Mironova - Unusual Adventure to Ancient   - 182..204..215
 
 Articles:
-Harper - A Library Writers Guide to Short - 7..8..11..12 (5 - Application) Add a note to mutypes-church.txt
-Kniberg - Scrum and XP from the Trenches  - 12..94
+Harper - A Library Writers Guide to Short - 8..11..12 (5.2)
+Kniberg - Scrum and XP from the Trenches  - 13..94
 Jones - Call-pattern Specialization       - 0 
 
 Video:
