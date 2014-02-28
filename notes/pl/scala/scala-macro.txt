@@ -1,1 +1,26 @@
 Burmako - Philosophy of Scala Macros slides
+http://scalamacros.org/paperstalks/2013-09-19-PhilosophyOfScalaMacros.pdf
+
+http://scalamacros.org/
+http://docs.scala-lang.org/overviews/macros/overview.html
+http://docs.scala-lang.org/overviews/macros/paradise.html
+
+http://scalamacros.org/paperstalks.html
+https://github.com/scalamacros/scalamacros.github.com/tree/master/paperstalks
+
+Scala Macros Poster:
+http://scalamacros.org/paperstalks/2013-11-25-ScalaMacrosPoster.pdf
+
+What Are Macros Good For:
+http://scalamacros.org/paperstalks/2013-08-21-RuWhatAreMacrosGoodFor.pdf
+
+Metaprogramming in Scala 2.10
+http://scalamacros.org/paperstalks/2012-04-28-MetaprogrammingInScala210.pdf
+
+
+Applied Materialization - When Macros meet Implicits:
+http://scalamacros.org/paperstalks/2013-06-13-AppliedMaterialization.pdf
+
+Let our Powers Combine:
+http://scalamacros.org/paperstalks/2013-07-02-LetOurPowersCombine.pdf
+http://scalamacros.org/paperstalks/2013-04-22-LetOurPowersCombine.pdf

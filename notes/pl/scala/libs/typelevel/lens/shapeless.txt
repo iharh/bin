@@ -1,0 +1,2 @@
+https://github.com/milessabin/shapeless
+https://github.com/milessabin/shapeless/wiki/Feature-overview:-shapeless-2.0.0
