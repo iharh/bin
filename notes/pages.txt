@@ -10,12 +10,12 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
 https://www.fpcomplete.com/user/gbaz/building-up-to-a-point-via-adjunctions
 
 Books:
-Lavie - GLR*                              - 67..91..107..133..145..149 (Ch 4 of 8)
-Ibsen - Camel in Action                   - 434..442..461..470..477..483..487..500 (Ch 12 of 14)
+Lavie - GLR*                              - 69..91..107..133..145..149 (Ch 4 of 8)
+Ibsen - Camel in Action                   - 437..442..461..470..477..483..487..500 (Ch 12 of 14)
 Mironova - Unusual Adventure to Ancient   - 182..204..215
 
 Articles:
-Harper - A Library Writers Guide to Short - 8..11..12 (5.2)
+Harper - A Library Writers Guide to Short - 9..11..12 (5.4)
 Kniberg - Scrum and XP from the Trenches  - 13..94
 Jones - Call-pattern Specialization       - 0 
 
@@ -23,7 +23,7 @@ Video:
 Linux in a Real World 11                  -  01:00
 
 Audio:
-Gritz 2,1-12                              -  00:00
+Gritz 2,1-12                              -1:09:00
 Sedakova                                  -  34:00
 
 Tracking:
