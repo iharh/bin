@@ -4,6 +4,7 @@ Marlow-ParallelAndConcurrentProgrammingInHaskell - ch 8
 Articles:
 Wadler - How to replace failure by a list of success
 Stewart - Scripting with Types (http://donsbot.files.wordpress.com/2009/01/semicolon.pdf)
+https://www.fpcomplete.com/school/starting-with-haskell/basics-of-haskell/10_Error_Handling
 
 Blogs:
 http://eax.me/haskell-exceptions/

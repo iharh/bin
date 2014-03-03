@@ -6,17 +6,19 @@ URLs:
 http://hackage.haskell.org/package/pipes-4.1.0/docs/Pipes-Tutorial.html
   Introduction
 http://hackage.haskell.org/packages/archive/pipes/latest/doc/html/Pipes-Core.html
+http://www.haskellforall.com/2013/01/pipes-safe-10-resource-management-and.html
+  Lazy Initialization
 http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 
 Books:
-Lavie - GLR*                              - 69..91..107..133..145..149 (Ch 4 of 8)
-Ibsen - Camel in Action                   - 437..442..461..470..477..483..487..500 (Ch 12 of 14)
-Mironova - Unusual Adventure to Ancient   - 184..204..215
+Lavie - GLR*                              - 71..91..107..133..145..149 (Ch 4 of 8)
+Ibsen - Camel in Action                   - 444..461..470..477..483..487..500 (Ch 13 of 14)
+Mironova - Unusual Adventure to Ancient   - 185..204..215
 
 Articles:
-Harper - A Library Writers Guide to Short - 9..11..12 (5.4)
-Kniberg - Scrum and XP from the Trenches  - 13..94
+Harper - A Library Writers Guide to Short - 10..11..12 (5.6)
+Kniberg - Scrum and XP from the Trenches  - 15..94
 Jones - Call-pattern Specialization       - 0 
 
 Video:
@@ -28,7 +30,7 @@ Sedakova                                  -  34:00
 
 Tracking:
 ACCU                                      - 119
-https://www.fpcomplete.com/recent-content - 27 Feb
+https://www.fpcomplete.com/recent-content - 2 Mar
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00

@@ -25,6 +25,7 @@ libraryDependencies ++= Seq(
   "org.slf4j"                 % "slf4j-log4j12"  % "1.7.5",
   "log4j"                     % "log4j"          % "1.2.17",
   "com.ibm.icu"               % "icu4j"          % "52.1",
+  "org.springframework"       % "spring-core"    % "4.0.2.RELEASE",
   //"org.scalatest"      % "scalatest_2.10"   % "1.9.1"   % "test",
   //"commons-io"                % "commons-io"         % "2.4"     % "test"
   "com.novocode"              % "junit-interface"    % "0.10"    % "test",
