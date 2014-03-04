@@ -1,4 +1,32 @@
-HPC Lambdas:
+Article:
+
+Allain - C++11 - Lambda Closures, the Definitive Guide
+http://www.cprogramming.com/c++11/c++11-lambda-closures.html
+
+Presentation:
+
+Sutter - Lambdas, Lambdas Everywhere:
+http://youtu.be/rcgRY7sOA58
+http://nwcpp.org/talks/2011/lambda.pdf
+
+Russian Only:
+
+C++0x Lambdas RU:
+http://blog.olendarenko.org.ua/2009/08/c0x.html
+
+Habr - Lambda:
+http://habrahabr.ru/post/66021/
+http://habrahabr.ru/post/65798/
+
+Habr - Currying in Cpp:
+http://habrahabr.ru/post/149056/
+
+Samples:
+
+Memoization, calc_once RU:
+http://habrahabr.ru/post/85718/
+
+Delegates, HPC Lambdas:
 http://www.codeproject.com/Articles/616090/Delegates-Cplusplus11-vs-Impossibly-Fast-A-Quick-a
 http://www.codeproject.com/Articles/11015/The-Impossibly-Fast-C-Delegates
 http://blog.coldflake.com/posts/2014-01-12-C%2B%2B-delegates-on-steroids.html

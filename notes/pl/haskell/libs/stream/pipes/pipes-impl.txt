@@ -1,0 +1,2 @@
+http://www.haskellforall.com/2013/04/pipes-and-io-streams.html
+http://www.haskellforall.com/2014/03/how-to-model-handles-with-pipes.html

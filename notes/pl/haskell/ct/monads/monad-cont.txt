@@ -8,9 +8,11 @@ http://en.wikibooks.org/wiki/Haskell/Continuation_passing_style
 
 This suggests a basic starting intuition for the continuation monad: we transform handlers.
 
+Piponi
 http://blog.sigfpe.com/2008/12/mother-of-all-monads.html
-Kabanov - FP - Continuation Monad and Monad Transformers
+https://www.fpcomplete.com/school/advanced-haskell/the-mother-of-all-monads
 
+Kabanov - FP - Continuation Monad and Monad Transformers
 
 
 newtype Cont r a = Cont { runCont :: (a -> r) -> r }   -- r is the final result type of the whole computation 

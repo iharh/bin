@@ -56,6 +56,10 @@ https://github.com/ekmett/either/
 gonzalez-error:
 http://hackage.haskell.org/package/errors
 https://github.com/Gabriel439/Haskell-Errors-Library
+http://watchchrislearn.com/blog/2013/11/28/playing-with-the-either-monad/
+http://watchchrislearn.com/blog/2013/11/30/using-the-either-monad-inside-another-monad/
+http://watchchrislearn.com/blog/2013/11/30/eithert-inside-of-io/
+http://watchchrislearn.com/blog/2013/12/01/working-entirely-in-eithert/
 
 gonzalez-resource
 http://www.haskellforall.com/2013/06/the-resource-applicative.html

@@ -1,3 +1,6 @@
+Nadav Wiener - Implementing Mixfix Operators in Scala Using Macros
+http://parleys.com/play/530e2217e4b06b7f61f3fc06
+
 Burmako - Philosophy of Scala Macros slides
 http://scalamacros.org/paperstalks/2013-09-19-PhilosophyOfScalaMacros.pdf
 

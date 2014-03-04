@@ -106,3 +106,6 @@ You may need to install profiling versions of your libraries, so a useful line t
 which causes all libraries you cabal install or cabal configure to have profiling enabled.
 
 ghc-prof-options: -auto-all
+
+Sample cabal configs:
+https://github.com/snapframework/snap-server/blob/master/snap-server.cabal

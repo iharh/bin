@@ -2,6 +2,13 @@ Articles:
 http://www.vittoriozaccaria.net/blog/2014/02/24/towards-template-programming-with-haskell.html
 SheardJones - Template Meta-programming in Haskell
 
+First stab at TH:
+http://www.hyperedsoftware.com/blog/entries/first-stab-th.html
+
+SOH-TH:
+https://www.fpcomplete.com/user/marcin/template-haskell-101
+https://www.fpcomplete.com/user/marcin/quasiquotation-101
+
 Presentations:
 
 Brown - Template Haskell
@@ -24,6 +31,7 @@ http://en.wikipedia.org/wiki/Template_Haskell
 monadloc:
 https://github.com/pepeiborra/monadloc
 http://hackage.haskell.org/cgi-bin/hackage-scripts/package/monadloc
+
 
 
 Every time you want to write something in TH, you start with:

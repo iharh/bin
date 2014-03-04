@@ -12,13 +12,13 @@ http://amnesia.pavelbers.com/Klassika%20v%20muzike.htm
   History
 
 Books:
-Lavie - GLR*                              - 71..91..107..133..145..149 (Ch 4 of 8)
-Ibsen - Camel in Action                   - 444..461..470..477..483..487..500 (Ch 13 of 14)
-Mironova - Unusual Adventure to Ancient   - 185..204..215
+Lavie - GLR*                              - 73..91..107..133..145..149 (Ch 4 of 8)
+Ibsen - Camel in Action                   - 447..461..470..477..483..487..500 (Ch 13 of 14)
+Mironova - Unusual Adventure to Ancient   - 187..204..215
 
 Articles:
-Harper - A Library Writers Guide to Short - 10..11..12 (5.6)
-Kniberg - Scrum and XP from the Trenches  - 15..94
+Harper - A Library Writers Guide to Short - 11..12 (6)
+Kniberg - Scrum and XP from the Trenches  - 16..94
 Jones - Call-pattern Specialization       - 0 
 
 Video:
@@ -30,7 +30,7 @@ Sedakova                                  -  34:00
 
 Tracking:
 ACCU                                      - 119
-https://www.fpcomplete.com/recent-content - 2 Mar
+https://www.fpcomplete.com/recent-content - 4 Mar
 
 Old Video:
 lshsm2002_V.M.Tikhomirov-2.rv         - 00:00
