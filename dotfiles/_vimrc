@@ -109,6 +109,7 @@ NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make
 "NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'iharh/neosauce'
+"NeoBundleUpdate neosauce
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
 "NeoBundle     'repos-scala/scala-vundle'
