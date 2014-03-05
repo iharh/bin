@@ -1,2 +1,0 @@
-http://msinttypes.googlecode.com/svn/trunk
-

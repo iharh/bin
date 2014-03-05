@@ -1,8 +1,0 @@
-## get top process eating memory
-alias psmem='ps auxf | sort -nr -k 4'
- 
-## get top process eating cpu ##
-alias pscpu='ps auxf | sort -nr -k 3'
-
-ps -o pid,cmd
-  print pid and cmd-line

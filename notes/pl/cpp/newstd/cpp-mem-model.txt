@@ -1,4 +1,0 @@
-Sutter - Atomic Weapons ...
-
-The compiler (by default) does not about our shared memory locations.
-

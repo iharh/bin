@@ -1,3 +1,0 @@
-http://hackage.haskell.org/package/regex-applicative
-https://github.com/feuerbach/regex-applicative
-

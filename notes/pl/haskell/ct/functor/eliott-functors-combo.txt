@@ -1,3 +1,0 @@
-Elliott
-http://hackage.haskell.org/package/functor-combo (https://github.com/conal/functor-combo)
-

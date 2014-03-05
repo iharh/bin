@@ -1,2 +1,0 @@
-http://hackage.haskell.org/package/zippo
-http://brandon.si/code/zippo/

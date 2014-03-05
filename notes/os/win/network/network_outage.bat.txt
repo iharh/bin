@@ -1,5 +1,0 @@
-@echo off
-SET SECONDS=30
-netsh int set interface name="Local Area Connection" admin=disable
-timeout /t %SECONDS% /NOBREAK
-netsh int set interface name="Local Area Connection" admin=enable

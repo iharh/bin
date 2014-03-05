@@ -1,1 +1,0 @@
-interesting simple profiler for jdk6/7

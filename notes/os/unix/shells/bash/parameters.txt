@@ -1,4 +1,0 @@
-Parameters
-
-`dirname $0`/sbt-launch.jar "$@"
-

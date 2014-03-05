@@ -1,5 +1,0 @@
-select dbid, name from sysdatabases
-
-Table size:
-sp_spaceused 'RAR_con'
-go

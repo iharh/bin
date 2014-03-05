@@ -1,8 +1,0 @@
-lsof     - list of open files
-free     - free OS memory
-file     - identify file type
-basename - extract base name
-htop     -
-iotop    - monitor io (http://www.tecmint.com/install-iotop-monitor-linux-disk-io-in-rhel-centos-and-fedora/)
-vmstat   - memory mon
-

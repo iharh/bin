@@ -1,3 +1,0 @@
-http://code.google.com/p/orika/
-http://orika-mapper.github.io/orika-docs/index.html
-

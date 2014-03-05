@@ -1,3 +1,0 @@
-http://va.lent.in/blog/2011/03/04/scala-processing/
-http://processing.org/
-https://github.com/processing

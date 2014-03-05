@@ -1,6 +1,0 @@
-:h
-    folding
-
-zR
-    Open all folds.
-    This sets 'foldlevel' to highest fold level.

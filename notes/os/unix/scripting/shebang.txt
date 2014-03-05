@@ -1,2 +1,0 @@
-#!/usr/bin/env node
-  find a user-specific path to node

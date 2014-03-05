@@ -1,2 +1,0 @@
-http://hackage.haskell.org/package/stringsearch
-https://bitbucket.org/dafis/stringsearch

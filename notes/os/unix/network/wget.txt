@@ -1,3 +1,0 @@
-wget –random-wait -r -p -e robots=off -U mozilla http://www.example.com
-  http://handynotes.ru/page/4
-

@@ -1,5 +1,0 @@
-gQ
-	Enter the ex-mode
-:vi
-	return to the normal mode
-

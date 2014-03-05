@@ -1,5 +1,7 @@
 @echo off
 setlocal
 call vars-haskell-cabal-p.bat
-cabal-dev.exe %*
+pushd %~dp0
+cabal.exe update %*
+popd
 endlocal

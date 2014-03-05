@@ -1,2 +1,0 @@
-http://metrics.codahale.com/
-https://github.com/codahale/metrics

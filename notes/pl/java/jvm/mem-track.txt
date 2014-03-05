@@ -1,3 +1,0 @@
-Memory tracking inside:
-https://github.com/paulp/jvm-memory-tracker
-

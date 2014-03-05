@@ -1,2 +1,0 @@
-colordiff
-	for colorizing diff

@@ -1,2 +1,0 @@
-http://hackage.haskell.org/package/primitive
-https://github.com/haskell/primitive

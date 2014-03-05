@@ -1,2 +1,0 @@
-sh -e
-  stop on first error

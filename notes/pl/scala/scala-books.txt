@@ -1,5 +1,0 @@
-Readen:
-Wampler - Programming Scala
-
-Interesting:
-Raychaudhuri - Scala in Action

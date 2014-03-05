@@ -1,3 +1,0 @@
-Plugins:
-TMR 12 - Strict Plugin.
-

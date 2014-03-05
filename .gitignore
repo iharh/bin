@@ -2,7 +2,6 @@
 derby.log
 cmd/util/misc/.*/*
 cmd/wrk/*
-notes/wrk/*
 vagrant-boxes/*/.vagrant/*
 prj/cabal/*/dist/*
 prj/cabal/*/.cabal-sandbox/*

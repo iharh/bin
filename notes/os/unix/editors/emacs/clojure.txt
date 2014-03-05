@@ -1,4 +1,0 @@
-(doc ns/func)
-	prints a documentation
-(ns name)
-(in-ns 'my-namespace)

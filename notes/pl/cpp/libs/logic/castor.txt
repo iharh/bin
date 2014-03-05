@@ -1,2 +1,0 @@
-http://sourceforge.net/projects/castor-logic/
-http://www.mpprogramming.com/Cpp/

@@ -1,4 +1,0 @@
-Shell Scripting:
-Shelly (https://github.com/yesodweb/Shelly.hs)
-http://hackage.haskell.org/package/shellish
-

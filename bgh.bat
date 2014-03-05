@@ -3,7 +3,9 @@ setlocal
 call vars-ecm-p.bat
 
 call ss-copydf.bat
+
 call bin-ap.bat 
+call notes-ap.bat 
 
 call wrk-backup.bat
 call yadisk-up.bat

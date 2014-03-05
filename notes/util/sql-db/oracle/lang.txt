@@ -1,3 +1,0 @@
-http://www.oracle.com/technology/tech/globalization/htdocs/nls_lang%20faq.htm
-
-NLS_LANG=American_America.UTF8

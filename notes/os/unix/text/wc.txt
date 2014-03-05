@@ -1,2 +1,0 @@
-wc
-  word/line/char counts

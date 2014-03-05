@@ -1,1 +1,0 @@
-Jones - A History of Haskell - Being Lazy With Class (a lot of topics covered)

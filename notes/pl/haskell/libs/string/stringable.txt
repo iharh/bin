@@ -1,3 +1,0 @@
-String type conversions:
-https://github.com/jwiegley/stringable
-http://hackage.haskell.org/package/stringable

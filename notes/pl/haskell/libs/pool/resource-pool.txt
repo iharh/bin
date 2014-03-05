@@ -1,4 +1,0 @@
-http://hackage.haskell.org/package/resource-pool
-https://github.com/bos/pool
-http://eax.me/haskell-resource-pool/
-

@@ -1,3 +1,0 @@
-mkdir -p "...."
-  create everything including parents...
-  -pv ... parents

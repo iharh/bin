@@ -1,2 +1,0 @@
-(@tailrec, @inline, @switch, @specialized - https://github.com/scala/scala/tree/master/src/library/scala/annotation)
-

@@ -1,3 +1,0 @@
-https://github.com/openframeworks/openFrameworks
-http://www.openframeworks.cc/
-

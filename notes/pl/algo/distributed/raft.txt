@@ -1,3 +1,0 @@
-Raft - The Understandable Distributed Protocol
-http://www.infoq.com/presentations/raft
-

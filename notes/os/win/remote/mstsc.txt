@@ -1,6 +1,0 @@
-if all connections busy:
-mstsc /v:server /console
-
-admin
-mstsc /v:server /admin
-

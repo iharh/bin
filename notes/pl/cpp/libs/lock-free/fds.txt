@@ -1,2 +1,0 @@
-http://liblfds.org/
-https://github.com/liblfds
