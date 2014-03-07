@@ -2,7 +2,7 @@
 setlocal
 call vars-ecm-p.bat
 
-call ss-copydf.bat
+call ss-copy.bat
 
 call bin-ap.bat 
 call notes-ap.bat 
