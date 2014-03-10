@@ -4,6 +4,7 @@ pushd %REPO_ROOT%\%~1.git
 
 call vars-git-p.bat
 :: set PLINK_PROTOCOL=ssh
+set GIT_ASK_YESNO=false
 
 echo ---------------------------------------------- >> %LOG_FILE%
 echo %~1 >> %LOG_FILE%

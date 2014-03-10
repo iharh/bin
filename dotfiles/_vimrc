@@ -150,23 +150,6 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 "set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
-" UNCOMMENT TO USE
-"ts tabstop                      " Global tab width.
-"sw shiftwidth=2                 " And again, related.
-"et expandtab                    " Use spaces instead of tabs
-
-"au[tocmd] setl[ocal] 
-au FileType cpp setl sw=4 sts=4 et
-au FileType java setl sw=4 sts=4 et
-au FileType scala setl sw=4 sts=4 et
-au FileType python setl sw=4 sts=4 et
-au FileType sql setl sw=4 sts=4 et
-au FileType xml setl sw=4 sts=4 et
-au FileType txt setl sw=4 sts=4 noeol
-au FileType haskell setl sw=4 sts=4 noeol
-" for t in ['cpp', 'java', 'sql']  DOES NOT WORK
-" endfor
-
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l-%L,%c-%v\ %)%P
@@ -240,6 +223,25 @@ if has('win32') || has('win64')
   set fileformats=dos
   set fileformat=dos
 endif
+
+" UNCOMMENT TO USE
+"ts tabstop                      " Global tab width.
+"sw shiftwidth=2                 " And again, related.
+"et expandtab                    " Use spaces instead of tabs
+
+"au[tocmd] setl[ocal] 
+au FileType cpp setl sw=4 sts=4 et
+au FileType java setl sw=4 sts=4 et
+au FileType scala setl sw=4 sts=4 et
+au FileType python setl sw=4 sts=4 et
+au FileType sql setl sw=4 sts=4 et
+au FileType xml setl sw=4 sts=4 et
+au FileType ant setl sw=4 sts=4 et
+au FileType txt setl sw=4 sts=4 noeol
+au FileType haskell setl sw=4 sts=4 noeol
+" for t in ['cpp', 'java', 'sql']  DOES NOT WORK
+" endfor
+" set ft - to check the current filetype
 
 "easier buffer/tabs navigation
 map <C-J> :bn<CR>
