@@ -1,7 +1,6 @@
 git\apache\ant -> git://git.apache.org/ant.git
 git\apache\lucene-solr -> git://git.apache.org/lucene-solr.git
 git\github\haskell\cabal -> https://github.com/haskell/cabal.git
-git\github\haskell\cabal-dev -> https://github.com/creswick/cabal-dev.git
 git\github\haskell\ekmett\free -> git://github.com/ekmett/free.git
 git\github\haskell\ekmett\lens -> git://github.com/ekmett/lens.git
 git\github\haskell\Gabriel439\Haskell-Errors-Library -> https://github.com/Gabriel439/Haskell-Errors-Library.git

@@ -1,12 +1,16 @@
 @echo off
 setlocal
 
+set FULL_PATH=%CD%
+for %%a in ("%FULL_PATH%") do set "hub_repo_name=%%~nxa"
+
+::echo %hub_repo_name%
+::goto:eof
+
+:: TODO: check the parents also
 if exist .git goto:eof
 
-if .%1==. goto:eof
-set hub_repo_name=%1
-
-call vars-github.bat
+call vars-github-p.bat
 for /f "delims=" %%a in ('print-date-time.bat') do set val_dt=%%a
 set git_status_flags=-uall
 

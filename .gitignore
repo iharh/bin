@@ -3,13 +3,3 @@ derby.log
 cmd/util/misc/.*/*
 cmd/wrk/*
 vagrant-boxes/*/.vagrant/*
-prj/cabal/*/dist/*
-prj/cabal/*/.cabal-sandbox/*
-prj/cabal/*/cabal.sandbox.config
-prj/cabal/*/*.exe
-prj/cabal/*/*.nsi
-prj/sbt/*/target/*
-prj/sbt/*/project/target/*
-prj/sbt/*/project/project/target/*
-prj/sbt/knlph/models/*
-prj/sbt/*/lib/*
