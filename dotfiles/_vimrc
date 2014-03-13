@@ -1,5 +1,5 @@
 "Ihar Hanchrenka custom settings 
-set nocp                 " Must come first because it changes other options.
+
 ":e $MYVIMRC
 ":source %
 
@@ -108,12 +108,14 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
 "NeoBundle 'Shougo/neocomplete.vim'
 "NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'iharh/neosauce'
 "NeoBundleUpdate neosauce
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
 "NeoBundle     'repos-scala/scala-vundle'
 "NeoBundleLazy 'derekwyatt/vim-sbt'
+":NeoBundleDocs to manually regenerate tags
 
 syn on                         " (syntax)   - turn on syntax highlighting
 filet plugin indent on         " (filetype) - turn on file type detection.
@@ -203,8 +205,17 @@ set tags=./tags;/
 " :map <silent> <F2> :echo 'Hello!'<CR>
 
 "Unite settings
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
+
+"vimfiler settings
+"let g:vimfiler_as_default_explorer = 1
+	
+" Enable file operation commands.
+let g:vimfiler_safe_mode_by_default = 0
+
+" Disable netrw.vim
+"let g:loaded_netrwPlugin = 1
 
 " Use ag for search
 "if executable('ag')
