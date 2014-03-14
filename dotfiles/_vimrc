@@ -12,16 +12,6 @@ else
     let s:vimfilesbase='~/.vim/'
 endif
  
-" SHIFT-Del is Cut
-vnoremap <S-Del> "+x
-" CTRL-Insert is Copy
-vnoremap <C-Insert> "+y
-" SHIFT-Insert is Paste
-map <S-Insert> "+gP
-cmap <S-Insert> <C-R>+
-" imap <S-Insert> <C-V>
-" vmap <S-Insert> <C-V>
-
 
 fun! MyF()
   "let v1 = 'abc'
@@ -69,18 +59,6 @@ fun MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-" fix tab behaviour in normal mode
-" Note the extra space after the second \
-set list lcs=tab:\ \ 
-
-" autocomplete for help works, but still have problems with file-path-names
-"set wildchar=9
-set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
-
-set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
-
 filet off "filetype
 
 "NeoBundle stuff
@@ -95,15 +73,6 @@ endif
 call neobundle#rc(expand(s:vimfilesbase . '/bundle'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" if filereadable("${HOME}/.vimrc")
-"   source ${HOME}/.vim/plugin-list.vim
-" endif
-" for CONFIG in split(glob('~/vimfiles/vimrc.d/*.vim'), '\n')
-"   exe 'source' CONFIG
-"endfor
-
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
 "NeoBundle 'Shougo/neocomplete.vim'
@@ -123,6 +92,18 @@ filet plugin indent on         " (filetype) - turn on file type detection.
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
 NeoBundleCheck
+
+" fix tab behaviour in normal mode
+" Note the extra space after the second \
+set list lcs=tab:\ \ 
+
+" autocomplete for help works, but still have problems with file-path-names
+"set wildchar=9
+set wildmenu                      " Enhanced command line completion.
+set wildmode=list:longest         " Complete files like a shell.
+
+set showcmd                       " Display incomplete commands.
+set showmode                      " Display the mode you're in.
 
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
@@ -172,8 +153,10 @@ else
   "topfunky-light
 endif
 
-set autoindent                    " auto-indent
+set autoindent                      " auto-indent
 set path=.,,**
+
+set hh=40                           " helpheight
 
 
 " http://vim.wikia.com/wiki/Restore_cursor_to_file_position_in_previous_editing_session
@@ -209,8 +192,6 @@ set tags=./tags;/
 nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
 
 "vimfiler settings
-"let g:vimfiler_as_default_explorer = 1
-	
 " Enable file operation commands.
 let g:vimfiler_safe_mode_by_default = 0
 
@@ -245,11 +226,12 @@ au FileType cpp setl sw=4 sts=4 et
 au FileType java setl sw=4 sts=4 et
 au FileType scala setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
-au FileType sql setl sw=4 sts=4 et
-au FileType xml setl sw=4 sts=4 et
-au FileType ant setl sw=4 sts=4 et
-au FileType txt setl sw=4 sts=4 noeol
 au FileType haskell setl sw=4 sts=4 noeol
+au FileType sql setl sw=4 sts=4 et
+au FileType ant setl sw=4 sts=4 et
+au FileType xml setl sw=4 sts=4 et
+au FileType text setl sw=4 sts=4 noeol
+au FileType vim setl sw=4 sts=4 et
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 " set ft - to check the current filetype
@@ -267,4 +249,13 @@ map <A-n> :cn<CR>
 map <A-P> :colder<CR>
 map <A-N> :newer<CR>
 
+" SHIFT-Del is Cut
+vnoremap <S-Del> "+x
+" CTRL-Insert is Copy
+vnoremap <C-Insert> "+y
+" SHIFT-Insert is Paste
+map <S-Insert> "+gP
+cmap <S-Insert> <C-R>+
+" imap <S-Insert> <C-V>
+" vmap <S-Insert> <C-V>
 
