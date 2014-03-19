@@ -187,6 +187,11 @@ set tags=./tags;/
 
 " :map <silent> <F2> :echo 'Hello!'<CR>
 
+"let mapleader=","
+"
+"" Save a file as root (,W)
+"noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
 "Unite settings
 "call unite#filters#matcher_default#use(['matcher_fuzzy'])
 nnoremap <leader>r :<C-u>Unite -start-insert file_rec<CR>
@@ -227,6 +232,7 @@ au FileType java setl sw=4 sts=4 et
 au FileType scala setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
 au FileType haskell setl sw=4 sts=4 noeol
+au FileType cabal setl sw=4 sts=4 noeol
 au FileType sql setl sw=4 sts=4 et
 au FileType ant setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et
