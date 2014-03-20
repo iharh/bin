@@ -6,6 +6,9 @@ call ss-copy.bat
 call all-ap.bat 
 
 call wrk-backup.bat
+
+call ss-trim.bat
+
 call yadisk-up.bat
 ::call bk-up.bat
 endlocal
