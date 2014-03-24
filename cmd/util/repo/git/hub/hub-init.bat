@@ -38,4 +38,8 @@ if "%CHOICE_TYPE%" equ "q" goto:eof
 git.exe remote add origin https://github.com/%hub_user_name%/%hub_repo_name%.git
 git.exe push -u origin master
 
+::
+:: git remote set-url origin https://iharh@github.com/%hub_user_name%/%hub_repo_name%.git
+::
+::
 endlocal

@@ -1,0 +1,8 @@
+DEVICE="eth0"
+BOOTPROTO="dhcp"
+IPV6INIT="yes"
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+TYPE="Ethernet"
+UUID="56f45b3e-1d42-4cf8-a78e-4a041835f3a1"
+DHCP_HOSTNAME=epbygomw0024t1.gomel.epam.com
