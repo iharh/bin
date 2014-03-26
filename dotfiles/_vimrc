@@ -82,6 +82,7 @@ NeoBundle 'iharh/neosauce'
 "NeoBundleUpdate neosauce
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
+"NeoBundle 'drmikehenry/vim-fixkey'
 "NeoBundle     'repos-scala/scala-vundle'
 "NeoBundleLazy 'derekwyatt/vim-sbt'
 ":NeoBundleDocs to manually regenerate tags
@@ -245,10 +246,10 @@ au FileType vim setl sw=4 sts=4 et
 " set ft - to check the current filetype
 
 "easier buffer/tabs navigation
-map <C-J> :bn<CR>
-map <C-K> :bp<CR>
-map <C-L> :tabn<CR>
-map <C-H> :tabp<CR>
+map <C-J>  :bn<CR>
+map <C-K>  :bp<CR>
+map <C-L>  :tabn<CR>
+map <C-H>  :tabp<CR>
 
 " QuickFix navigation
 " http://blog.sofistes.net/2013/10/effective-quickfix-window-use-in-vim.html
@@ -267,3 +268,7 @@ cmap <S-Insert> <C-R>+
 " imap <S-Insert> <C-V>
 " vmap <S-Insert> <C-V>
 
+" works in gvim only
+"map <Esc>[14^  <C-F4>
+"http://mg.pov.lt/vim/vimrc
+noremap <C-F4> :bw<CR>
