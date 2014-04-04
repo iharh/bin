@@ -7,6 +7,7 @@ call all-ap.bat
 
 call wrk-backup.bat
 
+call ss-compr.bat
 call ss-trim.bat
 
 call yadisk-up.bat
