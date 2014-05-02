@@ -2,9 +2,10 @@
 setlocal
 call vars-vbox-p.bat
 
-set VM_NAME=CentOS-6.5-x86_64
+set VM_NAME=CentOS-latest
+set IMG_NAME=CentOS-6.5-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
-set DVD_ISO=F:\vbox-isos\%VM_NAME%-minimal.iso 
+set DVD_ISO=F:\vbox-isos\%IMG_NAME%-minimal.iso 
 set VM_OS_TYPE=RedHat_64 
 set MAC_ADDR=
 set SHARED_FOLDER=F:\vbox-shared
@@ -29,6 +30,7 @@ VBoxManage.exe createhd --filename %VDI_NAME% --size 200000
 VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium %VDI_NAME%
 :: GuestAdditions
 VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --tempeject on --medium %VBOX_HOME%\VBoxGuestAdditions.iso
+:: --medium additions
 :: MOTHERBOARD
 VBoxManage.exe modifyvm %VM_NAME% --ioapic on
 :: BOOTSEQ
@@ -46,7 +48,6 @@ VBoxManage.exe storagectl %VM_NAME% --name "IDE Controller" --add ide --controll
 VBoxManage.exe storageattach %VM_NAME% --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium %DVD_ISO%
 :: or GuestAdditions
 ::VBoxManage.exe storageattach %VM_NAME% --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium %VBOX_HOME%\VBoxGuestAdditions.iso
-:: --medium additions
 :: PORT forwarding
 VBoxManage.exe modifyvm %VM_NAME% --natpf1 "guestssh,tcp,,2222,,22"
 :: SHARED FOLDER
