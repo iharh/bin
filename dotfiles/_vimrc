@@ -240,6 +240,7 @@ au FileType ant setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et
 au FileType text setl sw=4 sts=4 noeol
 au FileType vim setl sw=4 sts=4 et
+au FileType javascript setl sw=4 sts=4 et
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 " set ft - to check the current filetype
