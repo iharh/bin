@@ -2,7 +2,7 @@
 setlocal
 call vars-vbox-p.bat
 
-set VM_NAME=Manjaro-rolling
+set VM_NAME=Manjaro-xfce
 set IMG_NAME=manjaro-xfce-0.8.9-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
 set DVD_ISO=F:\vbox-isos\%IMG_NAME%.iso 
