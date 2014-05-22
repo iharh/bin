@@ -31,6 +31,8 @@ VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 0 -
 :: GuestAdditions
 ::!!! VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --tempeject on --medium %VBOX_HOME%\VBoxGuestAdditions.iso
 :: --medium additions
+:: USB
+VBoxManage.exe modifyvm %VM_NAME% --usb on --usbehci on
 :: MOTHERBOARD
 VBoxManage.exe modifyvm %VM_NAME% --ioapic on
 :: BOOTSEQ
