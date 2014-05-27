@@ -2,8 +2,9 @@
 setlocal
 call vars-vbox-p.bat
 
-set VM_NAME=Manjaro-xfce
-set IMG_NAME=manjaro-xfce-0.8.9-x86_64
+set VM_NAME=Manjaro-net
+::set IMG_NAME=manjaro-net-0.8.9-x86_64
+set IMG_NAME=manjaro-openbox-0.8.9-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
 set DVD_ISO=F:\vbox-isos\%IMG_NAME%.iso 
 set VM_OS_TYPE=ArchLinux_64
@@ -31,6 +32,8 @@ VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 0 -
 :: GuestAdditions
 ::!!! VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --tempeject on --medium %VBOX_HOME%\VBoxGuestAdditions.iso
 :: --medium additions
+:: USB
+VBoxManage.exe modifyvm %VM_NAME% --usb on --usbehci on
 :: MOTHERBOARD
 VBoxManage.exe modifyvm %VM_NAME% --ioapic on
 :: BOOTSEQ
