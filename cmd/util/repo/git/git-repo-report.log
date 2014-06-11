@@ -12,7 +12,6 @@ git\github\haskell\Gabriel439\Haskell-Pipes-Safe-Library -> https://github.com/G
 git\github\haskell\simonmar\async -> git://github.com/simonmar/async.git
 git\github\java\df4j -> git://github.com/rfqu/df4j.git
 git\github\java\DirectMemory -> https://github.com/raffaeleguidi/DirectMemory.git
-git\github\java\orientdb -> https://github.com/nuvolabase/orientdb.git
 git\github\java\RxJava -> https://github.com/Netflix/RxJava.git
 git\googlecode\selenium -> https://code.google.com/p/selenium/
 git\r0q\haskell\vis -> git://r0q.ath.cx/vis

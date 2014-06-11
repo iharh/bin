@@ -3,7 +3,7 @@ setlocal
 call vars-vbox-p.bat
 
 set VM_NAME=Manjaro-openbox
-set IMG_NAME=manjaro-openbox-0.8.9-x86_64
+set IMG_NAME=manjaro-openbox-0.8.10-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
 set DVD_ISO=F:\vbox-isos\%IMG_NAME%.iso 
 set VM_OS_TYPE=ArchLinux_64
@@ -17,7 +17,7 @@ if %CHOICE_TYPE%.==q. goto done
 ::VBoxManage list ostypes
 ::VBoxManage list vms --long
 
-::VBoxManage unregistervm %VM_NAME% --delete
+VBoxManage unregistervm %VM_NAME% --delete
 ::goto:done
 
 VBoxManage.exe createvm --name %VM_NAME% --ostype %VM_OS_TYPE% --register
@@ -31,6 +31,8 @@ VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 0 -
 :: GuestAdditions
 ::!!! VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 1 --device 0 --type dvddrive --tempeject on --medium %VBOX_HOME%\VBoxGuestAdditions.iso
 :: --medium additions
+:: UEFI
+::VBoxManage.exe modifyvm %VM_NAME% --firmware efi
 :: USB
 VBoxManage.exe modifyvm %VM_NAME% --usb on --usbehci on
 :: MOTHERBOARD
