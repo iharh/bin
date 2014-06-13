@@ -34,6 +34,8 @@ VBoxManage.exe storageattach %VM_NAME% --storagectl "SATA Controller" --port 0 -
 :: --medium additions
 :: UEFI
 ::VBoxManage.exe modifyvm %VM_NAME% --firmware efi
+:: Clipboard
+VBoxManage.exe modifyvm %VM_NAME% --clipboard bidirectional --draganddrop bidirectional
 :: USB
 VBoxManage.exe modifyvm %VM_NAME% --usb on --usbehci on
 :: MOTHERBOARD
