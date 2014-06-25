@@ -1,7 +1,8 @@
 set enc=utf-8                       " nobomb
 
+set gfn=Meslo_LG_S:h14 "guifont
 "set gfn=Bitstream_Vera_Sans_Mono:h14 "guifont
-set gfn=NanumGothicCoding:h14 "guifont
+"set gfn=NanumGothicCoding:h14 "guifont
 set gfw=Courier_New:h14:cRUSSIAN "guifontwide
 "Bitstream_Vera_Sans_Mono, Liberation_Mono
 "Ubuntu_Mono_derivative_Powerlin:h18
