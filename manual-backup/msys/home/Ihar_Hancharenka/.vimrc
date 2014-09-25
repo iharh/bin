@@ -3,7 +3,7 @@ set nocompatible                  " Must come first because it changes other opt
 
 " Pathogen stuff
 filetype off
-call pathogen#infect()
+"call pathogen#infect()
 
 
 syntax on                         " Turn on syntax highlighting
@@ -11,6 +11,6 @@ syntax on                         " Turn on syntax highlighting
 filetype plugin indent on         " Turn on file type detection.
 
 set background=dark
-colorscheme solarized             " topfunky-light
+"colorscheme solarized             " topfunky-light
 "far solarized
 
