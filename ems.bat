@@ -10,9 +10,10 @@ rem Set debugging program for errors
 rem set MSYS=error_start:%WD%../../mingw32/bin/qtcreator.exe|-debug|<process-id>
 set MSYSCON=mintty.exe
 
-start %MSYS_ROOT%\usr\bin\mintty -i /msys2.ico /usr/bin/zsh --login %*
+::start %MSYS_ROOT%\usr\bin\mintty -i /msys2.ico /usr/bin/zsh --login %*
 
-::start %MSYS_ROOT%\bin\mintty.exe --exec "%MSYS_ROOT%\bin\bash.exe" --login -i
+start %MSYS_ROOT%\usr\bin\mintty -i /msys2.ico /usr/bin/bash --login %*
+:: --login -i
 :: -c %USERPROFILE%\.minttyrc
 
 :: Additional packages:
