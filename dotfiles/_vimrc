@@ -121,6 +121,8 @@ set ruler                         " Show cursor position.
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
 
+"set paste                         " Do not autoindent while doing paste
+
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 set nostartofline                 " Do not go to the start of line on scrolling like C-F/C-B/...
@@ -148,8 +150,8 @@ if has("dialog_gui")
   set background=dark " or light which is by default
   colorscheme solarized
 else
-  set background=light
-  colorscheme far
+  "set background=light
+  "colorscheme far
   "topfunky-light
 endif
 
