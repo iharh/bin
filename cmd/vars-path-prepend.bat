@@ -17,6 +17,8 @@ for /f "delims=" %%a in ('%local_path%print-substring-match.bat "%PATH%%local_se
 if %local_present%.==1. goto:iter
 
 set PATH=%full_param_name%%local_sep%%PATH%
+::echo %PATH%
+::pause
 
 goto:iter
 
