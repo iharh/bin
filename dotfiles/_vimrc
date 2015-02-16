@@ -148,7 +148,10 @@ let g:pandoc_no_folding = 1
 if has("dialog_gui")
   "let g:solarized_termcolors=256
   set background=dark " or light which is by default
-  colorscheme solarized
+  try
+    colorscheme solarized
+  catch
+  endtry
 else
   "set background=light
   "colorscheme far
