@@ -1,6 +1,6 @@
 @echo off
 setlocal
 call vars-elk.bat
-call %ELK_ES_HOME%/bin/elasticsearch.bat %*
+call %ELK_LS_HOME%/bin/logstash.bat %*
 endlocal
 
