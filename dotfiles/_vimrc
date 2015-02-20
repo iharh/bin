@@ -228,12 +228,17 @@ if has('win32') || has('win64')
   set fileformat=dos
 endif
 
+
+" default file type
+"au BufEnter * if &ft == "" | setlocal ft=text | endif
+
 " UNCOMMENT TO USE
 "ts tabstop                      " Global tab width.
 "sw shiftwidth=2                 " And again, related.
 "et expandtab                    " Use spaces instead of tabs
 
 "au[tocmd] setl[ocal] 
+"au setl sw=4 sts=4 et
 au FileType cpp setl sw=4 sts=4 et
 au FileType java setl sw=4 sts=4 et
 au FileType scala setl sw=4 sts=4 et
@@ -244,6 +249,7 @@ au FileType sql setl sw=4 sts=4 et
 au FileType ant setl sw=4 sts=4 et
 au FileType xml setl sw=4 sts=4 et
 au FileType text setl sw=4 sts=4 et noeol
+au FileType conf setl sw=4 sts=4 et noeol
 au FileType vim setl sw=4 sts=4 et
 au FileType javascript setl sw=4 sts=4 et
 au FileType nsis setl sw=4 sts=4 et
