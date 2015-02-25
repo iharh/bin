@@ -5,8 +5,6 @@ call vars-ecm-p.bat
 call ss-copy.bat
 call all-ap.bat 
 
-call wrk-backup.bat
-
 call ss-compr.bat
 call ss-trim.bat
 
