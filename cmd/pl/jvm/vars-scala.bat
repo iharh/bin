@@ -1,4 +1,3 @@
 @echo off
-call vars-java7.bat
-::call vars-java-clb.bat
-set SCALA_TOOLS_HOME=%PL_ROOT%/scala/tools
+::call vars-scala7.bat
+call vars-scala8.bat
