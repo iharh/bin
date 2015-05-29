@@ -6,3 +6,5 @@
 [credential]
 	helper = !'C:\\Users\\Ihar_Hancharenka\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
 
+[alias]
+	purb = pull --rebase
