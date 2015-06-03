@@ -8,3 +8,7 @@
 
 [alias]
 	purb = pull --rebase
+	lgo = log --oneline --graph
+	conf = config
+	st = status
+	ci = commit
