@@ -14,8 +14,8 @@ alias ssh-1='ssh vagrant@epbygomw0024t1.gomel.epam.com -p 22 -o LogLevel=FATAL -
 # \[ - begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt
 # \] - end a sequence of non-printing characters
 
-export PS1='\[\e[01;32m\]\u\[\e[01;34m\]::\[\e[01;31m\]\h \[\e[00;34m\]{ \[\e[01;34m\]\w \[\e[00;34m\]}\[\e[01;32m\]-> \[\e[00m\]'
-#'\[\e[01;32m\]\u\[\e[01;34m\]::\[\e[01;31m\]\h \[\e[00;34m\]{ \[\e[01;34m\]\w \[\e[00;34m\]}\[\e[01;32m\]-> \[\e[00m\]'
+export PS1='\[\e[00;32m\]\u\[\e[00;34m\]::\[\e[00;31m\]\h \[\e[00;34m\]{ \[\e[00;34m\]\w \[\e[00;34m\]}\[\e[00;32m\]-> \[\e[00m\]'
+#'\[\e[00;32m\]\u\[\e[00;34m\]::\[\e[00;31m\]\h \[\e[00;34m\]{ \[\e[00;34m\]\w \[\e[00;34m\]}\[\e[00;32m\]-> \[\e[00m\]'
 #export PS1='\[\e]0;$MSYSTEM:\w\007\n\e[32m\]\u@\h \[\e[33m\w$(__git_ps1)\e[0m\]\n# '
 if [ -f /usr/share/git/completion/git-completion.bash ]; then
   export GIT_PS1_SHOWDIRTYSTATE=true
