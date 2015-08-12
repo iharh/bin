@@ -254,9 +254,13 @@ au FileType conf setl sw=4 sts=4 et noeol
 au FileType vim setl sw=4 sts=4 et
 au FileType javascript setl sw=4 sts=4 et
 au FileType nsis setl sw=4 sts=4 et
+au FileType groovy setl sw=4 sts=4 et
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 " set ft - to check the current filetype
+
+" gradle syntax highlighting
+au BufNewFile,BufRead *.gradle set filetype=groovy
 
 "easier buffer/tabs navigation
 map <C-J>  :bn<CR>
