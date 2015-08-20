@@ -81,7 +81,8 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'iharh/neosauce'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'docker/docker', {'rtp': 'contrib/syntax/vim/'}
+"NeoBundle 'docker/docker', {'rtp': 'contrib/syntax/vim'}
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 "NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
 "NeoBundle 'Shougo/neocomplete.vim'
@@ -260,12 +261,18 @@ au FileType vim setl sw=4 sts=4 et
 au FileType javascript setl sw=4 sts=4 et
 au FileType nsis setl sw=4 sts=4 et
 au FileType groovy setl sw=4 sts=4 et
+au FileType Dockerfile setl sw=4 sts=4 et
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 " set ft - to check the current filetype
 
 " gradle syntax highlighting
-au BufNewFile,BufRead *.gradle set filetype=groovy
+au BufRead,BufNewFile *.gradle set filetype=groovy
+
+" Dockerfile
+au BufRead,BufNewFile Dockerfile set ft=Dockerfile
+au BufRead,BufNewFile Dockerfile* setf Dockerfile
+au BufRead,BufNewFile *.dock setf Dockerfile
 
 "easier buffer/tabs navigation
 map <C-J>  :bn<CR>
