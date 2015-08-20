@@ -2,7 +2,8 @@
 setlocal
 call vars-ems-p.bat
 
-set MSYSTEM=MSYS
+::set MSYSTEM=MSYS
+set MSYSTEM=MINGW64
 rem To activate windows native symlinks uncomment next line
 set MSYS=winsymlinks
 ::set MSYS=winsymlinks:nativestrict
