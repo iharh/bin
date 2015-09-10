@@ -81,6 +81,7 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'iharh/neosauce'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'derekwyatt/vim-sbt'
 "NeoBundle 'docker/docker', {'rtp': 'contrib/syntax/vim'}
 NeoBundle 'ekalinin/Dockerfile.vim'
 
@@ -248,6 +249,7 @@ endif
 au FileType cpp setl sw=4 sts=4 et
 au FileType java setl sw=4 sts=4 et
 au FileType scala setl sw=4 sts=4 et
+au FileType sbt setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
 au FileType ruby setl sw=4 sts=4 et
 au FileType haskell setl sw=4 sts=4 noeol
@@ -273,6 +275,8 @@ au BufRead,BufNewFile *.gradle set filetype=groovy
 au BufRead,BufNewFile Dockerfile set ft=Dockerfile
 au BufRead,BufNewFile Dockerfile* setf Dockerfile
 au BufRead,BufNewFile *.dock setf Dockerfile
+au BufRead,BufNewFile *.sbt set filetype=sbt
+"sbt.scala
 
 "easier buffer/tabs navigation
 map <C-J>  :bn<CR>
