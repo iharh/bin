@@ -43,3 +43,8 @@ alias ssh-2r='ssh root@epbygomw0024t2.gomel.epam.com -p 22 -o LogLevel=FATAL -o 
 
 alias ssh-v='ssh vagrant@127.0.0.1 -p 2222 -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i /d/dev/Utils/Virtualization/Vagrant/insecure_private_key'
 
+alias ssh-d2m='docker-machine -s "F:\vbox-dm" ssh d2m'
+
+alias ssh-jlx='ssh hudson@192.168.31.250'
+alias ssh-pd='ssh ihar.hancharenka@platform-dev'
+
