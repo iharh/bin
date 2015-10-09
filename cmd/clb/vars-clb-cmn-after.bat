@@ -1,0 +1,4 @@
+@echo off
+set CLB_SVN_SRC_ROOT=%CLB_SRC%\%CLB_VER%
+
+set CLB_SRC_ROOT=%CLB_SVN_SRC_ROOT%
