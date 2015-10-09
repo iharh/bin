@@ -3,3 +3,4 @@ derby.log
 cmd/util/misc/.*/*
 wrk/*
 vagrant-boxes/*/.vagrant/*
+cmd/util/shell/.wcd/*
