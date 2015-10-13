@@ -84,6 +84,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'derekwyatt/vim-sbt'
 "NeoBundle 'docker/docker', {'rtp': 'contrib/syntax/vim'}
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'rking/ag.vim'
 
 "NeoBundle 'Shougo/vimproc', { 'build' : { 'windows' : 'nmake32-vc100.bat -f make_msvc32.mak nodebug=1' } }
 "NeoBundle 'Shougo/neocomplete.vim'
