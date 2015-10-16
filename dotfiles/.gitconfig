@@ -1,18 +1,17 @@
-[core]
-	autocrlf = true
-	longpaths = true
 [user]
 	name = Ihar Hancharenka
 	email = iigoncharenko@mail.ru
 [credential]
 	helper = wincred
-
+[core]
+	autocrlf = true
+	longpaths = true
 [alias]
 	purb = pull --rebase
 	lgo = log --oneline --graph --decorate
-	conf = config
 	st = status
 	ci = commit
 	rbi = rebase --interactive
+	conf = config
 	cfg = config
 	br = branch

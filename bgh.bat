@@ -8,7 +8,6 @@ call all-ap.bat
 call ss-compr.bat
 call ss-trim.bat
 
-call yadisk-up.bat
-::call bk-up.bat
+::call yadisk-up.bat
 endlocal
 
