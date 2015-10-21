@@ -4,3 +4,4 @@ cmd/util/misc/.*/*
 wrk/*
 vagrant-boxes/*/.vagrant/*
 cmd/util/shell/.wcd/*.bat
+cmd/util/shell/.wcd/stack.wcd
