@@ -265,6 +265,7 @@ au FileType javascript setl sw=4 sts=4 et
 au FileType nsis setl sw=4 sts=4 et
 au FileType groovy setl sw=4 sts=4 et
 au FileType Dockerfile setl sw=4 sts=4 et
+au FileType dosbatch setl sw=4 sts=4 et
 " for t in ['cpp', 'java', 'sql']  DOES NOT WORK
 " endfor
 " set ft - to check the current filetype
