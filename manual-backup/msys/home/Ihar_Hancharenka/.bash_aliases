@@ -33,9 +33,13 @@ export LS_COLORS='no=00;38;5;244:di=00;38;5;33:ln=01;38;5;37:pi=48;5;230;38;5;13
 #other
 #alias please='sudo $(fc -ln -1)'
 
-# ssh stuff
+# ssh stuff (ssh-copy-id)
 
+alias ssh-cps1='ssh ihar.hancharenka@d9-z01-lvpn-01.clarabridge.net'
+alias ssh-pd='ssh ihar.hancharenka@platform-dev'
+alias ssh-jlx='ssh hudson@192.168.31.250'
 alias ssh-basil1='ssh anton.aharkau@basil1 -p 22'
+
 #-o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i /d/dev/Utils/Virtualization/Vagrant/insecure_private_key'
 
 alias ssh-1='ssh vagrant@epbygomw0024t1.gomel.epam.com -p 22 -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i /d/dev/Utils/Virtualization/Vagrant/insecure_private_key'
@@ -45,10 +49,6 @@ alias ssh-2='ssh vagrant@epbygomw0024t2.gomel.epam.com -p 22 -o LogLevel=FATAL -
 alias ssh-2r='ssh root@epbygomw0024t2.gomel.epam.com -p 22 -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i /d/dev/Utils/Virtualization/Vagrant/insecure_private_key'
 
 alias ssh-v='ssh vagrant@127.0.0.1 -p 2222 -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i /d/dev/Utils/Virtualization/Vagrant/insecure_private_key'
-
-
-alias ssh-jlx='ssh hudson@192.168.31.250'
-alias ssh-pd='ssh ihar.hancharenka@platform-dev'
 
 # d2m stuff
 alias ssh-d2m='docker-machine -s "D:\vbox-dm" ssh d2m'
