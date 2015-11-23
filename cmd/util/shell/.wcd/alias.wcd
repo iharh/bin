@@ -21,3 +21,5 @@ dpt d:/clb/src/deep-thought
 dptpvp d:/clb/src/deep-thought/cb-cps-pvp
 logb d:/clb/log
 logss d:/clb/inst/server/logs
+down d:/download
+repo d:/dev/repo
