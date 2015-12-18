@@ -2,8 +2,8 @@
 setlocal
 call vars-vbox-p.bat
 
-set VM_NAME=Manjaro-fluxbox
-set IMG_NAME=manjaro-fluxbox-15.11-x86_64
+set VM_NAME=Manjaro-ob2
+set IMG_NAME=manjaro-openbox-0.8.13.1-x86_64-FINAL
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
 set DVD_ISO=F:\vbox-isos\%IMG_NAME%.iso 
 set VM_OS_TYPE=ArchLinux_64

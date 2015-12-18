@@ -3,13 +3,12 @@ setlocal
 call vars-vbox-p.bat
 
 set VM_NAME=Manjaro-net
-::set IMG_NAME=manjaro-net-0.8.9-x86_64
-set IMG_NAME=manjaro-openbox-0.8.9-x86_64
+set IMG_NAME=manjaro-net-15.09-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
 set DVD_ISO=F:\vbox-isos\%IMG_NAME%.iso 
 set VM_OS_TYPE=ArchLinux_64
 set MAC_ADDR=
-set SHARED_FOLDER=F:\vbox-shared
+::set SHARED_FOLDER=F:\vbox-shared
 
 call _print-choice-q.bat Reinstall %VM_NAME%?
 set /P CHOICE_TYPE=Your choice: 
@@ -19,7 +18,7 @@ if %CHOICE_TYPE%.==q. goto done
 ::VBoxManage list vms --long
 
 VBoxManage unregistervm %VM_NAME% --delete
-::goto:done
+goto:done
 
 VBoxManage.exe createvm --name %VM_NAME% --ostype %VM_OS_TYPE% --register
 :: SATA controller
@@ -58,7 +57,7 @@ VBoxManage.exe storageattach %VM_NAME% --storagectl "IDE Controller" --port 0 --
 :: PORT forwarding
 VBoxManage.exe modifyvm %VM_NAME% --natpf1 "guestssh,tcp,,2222,,22"
 :: SHARED FOLDER
-VBoxManage.exe sharedfolder add %VM_NAME% --name "/vagrant" --hostpath %SHARED_FOLDER% --readonly --automount
+::VBoxManage.exe sharedfolder add %VM_NAME% --name "/vagrant" --hostpath %SHARED_FOLDER% --readonly --automount
 :: look at UserManual 4.3.1 Manual mounting
 ::
 :: guestcontrol
