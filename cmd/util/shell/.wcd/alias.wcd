@@ -9,12 +9,13 @@ utils d:/dev/utils
 prj d:/dev/prj
 cmp d:/clb/src/platform/cmp
 fxtrans d:/clb/src/platform/cmp/transformers/FXTransformer
-fx d:/clb/src/6.3.4/fx/fx
-lps d:/clb/src/6.3.4/lang-packs
-lpko d:/clb/src/6.3.4/lang-packs/korean
-lpen d:/clb/src/6.3.4/lang-packs/english
-lpro d:/clb/src/6.3.4/lang-packs/romanian
-lpsh d:/clb/src/6.3.4/lang-packs/shared
+fx d:/clb/src/main/fx/fx
+lps d:/clb/src/main/lang-packs
+lpsh d:/clb/src/main/lang-packs/shared
+lpen d:/clb/src/main/lang-packs/english
+lpro d:/clb/src/main/lang-packs/romanian
+lpsp d:/clb/src/main/lang-packs/spanish
+lpko d:/clb/src/main/lang-packs/korean
 cps d:/clb/src/spikes/cb-cps
 csls d:/clb/src/spikes/cb-cps/cb-cps-csls
 dpt d:/clb/src/deep-thought
@@ -23,5 +24,4 @@ logb d:/clb/log
 logss d:/clb/inst/server/logs
 down d:/download
 repo d:/dev/repo
-lpsp d:/clb/src/6.3.4/lang-packs/spanish
 notesepam d:/dev/notes/wrk/epam
