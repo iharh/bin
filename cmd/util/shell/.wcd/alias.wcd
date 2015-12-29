@@ -8,7 +8,8 @@ noteslp d:/dev/notes/wrk/clb/features/lp
 utils d:/dev/utils
 prj d:/dev/prj
 cmp d:/clb/src/platform/cmp
-fxtrans d:/clb/src/platform/cmp/transformers/FXTransformer
+transfx d:/clb/src/platform/cmp/transformers/FXTransformer
+transclas d:/clb/src/platform/cmp/transformers/Classification
 fx d:/clb/src/main/fx/fx
 lps d:/clb/src/main/lang-packs
 lpsh d:/clb/src/main/lang-packs/shared
