@@ -2,10 +2,12 @@
 setlocal
 call vars-vbox-p.bat
 
-set VM_NAME=CentOS-latest
-set IMG_NAME=CentOS-6.5-x86_64
+::CentOS-7-x86_64-Minimal-1511
+
+set VM_NAME=CentOS-7-latest
+set IMG_NAME=CentOS-7-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
-set DVD_ISO=F:\vbox-isos\%IMG_NAME%-minimal.iso 
+set DVD_ISO=F:\vbox-isos\%IMG_NAME%-Minimal-1511.iso 
 set VM_OS_TYPE=RedHat_64 
 set MAC_ADDR=
 set SHARED_FOLDER=F:\vbox-shared
@@ -17,7 +19,7 @@ if %CHOICE_TYPE%.==q. goto done
 ::VBoxManage list ostypes
 ::VBoxManage list vms --long
 
-VBoxManage unregistervm %VM_NAME% --delete
+VBoxManage.exe unregistervm %VM_NAME% --delete
 ::goto:done
 
 VBoxManage.exe createvm --name %VM_NAME% --ostype %VM_OS_TYPE% --register

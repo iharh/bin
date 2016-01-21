@@ -11,6 +11,8 @@ cmp d:/clb/src/platform/cmp
 transfx d:/clb/src/platform/cmp/transformers/FXTransformer
 transclas d:/clb/src/platform/cmp/transformers/Classification
 fx d:/clb/src/main/fx/fx
+fxlib d:/clb/src/main/fx/lib.cpp
+scws d:/clb/src/main/fx/lib.cpp/scws/1.1.8
 lps d:/clb/src/main/lang-packs
 lpsh d:/clb/src/main/lang-packs/shared
 lpen d:/clb/src/main/lang-packs/english
@@ -26,3 +28,4 @@ logss d:/clb/inst/server/logs
 down d:/download
 repo d:/dev/repo
 notesepam d:/dev/notes/wrk/epam
+lpzh d:/clb/src/main/lang-packs/chinese
