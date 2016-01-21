@@ -19,7 +19,7 @@ if %CHOICE_TYPE%.==q. goto done
 ::VBoxManage list ostypes
 ::VBoxManage list vms --long
 
-VBoxManage.exe unregistervm %VM_NAME% --delete
+::VBoxManage.exe unregistervm %VM_NAME% --delete
 ::goto:done
 
 VBoxManage.exe createvm --name %VM_NAME% --ostype %VM_OS_TYPE% --register
