@@ -3,7 +3,7 @@ setlocal
 call vars-vbox-p.bat
 
 set VM_NAME=Manjaro-net
-set IMG_NAME=manjaro-net-15.09-x86_64
+set IMG_NAME=manjaro-net-15.12-x86_64
 set VDI_NAME=F:\VBoxImages\%VM_NAME%\%VM_NAME%_disk.vdi
 set DVD_ISO=F:\vbox-isos\%IMG_NAME%.iso 
 set VM_OS_TYPE=ArchLinux_64
@@ -17,8 +17,8 @@ if %CHOICE_TYPE%.==q. goto done
 ::VBoxManage list ostypes
 ::VBoxManage list vms --long
 
-VBoxManage unregistervm %VM_NAME% --delete
-goto:done
+::VBoxManage unregistervm %VM_NAME% --delete
+::goto:done
 
 VBoxManage.exe createvm --name %VM_NAME% --ostype %VM_OS_TYPE% --register
 :: SATA controller
