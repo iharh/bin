@@ -290,17 +290,11 @@ exe 'vnoremap <script> <C-V> ' . paste#paste_cmd['v']
 imap <S-Insert>		<C-V>
 vmap <S-Insert>		<C-V>
 
-" Use CTRL-Q to do what CTRL-V used to do
-noremap <C-Q>		<C-V>
-
-" Use CTRL-S for saving, also in Insert mode
-noremap <C-S>		:update<CR>
-vnoremap <C-S>		<C-C>:update<CR>
-inoremap <C-S>		<C-O>:update<CR>
-
-
 
 " works in gvim only
-"map <Esc>[14^  <C-F4>
+map <Esc>[14^  <C-F4>
 "http://mg.pov.lt/vim/vimrc
 noremap <C-F4> :bw<CR>
+
+" Use CTRL-Q to do what CTRL-V used to do
+noremap <C-Q>		<C-V>
