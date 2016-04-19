@@ -12,22 +12,20 @@ if has('win32') || has('win64')
     let s:vimfilesbase='~/vimfiles/'
 else
     let s:vimfilesbase='~/.vim/'
-    if empty(glob('~/.vim/autoload/plug.vim'))
-        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-        autocmd VimEnter * PlugInstall | source $MYVIMRC
-    endif
+    "if empty(glob('~/.vim/autoload/plug.vim'))
+    "    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    "    autocmd VimEnter * PlugInstall | source $MYVIMRC
+    "endif
 endif
 
 call plug#begin('~/vimfiles/plugged')
 
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-Plug 'bling/vim-bufferline'
+""Plug 'bling/vim-bufferline'
 
-""NeoBundle 'derekwyatt/vim-scala'
-""NeoBundle 'derekwyatt/vim-sbt'
+Plug 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-sbt'
 Plug 'ekalinin/Dockerfile.vim'
-Plug 'rking/ag.vim'
+"Plug 'rking/ag.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -68,13 +66,6 @@ fun MyDiff()
 endfunction
 
 filet off "filetype
-
-"NeoBundle 'iharh/neosauce'
-"NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'derekwyatt/vim-scala'
-"NeoBundle 'derekwyatt/vim-sbt'
-"NeoBundle 'ekalinin/Dockerfile.vim'
-"NeoBundle 'rking/ag.vim'
 
 syn on                         " (syntax)   - turn on syntax highlighting
 filet plugin indent on         " (filetype) - turn on file type detection.
@@ -178,7 +169,7 @@ set tags=./tags;/
 
 " :map <silent> <F2> :echo 'Hello!'<CR>
 
-"let mapleader=","
+let mapleader=","
 "|,|    repeat latest f, t, F or T in opposite direction N times
 
 " Disable netrw.vim
@@ -277,19 +268,6 @@ map <S-Insert>		"+gP
 
 cmap <C-V>		<C-R>+
 cmap <S-Insert>		<C-R>+
-
-" Pasting blockwise and linewise selections is not possible in Insert and
-" Visual mode without the +virtualedit feature.  They are pasted as if they
-" were characterwise instead.
-" Uses the paste.vim autoload script.
-" Use CTRL-G u to have CTRL-Z only undo the paste.
-
-exe 'inoremap <script> <C-V> <C-G>u' . paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V> ' . paste#paste_cmd['v']
-
-imap <S-Insert>		<C-V>
-vmap <S-Insert>		<C-V>
-
 
 " works in gvim only
 map <Esc>[14^  <C-F4>
