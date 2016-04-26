@@ -11,6 +11,7 @@
 	lgo = log --oneline --graph --decorate
 	st = status
 	ci = commit
+	co = checkout
 	rbi = rebase --interactive
 	conf = config
 	cfg = config
