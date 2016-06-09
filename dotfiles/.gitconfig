@@ -16,4 +16,5 @@
 	conf = config
 	cfg = config
 	br = branch
+	bra = branch --all
 	puso = push origin HEAD
