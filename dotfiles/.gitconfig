@@ -18,3 +18,4 @@
 	br = branch
 	bra = branch --all
 	puso = push origin HEAD
+	fep = fetch -p
