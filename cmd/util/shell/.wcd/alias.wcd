@@ -1,5 +1,6 @@
 bin d:/dev/bin
 binclb d:/dev/bin/wrk/clb
+binwcd d:/dev/bin/cmd/util/shell/.wcd
 notes d:/dev/notes
 notesansible d:/dev/notes/os/provis/ansible
 notesclb d:/dev/notes/wrk/clb
@@ -8,6 +9,7 @@ noteslp d:/dev/notes/wrk/clb/features/lp
 utils d:/dev/utils
 prj d:/dev/prj
 cmp d:/clb/src/platform/cmp
+cbtests d:/clb/src/platform/cbtests
 transfx d:/clb/src/platform/cmp/transformers/FXTransformer
 transclas d:/clb/src/platform/cmp/transformers/Classification
 fx d:/clb/src/main/fx/fx
