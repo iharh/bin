@@ -1,12 +1,6 @@
 git\apache\ant
 git\github\haskell\cabal
 git\github\haskell\ekmett\lens
-git\github\haskell\Gabriel439\Haskell-Errors-Library
-git\github\haskell\Gabriel439\Haskell-MMorph-Library
-git\github\haskell\Gabriel439\Haskell-Pipes-Concurrency-Library
-git\github\haskell\Gabriel439\Haskell-Pipes-Library
-git\github\haskell\Gabriel439\Haskell-Pipes-Parse-Library
-git\github\haskell\Gabriel439\Haskell-Pipes-Safe-Library
 git\github\haskell\simonmar\async
 git\github\java\df4j
 git\github\java\DirectMemory

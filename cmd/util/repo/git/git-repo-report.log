@@ -1,12 +1,6 @@
 git\apache\ant -> git://git.apache.org/ant.git
 git\github\haskell\cabal -> https://github.com/haskell/cabal.git
 git\github\haskell\ekmett\lens -> git://github.com/ekmett/lens.git
-git\github\haskell\Gabriel439\Haskell-Errors-Library -> https://github.com/Gabriel439/Haskell-Errors-Library.git
-git\github\haskell\Gabriel439\Haskell-MMorph-Library -> https://github.com/Gabriel439/Haskell-MMorph-Library.git
-git\github\haskell\Gabriel439\Haskell-Pipes-Concurrency-Library -> git://github.com/Gabriel439/Haskell-Pipes-Concurrency-Library
-git\github\haskell\Gabriel439\Haskell-Pipes-Library -> https://github.com/Gabriel439/Haskell-Pipes-Library.git
-git\github\haskell\Gabriel439\Haskell-Pipes-Parse-Library -> git://github.com/Gabriel439/Haskell-Pipes-Parse-Library.git
-git\github\haskell\Gabriel439\Haskell-Pipes-Safe-Library -> https://github.com/Gabriel439/Haskell-Pipes-Safe-Library.git
 git\github\haskell\simonmar\async -> git://github.com/simonmar/async.git
 git\github\java\df4j -> git://github.com/rfqu/df4j.git
 git\github\java\DirectMemory -> git://github.com/raffaeleguidi/DirectMemory.git
