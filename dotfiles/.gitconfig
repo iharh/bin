@@ -1,7 +1,6 @@
 [user]
 	name = Ihar Hancharenka
 	email = iigoncharenko@mail.ru
-[credential]
 [core]
 	autocrlf = true
 	longpaths = true
@@ -18,8 +17,5 @@
 	bra = branch --all
 	puso = push origin HEAD
 	fep = fetch -p
-[credential]
-[credential]
-[credential]
 [credential]
 	helper = manager
