@@ -1,0 +1,7 @@
+/usr/java/default/bin/
+
+/usr/local/clarabridge/...
+/etc/clarabridge/clara*.properties
+
+CATALINA_PID="/var/run/clara*.pid"
+

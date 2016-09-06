@@ -5,3 +5,4 @@ wrk/*
 vagrant-boxes/*/.vagrant/*
 cmd/util/shell/.wcd/wcdgo.bat
 cmd/util/shell/.wcd/stack.wcd
+cmd/clb/.clb/lic/*
