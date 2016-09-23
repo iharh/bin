@@ -8,6 +8,7 @@ notesfx d:/dev/notes/wrk/clb/features/fx
 noteslp d:/dev/notes/wrk/clb/features/lp
 utils d:/dev/utils
 prj d:/dev/prj
+chef d:/clb/src/chef
 cmp d:/clb/src/platform/cmp
 cbtests d:/clb/src/platform/cbtests
 transfx d:/clb/src/platform/cmp/transformers/FXTransformer
