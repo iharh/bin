@@ -6,6 +6,7 @@ notesansible d:/dev/notes/os/provis/ansible
 notesclb d:/dev/notes/wrk/clb
 notesfx d:/dev/notes/wrk/clb/features/fx
 noteslp d:/dev/notes/wrk/clb/features/lp
+wnotes d:/dev/wnotes
 utils d:/dev/utils
 prj d:/dev/prj
 chef d:/clb/src/chef
