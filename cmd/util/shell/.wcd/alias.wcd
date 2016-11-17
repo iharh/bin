@@ -2,11 +2,11 @@ bin d:/dev/bin
 binclb d:/dev/bin/wrk/clb
 binwcd d:/dev/bin/cmd/util/shell/.wcd
 notes d:/dev/notes
-notesansible d:/dev/notes/os/provis/ansible
-notesclb d:/dev/notes/wrk/clb
-notesfx d:/dev/notes/wrk/clb/features/fx
-noteslp d:/dev/notes/wrk/clb/features/lp
-wnotes d:/dev/wnotes
+noteclb d:/dev/notes/wrk/clb
+notefx d:/dev/notes/wrk/clb/features/fx
+notelp d:/dev/notes/wrk/clb/features/lp
+wnote d:/dev/wnotes
+wnotewrk d:/dev/notes/wrk
 utils d:/dev/utils
 prj d:/dev/prj
 chef d:/clb/src/chef
@@ -14,7 +14,7 @@ cmp d:/clb/src/platform/cmp
 cbtests d:/clb/src/platform/cbtests
 transfx d:/clb/src/platform/cmp/transformers/FXTransformer
 transclas d:/clb/src/platform/cmp/transformers/Classification
-fx d:/clb/src/main/fx/fx
+fxfx d:/clb/src/main/fx/fx
 fxlib d:/clb/src/main/fx/lib.cpp
 scws d:/clb/src/main/fx/lib.cpp/scws/1.1.8
 lps d:/clb/src/main/lang-packs
@@ -32,7 +32,6 @@ logb d:/clb/log
 logss d:/clb/inst/server/logs
 down d:/download
 repo d:/dev/repo
-notesepam d:/dev/notes/wrk/epam
 lpzh d:/clb/src/main/lang-packs/chinese
 lptr d:/clb/src/main/lang-packs/turkish
 oval d:/dev/pl/java/jtools/oVal/src/net/sf/oval
