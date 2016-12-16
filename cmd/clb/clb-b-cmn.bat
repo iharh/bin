@@ -143,8 +143,9 @@ call clb-gri-cmn.bat 2>%GROK_LOG%
 
 if %1.==nobuild. goto lDone
 ::set CLB_DEFS_B=%CLB_DEFS_B% -Dinstaller.revision=%new_rev%
-call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
-:: "-d"
+
+::call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
+call gradlew.bat build >>%BUILD_LOG%
 
 :lDone
 popd
