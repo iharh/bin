@@ -111,7 +111,8 @@ popd
 if %CLB_GIT_SRC_ROOT%.==. goto skipGitStuff
 pushd %CLB_GIT_SRC_ROOT%
 
-call antc-cmn.bat %EXTRA_CLEAN_TARGETS% clean %CLB_DEFS_C% >>%BUILD_LOG%
+::call antc-cmn.bat %EXTRA_CLEAN_TARGETS% clean %CLB_DEFS_C% >>%BUILD_LOG%
+::call gradlew.bat clean >>%BUILD_LOG%
 
 call git.bat remote -v update --prune
 for /f "delims=" %%a in ('git.bat rev-parse --abbrev-ref HEAD') do set git_cur_br=%%a
@@ -145,7 +146,7 @@ if %1.==nobuild. goto lDone
 ::set CLB_DEFS_B=%CLB_DEFS_B% -Dinstaller.revision=%new_rev%
 
 ::call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
-call gradlew.bat build >>%BUILD_LOG%
+call gradlew.bat build >>%BUILD_LOG% 2>&1
 
 :lDone
 popd
