@@ -85,6 +85,8 @@ if %BUILD_FXLP%.==. goto skipFXLP
 set CLB_DEFS_B=%CLB_DEFS_B% %CLB_DEFS_FXLP%
 set EXTRA_TARGETS=build-fx build-lp
 set EXTRA_CLEAN_TARGETS=clean-fx clean-lp
+
+call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
 :skipFXLP
 
 if %BUILD_CONNECTORS%.==. goto skipCONNECTORS
@@ -112,7 +114,7 @@ if %CLB_GIT_SRC_ROOT%.==. goto skipGitStuff
 pushd %CLB_GIT_SRC_ROOT%
 
 ::call antc-cmn.bat %EXTRA_CLEAN_TARGETS% clean %CLB_DEFS_C% >>%BUILD_LOG%
-::call gradlew.bat clean >>%BUILD_LOG%
+call gradlew.bat clean >>%BUILD_LOG% 2>&1
 
 call git.bat remote -v update --prune
 for /f "delims=" %%a in ('git.bat rev-parse --abbrev-ref HEAD') do set git_cur_br=%%a
