@@ -61,7 +61,8 @@ echo CLB_DEFS_C - %CLB_DEFS_C% >%BUILD_LOG%
 ::
 pushd %CLB_SVN_SRC_ROOT%
 
-call antc-cmn.bat clean %CLB_DEFS_C% >>%BUILD_LOG%
+set EXTRA_CLEAN_TARGETS=clean-fx clean-lp
+call antc-cmn.bat %EXTRA_CLEAN_TARGETS% clean %CLB_DEFS_C% >>%BUILD_LOG%
 call svn-clean.bat
 
 for /f "delims=" %%a in ('_svn-print-rev.bat') do set old_rev=%%a
@@ -79,12 +80,10 @@ set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.checkstyle=true"
 ::set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.i18n=true"
 
 set EXTRA_TARGETS=
-set EXTRA_CLEAN_TARGETS=
 if %BUILD_FXLP%.==. goto skipFXLP
 :: obsolete for 6.3.4 and further
 set CLB_DEFS_B=%CLB_DEFS_B% %CLB_DEFS_FXLP%
 set EXTRA_TARGETS=build-fx build-lp
-set EXTRA_CLEAN_TARGETS=clean-fx clean-lp
 
 call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
 :skipFXLP
@@ -113,7 +112,6 @@ popd
 if %CLB_GIT_SRC_ROOT%.==. goto skipGitStuff
 pushd %CLB_GIT_SRC_ROOT%
 
-::call antc-cmn.bat %EXTRA_CLEAN_TARGETS% clean %CLB_DEFS_C% >>%BUILD_LOG%
 call gradlew.bat clean >>%BUILD_LOG% 2>&1
 
 call git.bat remote -v update --prune
