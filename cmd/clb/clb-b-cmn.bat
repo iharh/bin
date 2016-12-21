@@ -24,10 +24,6 @@ if %BUILD_FXLP%.==. goto _skipFXLP
 echo BUILD_FXLP: %BUILD_FXLP%
 :_skipFXLP
 
-if %BUILD_CONNECTORS%.==. goto _skipCONNECTORS
-echo BUILD_CONNECTORS: %BUILD_CONNECTORS%
-:_skipCONNECTORS
-
 if %JAVA_HOME%.==. goto lExit
 echo JAVA_HOME: %JAVA_HOME%
 
@@ -49,20 +45,15 @@ set GIT_LOCAL_LOG=%BUILD_LOG_DIR%\git_local_changes.txt
 set GROK_LOG=%BUILD_LOG_DIR%\grok.txt
 set CTAGS_LOG=%BUILD_LOG_DIR%\ctags.txt
 
-set CLB_DEFS_FXLP=%CLB_DEFS_FXLP% "-Dbuild.fx=true"
-set CLB_DEFS_FXLP=%CLB_DEFS_FXLP% "-Dbuild.lp=true"
-set CLB_DEFS_CONNECTORS=%CLB_DEFS_CONNECTORS% "-Dbuild.connectors=true"
-
-set CLB_DEFS_C=%CLB_DEFS_FXLP%
-echo CLB_DEFS_C - %CLB_DEFS_C% >%BUILD_LOG%
+set CLB_DEFS_FXLP="-Dbuild.fx=true" "-Dbuild.lp=true"
+echo CLB_DEFS_FXLP - %CLB_DEFS_FXLP% >%BUILD_LOG%
 
 ::
 :: SVN stuff
 ::
 pushd %CLB_SVN_SRC_ROOT%
 
-set EXTRA_CLEAN_TARGETS=clean-fx clean-lp
-call antc-cmn.bat %EXTRA_CLEAN_TARGETS% clean %CLB_DEFS_C% >>%BUILD_LOG%
+call antc-cmn.bat clean-fx clean-lp %CLB_DEFS_FXLP% >>%BUILD_LOG%
 call svn-clean.bat
 
 for /f "delims=" %%a in ('_svn-print-rev.bat') do set old_rev=%%a
@@ -73,28 +64,18 @@ call svn.bat st >%SVN_LOCAL_LOG%
 for /f "delims=" %%a in ('_svn-print-rev.bat') do set new_rev=%%a
 
 if %1.==noskip. goto skipExtraSkips
-::set CLB_DEFS_B="-Dcustomer=verint"
-::set CLB_DEFS_B=%CLB_DEFS_B% "-Dbuild.connectors=true"
 set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.test=true"
 set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.checkstyle=true"
+::set CLB_DEFS_B=%CLB_DEFS_B% "-Dbuild.connectors=true"
 ::set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.i18n=true"
 
-set EXTRA_TARGETS=
 if %BUILD_FXLP%.==. goto skipFXLP
-:: obsolete for 6.3.4 and further
-set CLB_DEFS_B=%CLB_DEFS_B% %CLB_DEFS_FXLP%
-set EXTRA_TARGETS=build-fx build-lp
-
-call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
+pushd %CLB_SVN_SRC_ROOT%\cmp\installer
+call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_LOG%
+popd
 :skipFXLP
 
-if %BUILD_CONNECTORS%.==. goto skipCONNECTORS
-set CLB_DEFS_B=%CLB_DEFS_B% %CLB_DEFS_CONNECTORS%
-:skipCONNECTORS
-
 :skipExtraSkips
-echo CLB_DEFS_B - %CLB_DEFS_B% >>%BUILD_LOG%
-
 if %old_rev% == %new_rev% goto skipSvnLog
 set /A old_revision+=1
 call svn.bat log -v -r %old_rev%:%new_rev% >>%SVN_LOG% 2>&1
@@ -144,9 +125,8 @@ call clb-gri-cmn.bat 2>%GROK_LOG%
 
 if %1.==nobuild. goto lDone
 ::set CLB_DEFS_B=%CLB_DEFS_B% -Dinstaller.revision=%new_rev%
-
-::call antc-cmn.bat %EXTRA_TARGETS% dist %CLB_DEFS_B% >>%BUILD_LOG%
-call gradlew.bat build >>%BUILD_LOG% 2>&1
+call gradlew.bat build -Pbuild.type=nlp -Dnlp.workspace=%CLB_SVN_SRC_ROOT% >>%BUILD_LOG% 2>&1
+::continuous
 
 :lDone
 popd
