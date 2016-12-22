@@ -66,14 +66,6 @@ for /f "delims=" %%a in ('_svn-print-rev.bat') do set new_rev=%%a
 if %1.==noskip. goto skipExtraSkips
 set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.test=true"
 set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.checkstyle=true"
-::set CLB_DEFS_B=%CLB_DEFS_B% "-Dbuild.connectors=true"
-::set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.i18n=true"
-
-if %BUILD_FXLP%.==. goto skipFXLP
-pushd %CLB_SVN_SRC_ROOT%\cmp\installer
-call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_LOG%
-popd
-:skipFXLP
 
 :skipExtraSkips
 if %old_rev% == %new_rev% goto skipSvnLog
@@ -85,6 +77,12 @@ if %CTAGS_SRC%.==. goto skipCtagsSvn
 call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 :skipCtagsSvn
 
+if %BUILD_FXLP%.==. goto skipFXLP
+pushd %CLB_SVN_SRC_ROOT%\cmp\installer
+call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_LOG%
+popd
+
+:skipFXLP
 popd
 
 ::
