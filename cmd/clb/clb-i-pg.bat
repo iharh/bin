@@ -2,7 +2,6 @@
 setlocal
 call vars-clb-cur.bat
 
-::set CLB_INSTALLER_DIST_DIR=%CLB_SRC_ROOT%\cmp\installer\dist
 set CLB_INSTALLER_DIST_DIR=%CLB_SRC_ROOT%\build
 for /f "delims=" %%a in ('dir /B %CLB_INSTALLER_DIST_DIR%\*.exe') do set INST_FILE=%CLB_INSTALLER_DIST_DIR%\%%a
 call _print-choice-q.bat Install (%INST_FILE%) and Configure PG DB ?

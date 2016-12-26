@@ -53,8 +53,12 @@ echo CLB_DEFS_FXLP - %CLB_DEFS_FXLP% >%BUILD_LOG%
 ::
 pushd %CLB_SVN_SRC_ROOT%
 
+set BUILD_TYPE=continuous
+if %BUILD_FXLP%.==. goto skipFXLPClean
+set BUILD_TYPE=nlp
 call antc-cmn.bat clean-fx clean-lp %CLB_DEFS_FXLP% >>%BUILD_LOG%
 call svn-clean.bat
+:skipFXLPClean
 
 for /f "delims=" %%a in ('_svn-print-rev.bat') do set old_rev=%%a
 if %1.==nosvn. goto skipSvnUp
@@ -66,8 +70,8 @@ for /f "delims=" %%a in ('_svn-print-rev.bat') do set new_rev=%%a
 if %1.==noskip. goto skipExtraSkips
 set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.test=true"
 set CLB_DEFS_B=%CLB_DEFS_B% "-Dskip.checkstyle=true"
-
 :skipExtraSkips
+
 if %old_rev% == %new_rev% goto skipSvnLog
 set /A old_revision+=1
 call svn.bat log -v -r %old_rev%:%new_rev% >>%SVN_LOG% 2>&1
@@ -77,12 +81,12 @@ if %CTAGS_SRC%.==. goto skipCtagsSvn
 call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 :skipCtagsSvn
 
-if %BUILD_FXLP%.==. goto skipFXLP
+if %BUILD_FXLP%.==. goto skipFXLPBuild
 pushd %CLB_SVN_SRC_ROOT%\cmp\installer
 call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_LOG%
 popd
+:skipFXLPBuild
 
-:skipFXLP
 popd
 
 ::
@@ -123,8 +127,9 @@ call clb-gri-cmn.bat 2>%GROK_LOG%
 
 if %1.==nobuild. goto lDone
 set CLB_DEFS_G=-Pmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
-call gradlew.bat build -Pbuild.type=nlp -Pnlp.workspace=%CLB_SVN_SRC_ROOT% %CLB_DEFS_G% >>%BUILD_LOG% 2>&1
-::continuous
+set BUILD_TYPE=continuous
+::nlp
+call gradlew.bat build -Pbuild.type=%BUILD_TYPE% -Pnlp.workspace=%CLB_SVN_SRC_ROOT% %CLB_DEFS_G% >>%BUILD_LOG% 2>&1
 
 :lDone
 popd
