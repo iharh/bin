@@ -5,6 +5,7 @@ set CLB_VER=main
 
 call vars-java8.bat
 call vars-antc8.bat
+call vars-gradle.bat
 
 call vars-clb-cmn-after.bat
 
