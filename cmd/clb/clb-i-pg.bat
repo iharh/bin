@@ -9,12 +9,13 @@ call _print-choice-q.bat Install (%INST_FILE%) and Configure PG DB ?
 set /P CHOICE_TYPE=Your choice: 
 if %CHOICE_TYPE%.==q. goto done
 
-start "clb-installer" /wait %INST_FILE% /S /D=%CLB_INST_ROOT%
+::start "clb-installer" /wait %INST_FILE% /S /D=%CLB_INST_ROOT%
+for /r "%CLB_INST_ROOT%" %%i in (extension\*) do %ComSpec% /c "%%i /S /D=%CLB_INST_ROOT%"
 
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
 call %~dp0.clb\pg\clb-fillpg-win.bat
 
-call %~dp0clb-un-svc.bat
+::call %~dp0clb-un-svc.bat
 mklink /d %CLB_INST_ROOT%\scripts\groovy %CLB_SRC_ROOT%\cbtests\tests\groovy
 :done
 endlocal
