@@ -116,8 +116,23 @@ popd
 
 :skipGitStuff
 
+:: 7.0.3
+pushd %CLB_SRC_ROOT%
+set CLB_DEFS_G=-Dstatus=integration
+set CLB_DEFS_G=%CLB_DEFS_G% -Dmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
+set CLB_DEFS_G=%CLB_DEFS_G% -Dshared.dir=\\\\192.168.1.24/integration
+set CLB_DEFS_G=%CLB_DEFS_G% -Dsvn.workspace=%CLB_SVN_SRC_ROOT%
+set CLB_DEFS_G=%CLB_DEFS_G% -Dgwt.compile.threads=4
+set CLB_DEFS_G=%CLB_DEFS_G% -Dgwt.Xmx=2g
+set CLB_DEFS_G=%CLB_DEFS_G% -Dparallel.threads=2
+set CLB_DEFS_G=%CLB_DEFS_G% -Dskip.i18n=false
+set CLB_DEFS_G=%CLB_DEFS_G% -Dbuild.connectors=true
+set CLB_DEFS_G=%CLB_DEFS_G% -Dexpected.ant.version=Ant(TM) version 1.9.5
+call antc-cmn.bat clean dist %CLB_DEFS_G% >>%BUILD_LOG%
+goto lDone
+:skip703
 
-
+:: 7.1
 pushd %CLB_SRC_ROOT%
 ::goto lDone
 

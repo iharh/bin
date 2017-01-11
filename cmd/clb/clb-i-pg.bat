@@ -10,6 +10,7 @@ set /P CHOICE_TYPE=Your choice:
 if %CHOICE_TYPE%.==q. goto done
 
 ::start "clb-installer" /wait %INST_FILE% /S /D=%CLB_INST_ROOT%
+xcopy /e /i %CLB_INSTALLER_DIST_DIR%\tmp %CLB_INST_ROOT%
 for /r "%CLB_INST_ROOT%" %%i in (extension\*) do %ComSpec% /c "%%i /S /D=%CLB_INST_ROOT%"
 
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
