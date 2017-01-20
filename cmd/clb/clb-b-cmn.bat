@@ -117,6 +117,7 @@ popd
 :skipGitStuff
 
 :: 7.0.3
+goto skip703
 pushd %CLB_SRC_ROOT%
 :: %CLB_SRC_ROOT%\cmp\installer
 set CLB_DEFS_G=-Dstatus=integration
