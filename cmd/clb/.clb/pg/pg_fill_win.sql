@@ -1,2 +1,2 @@
-update win_ss.cb_properties set prop_value='postgres' where prop_name='CREATE_SCHEMA_CREDENTIALS_USERNAME';
-update win_ss.cb_properties set prop_value='PGSQL-123' where prop_name='CREATE_SCHEMA_CREDENTIALS_PASSWORD';
+update win_ss.cb_databases set username='postgres' where id=0;
+update win_ss.cb_databases set password='PGSQL-123' where id=0;

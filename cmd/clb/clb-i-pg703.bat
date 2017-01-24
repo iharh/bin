@@ -16,7 +16,7 @@ if %CHOICE_TYPE%.==q. goto done
 ::goto done
 
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
-call %~dp0.clb\pg\clb-fillpg-win.bat
+call %~dp0.clb\pg\clb-fillpg703-win.bat
 
 call %~dp0clb-un-svc.bat
 mklink /d %CLB_INST_ROOT%\scripts\groovy %CLB_SRC_ROOT%\cbtests\tests\groovy
