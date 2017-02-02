@@ -38,10 +38,10 @@ set BUILD_LOG_DIR=%CLB_ROOT%\log\%val_dt%-build-%CLB_VER%
 mkdir %BUILD_LOG_DIR%
 
 set BUILD_LOG=%BUILD_LOG_DIR%\build.txt
-set SVN_LOG=%BUILD_LOG_DIR%\svn_changes.txt
-set GIT_LOG=%BUILD_LOG_DIR%\git_changes.txt
-set SVN_LOCAL_LOG=%BUILD_LOG_DIR%\svn_local_changes.txt
-set GIT_LOCAL_LOG=%BUILD_LOG_DIR%\git_local_changes.txt
+set SVN_LOG=%BUILD_LOG_DIR%\svn-changes.txt
+set GIT_LOG=%BUILD_LOG_DIR%\git-changes.txt
+set SVN_LOCAL_LOG=%BUILD_LOG_DIR%\svn-local-changes.txt
+set GIT_LOCAL_LOG=%BUILD_LOG_DIR%\git-local-changes.txt
 set GROK_LOG=%BUILD_LOG_DIR%\grok.txt
 set CTAGS_LOG=%BUILD_LOG_DIR%\ctags.txt
 
