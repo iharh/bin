@@ -1,1 +1,1 @@
-@call %~dp0gradle.bat %*
+@call %~dp0gradle.bat -Pjboss.home=D:/clb/inst/server %*
