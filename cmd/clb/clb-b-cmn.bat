@@ -144,7 +144,7 @@ call clb-gri-cmn.bat 2>%GROK_LOG%
 :skipIndexing
 
 if %1.==nobuild. goto lDone
-set CLB_DEFS_G=-Pmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
+::set CLB_DEFS_G=-Pmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
 call gradlew.bat build -Pbuild.type=%BUILD_TYPE% -Pnlp.workspace=%CLB_SVN_SRC_ROOT% %CLB_DEFS_G% >>%BUILD_LOG% 2>&1
 
 :lDone
