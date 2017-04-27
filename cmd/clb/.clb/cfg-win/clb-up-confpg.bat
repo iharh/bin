@@ -10,7 +10,6 @@ copy %~dp0\%DB_ID%CommandLineConfig.properties %CLB_CONFIG_DIR%\commandLineConfi
 copy %~dp0\service.properties %CLB_CONFIG_DIR%
 
 pushd %CLB_CONFIG_DIR%
-::type %~dp0%DB_ID%.in
 call java.bat -XX:+HeapDumpOnOutOfMemoryError -mx512m -Dfile.encoding=UTF-8 -jar configurer-cmp.jar run.xml run 0 1
 ::upgrade.lp=true
 ::upgrade.lp.mode=force
