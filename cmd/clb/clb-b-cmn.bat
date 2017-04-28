@@ -46,6 +46,7 @@ set GROK_LOG=%BUILD_LOG_DIR%\grok.txt
 set CTAGS_LOG=%BUILD_LOG_DIR%\ctags.txt
 
 set CLB_DEFS_FXLP="-Dbuild.fx=true" "-Dbuild.lp=true"
+::set CLB_DEFS_FXLP=%CLB_DEFS_FXLP% "-Dvs.base=C:/Program Files/Microsoft Visual Studio 10.0"
 echo CLB_DEFS_FXLP - %CLB_DEFS_FXLP% >%BUILD_LOG%
 
 ::
@@ -86,7 +87,7 @@ pushd %CLB_SVN_SRC_ROOT%\cmp\installer
 call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_LOG%
 popd
 :skipFXLPBuild
-
+::goto lExit
 popd
 
 ::

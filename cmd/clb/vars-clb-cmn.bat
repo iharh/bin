@@ -9,4 +9,3 @@ set HUDSON_SRC=\\epbygomw0039t1\integration
 set HUDSON_DST=%CLB_ROOT%\hudson-integration
 
 set CLB_DIST_ROOT=%CLB_ROOT%\dist
-

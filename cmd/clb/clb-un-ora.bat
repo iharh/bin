@@ -9,10 +9,13 @@ if %CHOICE_TYPE%.==q. goto done
 call clb-un-svc.bat
 
 :: remove soft-link
-rmdir %CLB_INST_ROOT%\scripts\groovy
+:::rmdir %CLB_INST_ROOT%\scripts\groovy
 
-start "clb-uninstaller" /wait %CLB_INST_ROOT%\uninst.exe /S _?=%CLB_INST_ROOT%
-del %CLB_INST_ROOT%\uninst.exe
+for /r "%CLB_INST_ROOT%" %%i in (uninstall_*) do %ComSpec% /c "%%i /S"
+rd /s /q "%CLB_INST_ROOT%\"
+mkdir "%CLB_INST_ROOT%"
+::start "clb-uninstaller" /wait %CLB_INST_ROOT%\uninst.exe /S _?=%CLB_INST_ROOT%
+::del %CLB_INST_ROOT%\uninst.exe
 
 set DROP_DIR=%~dp0.clb\ora\
 set OS_CODE=win
