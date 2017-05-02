@@ -5,6 +5,7 @@ call vars-clb-cmn.bat
 call _print-choice-q.bat Uninstall CLB and Drop Oracle DB?
 set /P CHOICE_TYPE=Your choice: 
 if %CHOICE_TYPE%.==q. goto done
+::goto doUn
 
 call clb-un-svc.bat
 
@@ -17,6 +18,7 @@ mkdir "%CLB_INST_ROOT%"
 ::start "clb-uninstaller" /wait %CLB_INST_ROOT%\uninst.exe /S _?=%CLB_INST_ROOT%
 ::del %CLB_INST_ROOT%\uninst.exe
 
+:doUn
 set DROP_DIR=%~dp0.clb\ora\
 set OS_CODE=win
 set CONNECT_STR=system/System11@ihorcl
