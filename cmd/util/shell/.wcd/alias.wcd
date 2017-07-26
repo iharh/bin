@@ -44,3 +44,4 @@ jad d:/dev/pl/java/jtools/JAD
 oval d:/dev/pl/java/jtools/oVal/src/net/sf/oval
 transhrv d:/clb/src/platform/cmp/transformers/harvester
 sql d:/clb/src/platform/cmp/server/core/src/runtime/resources/sql
+udr d:/clb/src/ud-research
