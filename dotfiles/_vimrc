@@ -32,15 +32,6 @@ Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 " :PlugInstall
 
-
-fun! SetCompilerAnt()
-  compiler ant
-  set makeprg=antcq\ -find\ build.xml
-  "errorformat
-  set efm=%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
-endf
-call SetCompilerAnt()
-
 set diffexpr=MyDiff()
 fun MyDiff()
   let opt = '-a --binary '
