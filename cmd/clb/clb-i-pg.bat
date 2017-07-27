@@ -12,8 +12,11 @@ if %CHOICE_TYPE%.==q. goto done
 
 xcopy /e /i %CLB_INSTALLER_DIST_DIR%\tmp %CLB_INST_ROOT%
 for /r "%CLB_INST_ROOT%" %%i in (extension\*) do %ComSpec% /c "%%i /S /D=%CLB_INST_ROOT%"
+::goto done
 
 :doConfig
+:: inst/configurerc/onfigurer-cmp.properties
+:: directory.install=D\:/clb/inst
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
 call %~dp0.clb\pg\clb-fillpg-win.bat
 
