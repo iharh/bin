@@ -12,10 +12,6 @@ if %CLB_GIT_SRC_ROOT%.==. goto _skipGitSrc
 echo CLB_GIT_SRC_ROOT: %CLB_GIT_SRC_ROOT%
 :_skipGitSrc
 
-if %IDX_SRC%.==. goto _skipIndexing
-echo IDX_SRC: %IDX_SRC%
-:_skipIndexing
-
 if %CTAGS_SRC%.==. goto _skipCtags
 echo CTAGS_SRC: %CTAGS_SRC%
 :_skipCtags
@@ -31,33 +27,30 @@ call _print-choice-q.bat Build CLB?
 set /P CHOICE_TYPE=Your choice: 
 if %CHOICE_TYPE%.==q. goto lExit
 
-::goto lExit
-
 for /f "delims=" %%a in ('print-date-time.bat - - _') do set val_dt=%%a
 set BUILD_LOG_DIR=%CLB_ROOT%\log\%val_dt%-build-%CLB_VER%
 mkdir %BUILD_LOG_DIR%
 
-set BUILD_LOG=%BUILD_LOG_DIR%\build.txt
+set BUILD_FX_LOG=%BUILD_LOG_DIR%\build-fx.txt
+set BUILD_CMP_LOG=%BUILD_LOG_DIR%\build-cmp.txt
 set SVN_LOG=%BUILD_LOG_DIR%\svn-changes.txt
 set GIT_LOG=%BUILD_LOG_DIR%\git-changes.txt
 set SVN_LOCAL_LOG=%BUILD_LOG_DIR%\svn-local-changes.txt
 set GIT_LOCAL_LOG=%BUILD_LOG_DIR%\git-local-changes.txt
-set GROK_LOG=%BUILD_LOG_DIR%\grok.txt
 set CTAGS_LOG=%BUILD_LOG_DIR%\ctags.txt
 
-set CLB_DEFS_FXLP="-Dbuild.fx=true" "-Dbuild.lp=true"
-::set CLB_DEFS_FXLP=%CLB_DEFS_FXLP% "-Dvs.base=C:/Program Files/Microsoft Visual Studio 10.0"
-echo CLB_DEFS_FXLP - %CLB_DEFS_FXLP% >%BUILD_LOG%
+::goto noFXLP
 
 ::
 :: SVN stuff
 ::
 pushd %CLB_SVN_SRC_ROOT%
 
-set BUILD_TYPE=continuous
+set CLB_DEFS_FXLP="-Dbuild.fx=true" "-Dbuild.lp=true"
+echo CLB_DEFS_FXLP - %CLB_DEFS_FXLP% >%BUILD_FX_LOG%
+
 if %BUILD_FXLP%.==. goto skipFXLPClean
-set BUILD_TYPE=nlp
-call antc-cmn.bat clean-fx clean-lp %CLB_DEFS_FXLP% >>%BUILD_LOG%
+call antc-cmn.bat clean-fx clean-lp %CLB_DEFS_FXLP% >>%BUILD_FX_LOG%
 call svn-clean.bat
 :skipFXLPClean
 
@@ -84,11 +77,13 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
 pushd %CLB_SVN_SRC_ROOT%\cmp\installer
-call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_LOG%
+call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_FX_LOG%
 popd
 :skipFXLPBuild
 ::goto lExit
 popd
+
+:noFXLP
 
 ::
 :: GIT stuff
@@ -96,7 +91,10 @@ popd
 if %CLB_GIT_SRC_ROOT%.==. goto skipGitStuff
 pushd %CLB_GIT_SRC_ROOT%
 
-call gradlew.bat clean >>%BUILD_LOG% 2>&1
+::set CLB_DEFS_CMP=%CLB_DEFS_CMP% -Pmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
+echo CLB_DEFS_CMP: %CLB_DEFS_CMP% >%BUILD_CMP_LOG%
+
+call gradlew.bat clean >>%BUILD_CMP_LOG% 2>&1
 
 call git.bat remote -v update --prune
 for /f "delims=" %%a in ('git.bat rev-parse --abbrev-ref HEAD') do set git_cur_br=%%a
@@ -104,8 +102,6 @@ echo.
 echo GIT BRANCH: %git_cur_br%
 echo.
 call git.bat log %git_cur_br%..origin/%git_cur_br% --name-status >> %GIT_LOG% 2>&1
-:: git rebase origin/%git_cur_br%
-::call git.bat pull --rebase > %GIT_LOG%
 call git.bat rebase origin/%git_cur_br%>> %GIT_LOG%
 call git.bat status >%GIT_LOCAL_LOG%
 
@@ -132,7 +128,7 @@ set CLB_DEFS_G=%CLB_DEFS_G% -Dbuild.connectors=true
 set CLB_DEFS_G=%CLB_DEFS_G% "-Dexpected.ant.version=Ant(TM) version 1.9.4"
 :: !!! dangerous !!! set CLB_DEFS_G=%CLB_DEFS_G% -Dparallel.threads=2
 :: -d clean dist dist-fast
-call antc-cmn.bat clean dist %CLB_DEFS_G% >>%BUILD_LOG%
+call antc-cmn.bat clean dist %CLB_DEFS_G% >>%BUILD_FX_LOG%
 goto lDone
 :skip703
 
@@ -140,13 +136,8 @@ goto lDone
 pushd %CLB_SRC_ROOT%
 ::goto lDone
 
-if %IDX_SRC%.==. goto skipIndexing
-call clb-gri-cmn.bat 2>%GROK_LOG%
-:skipIndexing
-
 if %1.==nobuild. goto lDone
-::set CLB_DEFS_G=-Pmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
-call gradlew.bat build -Pbuild.type=%BUILD_TYPE% -Pnlp.workspace=%CLB_SVN_SRC_ROOT% %CLB_DEFS_G% >>%BUILD_LOG% 2>&1
+call gradlew.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
 
 :lDone
 popd

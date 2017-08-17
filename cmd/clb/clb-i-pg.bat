@@ -8,6 +8,8 @@ call _print-choice-q.bat Install (%INST_FILE%) and Configure PG DB ?
 
 set /P CHOICE_TYPE=Your choice: 
 if %CHOICE_TYPE%.==q. goto done
+:: problem with configurer.cmp.properties rewriting
+:: delete from win_ss.cb_properties where prop_name = 'FX.VERSIONS_10.9.213.119:16161';
 ::goto doConfig
 
 xcopy /e /i %CLB_INSTALLER_DIST_DIR%\tmp %CLB_INST_ROOT%
