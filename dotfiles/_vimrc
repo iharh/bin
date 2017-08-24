@@ -200,6 +200,7 @@ endif
 au FileType cpp setl sw=4 sts=4 et
 au FileType c setl sw=4 sts=4 et
 au FileType java setl sw=4 sts=4 et
+au FileType json setl sw=4 sts=4 et
 au FileType scala setl sw=4 sts=4 et
 au FileType sbt setl sw=4 sts=4 et
 au FileType python setl sw=4 sts=4 et
