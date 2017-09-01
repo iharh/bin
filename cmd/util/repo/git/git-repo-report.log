@@ -3,6 +3,5 @@ git\github\haskell\cabal -> https://github.com/haskell/cabal.git
 git\github\haskell\ekmett\lens -> git://github.com/ekmett/lens.git
 git\github\haskell\simonmar\async -> git://github.com/simonmar/async.git
 git\github\java\df4j -> git://github.com/rfqu/df4j.git
-git\github\java\DirectMemory -> git://github.com/raffaeleguidi/DirectMemory.git
 git\github\java\elasticsearch -> git://github.com/elasticsearch/elasticsearch.git
 git\github\java\RxJava -> git://github.com/Netflix/RxJava.git
