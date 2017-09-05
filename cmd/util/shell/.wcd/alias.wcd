@@ -11,6 +11,7 @@ utils d:/dev/utils
 prj d:/dev/prj
 foma d:/dev/clbfoma
 kenlm d:/dev/clbkenlm
+hfst d:/dev/clbhfst
 chef d:/clb/src/chef
 cmp d:/clb/src/platform/cmp
 cbtests d:/clb/src/platform/cbtests
