@@ -1,8 +1,6 @@
 ::@echo off
 call vars-clb-cmn.bat
-
 set CLB_VER=main
-
 call vars-java8.bat
 call vars-antc8.bat
 call vars-gradle.bat
