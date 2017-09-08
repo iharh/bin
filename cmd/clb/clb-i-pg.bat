@@ -16,15 +16,13 @@ xcopy /e /i %CLB_INSTALLER_DIST_DIR%\tmp %CLB_INST_ROOT%
 :: directory.install=D\:/clb/inst
 ::   CONFIGURER_CMP_PROPERTIES_FILE
 for /r "%CLB_INST_ROOT%" %%i in (extension\*) do %ComSpec% /c "%%i /S /D=%CLB_INST_ROOT%"
-goto done
 
 :doConfig
-:: problem with configurer.cmp.properties rewriting
-:: delete from win_ss.cb_properties where prop_name = 'FX.VERSIONS_10.9.213.119:16161';
+call gradle.bat -b "D:/dev/prj/gra/kts/build.gradle.kts" clbCfg
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
 call %~dp0.clb\pg\clb-fillpg-win.bat
 
-::call %~dp0clb-un-svc.bat
+:skipCfg
 mklink /d %CLB_INST_ROOT%\scripts\groovy %CLB_SRC_ROOT%\cbtests\tests\groovy
 :done
 endlocal

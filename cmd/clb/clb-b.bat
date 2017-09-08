@@ -8,8 +8,8 @@ call _print-choice-q.bat Build CLB?
 set /P CHOICE_TYPE=Your choice: 
 if %CHOICE_TYPE%.==q. goto lExit
 
-call clb-b-fx.bat
-::call clb-b-cmp.bat
+::call clb-b-fx.bat
+call clb-b-cmp.bat
 
 :lExit
 endlocal
