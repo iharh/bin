@@ -11,10 +11,6 @@ if %CHOICE_TYPE%.==q. goto done
 ::goto doConfig
 
 xcopy /e /i %CLB_INSTALLER_DIST_DIR%\tmp %CLB_INST_ROOT%
-:: TODO: fix directory.install !!!
-:: inst/configurerc/onfigurer-cmp.properties
-:: directory.install=D\:/clb/inst
-::   CONFIGURER_CMP_PROPERTIES_FILE
 for /r "%CLB_INST_ROOT%" %%i in (extension\*) do %ComSpec% /c "%%i /S /D=%CLB_INST_ROOT%"
 
 :doConfig
