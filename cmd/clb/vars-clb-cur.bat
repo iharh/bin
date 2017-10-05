@@ -18,6 +18,7 @@ set CLB_DEFS_CMP_VER=-Pfx.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.english.version=+
 :: ...
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.indonesian.version=+
+set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.russian.version=+
 :: ...
 :: +
 :: 7.3.0.3
