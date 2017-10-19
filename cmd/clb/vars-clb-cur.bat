@@ -19,6 +19,10 @@ set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.english.version=+
 :: ...
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.indonesian.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.russian.version=+
+set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.french.version=+
+set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.spanish.version=+
+set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.italian.version=+
+set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.portuguese.version=+
 :: ...
 :: +
 :: 7.3.0.3
