@@ -23,7 +23,7 @@ for /f "delims=" %%a in ('print-date-time.bat - - _') do set val_dt=%%a
 set BUILD_CMP_LOG_DIR=%CLB_ROOT%\log\%val_dt%-build-cmp
 mkdir %BUILD_CMP_LOG_DIR%
 
-set BUILD_CMP_LOG=%BUILD_CMP_LOG_DIR%\build.txt
+set BUILD_CMP_LOG=%BUILD_CMP_LOG_DIR%\build-cmp.txt
 set GIT_LOG=%BUILD_CMP_LOG_DIR%\git-changes.txt
 set GIT_LOCAL_LOG=%BUILD_CMP_LOG_DIR%\git-local-changes.txt
 set CTAGS_LOG=%BUILD_CMP_LOG_DIR%\ctags.txt
