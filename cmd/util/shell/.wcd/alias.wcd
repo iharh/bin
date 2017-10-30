@@ -25,10 +25,11 @@ lpar d:/clb/src/main/lang-packs/arabic
 lpen d:/clb/src/main/lang-packs/english
 lpid d:/clb/src/main/lang-packs/indonesian
 lpko d:/clb/src/main/lang-packs/korean
+lpsp d:/clb/src/main/lang-packs/spanish
 lpro d:/clb/src/main/lang-packs/romanian
 lpru d:/clb/src/main/lang-packs/russian
 lpsh d:/clb/src/main/lang-packs/shared
-lpsp d:/clb/src/main/lang-packs/spanish
+lptl d:/clb/src/main/lang-packs/tagalog
 mst d:/clb/src/microstructure/msa-samples
 cps d:/clb/src/spikes/cb-cps
 csls d:/clb/src/spikes/cb-cps/cb-cps-csls
