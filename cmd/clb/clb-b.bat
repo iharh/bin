@@ -10,7 +10,7 @@ if %CHOICE_TYPE%.==q. goto lExit
 
 ::call clb-c-fx.bat
 call clb-b-fx.bat
-::call clb-b-cmp.bat
+call clb-b-cmp.bat
 
 :lExit
 endlocal
