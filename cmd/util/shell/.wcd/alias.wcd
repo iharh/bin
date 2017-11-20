@@ -18,6 +18,7 @@ cbtests d:/clb/src/platform/cbtests
 transfx d:/clb/src/platform/cmp/transformers/FXTransformer
 transclas d:/clb/src/platform/cmp/transformers/Classification
 fxfx d:/clb/src/main/fx/fx
+fxsvc d:/clb/src/fx/fxservice
 fxlib d:/clb/src/main/fx/lib.cpp
 scws d:/clb/src/main/fx/lib.cpp/scws/1.1.8
 lps d:/clb/src/main/lang-packs
