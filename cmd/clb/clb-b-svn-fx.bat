@@ -56,6 +56,8 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
 pushd %CLB_SVN_SRC_ROOT%\cmp\installer
+:: build-fx
+::set CLB_DEFS_B=%CLB_DEFS_B% "-Dfx.shared.dir=d:/clb/src/fx/fx/fx/.build/.shared"
 call antc-cmn.bat build-fx build-lp %CLB_DEFS_FXLP% %CLB_DEFS_B% >>%BUILD_FX_LOG%
 popd
 :skipFXLPBuild
