@@ -14,6 +14,8 @@ set CLB_SRC_ROOT=%CLB_SVN_SRC_ROOT%
 set BUILD_TYPE=continuous
 if %BUILD_FXLP%.==. goto skipFXLPbt
 set BUILD_TYPE=nlp
+set CLB_DEFS_CMP=%CLB_DEFS_CMP% -Pnlp.workspace=%CLB_SVN_SRC_ROOT%
+
 set CLB_DEFS_CMP_VER=-Pfx.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.english.version=+
 :: ...
@@ -30,7 +32,8 @@ set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.unknown.version=+
 :: 7.3.0.3
 :skipFXLPbt
 
-set CLB_DEFS_CMP=%CLB_DEFS_CMP% -Pbuild.type=%BUILD_TYPE% -Pnlp.workspace=%CLB_SVN_SRC_ROOT% %CLB_DEFS_CMP_VER%
+set CLB_DEFS_CMP=%CLB_DEFS_CMP% -Pbuild.type=%BUILD_TYPE%
+set CLB_DEFS_CMP=%CLB_DEFS_CMP% %CLB_DEFS_CMP_VER%
 echo CLB_DEFS_CMP: %CLB_DEFS_CMP%
 
 ::echo after call vars-clb-cmn-after.bat !!!
