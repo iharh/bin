@@ -1,3 +1,3 @@
-update win_ss.cb_properties set prop_value='system' where prop_name='CREATE_SCHEMA_CREDENTIALS_USERNAME';
-update win_ss.cb_properties set prop_value='System11' where prop_name='CREATE_SCHEMA_CREDENTIALS_PASSWORD';
+update win_ss.cb_databases set username='system' where id=0;
+update win_ss.cb_databases set password='System11' where id=0;
 exit;
