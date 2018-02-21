@@ -2,7 +2,7 @@
 	name = Ihar Hancharenka
 	email = iigoncharenko@mail.ru
 [core]
-	autocrlf = input
+	autocrlf = true
 	longpaths = true
 [alias]
 	purb = pull --rebase
