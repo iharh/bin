@@ -42,7 +42,7 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 :skipCtagsSvn
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
-call antc-cmn.bat compile %CLB_DEFS_B% >>%BUILD_FX_LOG%
+call antc-cmn.bat compile publish-local %CLB_DEFS_B% >>%BUILD_FX_LOG%
 :skipFXLPBuild
 popd
 :lExit
