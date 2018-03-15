@@ -7,7 +7,7 @@ call _print-choice-q.bat Configure PG DB ?
 set /P CHOICE_TYPE=Your choice: 
 if %CHOICE_TYPE%.==q. goto done
 
-call gradle.bat -b "D:/dev/prj/gra/kts/build.gradle.kts" clbCfg
+call gradle.bat -b "D:/dev/prj/gra/kts/clb/build.gradle.kts" clbCfg
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
 call %~dp0.clb\pg\clb-fillpg-win.bat
 
