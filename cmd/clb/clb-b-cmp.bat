@@ -58,7 +58,8 @@ popd
 
 :: 7.1
 pushd %CLB_SRC_ROOT%
-call gradlew.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
+::call gradlew.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
+call gradle.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
 popd
 :lExit
 endlocal
