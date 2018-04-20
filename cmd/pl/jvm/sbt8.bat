@@ -1,6 +1,7 @@
 @echo off
 setlocal
-call vars-java8.bat
+call vars-pl.bat
+::call vars-java8.bat
 call vars-scala.bat
 set SBT_HOME=%SCALA_TOOLS_HOME%/sbt
 
