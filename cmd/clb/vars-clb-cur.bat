@@ -1,9 +1,9 @@
 ::@echo off
 call vars-clb-cmn.bat
 set CLB_VER=fx
-call vars-java8.bat
-call vars-antc8.bat
-call vars-gradle.bat
+::call vars-java8.bat
+::call vars-antc8.bat
+::call vars-gradle.bat
 
 ::echo before vars-clb-cmn-after.bat BUILD_FXLP: %BUILD_FXLP% !!!
 :: call vars-clb-cmn-after.bat

@@ -37,16 +37,17 @@ pushd %CLB_GIT_SRC_ROOT%
 ::set CLB_DEFS_CMP=%CLB_DEFS_CMP% -Pmvn.repo=http://epbygomw0039t1.gomel.epam.com:8099/nexus/content/groups/public
 echo CLB_DEFS_CMP: %CLB_DEFS_CMP% >%BUILD_CMP_LOG%
 
-call gradlew.bat clean >>%BUILD_CMP_LOG% 2>&1
+::call gradlew.bat clean >>%BUILD_CMP_LOG% 2>&1
+call gradle.cmd clean >>%BUILD_CMP_LOG% 2>&1
 
-call git.bat remote -v update --prune
-for /f "delims=" %%a in ('git.bat rev-parse --abbrev-ref HEAD') do set git_cur_br=%%a
+git.exe remote -v update --prune
+for /f "delims=" %%a in ('git.exe rev-parse --abbrev-ref HEAD') do set git_cur_br=%%a
 echo.
 echo GIT BRANCH: %git_cur_br%
 echo.
-call git.bat log %git_cur_br%..origin/%git_cur_br% --name-status >> %GIT_LOG% 2>&1
-call git.bat rebase origin/%git_cur_br%>> %GIT_LOG%
-call git.bat status >%GIT_LOCAL_LOG%
+git.exe log %git_cur_br%..origin/%git_cur_br% --name-status >> %GIT_LOG% 2>&1
+git.exe rebase origin/%git_cur_br%>> %GIT_LOG%
+git.exe status >%GIT_LOCAL_LOG%
 
 if %CTAGS_SRC%.==. goto skipCtagsGit
 call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
@@ -59,7 +60,8 @@ popd
 :: 7.1
 pushd %CLB_SRC_ROOT%
 ::call gradlew.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
-call gradle.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
+::call gradle.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
+call gradle.cmd build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
 popd
 :lExit
 endlocal
