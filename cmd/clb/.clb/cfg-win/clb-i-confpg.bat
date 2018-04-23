@@ -10,7 +10,7 @@ copy %~dp0\%DB_ID%CommandLineConfig.properties %CLB_CONFIG_DIR%\commandLineConfi
 copy %~dp0\service.properties %CLB_CONFIG_DIR%
 
 pushd %CLB_CONFIG_DIR%
-call java.bat -XX:+HeapDumpOnOutOfMemoryError -mx512m -Dfile.encoding=UTF-8 -jar configurer-cmp.jar run.xml run 0 1
+java -XX:+HeapDumpOnOutOfMemoryError -mx512m -Dfile.encoding=UTF-8 -jar configurer-cmp.jar run.xml run 0 1
 popd
 :lExit
 endlocal

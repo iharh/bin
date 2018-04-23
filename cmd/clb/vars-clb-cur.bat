@@ -40,4 +40,4 @@ echo CLB_DEFS_CMP: %CLB_DEFS_CMP%
 :: !!!
 set CLB_GIT_SRC_ROOT=%CLB_SRC%\platform
 set CLB_SRC_ROOT=%CLB_GIT_SRC_ROOT%
-call vars-git-p.bat
+::call vars-git-p.bat

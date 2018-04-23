@@ -14,7 +14,7 @@ xcopy /e /i %CLB_INSTALLER_DIST_DIR%\tmp %CLB_INST_ROOT%
 for /r "%CLB_INST_ROOT%" %%i in (extension\*) do %ComSpec% /c "%%i /S /D=%CLB_INST_ROOT%"
 
 :doConfig
-call gradle.bat -b "D:/dev/prj/gra/kts/clb/build.gradle.kts" clbCfg
+call gra.bat -b "D:/dev/prj/gra/kts/clb/build.gradle.kts" clbCfg
 call %~dp0.clb\cfg-win\clb-i-confpg.bat
 call %~dp0.clb\pg\clb-fillpg-win.bat
 
