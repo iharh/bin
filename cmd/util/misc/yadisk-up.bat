@@ -1,6 +1,5 @@
 @echo off
 setlocal
-call vars-java-p.bat
 call vars-jtools.bat
 call vars-ydisk.bat
 
