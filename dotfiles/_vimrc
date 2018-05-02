@@ -184,6 +184,8 @@ if has('win32') || has('win64')
 " for hiding ^M while viewing DOS-files
   set fileformats=dos
   set fileformat=dos
+  " http://tahirhassan.blogspot.com.by/2017/10/conemu-redraw-problems-with-vim.html
+  set ttyscroll=0
 endif
 
 
