@@ -36,8 +36,8 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
 :: compile
-:: publish-to-nexus
-call antc-cmn.bat compile publish-to-nexus %CLB_DEFS_B% >>%BUILD_FX_LOG%
+:: publish-to-nexus publish-local
+call antc-cmn.bat compile %CLB_DEFS_B% >>%BUILD_FX_LOG%
 :skipFXLPBuild
 popd
 :lExit
