@@ -25,7 +25,6 @@ pushd %CLB_SVN_SRC_ROOT%\fx\fx
 
 if %BUILD_FXLP%.==. goto skipFXLPClean
 call antc-cmn.bat clean >>%BUILD_FX_LOG%
-::call svn-clean.bat
 :skipFXLPClean
 
 if %1.==noskip. goto skipExtraSkips
@@ -42,7 +41,11 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 :skipCtagsSvn
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
-call antc-cmn.bat compile publish-local %CLB_DEFS_B% >>%BUILD_FX_LOG%
+call antc-cmn.bat compile %CLB_DEFS_B% >>%BUILD_FX_LOG%
+cd ..\modern
+call gra.bat clean build >>%BUILD_FX_LOG%
+cd ..\fx
+call antc-cmn.bat publish-local %CLB_DEFS_B% >>%BUILD_FX_LOG%
 :skipFXLPBuild
 popd
 :lExit
