@@ -1,7 +1,7 @@
 @echo off
 setlocal
 set CTAGS_SRC=1
-set BUILD_FXLP=1
+::set BUILD_FXLP=1
 call vars-clb-cur.bat
 
 call _print-choice-q.bat Build (%BUILD_FXLP%) git CLB?
@@ -14,7 +14,7 @@ if %BUILD_FXLP%.==. goto skipFXLP
 call clb-b-git-fx.bat
 :skipFXLP
 
-::call clb-b-cmp.bat
+call clb-b-cmp.bat
 
 :lExit
 endlocal
