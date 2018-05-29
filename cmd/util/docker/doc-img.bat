@@ -1,1 +1,0 @@
-@call docker.bat images
