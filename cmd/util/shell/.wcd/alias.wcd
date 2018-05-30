@@ -1,12 +1,9 @@
 bin d:/dev/bin
-binclb d:/dev/bin/wrk/clb
-binwcd d:/dev/bin/cmd/util/shell/.wcd
 notes d:/dev/notes
 noteclb d:/dev/notes/wrk/clb
 notefx d:/dev/notes/wrk/clb/features/fx
 notelp d:/dev/notes/wrk/clb/features/lp
 wnote d:/dev/wnotes
-wnotewrk d:/dev/notes/wrk
 utils d:/dev/utils
 prj d:/dev/prj
 foma d:/dev/clbfoma
@@ -46,7 +43,6 @@ repo d:/dev/repo
 lpzh d:/clb/src/main/lang-packs/chinese
 lptr d:/clb/src/main/lang-packs/turkish
 jad d:/dev/pl/java/jtools/JAD
-oval d:/dev/pl/java/jtools/oVal/src/net/sf/oval
 transhrv d:/clb/src/platform/cmp/transformers/harvester
 sql d:/clb/src/platform/cmp/server/core/src/runtime/resources/sql
 udr d:/clb/src/ud-research
