@@ -14,6 +14,7 @@ cmp d:/clb/src/platform/cmp
 cbtests d:/clb/src/platform/cbtests
 transfx d:/clb/src/platform/cmp/transformers/FXTransformer
 transclas d:/clb/src/platform/cmp/transformers/Classification
+jft d:/clb/src/JFastText
 fxfx d:/clb/src/fx/fx/fx
 fxsvc d:/clb/src/fx/fxservice
 fxlib d:/clb/src/main/fx/lib.cpp
