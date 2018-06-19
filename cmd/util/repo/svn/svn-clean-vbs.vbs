@@ -1,8 +1,9 @@
 Set FSO = CreateObject("Scripting.FileSystemObject")
 Set SHELL = CreateObject("WScript.Shell")
 
-subversion_home = SHELL.ExpandEnvironmentStrings("%SUBVERSION_HOME%")
-status_log = subversion_home + "\svn_status.log"
+'subversion_home = SHELL.ExpandEnvironmentStrings("%SUBVERSION_HOME%")
+'status_log = subversion_home + "\svn_status.log"
+status_log = "d:/svn_status.log"
 
 'Delete c:\svn_status.log
 if (FSO.FileExists(status_log)) then 

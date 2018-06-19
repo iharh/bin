@@ -26,7 +26,7 @@ set CLB_DEFS_FXLP="-Dbuild.fx=true" "-Dbuild.lp=true"
 echo CLB_DEFS_FXLP - %CLB_DEFS_FXLP% >%BUILD_FX_LOG%
 
 if %BUILD_FXLP%.==. goto skipFXLPClean
-call antc-cmn.bat clean-fx clean-lp %CLB_DEFS_FXLP% >>%BUILD_FX_LOG%
+:: call antc-cmn.bat clean-fx clean-lp %CLB_DEFS_FXLP% >>%BUILD_FX_LOG%
 call svn-clean.bat
 :skipFXLPClean
 

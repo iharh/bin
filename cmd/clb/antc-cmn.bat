@@ -7,7 +7,7 @@ if %ANT_HOME%.==. goto done
 call vars-clb-cmn.bat
 
 :: TODO: remove these
-set CLB_EXTRA_DEFS="-Dvs.base=D:/Program Files (x86)/Microsoft Visual Studio 10.0"
+set CLB_EXTRA_DEFS="-Dvs.base=C:/Program Files (x86)/Microsoft Visual Studio 10.0"
 set CLB_EXTRA_DEFS=%CLB_EXTRA_DEFS% "-Dsdk.base=C:/Program Files (x86)/Microsoft SDKs/Windows/v7.0A"
 set CLB_EXTRA_DEFS=%CLB_EXTRA_DEFS% "-Dhelp.workshop.base=C:/Program Files (x86)/HTML Help Workshop"
 
