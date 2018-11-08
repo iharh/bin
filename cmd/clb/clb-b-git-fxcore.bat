@@ -12,16 +12,16 @@ echo BUILD_FXLP: %BUILD_FXLP%
 :_skipFXLP
 
 for /f "delims=" %%a in ('print-date-time.bat - - _') do set val_dt=%%a
-set BUILD_FX_LOG_DIR=%CLB_ROOT%\log\%val_dt%-build-fxbase
+set BUILD_FX_LOG_DIR=%CLB_ROOT%\log\%val_dt%-build-fxcore
 mkdir %BUILD_FX_LOG_DIR%
 
-set BUILD_FX_LOG=%BUILD_FX_LOG_DIR%\build-fxbase.txt
+set BUILD_FX_LOG=%BUILD_FX_LOG_DIR%\build-fxcore.txt
 set CTAGS_LOG=%BUILD_FX_LOG_DIR%\ctags.txt
 
 ::
 :: SVN stuff
 ::
-pushd %CLB_SVN_SRC_ROOT%\fx\base
+pushd %CLB_SVN_SRC_ROOT%\core
 
 if %BUILD_FXLP%.==. goto skipFXLPClean
 call antc-cmn.bat clean >>%BUILD_FX_LOG%

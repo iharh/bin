@@ -21,7 +21,7 @@ set CTAGS_LOG=%BUILD_FX_LOG_DIR%\ctags.txt
 ::
 :: SVN stuff
 ::
-pushd %CLB_SVN_SRC_ROOT%\fx\fx
+pushd %CLB_SVN_SRC_ROOT%\modules
 
 if %BUILD_FXLP%.==. goto skipFXLPClean
 call antc-cmn.bat clean >>%BUILD_FX_LOG%
@@ -42,9 +42,9 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
 call antc-cmn.bat compile %CLB_DEFS_B% >>%BUILD_FX_LOG%
-cd ..\modern
+cd ..\fx\modern
 call gra.bat clean build >>%BUILD_FX_LOG%
-cd ..\fx
+cd ..\..\modules
 call antc-cmn.bat publish-local %CLB_DEFS_B% >>%BUILD_FX_LOG%
 :skipFXLPBuild
 popd

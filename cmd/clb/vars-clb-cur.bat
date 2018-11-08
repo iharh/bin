@@ -18,6 +18,7 @@ set CLB_DEFS_CMP_VER=-Pfx.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.english.version=+
 :: ...
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.arabic.version=+
+set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.bengali.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.indonesian.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.russian.version=+
 set CLB_DEFS_CMP_VER=%CLB_DEFS_CMP_VER% -Plp.french.version=+
