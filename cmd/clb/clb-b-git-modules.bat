@@ -42,9 +42,9 @@ call clb-ctags-cmn.bat >%CTAGS_LOG% 2>&1
 
 if %BUILD_FXLP%.==. goto skipFXLPBuild
 call antc-cmn.bat compile %CLB_DEFS_B% >>%BUILD_FX_LOG%
-cd ..\fx\modern
+cd ..\modern
 call gra.bat clean build >>%BUILD_FX_LOG%
-cd ..\..\modules
+cd ..\modules
 call antc-cmn.bat publish-local %CLB_DEFS_B% >>%BUILD_FX_LOG%
 :skipFXLPBuild
 popd

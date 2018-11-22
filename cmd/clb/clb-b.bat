@@ -10,8 +10,8 @@ if %CHOICE_TYPE%.==q. goto lExit
 
 if %BUILD_FXLP%.==. goto skipFXLP
 call clb-c-fx.bat
-call clb-b-git-fxcore.bat
-call clb-b-git-fx.bat
+call clb-b-git-core.bat
+call clb-b-git-modules.bat
 :skipFXLP
 
 ::call clb-b-cmp.bat
