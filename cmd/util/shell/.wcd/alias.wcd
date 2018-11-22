@@ -35,7 +35,7 @@ lpru d:/clb/src/main/lang-packs/russian
 lpsh d:/clb/src/main/lang-packs/shared
 lptl d:/clb/src/main/lang-packs/tagalog
 lpvi d:/clb/src/main/lang-packs/vietnamese
-mst d:/clb/src/microstructure/msa-samples
+mst d:/clb/src/microstructure
 cps d:/clb/src/spikes/cb-cps
 csls d:/clb/src/spikes/cb-cps/cb-cps-csls
 dpt d:/clb/src/deep-thought
