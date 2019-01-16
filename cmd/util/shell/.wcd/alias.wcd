@@ -16,8 +16,7 @@ transfx d:/clb/src/platform/cmp/transformers/FXTransformer
 transclas d:/clb/src/platform/cmp/transformers/Classification
 jft d:/clb/src/JFastText
 fxco d:/clb/src/fx/core
-fxfx d:/clb/src/fx/modules
-fxmo d:/clb/src/fx/modern
+fxmo d:/clb/src/fx/modules
 fxsvc d:/clb/src/fx/service
 fxtp d:/clb/src/fx/third_party
 lpsc d:/clb/src/fx/lpschemes
