@@ -9,7 +9,22 @@ set nocp
 if has('win32') || has('win64')
     "source $VIMRUNTIME/mswin.vim
     "behave mswin
+
     let s:vimfilesbase='~/vimfiles/'
+
+    call plug#begin('~/vimfiles/plugged')
+
+    ""Plug 'bling/vim-bufferline'
+
+    Plug 'altercation/vim-colors-solarized'
+    Plug 'udalov/kotlin-vim'
+    Plug 'derekwyatt/vim-scala'
+    Plug 'derekwyatt/vim-sbt'
+    Plug 'ekalinin/Dockerfile.vim'
+    "Plug 'rking/ag.vim'
+
+    " Add plugins to &runtimepath
+    call plug#end()
 else
     let s:vimfilesbase='~/.vim/'
     "if empty(glob('~/.vim/autoload/plug.vim'))
@@ -17,20 +32,6 @@ else
     "    autocmd VimEnter * PlugInstall | source $MYVIMRC
     "endif
 endif
-
-call plug#begin('~/vimfiles/plugged')
-
-""Plug 'bling/vim-bufferline'
-
-Plug 'udalov/kotlin-vim'
-Plug 'derekwyatt/vim-scala'
-Plug 'derekwyatt/vim-sbt'
-Plug 'ekalinin/Dockerfile.vim'
-"Plug 'rking/ag.vim'
-
-" Add plugins to &runtimepath
-call plug#end()
-" :PlugInstall
 
 set diffexpr=MyDiff()
 fun MyDiff()
@@ -114,19 +115,6 @@ let g:pandoc_no_folding = 1
 " au
 " autocmd BufNewFile,BufRead *.txt   set filetype=pandoc
 
-" Or use vividchalk
-if has("dialog_gui")
-  "let g:solarized_termcolors=256
-  set background=dark " or light which is by default
-  try
-    colorscheme solarized
-  catch
-  endtry
-else
-  "set background=light
-  "colorscheme far
-  "topfunky-light
-endif
 
 set autoindent                      " auto-indent
 set path=.,,**
@@ -145,6 +133,7 @@ set hh=40                           " helpheight
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
 set viminfo='50,\"100,:20,%,n~/_viminfo
+"set ssop+=resize,winpos,winsize,blank,buffers,curdir,folds,help,options,tabpages
 
 function! ResCur()
   if line("'\"") <= line("$")
@@ -268,6 +257,7 @@ map <S-Insert>		"+gP
 cmap <C-V>		<C-R>+
 cmap <S-Insert>		<C-R>+
 
+"
 " works in gvim only
 map <Esc>[14^  <C-F4>
 "http://mg.pov.lt/vim/vimrc
@@ -275,3 +265,47 @@ noremap <C-F4> :bw<CR>
 
 " Use CTRL-Q to do what CTRL-V used to do
 noremap <C-Q>		<C-V>
+
+" An example for a vimrc file.
+"
+" Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Last change:	2017 Sep 20
+"
+" To use it, copy it to
+"     for Unix and OS/2:  ~/.vimrc
+"	      for Amiga:  s:.vimrc
+"  for MS-DOS and Win32:  $VIM\_vimrc
+"	    for OpenVMS:  sys$login:.vimrc
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Get the defaults that most users want.
+" source $VIMRUNTIME/defaults.vim
+
+" Add optional packages.
+"
+" The matchit plugin makes the % command work better, but it is not backwards
+" compatible.
+" The ! means the package won't be loaded right away but when plugins are
+" loaded during initialization.
+if has('syntax') && has('eval')
+  packadd! matchit
+endif
+
+" set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe\ -executionpolicy\ bypass
+
+"if has("dialog_gui")
+if has("gui_running")
+  if has("gui_win32")
+    set guifont=Consolas:h14:cANSI
+    set background=light "dark or light
+    "let g:solarized_termcolors=256
+    try
+      colorscheme solarized
+    catch
+    endtry
+  endif
+endif
