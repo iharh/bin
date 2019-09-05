@@ -1,2 +1,3 @@
 @echo off
-dir /s /b | findstr %*
+::dir /s /b | findstr %*
+fd %*
