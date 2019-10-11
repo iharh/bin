@@ -42,6 +42,7 @@ csls d:/clb/src/spikes/cb-cps/cb-cps-csls
 dpt d:/clb/src/deep-thought
 dptpvp d:/clb/src/deep-thought/cb-cps-pvp
 cld2 d:/clb/src/cld2
+cld3 d:/clb/src/cld3
 logb d:/clb/log
 logss d:/clb/inst/server/logs
 down d:/download
