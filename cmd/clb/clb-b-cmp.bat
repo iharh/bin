@@ -38,7 +38,7 @@ pushd %CLB_GIT_SRC_ROOT%
 echo CLB_DEFS_CMP: %CLB_DEFS_CMP% >%BUILD_CMP_LOG%
 
 ::call gradlew.bat clean >>%BUILD_CMP_LOG% 2>&1
-call gradle.cmd clean >>%BUILD_CMP_LOG% 2>&1
+call gradlew.bat clean >>%BUILD_CMP_LOG% 2>&1
 
 git.exe remote -v update --prune
 for /f "delims=" %%a in ('git.exe rev-parse --abbrev-ref HEAD') do set git_cur_br=%%a
@@ -61,7 +61,7 @@ popd
 pushd %CLB_SRC_ROOT%
 ::call gradlew.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
 ::call gradle.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
-call gradle.cmd build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
+call gradlew.bat build %CLB_DEFS_CMP% >>%BUILD_CMP_LOG% 2>&1
 popd
 :lExit
 endlocal
