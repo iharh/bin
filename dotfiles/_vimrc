@@ -6,32 +6,21 @@
 set nocp
 
 " for selection in visual/insert mode - http://vim.wikia.com/wiki/Make_C-Left_C-Right_behave_as_in_Windows
-if has('win32') || has('win64')
-    "source $VIMRUNTIME/mswin.vim
-    "behave mswin
+"source $VIMRUNTIME/mswin.vim
+"behave mswin
 
-    let s:vimfilesbase='~/vimfiles/'
-
-    call plug#begin('~/vimfiles/plugged')
-
-    ""Plug 'bling/vim-bufferline'
-
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'udalov/kotlin-vim'
-    Plug 'derekwyatt/vim-scala'
-    Plug 'derekwyatt/vim-sbt'
-    Plug 'ekalinin/Dockerfile.vim'
-    "Plug 'rking/ag.vim'
-
-    " Add plugins to &runtimepath
-    call plug#end()
-else
-    let s:vimfilesbase='~/.vim/'
-    "if empty(glob('~/.vim/autoload/plug.vim'))
-    "    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    "    autocmd VimEnter * PlugInstall | source $MYVIMRC
-    "endif
-endif
+" let s:vimfilesbase='~/vimfiles/'
+"call plug#begin('~/vimfiles/plugged')
+call plug#begin()
+""Plug 'bling/vim-bufferline'
+Plug 'altercation/vim-colors-solarized'
+Plug 'udalov/kotlin-vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-sbt'
+Plug 'ekalinin/Dockerfile.vim'
+"Plug 'rking/ag.vim'
+" Add plugins to &runtimepath
+call plug#end()
 
 set diffexpr=MyDiff()
 fun MyDiff()
